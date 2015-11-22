@@ -12,7 +12,7 @@
 	<style>
 		body{
 			background-color: #f4645f;
-			background-image: url(<?php echo base_url();?>/upload/1.jpg );
+			background-image: url(<?php echo base_url();?>/images/1.jpg );
 			padding-top: 40px;
   			padding-bottom: 40px;
 		}

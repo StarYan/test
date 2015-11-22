@@ -20,6 +20,21 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->helper('url');
+		$this->load->view('appointment_view');
 	}
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->library('layout');
+		$this->load->helper('url');
+	}
+
+	public function test_layout()
+	{
+		$data['test'] = "我的layout";
+		$this->layout->view('content',$data);
+	}
+
 }

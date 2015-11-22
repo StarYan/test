@@ -1,5 +1,11 @@
 <?php
 	class Login_controller extends CI_Controller{
+		public function __construct()
+		{
+			parent::__construct();
+			$this->load->library('layout');
+			$this->load->helper('url');
+		}
 		//加载登录页面
 		public function Login(){
 			$this->load->model('login_model','login');
@@ -59,10 +65,8 @@
 						$data['list']=$list;
 						$data['href']=site_url('check_controller/checked');
 						$data['act']="审核";
-						
-						$this->load->view('manager_view_mheader_nocheck');
-						$this->load->view('manager_view_body',$data);	
-						$this->load->view('manager_view_footer');
+
+						$this->layout->view('manager_view_body',$data);
 					}else{
 						$this->load->model('manager_model','manager');
 						$this->load->library('pagination');
@@ -100,10 +104,8 @@
 						$data['list']=$list;
 						$data['href']=site_url('nopass_controller/nopass');
 						$data['act']="查看详细信息";
-						
-						$this->load->view('manager_view_sheader');
-						$this->load->view('manager_view_body',$data);	
-						$this->load->view('manager_view_footer');
+
+						$this->layout->view('manager_view_body',$data);
 					}
 								
 				}else{

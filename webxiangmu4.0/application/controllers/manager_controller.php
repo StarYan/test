@@ -1,6 +1,13 @@
 <?php
 	class Manager_controller extends CI_Controller{
-		
+		public function __construct()
+		{
+			parent::__construct();
+			$this->load->library('layout');
+			$this->load->helper('url');
+		}
+
+
 		//审核合格的分页显示
 		public function Pass(){
 			$this->load->helper('url');
@@ -46,9 +53,7 @@
 			$data['list']=$list;
 			$data['href']=site_url('print_controller/printPage');
 			$data['act']="打印";
-			$this->load->view('manager_view_mheader_pass');
-			$this->load->view('manager_view_body',$data);	
-			$this->load->view('manager_view_footer');
+			$this->layout->view('manager_view_body',$data);
 		}
 
 
@@ -101,10 +106,8 @@
 			$data['act']="审核";
 			
 			$this->check->deleteAll();
-			
-			$this->load->view('manager_view_mheader_nocheck');
-			$this->load->view('manager_view_body',$data);	
-			$this->load->view('manager_view_footer');
+
+			$this->layout->view('manager_view_body',$data);
 			
 		}
 
@@ -155,10 +158,8 @@
 			$data['list']=$list;
 			$data['href']=site_url('nopass_controller/Nopass');
 			$data['act']="查看详细信息";
-			
-			$this->load->view('manager_view_sheader');
-			$this->load->view('manager_view_body',$data);	
-			$this->load->view('manager_view_footer');
+
+			$this->layout->view('manager_view_body',$data);
 		}
 		
 
