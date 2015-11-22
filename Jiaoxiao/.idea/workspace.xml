@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5dd4b6d4-af37-4df7-adb2-2187ae7dc0da" name="Default" comment="web">
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\TEST" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\jiaxiao\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\.idea\webxiangmu4.0.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\.project" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\cache\.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\cache\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\config.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\constants.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\database.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\doctypes.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\foreign_chars.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\hooks.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\memcached.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\migration.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\mimes.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\profiler.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\routes.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\smileys.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\config\user_agents.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\controllers\Welcome.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\controllers\check_controller.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\controllers\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\controllers\login_controller.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\controllers\manager_controller.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\controllers\nopass_controller.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\controllers\print_controller.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\controllers\register_controller.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\core\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\helpers\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\hooks\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\language\english\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\language\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\libraries\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\logs\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\models\check_model.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\models\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\models\login_model.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\models\manager_model.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\models\nopass_model.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\models\print_model.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\models\register_model.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\third_party\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\check_view.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\cli\error_404.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\cli\error_db.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\cli\error_exception.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\cli\error_general.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\cli\error_php.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\cli\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\html\error_404.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\html\error_db.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\html\error_exception.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\html\error_general.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\html\error_php.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\html\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\errors\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\login_view.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\manager_view_body.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\manager_view_footer.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\manager_view_mheader_nocheck.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\manager_view_mheader_pass.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\manager_view_sheader.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\nopass_view.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\print_view.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\register_view.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\application\views\welcome_message.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\css\component.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\css\demo.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\css\normalize.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\js\jquery.let_it_snow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Benchmark.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\CodeIgniter.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Common.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Config.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Controller.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Exceptions.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Hooks.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Input.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Loader.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Log.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Model.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Output.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Router.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Security.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\URI.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\Utf8.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\compat\hash.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\compat\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\compat\mbstring.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\compat\password.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\compat\standard.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\core\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\DB.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\DB_cache.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\DB_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\DB_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\DB_query_builder.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\DB_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\DB_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\cubrid\cubrid_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\cubrid\cubrid_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\cubrid\cubrid_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\cubrid\cubrid_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\cubrid\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\ibase\ibase_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\ibase\ibase_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\ibase\ibase_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\ibase\ibase_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\ibase\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mssql\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mssql\mssql_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mssql\mssql_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mssql\mssql_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mssql\mssql_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mysql\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mysql\mysql_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mysql\mysql_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mysql\mysql_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mysql\mysql_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mysqli\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mysqli\mysqli_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mysqli\mysqli_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mysqli\mysqli_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\mysqli\mysqli_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\oci8\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\oci8\oci8_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\oci8\oci8_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\oci8\oci8_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\oci8\oci8_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\odbc\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\odbc\odbc_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\odbc\odbc_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\odbc\odbc_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\odbc\odbc_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\pdo_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\pdo_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\pdo_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\pdo_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_4d_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_4d_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_cubrid_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_cubrid_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_dblib_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_dblib_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_firebird_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_firebird_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_ibm_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_ibm_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_informix_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_informix_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_mysql_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_mysql_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_oci_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_oci_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_odbc_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_odbc_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_pgsql_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_pgsql_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_sqlite_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_sqlite_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_sqlsrv_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\pdo\subdrivers\pdo_sqlsrv_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\postgre\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\postgre\postgre_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\postgre\postgre_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\postgre\postgre_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\postgre\postgre_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlite3\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlite3\sqlite3_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlite3\sqlite3_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlite3\sqlite3_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlite3\sqlite3_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlite\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlite\sqlite_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlite\sqlite_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlite\sqlite_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlite\sqlite_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlsrv\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlsrv\sqlsrv_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlsrv\sqlsrv_forge.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlsrv\sqlsrv_result.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\drivers\sqlsrv\sqlsrv_utility.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\database\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\fonts\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\fonts\texb.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\array_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\captcha_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\cookie_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\date_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\directory_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\download_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\email_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\file_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\form_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\html_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\inflector_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\language_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\number_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\path_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\security_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\smiley_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\string_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\text_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\typography_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\url_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\helpers\xml_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\calendar_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\date_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\db_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\email_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\form_validation_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\ftp_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\imglib_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\migration_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\number_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\pagination_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\profiler_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\unit_test_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\english\upload_lang.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\language\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Cache\Cache.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Cache\drivers\Cache_apc.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Cache\drivers\Cache_dummy.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Cache\drivers\Cache_file.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Cache\drivers\Cache_memcached.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Cache\drivers\Cache_redis.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Cache\drivers\Cache_wincache.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Cache\drivers\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Cache\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Calendar.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Cart.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Email.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Encrypt.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Encryption.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Form_validation.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Ftp.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Image_lib.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Javascript.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Javascript\Jquery.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Javascript\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Migration.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Pagination.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Parser.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Profiler.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Session\Session.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Session\SessionHandlerInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Session\Session_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Session\drivers\Session_database_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Session\drivers\Session_files_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Session\drivers\Session_memcached_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Session\drivers\Session_redis_driver.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Session\drivers\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Session\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Table.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Trackback.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Typography.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Unit_test.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Upload.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\User_agent.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Xmlrpc.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Xmlrpcs.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\Zip.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\system\libraries\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\upload\1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\110.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\111.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\112.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\113.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\114.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\115.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\116.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\117.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\118.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\119.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\120.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\121.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\122.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\123.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\124.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\125.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\126.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\127.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\129.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\130.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\131.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\132.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\133.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\134.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\135.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\136.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\137.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\138.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\139.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\140.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\141.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle19.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle21.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle22.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle25.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle26.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle27.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle28.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle29.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle30.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle31.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle32.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle33.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle34.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle35.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle36.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle37.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle38.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle39.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle41.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle42.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle43.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle44.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle45.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle46.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle47.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle48.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle49.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle51.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle52.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\1415668652055_middle9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\142.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\143.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\WAHAHA\webxiangmu4.0\uploads\19.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WAHAHA/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../WAHAHA/.idea/workspace.xml" />
+    </list>
+    <ignored path="webxiangmu4.0.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="webxiangmu4.0">
+      <favorite_root url="file://$PROJECT_DIR$" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/js" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/js/jquery.let_it_snow.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/css" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/css/demo.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/css/component.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/css/normalize.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/.idea" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/.idea/.name" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/vcs.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/misc.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/modules.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/workspace.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/webxiangmu4.0.iml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/system" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/system/core" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/system/core/compat" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/system/core/compat/hash.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/core/compat/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/core/compat/mbstring.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/core/compat/password.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/core/compat/standard.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Log.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/URI.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Utf8.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Hooks.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Input.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Model.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Common.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Config.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Loader.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Output.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Router.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Security.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Benchmark.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Controller.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/Exceptions.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/core/CodeIgniter.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/system/fonts" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/system/fonts/texb.ttf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/fonts/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/system/helpers" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/url_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/xml_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/date_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/file_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/form_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/html_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/path_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/text_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/array_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/email_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/cookie_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/number_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/smiley_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/string_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/captcha_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/download_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/language_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/security_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/directory_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/inflector_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/helpers/typography_helper.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/system/database" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/system/database/DB.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/database/drivers" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_4d_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_4d_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_ibm_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_oci_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_ibm_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_oci_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_odbc_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_dblib_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_mysql_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_odbc_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_pgsql_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_cubrid_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_dblib_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_mysql_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_pgsql_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_sqlite_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_sqlsrv_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_cubrid_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_sqlite_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_sqlsrv_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_firebird_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_informix_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_firebird_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_informix_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/pdo_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/pdo_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/pdo_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/pdo/pdo_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/oci8" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/oci8/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/oci8/oci8_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/oci8/oci8_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/oci8/oci8_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/oci8/oci8_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/odbc" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/odbc/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/odbc/odbc_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/odbc/odbc_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/odbc/odbc_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/odbc/odbc_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/ibase" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/ibase/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/ibase/ibase_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/ibase/ibase_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/ibase/ibase_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/ibase/ibase_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mssql" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mssql/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mssql/mssql_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mssql/mssql_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mssql/mssql_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mssql/mssql_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysql" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysql/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysql/mysql_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysql/mysql_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysql/mysql_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/cubrid" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/cubrid/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysqli" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysqli/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlsrv" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlsrv/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/postgre" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/postgre/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/postgre/postgre_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/postgre/postgre_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/postgre/postgre_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/postgre/postgre_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite3" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite3/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite3/sqlite3_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite3/sqlite3_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite3/sqlite3_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/sqlite3/sqlite3_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/database/drivers/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/system/database/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/database/DB_cache.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/database/DB_forge.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/database/DB_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/database/DB_result.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/database/DB_utility.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/database/DB_query_builder.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/system/language" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/system/language/english" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/db_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/ftp_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/date_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/email_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/imglib_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/number_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/upload_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/calendar_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/profiler_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/migration_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/unit_test_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/pagination_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/language/english/form_validation_lang.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/system/language/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/system/.htaccess" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/system/libraries" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cache" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cache/drivers" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cache/drivers/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_apc.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_file.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_dummy.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_redis.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_wincache.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_memcached.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cache/Cache.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cache/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Ftp.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Session" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/system/libraries/Session/drivers" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Session/drivers/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Session/drivers/Session_files_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Session/drivers/Session_redis_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Session/drivers/Session_database_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/system/libraries/Session/drivers/Session_memcached_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/system/libraries/Session/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/libraries/Session/Session.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/libraries/Session/Session_driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/libraries/Session/SessionHandlerInterface.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Zip.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Cart.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Email.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Table.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Driver.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Javascript" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/system/libraries/Javascript/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/system/libraries/Javascript/Jquery.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Parser.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Upload.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Xmlrpc.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Encrypt.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Xmlrpcs.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Calendar.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Profiler.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Image_lib.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Migration.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Trackback.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Unit_test.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Encryption.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Javascript.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Pagination.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Typography.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/User_agent.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/system/libraries/Form_validation.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/system/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/upload" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/upload/1.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/WAHAHA" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/WAHAHA/WAHAHA" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/WAHAHA/WAHAHA/.idea" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/WAHAHA/WAHAHA/.idea/vcs.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/WAHAHA/WAHAHA/.idea/misc.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/WAHAHA/WAHAHA/.idea/WAHAHA.iml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/WAHAHA/WAHAHA/.idea/modules.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/WAHAHA/WAHAHA/.idea/workspace.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/uploads" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/11.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/12.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/13.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/14.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/15.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/16.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/17.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/18.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/19.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/110.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/111.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/112.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/113.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/114.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/115.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/116.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/117.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/118.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/119.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/120.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/121.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/122.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/123.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/124.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/125.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/126.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/127.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/128.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/129.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/130.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/131.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/132.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/133.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/134.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/135.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/136.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/137.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/138.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/139.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/140.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/141.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/142.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/143.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle1.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle2.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle3.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle4.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle5.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle6.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle7.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle8.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle9.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle10.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle11.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle12.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle13.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle14.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle15.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle16.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle17.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle18.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle19.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle20.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle21.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle22.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle23.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle24.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle25.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle26.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle27.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle28.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle29.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle30.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle31.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle32.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle33.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle34.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle35.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle36.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle37.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle38.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle39.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle40.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle41.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle42.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle43.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle44.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle45.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle46.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle47.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle48.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle49.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle50.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle51.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/uploads/1415668652055_middle52.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/.project" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/index.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/application" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/application/core" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/core/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/application/logs" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/logs/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/application/cache" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/cache/.htaccess" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/cache/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/application/hooks" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/hooks/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/application/views" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/views/errors" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/application/views/errors/cli" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/cli/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/cli/error_db.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/cli/error_404.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/cli/error_php.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/cli/error_general.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/cli/error_exception.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/application/views/errors/html" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/html/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/html/error_db.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/html/error_404.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/html/error_php.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/html/error_general.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/application/views/errors/html/error_exception.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/application/views/errors/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/application/views/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/views/check_view.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/views/login_view.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/views/print_view.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/views/nopass_view.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/views/register_view.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/views/welcome_message.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/views/manager_view_body.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/views/manager_view_footer.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/views/manager_view_sheader.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/views/manager_view_mheader_pass.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/views/manager_view_mheader_nocheck.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/application/config" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/config/hooks.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/mimes.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/config.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/routes.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/smileys.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/autoload.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/database.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/doctypes.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/profiler.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/constants.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/memcached.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/migration.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/user_agents.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/config/foreign_chars.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/application/models" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/models/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/models/check_model.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/models/login_model.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/models/print_model.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/models/nopass_model.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/models/manager_model.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/models/register_model.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/application/helpers" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/helpers/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/application/language" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/language/english" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/application/language/english/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/application/language/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/application/.htaccess" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/application/libraries" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/libraries/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/application/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/application/controllers" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/controllers/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/controllers/Welcome.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/controllers/check_controller.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/controllers/login_controller.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/controllers/print_controller.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/controllers/nopass_controller.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/controllers/manager_controller.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/application/controllers/register_controller.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/application/third_party" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/application/third_party/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/webxiangmu4.0" module="webxiangmu4.0" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/webxiangmu4.0/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+      </favorite_root>
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Downloads/html5-3d-carousel/html5-3d-carousel/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.51473135">
+              <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../WAHAHA" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webxiangmu4.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webxiangmu4.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webxiangmu4.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webxiangmu4.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webxiangmu4.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webxiangmu4.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webxiangmu4.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webxiangmu4.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webxiangmu4.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JD_purchase2.0" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5dd4b6d4-af37-4df7-adb2-2187ae7dc0da" name="Default" comment="" />
+      <created>1445872562251</created>
+      <option name="number" value="Default" />
+      <updated>1445872562251</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25402635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="web" />
+    <option name="LAST_COMMIT_MESSAGE" value="web" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/views/login_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27729636">
+          <caret line="8" column="102" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="102" />
+          <folding>
+            <marker date="1445222705577" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1445222705577" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/html5-3d-carousel/html5-3d-carousel/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51473135">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
