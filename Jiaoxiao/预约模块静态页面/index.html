@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Dashboard - FLATY Admin</title>
+        <title>驾校预约</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,12 +20,12 @@
         <link rel="stylesheet" href="css/flaty.css">
         <link rel="stylesheet" href="css/flaty-responsive.css">
 
-        <link rel="shortcut icon" href="img/favicon.png">
+
     </head>
     <body>
 
-    <!--Login Modal -->
-    <div class="md-modal md-effect-7" id="modal-7">
+    <!-- 登录表单 -->
+    <div class="md-modal md-effect-7" id="login">
         <div class="md-content">
             <h3>用户登录</h3>
             <div>
@@ -54,7 +54,10 @@
             </div>
         </div>
     </div>
-    <div class="md-overlay"></div><!-- the overlay element -->
+    <!-- 登录表单 -->
+    <div class="md-overlay"></div>
+
+    <div class="a" >
         <!-- BEGIN Navbar -->
         <div id="navbar" class="navbar">
             <a class="navbar-brand" href="#">
@@ -64,141 +67,142 @@
                 </small>
             </a>
 
-            <!-- BEGIN Navbar Buttons -->
-            <ul class="nav flaty-nav pull-right">
-                        <li>
-                            <a  class="md-trigger" data-modal="modal-7" >
-                                <i class="icon-user"></i>
-                                登录
-                            </a>
-                        </li>
-            </ul>
-            <!-- END Navbar Buttons -->
+            <button type="button" class="navbar-toggle navbar-btn btn " data-toggle="collapse" data-target="#select">
+                <i class="icon-reorder"></i>
+                点击预约
+            </button>
 
+            <!-- 学员登录按钮 -->
+            <ul class="nav flaty-nav pull-right">
+                <li>
+                    <a href="#" class="md-trigger" data-modal="login" >
+                        <i class="icon-user"></i>
+                        登录
+                    </a>
+                </li>
+            </ul>
+            <!-- 学员登录按钮 -->
         </div>
         <!-- END Navbar -->
 
-        <!-- BEGIN Container -->
-        <div class="container" id="main-container">
+        <!-- BEGIN Page Title -->
+        <div class="page-title">
+            <div>
+                <h1>蓝光驾校欢迎您</h1>
+                <h4>驾校标语</h4>
+            </div>
+        </div>
+        <!-- END Page Title -->
 
-            <!-- BEGIN Content -->
-            <div id="main-content">
-                <!-- BEGIN Page Title -->
-                <div class="page-title">
-                    <div>
-                        <h1>蓝光驾校欢迎您</h1>
-                        <h4>驾校标语</h4>
-                    </div>
-                </div>
-                <!-- END Page Title -->
-
-                <!-- BEGIN Breadcrumb -->
-                <div id="breadcrumbs" class="container">
-                    <form action="#" class="form-horizontal" id="validation-form" method="post">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label for="place" class="col-sm-6 col-lg-4 control-label">场地</label>
-                                    <div class="col-sm-12 col-lg-8 controls">
-                                        <select class="form-control" name="place" id="place"  data-rule-required="true">
-                                            <option value=""> 选择场地 </option>
-                                            <option value="1">Option-1</option>
-                                            <option value="2">Option-2</option>
-                                            <option value="3">Option-3</option>
-                                            <option value="4">Option-4</option>
-                                            <option value="5">Option-5</option>
-                                            <option value="6">Option-6</option>
-                                            <option value="7">Option-7</option>
-                                            <option value="8">Option-8</option>
-                                            <option value="9">Option-9</option>
-                                            <option value="10">Option-10</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label for="time" class="col-sm-6 col-lg-4 control-label">时间</label>
-                                    <div class="col-sm-12 col-lg-8 controls">
-                                        <select class="form-control" name="time" id="time" data-rule-required="true">
-                                            <option value=""> 选择时间 </option>
-                                            <option value="1">Option-1</option>
-                                            <option value="2">Option-2</option>
-                                            <option value="3">Option-3</option>
-                                            <option value="4">Option-4</option>
-                                            <option value="5">Option-5</option>
-                                            <option value="6">Option-6</option>
-                                            <option value="7">Option-7</option>
-                                            <option value="8">Option-8</option>
-                                            <option value="9">Option-9</option>
-                                            <option value="10">Option-10</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label for="coach" class="col-sm-6 col-lg-4 control-label">教练</label>
-                                    <div class="col-sm-12 col-lg-8 controls">
-                                        <select class="form-control" name="coach" id="coach" data-rule-required="true">
-                                            <option value=""> 选择教练 </option>
-                                            <option value="1">Option-1</option>
-                                            <option value="2">Option-2</option>
-                                            <option value="3">Option-3</option>
-                                            <option value="4">Option-4</option>
-                                            <option value="5">Option-5</option>
-                                            <option value="6">Option-6</option>
-                                            <option value="7">Option-7</option>
-                                            <option value="8">Option-8</option>
-                                            <option value="9">Option-9</option>
-                                            <option value="10">Option-10</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label for="car" class="col-sm-6 col-lg-4 control-label">车型</label>
-                                    <div class="col-sm-12 col-lg-8 controls">
-                                        <select class="form-control" name="car" id="car" data-rule-required="true">
-                                            <option value=""> 选择车型 </option>
-                                            <option value="1">Option-1</option>
-                                            <option value="2">Option-2</option>
-                                            <option value="3">Option-3</option>
-                                            <option value="4">Option-4</option>
-                                            <option value="5">Option-5</option>
-                                            <option value="6">Option-6</option>
-                                            <option value="7">Option-7</option>
-                                            <option value="8">Option-8</option>
-                                            <option value="9">Option-9</option>
-                                            <option value="10">Option-10</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
-                                        <input type="submit" class="btn btn-primary" value="预约">
-                                        <button type="button" class="btn btn-danger">取消</button>
-                                    </div>
+            <!-- 预约栏 -->
+            <div id="breadcrumbs" class="container">
+                <form action="#" class="form-horizontal" id="validation-form" method="post">
+                    <div class="collapse navbar-collapse row " id="select">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="place" class="col-sm-6 col-lg-4 control-label">场地</label>
+                                <div class="col-sm-12 col-lg-8 controls">
+                                    <select class="form-control" name="place" id="place"  data-rule-required="true">
+                                        <option value=""> 选择场地 </option>
+                                        <option value="1">Option-1</option>
+                                        <option value="2">Option-2</option>
+                                        <option value="3">Option-3</option>
+                                        <option value="4">Option-4</option>
+                                        <option value="5">Option-5</option>
+                                        <option value="6">Option-6</option>
+                                        <option value="7">Option-7</option>
+                                        <option value="8">Option-8</option>
+                                        <option value="9">Option-9</option>
+                                        <option value="10">Option-10</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
 
-                    </form>
-                </div>
-                <!-- END Breadcrumb -->
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="time" class="col-sm-6 col-lg-4 control-label">时间</label>
+                                <div class="col-sm-12 col-lg-8 controls">
+                                    <select class="form-control" name="time" id="time" data-rule-required="true">
+                                        <option value=""> 选择时间 </option>
+                                        <option value="1">Option-1</option>
+                                        <option value="2">Option-2</option>
+                                        <option value="3">Option-3</option>
+                                        <option value="4">Option-4</option>
+                                        <option value="5">Option-5</option>
+                                        <option value="6">Option-6</option>
+                                        <option value="7">Option-7</option>
+                                        <option value="8">Option-8</option>
+                                        <option value="9">Option-9</option>
+                                        <option value="10">Option-10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="coach" class="col-sm-6 col-lg-4 control-label">教练</label>
+                                <div class="col-sm-12 col-lg-8 controls">
+                                    <select class="form-control" name="coach" id="coach" data-rule-required="true">
+                                        <option value=""> 选择教练 </option>
+                                        <option value="1">Option-1</option>
+                                        <option value="2">Option-2</option>
+                                        <option value="3">Option-3</option>
+                                        <option value="4">Option-4</option>
+                                        <option value="5">Option-5</option>
+                                        <option value="6">Option-6</option>
+                                        <option value="7">Option-7</option>
+                                        <option value="8">Option-8</option>
+                                        <option value="9">Option-9</option>
+                                        <option value="10">Option-10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="car" class="col-sm-6 col-lg-4 control-label">车型</label>
+                                <div class="col-sm-12 col-lg-8 controls">
+                                    <select class="form-control" name="car" id="car" data-rule-required="true">
+                                        <option value=""> 选择车型 </option>
+                                        <option value="1">Option-1</option>
+                                        <option value="2">Option-2</option>
+                                        <option value="3">Option-3</option>
+                                        <option value="4">Option-4</option>
+                                        <option value="5">Option-5</option>
+                                        <option value="6">Option-6</option>
+                                        <option value="7">Option-7</option>
+                                        <option value="8">Option-8</option>
+                                        <option value="9">Option-9</option>
+                                        <option value="10">Option-10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
+                                    <input type="submit" class="btn btn-primary" value="预约">
+                                    <button type="button" class="btn btn-danger">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- 预约栏 -->
+    </div>
 
 
-
-
-
-                <div class="row">
+    <!-- 预约内容介绍 -->
+        <div class="container" id="main-container" >
+            <div id="main-content" style="margin-top: 100px;">
+                <!-- 场地介绍 -->
+                <div class="row" style="margin-top: 100px; z-index: -1;">
                     <div class="col-md-12">
                         <div class="box box-blue">
                             <div class="box-title">
@@ -238,8 +242,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- 场地介绍 -->
                 <br /><br /><br />
-                <div class="row">
+                <!-- 教练介绍 -->
+                <div class="row" style="z-index: -1;">
                     <div class="col-md-12">
                         <div class="box box-blue">
                             <div class="box-title">
@@ -278,8 +284,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- 教练介绍 -->
                 <br /><br /><br />
-                <div class="row">
+                <!-- 车型介绍 -->
+                <div class="row" style="z-index: -1;">
                     <div class="col-md-12">
                         <div class="box box-blue">
                             <div class="box-title">
@@ -318,16 +326,15 @@
                         </div>
                     </div>
                 </div>
-                
+                <!-- 车型介绍 -->
                 <footer>
-                    <p>2013 © FLATY Admin Template.</p>
+                    <p>2015 © 蓝光驾校.</p>
                 </footer>
 
                 <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="icon-chevron-up"></i></a>
             </div>
-            <!-- END Content -->
         </div>
-        <!-- END Container -->
+    <!-- 预约内容介绍 -->
 
 
         <!--basic scripts-->
