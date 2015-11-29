@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-11-29 09:31:21
+Date: 2015-11-29 09:47:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,26 +20,26 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-  `NAME` varchar(128) NOT NULL,
-  `NUM` varchar(128) NOT NULL,
-  `PASSWORD` varchar(128) NOT NULL,
-  `SEX` tinyint(1) DEFAULT '0',
-  `BIRTHDAY` date NOT NULL,
-  `PHONE` varchar(128) NOT NULL,
-  `QQ` varchar(16) DEFAULT NULL,
-  `ADDRESS` varchar(128) NOT NULL,
-  `EMAIL` varchar(128) NOT NULL,
-  `IDCARD` varchar(32) NOT NULL,
-  `PHOTO` varchar(128) NOT NULL,
-  `ORIGINAL_CAR_TYPE` varchar(64) DEFAULT NULL,
-  `WANTED_CAR_TYPE` varchar(64) NOT NULL,
-  `CREATE_DATE` datetime NOT NULL,
-  `CREATE_ID` bigint(20) NOT NULL,
-  `STATUS` tinyint(1) DEFAULT '0',
-  `DELETED` tinyint(1) DEFAULT '0',
-  PRIMARY KEY (`NUM`),
-  KEY `ID` (`ID`)
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  `num` varchar(128) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  `sex` tinyint(1) DEFAULT '0',
+  `birthday` date NOT NULL,
+  `phone` varchar(128) NOT NULL,
+  `qq` varchar(16) DEFAULT NULL,
+  `address` varchar(128) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `idcard` varchar(32) NOT NULL,
+  `photo` varchar(128) NOT NULL,
+  `original_car_type` varchar(64) DEFAULT NULL COMMENT '用户原准驾车型',
+  `wanted_car_type` varchar(64) NOT NULL COMMENT '用户需要培训的车型',
+  `create_date` datetime NOT NULL COMMENT '注册日期',
+  `create_id` bigint(20) NOT NULL COMMENT '注册人ID',
+  `status` tinyint(1) DEFAULT '0' COMMENT '0代表未审核，1代表审核合格，2代表审核不合格',
+  `deleted` tinyint(1) DEFAULT '0' COMMENT '0代表显示,1代表不显示',
+  PRIMARY KEY (`num`),
+  KEY `ID` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
