@@ -5,10 +5,25 @@
  */
     class Coachandplace_model extends CI_Model{
 
-        private $table_name = 'coachandplace_model';
+        private $table_name = 'coachandplace';
 
         public function __construct(){
             parent::__construct();
+        }
+
+        /**
+         * 根据地点id查找信息
+         * @param $data
+         * @return bool
+         */
+        public function get_by_placeid($data){
+            $this->db->where($data);
+            $this->db->from($this->table_name);
+            $result = $this->db->get();
+            if ($result->num_rows() > 0) {
+                return $result->result_array();
+            }
+            return false;
         }
 
         /**
