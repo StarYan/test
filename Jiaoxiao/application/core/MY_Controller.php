@@ -8,20 +8,12 @@ class MY_Controller extends CI_Controller {
 
     public function __construct() {
         parent::__construct ();
-        // Load cache driver
-        $this->load->driver('cache', array('adapter' => 'redis'));
 
         // Load Database
         $this->load->database();
 
     }
 
-    protected  function check_login() {
-        if ($this->user_id < 1) {
-            return false;
-        }
-        return true;
-    }
 
     /**
      *  以 json 的形式输出结果
@@ -32,13 +24,14 @@ class MY_Controller extends CI_Controller {
      */
     protected function send_json($success = true, $msg = '', $data = array(), $code = 1) {
         $code = $success === true ? CODE_SUCCESS : $code;
+
         $json_arr = array(
             'code' => $code,
             'msg' => $msg,
             'data' => $data
         );
 
-        $this->output->set_content_type('application/json')->set_output(json_encode($json_arr));
+        $this->output->set_header('Content-Type: application/json; charset=utf-8')->set_output(json_encode($json_arr));
     }
 
     /**
@@ -54,5 +47,33 @@ class MY_Controller extends CI_Controller {
         }
     }
 
+    /**
+     * 对象转换为数组
+     * @param $arrObjData
+     * @param array $arrSkipIndices
+     * @return array
+     */
+    function wl_objects_into_array($arrObjData, $arrSkipIndices = array())
+    {
+        $arrData = array();
+
+        // if input is object, convert into array
+        if (is_object($arrObjData)) {
+            $arrObjData = get_object_vars($arrObjData);
+        }
+
+        if (is_array($arrObjData)) {
+            foreach ($arrObjData as $index => $value) {
+                if (is_object($value) || is_array($value)) {
+                    $value = wl_objects_into_array($value, $arrSkipIndices); // recursive call
+                }
+                if (in_array($index, $arrSkipIndices)) {
+                    continue;
+                }
+                $arrData[$index] = $value;
+            }
+        }
+        return $arrData;
+    }
 
 }
