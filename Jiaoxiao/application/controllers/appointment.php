@@ -18,11 +18,17 @@
             $this->load->view('appointment_view');
         }
 
+        /**
+         * ajax接口查找场地
+         */
         public function place(){
             $result = $this->place_model->getall();
             return $this->send_json(true,"",$result);
         }
 
+        /**
+         * ajax接口查找教练
+         */
         public function coach(){
             $placeid = $this->input->post('id',true);
             $time = $this->input->post('time',true);
@@ -35,6 +41,9 @@
             return $this->send_json(flase,"查找错误");
         }
 
+        /**
+         * 预约提交
+         */
         public function saveappointment(){
             $coachandplaceid = $this->input->post('coachandplaceid',true);
             $userid = $this->input->post('userid',true);
@@ -45,6 +54,7 @@
                 $data['userid'] = $userid;
                 $data['time'] = $time;
                 $data['cartype'] = $cartype;
+
                 $where['userid'] = $userid;
                 if($this->appointment_model->get($where)){
                     $this->appointment_model->update($data);
@@ -56,6 +66,9 @@
             return $this->send_json(false,"预约失败");
         }
 
+        /**
+         * 用户登录
+         */
         public function login(){
             $name = $this->input->post('username',true);
             $password = $this->input->post('pwd',true);
@@ -72,6 +85,9 @@
             return $this->send_json(false,"登录失败，请查看密码或用户名是否正确");
         }
 
+        /**
+         * 用户注销
+         */
         public function logout(){
             unset($_SESSION);
             return $this->send_json(true,"注销成功");
