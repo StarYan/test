@@ -12,7 +12,7 @@
 	<style>
 		body{
 			background-color: #f4645f;
-			background-image: url(<?php echo base_url();?>/upload/1.jpg );
+			background-image: url(<?php echo base_url();?>/images/1.jpg );
 			padding-top: 40px;
   			padding-bottom: 40px;
 		}
@@ -55,12 +55,12 @@
 	
 	<canvas width="100%" height="100%" class="snow"></canvas>
 	<div class="container" style="position: relative;">
-		<form class="form-signin" action="<?php echo site_url('/login_controller/Check')?>" method="post">
+		<form class="form-signin" action="<?php echo site_url('/manage_controller/Access')?>" method="post">
         <h2 class="form-signin-heading text-center">后台登陆</h2>
-        <label for="inputID" >用户ID：</label>
-        <input type="text" id="inputID" class="form-control" name="ID" placeholder="User ID" required autofocus>
+        <label for="inputUsername" >用户名：</label>
+        <input type="text" id="inputUsername" class="form-control" name="username" placeholder="Username" required autofocus>
         <label for="inputPassword" >用户密码：</label>
-        <input type="password" id="inputPassword" class="form-control" name="PASSWORD" placeholder="Password" required>
+        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
          
 		
 		<br />

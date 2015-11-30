@@ -4,9 +4,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 		<title></title>
-		
+
 		<script type="text/javascript">
-			
+
 			window.onload=function(){
 				var oPrint=document.getElementById('print');
 				var oOther=document.getElementById('others');
@@ -14,16 +14,16 @@
 					oPrint.style['display']='none';
 					window.print();
 				}
-				
-				var id='<?=$list[0]->car_type ?>';	
+
+				var id='<?=$list->wanted_car_type ?>';
 				var oI=document.getElementById(id);
-				
+
 				if(oI==null){
-					oOther.innerHTML='<?=$list[0]->car_type ?>';
+					oOther.innerHTML='<?=$list->wanted_car_type ?>';
 				}else{
 					oI.checked=true;
 				}
-				
+
 			}
 		</script>
 	</head>
@@ -34,37 +34,37 @@
 		<div class="container" >
 			<h5>培训机构名称：蓝光驾校</h5>
 			<div class="col-md-4" style="margin-left:70%;">
-				<h5>NO.<?=$list[0]->user_num ?></h5>
+				<h5>NO.<?=$list->num ?></h5>
 			</div>
 			<table class="table table-bordered">
 				<div class="row">
 					<tr>
 						<td class="col-md-1">姓名</td>
-						<td class="col-md-2" colspan="2"><?=$list[0]->user_name ?></td>
+						<td class="col-md-2" colspan="2"><?=$list->name ?></td>
 						<td class="col-md-1">性别</td>
-						<td class="col-md-1"><?=$list[0]->sex ?></td>
+						<td class="col-md-1"><?=$list->sex ?></td>
 						<td class="col-md-1">出生日期</td>
-						<td class="col-md-4" colspan="4"><?=$list[0]->birthday ?></td>
-						<td class="col-md-2" colspan="2" rowspan="3"><img src="<?php echo base_url();?>/uploads/<?=$list[0]->photo?>" style="width:100px;height: 100px;" /></td>
+						<td class="col-md-4" colspan="4"><?=$list->birthday ?></td>
+						<td class="col-md-2" colspan="2" rowspan="3"><img src="<?php echo base_url();?>/uploads/<?=$list->photo?>" style="width:100px;height: 100px;" /></td>
 					</tr>
 					
 					<tr>
 						<td class="col-md-1">身份证号</td>
-						<td class="col-md-9" colspan="9"><?=$list[0]->user_id ?></td>
+						<td class="col-md-9" colspan="9"><?=$list->idcard ?></td>
 						
 					</tr>
 					
 					<tr>
 						<td class="col-md-1">住址</td>
-						<td class="col-md-9" colspan="9"><?=$list[0]->address ?></td>
+						<td class="col-md-9" colspan="9"><?=$list->address ?></td>
 						
 					</tr>
 					
 					<tr>
 						<td class="col-md-1">联系电话</td>
-						<td class="col-md-5" colspan="5"><?=$list[0]->phone_number ?></td>
+						<td class="col-md-5" colspan="5"><?=$list->phone ?></td>
 						<td class="col-md-1">原准驾车型</td>
-						<td class="col-md-5" colspan="5"><?=$list[0]->original_car_type ?></td>
+						<td class="col-md-5" colspan="5"><?=$list->original_car_type ?></td>
 						
 					</tr>
 					
@@ -137,8 +137,8 @@
 			<!--endprint-->
 			<input type="button" value="确认打印" class="col-md-offset-11 btn btn-primary" style="margin-top:20px; margin-bottom:30px; " id="print" />
 		</div>
-		
-		
+
+
 		
 	</body>
 </html>
