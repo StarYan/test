@@ -11,6 +11,16 @@
             parent::__construct();
         }
 
+        public function get_by_name_and_pwd($data){
+            $this->db->where($data);
+            $this->db->from($this->table_name);
+            $result = $this->db->get();
+            if ($result->num_rows() > 0) {
+                return $result->row_array();
+            }
+            return false;
+        }
+
         /**
          * 按条件查找
          * @param array $where 查询数组

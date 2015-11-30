@@ -1,9 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Administrator_Wen
- * Date: 2015/11/19
- * Time: 14:15
+ * 用户预约模块
  */
     class Appointment extends MY_Controller{
 
@@ -13,6 +11,7 @@
             $this->load->model('place_model');
             $this->load->model('coachandplace_model');
             $this->load->model('appointment_model');
+            $this->load->model('user_model');
         }
 
         public function appointmentmodel(){
@@ -25,8 +24,8 @@
         }
 
         public function coach(){
-            $placeid = $this->input->post('id');
-            $time = $this->input->post('time');
+            $placeid = $this->input->post('id',true);
+            $time = $this->input->post('time',true);
             if($placeid && $time){
                 $data['placeid'] = $placeid;
                 $data['time'] = $time;
@@ -37,10 +36,10 @@
         }
 
         public function saveappointment(){
-            $coachandplaceid = $this->input->post('coachandplaceid');
-            $userid = $this->input->post('userid');
-            $time = $this->input->post('time');
-            $cartype = $this->input->post('cartype');
+            $coachandplaceid = $this->input->post('coachandplaceid',true);
+            $userid = $this->input->post('userid',true);
+            $time = $this->input->post('time',true);
+            $cartype = $this->input->post('cartype',true);
             if($coachandplaceid&&$userid&&$time&&$cartype){
                 $data['coachandplaceid'] = $coachandplaceid;
                 $data['userid'] = $userid;
@@ -53,7 +52,24 @@
         }
 
         public function login(){
+            $name = $this->input->post('username',true);
+            $password = $this->input->post('pwd',true);
+            if($name&&$password){
+                $data['name'] = $name;
+                $data['password'] = $password;
+                if($this->checklogin()){
+                    unset($_SESSION);
+                }
+                $result = $this->user_model->get_by_name_and_pwd($data);
+                $_SESSION = $result;
+                return $this->send_json(true,"登录成功");
+            }
+            return $this->send_json(false,"登录失败，请查看密码或用户名是否正确");
+        }
 
+        public function logout(){
+            unset($_SESSION);
+            return $this->send_json(true,"注销成功");
         }
 
     }

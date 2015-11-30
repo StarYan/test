@@ -6,7 +6,7 @@
  * Time: 14:18
  */
     class Appointment_model extends CI_Model{
-        private $table_name = 'appointmentl';
+        private $table_name = 'appointment';
 
         public function __construct(){
             parent::__construct();

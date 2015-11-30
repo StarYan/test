@@ -84,5 +84,7 @@ define('EXIT_DATABASE', 8); // database error
 define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-
+/*edit by chenzhixin
+|----------------------------------------------------
+*/
 define("CODE_SUCCESS", 0);//返回json时成功码

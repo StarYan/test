@@ -5,6 +5,7 @@
  *
  */
 class MY_Controller extends CI_Controller {
+    public $userid = "";
 
     public function __construct() {
         parent::__construct ();
@@ -12,6 +13,19 @@ class MY_Controller extends CI_Controller {
         // Load Database
         $this->load->database();
 
+        $this->load->library('session');
+        $this->userid = $this->session->userid;
+    }
+
+    /**
+     * ´Ósession²éÊÇ·ñµÇÂ¼
+     * @return bool
+     */
+    public function checklogin(){
+        if($this->userid){
+            return true;
+        }
+        return false;
     }
 
 
@@ -53,7 +67,7 @@ class MY_Controller extends CI_Controller {
      * @param array $arrSkipIndices
      * @return array
      */
-    function wl_objects_into_array($arrObjData, $arrSkipIndices = array())
+    function objects_into_array($arrObjData, $arrSkipIndices = array())
     {
         $arrData = array();
 
@@ -65,7 +79,7 @@ class MY_Controller extends CI_Controller {
         if (is_array($arrObjData)) {
             foreach ($arrObjData as $index => $value) {
                 if (is_object($value) || is_array($value)) {
-                    $value = wl_objects_into_array($value, $arrSkipIndices); // recursive call
+                    $value = objects_into_array($value, $arrSkipIndices); // recursive call
                 }
                 if (in_array($index, $arrSkipIndices)) {
                     continue;
