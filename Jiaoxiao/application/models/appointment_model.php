@@ -13,7 +13,7 @@
         }
 
         public function update($data){
-            $this->db->where('name',$data['name']);
+            $this->db->where('userid',$data['userid']);
             $this->db->update($this->table_name,$data);
         }
 
