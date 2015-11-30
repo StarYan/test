@@ -45,10 +45,14 @@
                 $data['userid'] = $userid;
                 $data['time'] = $time;
                 $data['cartype'] = $cartype;
-                $this->appointment_model->get_by_placeid($data);
+                if($this->appointment_model->get($data)){
+                    $this->appointment_model->update($data);
+                }else{
+                    $this->appointment_model->add($data);
+                }
                 return $this->send_json(true,"成功");
             }
-            return $this->send_json(false,"查找错误");
+            return $this->send_json(false,"预约失败");
         }
 
         public function login(){
