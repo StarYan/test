@@ -45,7 +45,8 @@
                 $data['userid'] = $userid;
                 $data['time'] = $time;
                 $data['cartype'] = $cartype;
-                if($this->appointment_model->get($data)){
+                $where['userid'] = $userid;
+                if($this->appointment_model->get($where)){
                     $this->appointment_model->update($data);
                 }else{
                     $this->appointment_model->add($data);
