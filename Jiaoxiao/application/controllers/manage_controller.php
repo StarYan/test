@@ -26,43 +26,43 @@
             $username=$_POST['username'];
             $password=$_POST['password'];
             $dataAdmin=$this->admin->getAdminInfoByUsername($username);
-            $list['dataAdmin']=$dataAdmin;
-            $pagesize=10;
-            $count=$this->user->getUserCountByStatus(0);
-            $config['base_url']=site_url('manage_controller/UnChecked/'.$dataAdmin->id);
-            $config['total_rows']=$count;
-            $config['per_page']=$pagesize;
-            $config['next_link']='>>';
-            $config['prev_link']='<<';
-            $config['first_link']='��ҳ';
-            $config['last_link']='βҳ';
-            $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
-            $config['full_tag_close']="</ul>";
-            $config['prev_tag_open']='<li>';
-            $config['prev_tag_close']='</li>';
-            $config['next_tag_open']='<li>';
-            $config['next_tag_close']='</li>';
-            $config['first_tag_open']='<li>';
-            $config['first_tag_close']='</li>';
-            $config['last_tag_open']='<li>';
-            $config['last_tag_close']='</li>';
-            $config['num_tag_open']='<li>';
-            $config['num_tag_close']='</li>';
-            $config['cur_tag_open']='<li><a>';
-            $config['cur_tag_close']='</a></li>';
-            $offset=intval($this->uri->segment(4));
-            $this->pagination->initialize($config);
-            $dataUser=$this->user->getStudentInfoByStatus(0,$offset,$pagesize);
-
-            $list['dataUser']=$dataUser;
-            $list['dataAdmin']=$dataAdmin;
-            $list['link']=$this->pagination->create_links();
-            $list['href']=site_url('/manage_controller/Check/'.$dataAdmin->id);
-            $list['act']='<i class="icon-check"></i>&nbsp;&nbsp;check';
-
-
+            
             if(!empty($dataAdmin)){
                 if($dataAdmin->password==$password){
+                    $list['dataAdmin']=$dataAdmin;
+                    $pagesize=10;
+                    $count=$this->user->getUserCountByStatus(0);
+                    $config['base_url']=site_url('manage_controller/UnChecked/'.$dataAdmin->id);
+                    $config['total_rows']=$count;
+                    $config['per_page']=$pagesize;
+                    $config['next_link']='>>';
+                    $config['prev_link']='<<';
+                    $config['first_link']='��ҳ';
+                    $config['last_link']='βҳ';
+                    $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
+                    $config['full_tag_close']="</ul>";
+                    $config['prev_tag_open']='<li>';
+                    $config['prev_tag_close']='</li>';
+                    $config['next_tag_open']='<li>';
+                    $config['next_tag_close']='</li>';
+                    $config['first_tag_open']='<li>';
+                    $config['first_tag_close']='</li>';
+                    $config['last_tag_open']='<li>';
+                    $config['last_tag_close']='</li>';
+                    $config['num_tag_open']='<li>';
+                    $config['num_tag_close']='</li>';
+                    $config['cur_tag_open']='<li><a>';
+                    $config['cur_tag_close']='</a></li>';
+                    $offset=intval($this->uri->segment(4));
+                    $this->pagination->initialize($config);
+                    $dataUser=$this->user->getStudentInfoByStatus(0,$offset,$pagesize);
+
+                    $list['dataUser']=$dataUser;
+                    $list['dataAdmin']=$dataAdmin;
+                    $list['link']=$this->pagination->create_links();
+                    $list['href']=site_url('/manage_controller/Check/'.$dataAdmin->id);
+                    $list['act']='<i class="icon-check"></i>&nbsp;&nbsp;check';
+
                     $this->layout->view('/manage/manage_view',$list);
                 }else{
                     $err['errno']=1;
