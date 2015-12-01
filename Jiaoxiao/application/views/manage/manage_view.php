@@ -20,7 +20,7 @@
 					<tbody>
 					<?php foreach($dataUser as $user):?>
 						<tr>
-							<td><?=$user->id?></td><td><?=$user->name?></td><td><a class="btn btn-primary btn-sm" href="<?php echo $href.'/'.$user->id?>"><?=$act?></a></td>
+							<td><?=$user->id?></td><td><?=$user->name?></td><td><a class="btn btn-primary btn-sm" href="<?php echo $href.'/'.$user->id?>"><?php echo $act;?></a></td>
 						</tr>
 					<?php endforeach;?>
 					</tbody>
