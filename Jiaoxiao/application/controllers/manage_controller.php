@@ -36,7 +36,7 @@
             $config['prev_link']='<<';
             $config['first_link']='��ҳ';
             $config['last_link']='βҳ';
-            $config['full_tag_open']="<ul class='pagination'>";
+            $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
             $config['full_tag_close']="</ul>";
             $config['prev_tag_open']='<li>';
             $config['prev_tag_close']='</li>';
@@ -57,7 +57,7 @@
             $list['dataUser']=$dataUser;
             $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
-            $list['href']=site_url('#');
+            $list['href']=site_url('/manage_controller/Check/'.$dataAdmin->id);
             $list['act']='<i class="icon-check"></i>&nbsp;&nbsp;check';
 
 
@@ -90,7 +90,7 @@
             $config['prev_link']='<<';
             $config['first_link']='��ҳ';
             $config['last_link']='βҳ';
-            $config['full_tag_open']="<ul class='pagination'>";
+            $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
             $config['full_tag_close']="</ul>";
             $config['prev_tag_open']='<li>';
             $config['prev_tag_close']='</li>';
@@ -134,7 +134,7 @@
             $config['prev_link']='<<';
             $config['first_link']='��ҳ';
             $config['last_link']='βҳ';
-            $config['full_tag_open']="<ul class='pagination'>";
+            $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
             $config['full_tag_close']="</ul>";
             $config['prev_tag_open']='<li>';
             $config['prev_tag_close']='</li>';
@@ -177,7 +177,7 @@
             $config['prev_link']='<<';
             $config['first_link']='��ҳ';
             $config['last_link']='βҳ';
-            $config['full_tag_open']="<ul class='pagination'>";
+            $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
             $config['full_tag_close']="</ul>";
             $config['prev_tag_open']='<li>';
             $config['prev_tag_close']='</li>';
