@@ -46,6 +46,13 @@
                 <!-- BEGIN Navlist -->
                 <ul class="nav nav-list">
                     <li >
+                        <a href="<?php echo site_url('manage_appointment/index/'.$dataAdmin->id)?>">
+                            <i class="icon-star"></i>
+                            <span>预约管理</span>
+                        </a>
+                    </li>
+
+                    <li >
                         <a href="<?php echo site_url('manage_controller/UnChecked/'.$dataAdmin->id)?>">
                             <i class="icon-check"></i>
                             <span>未审核</span>
