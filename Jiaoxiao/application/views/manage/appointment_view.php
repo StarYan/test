@@ -127,16 +127,17 @@
 
 <script type="text/javascript">
     var addbut = document.getElementById("addbut");
+    var place = document.getElementById("addplace");
     addbut.onclick = function(){
 //1.获取文本框的数据
-//通过JQuery的方式获取
-            var place = $("#addplace");
-            var coach = $("#addcoach");
-            var time = $("#addtime");
-//获取节点的值
-            var placeval = place.val();
-            var coachval = coach.val();
-            var timeval = time.val();
+        //通过JQuery的方式获取
+        var place = $("#addplace");
+        var coach = $("#addcoach");
+        var time = $("#addtime");
+        //获取节点的值
+        var placeval = place.val();
+        var coachval = coach.val();
+        var timeval = time.val();
 //2.将文本框的数据发送到服务器端的servlet
             $.ajax({
                 type:"POST",
@@ -160,4 +161,24 @@
             });
         alert(document.getElementById("addplace").value);
     }
+
+    place.change = function(){
+        $.ajax({
+            type:"POST",
+            url:'<?php echo site_url('manage_appointment/getplace')?>',
+            data:{
+            },
+            dataType:"json",
+            success:function(data){
+                //var html = "";
+                $("#addplace").empty();
+                for(var i = 0;i<data.data.length;i++){
+                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].name + "</option>";
+                    $("#addplace").append(str);
+                    //html += "ID:"+data.data[i].id +"name:"+data.data[i].name;
+                }
+            }
+        });
+    }
+
 </script>

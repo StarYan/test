@@ -61,17 +61,23 @@
             $data['placeid'] = $this->input->post('placeid');
             $data['coachid'] = $this->input->post('coachid');
             $data['timeid'] = $this->input->post('timeid');
-            $result = $this->coachandplace_model->add($data);
+            if($this->coachandplace_model->count($data)){
+                $result = $this->coachandplace_model->add($data);
+                if($result){
+                    return $this->send_json(true,'成功');
+                }else{
+                    return $this->send_json(false,'失败');
+                }
+            }
+            return $this->send_json(false,'已存在');
+        }
+
+        public function getplace(){
+            $result = $this->place_model->getall();
             if($result){
-                return $this->send_json(true,'成功',$data);
+                return $this->send_json(true,'成功',$result);
             }else{
                 return $this->send_json(false,'失败');
             }
         }
-
-        public function savecouah(){
-            $name = $this->input->post();
-
-        }
-
     }
