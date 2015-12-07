@@ -103,6 +103,10 @@
         margin-left: 0;
         margin-top: 15px;
     }
+
+    .md-trigger{
+        background: #0090ff;
+    }
 }
 
 @media (max-width: 979px) {

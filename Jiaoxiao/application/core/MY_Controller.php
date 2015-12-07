@@ -13,6 +13,8 @@ class MY_Controller extends CI_Controller {
         // Load Database
         $this->load->database();
 
+        $this->load->library('layout');
+        $this->load->helper('url');
         $this->load->library('session');
         $this->userid = $this->session->userid;
     }
