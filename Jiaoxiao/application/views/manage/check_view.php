@@ -24,7 +24,11 @@
                     </div>
                     <div class="col-md-9 user-profile-info">
                         <p><span>用户名:</span> <?=$dataUser->name?></p>
-                        <p><span>性别:</span> <?=$dataUser->sex?></p>
+                        <?php if($dataUser->sex=1){ ?>
+                            <p><span>性别:</span> 男</p>
+                        <?php }elseif($dataUser->sex=0){ ?>
+                            <p><span>性别:</span> 女</p>
+                        <?php } ?>
                         <p><span>身份证号码:</span> <?=$dataUser->idcard?></p>
                         <p><span>出生日期:</span> <?=$dataUser->birthday?></p>
                         <p><span>电话号码:</span> <?=$dataUser->phone?></p>

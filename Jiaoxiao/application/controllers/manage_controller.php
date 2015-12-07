@@ -1,9 +1,7 @@
-<?php
-    class Manage_controller extends CI_Controller{
+ï»¿<?php
+    class Manage_controller extends MY_Controller{
         public function __construct(){
             parent::__construct();
-            $this->load->library('layout');
-            $this->load->helper('url');
             $this->load->library('pagination');
             $this->load->model('user_model','user');
             $this->load->model('admin_model','admin');
@@ -11,22 +9,22 @@
         }
 
         /**
-         * ½øÈëºóÌ¨µÇÂ¼½çÃæ
+         * è¿›å…¥åŽå°ç™»å½•ç•Œé¢
          */
         public function Login(){
             $this->load->view('/manage/login_view');
         }
 
         /**
-         * ¶ÔºóÌ¨µÇÂ½ÈËÔ±µÄÈ¨ÏÞÑéÖ¤,ÑéÖ¤Í¨¹ýÔòÌø×ªÈ¥ºóÌ¨¹ÜÀí½çÃæ,ÑéÖ¤²»Í¨¹ýÔò·µ»Ø´íÎóÌáÊ¾
-         * @param string $username ºóÌ¨µÇÂ½ÈËÔ±µÄÓÃ»§Ãû
-         * @param string $password ºóÌ¨µÇÂ½ÈËÔ±µÄÓÃ»§ÃÜÂë
+         * å¯¹åŽå°ç™»é™†äººå‘˜çš„æƒé™éªŒè¯,éªŒè¯é€šè¿‡åˆ™è·³è½¬åŽ»åŽå°ç®¡ç†ç•Œé¢,éªŒè¯ä¸é€šè¿‡åˆ™è¿”å›žé”™è¯¯æç¤º
+         * @param string $username åŽå°ç™»é™†äººå‘˜çš„ç”¨æˆ·å
+         * @param string $password åŽå°ç™»é™†äººå‘˜çš„ç”¨æˆ·å¯†ç 
          */
         public function Access(){
             $username=$_POST['username'];
             $password=$_POST['password'];
             $dataAdmin=$this->admin->getAdminInfoByUsername($username);
-            
+
             if(!empty($dataAdmin)){
                 if($dataAdmin->password==$password){
                     $list['dataAdmin']=$dataAdmin;
@@ -35,10 +33,10 @@
                     $config['base_url']=site_url('manage_controller/UnChecked/'.$dataAdmin->id);
                     $config['total_rows']=$count;
                     $config['per_page']=$pagesize;
-                    $config['next_link']='>>';
-                    $config['prev_link']='<<';
-                    $config['first_link']='Ê×Ò³';
-                    $config['last_link']='Î²Ò³';
+                    $config['next_link']='ä¸‹ä¸€é¡µ';
+                    $config['prev_link']='ä¸Šä¸€é¡µ';
+                    $config['first_link']='é¦–é¡µ';
+                    $config['last_link']='å°¾é¡µ';
                     $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
                     $config['full_tag_close']="</ul>";
                     $config['prev_tag_open']='<li>';
@@ -61,7 +59,8 @@
                     $list['dataAdmin']=$dataAdmin;
                     $list['link']=$this->pagination->create_links();
                     $list['href']=site_url('/manage_controller/Check/'.$dataAdmin->id);
-                    $list['act']='<i class="icon-check"></i>&nbsp;&nbsp;check';
+                    $list['act']='<i class="icon-check"></i>&nbsp;&nbsp;å®¡æ ¸';
+                    $list['class1']='active';
 
                     $this->layout->view('/manage/manage_view',$list);
                 }else{
@@ -77,8 +76,8 @@
         }
 
         /**
-         *ÔÚºóÌ¨½çÃæÏÔÊ¾Î´ÉóºËµÄÓÃ»§
-         * @param string $id ¹ÜÀíÔ±µÄid
+         *åœ¨åŽå°ç•Œé¢æ˜¾ç¤ºæœªå®¡æ ¸çš„ç”¨æˆ·
+         * @param string $id ç®¡ç†å‘˜çš„id
          */
         public function UnChecked($id){
             $pagesize=10;
@@ -86,10 +85,10 @@
             $config['base_url']=site_url('manage_controller/UnChecked/'.$id);
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
-            $config['next_link']='>>';
-            $config['prev_link']='<<';
-            $config['first_link']='Ê×Ò³';
-            $config['last_link']='Î²Ò³';
+            $config['next_link']='ä¸‹ä¸€é¡µ';
+            $config['prev_link']='ä¸Šä¸€é¡µ';
+            $config['first_link']='é¦–é¡µ';
+            $config['last_link']='å°¾é¡µ';
             $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
             $config['full_tag_close']="</ul>";
             $config['prev_tag_open']='<li>';
@@ -113,7 +112,8 @@
             $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
             $list['href']=site_url('/manage_controller/Check/'.$id);
-            $list['act']='<i class="icon-check"></i>&nbsp;&nbsp;check';
+            $list['act']='<i class="icon-check"></i>&nbsp;&nbsp;å®¡æ ¸';
+            $list['class1']='active';
 
             $this->layout->view('/manage/manage_view',$list);
 
@@ -121,8 +121,8 @@
         }
 
         /**
-         * ÔÚºóÌ¨Ò³ÃæÏÔÊ¾ÉóºËºÏ¸ñµÄÓÃ»§
-         * @param string $id ¹ÜÀíÔ±µÄid
+         * åœ¨åŽå°é¡µé¢æ˜¾ç¤ºå®¡æ ¸åˆæ ¼çš„ç”¨æˆ·
+         * @param string $id ç®¡ç†å‘˜çš„id
          */
         public function Pass($id){
             $pagesize=10;
@@ -130,10 +130,10 @@
             $config['base_url']=site_url('manage_controller/UnChecked/'.$id);
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
-            $config['next_link']='>>';
-            $config['prev_link']='<<';
-            $config['first_link']='Ê×Ò³';
-            $config['last_link']='Î²Ò³';
+            $config['next_link']='ä¸‹ä¸€é¡µ';
+            $config['prev_link']='ä¸Šä¸€é¡µ';
+            $config['first_link']='é¦–é¡µ';
+            $config['last_link']='å°¾é¡µ';
             $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
             $config['full_tag_close']="</ul>";
             $config['prev_tag_open']='<li>';
@@ -157,15 +157,16 @@
             $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
             $list['href']=site_url('/manage_controller/PrintInfo');
-            $list['act']='<i class="icon-print"></i>&nbsp;&nbsp;print';
+            $list['act']='<i class="icon-print"></i>&nbsp;&nbsp;æ‰“å°';
+            $list['class2']='active';
 
             $this->layout->view('/manage/manage_view',$list);
 
         }
 
         /**
-         *ÔÚºóÌ¨ÏÔÊ¾ÉóºË²»ºÏ¸ñµÄÓÃ»§
-         * @param string $id ¹ÜÀíÔ±µÄid
+         *åœ¨åŽå°æ˜¾ç¤ºå®¡æ ¸ä¸åˆæ ¼çš„ç”¨æˆ·
+         * @param string $id ç®¡ç†å‘˜çš„id
          */
         public function UnPassed($id){
             $pagesize=10;
@@ -173,10 +174,10 @@
             $config['base_url']=site_url('manage_controller/UnChecked/'.$id);
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
-            $config['next_link']='>>';
-            $config['prev_link']='<<';
-            $config['first_link']='Ê×Ò³';
-            $config['last_link']='Î²Ò³';
+            $config['next_link']='ä¸‹ä¸€é¡µ';
+            $config['prev_link']='ä¸Šä¸€é¡µ';
+            $config['first_link']='é¦–é¡µ';
+            $config['last_link']='å°¾é¡µ';
             $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
             $config['full_tag_close']="</ul>";
             $config['prev_tag_open']='<li>';
@@ -200,15 +201,16 @@
             $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
             $list['href']=site_url('/manage_controller/ViewWrongMsg/'.$id);
-            $list['act']='<i class="icon-eye-open"></i>&nbsp;&nbsp;view';
+            $list['act']='<i class="icon-eye-open"></i>&nbsp;&nbsp;æŸ¥çœ‹è¯¦æƒ…';
+            $list['class3']='active';
 
             $this->layout->view('/manage/manage_view',$list);
         }
 
         /**
-         * ¶ÔÒÑ¾­±¨ÃûµÄÓÃ»§ÐÅÏ¢½øÐÐÉóºË
-         * @param string $admin_id ¹ÜÀíÔ±µÄid
-         * @param string $user_id ÓÃ»§µÄid
+         * å¯¹å·²ç»æŠ¥åçš„ç”¨æˆ·ä¿¡æ¯è¿›è¡Œå®¡æ ¸
+         * @param string $admin_id ç®¡ç†å‘˜çš„id
+         * @param string $user_id ç”¨æˆ·çš„id
          */
         public function Check($admin_id,$user_id){
             $dataAdmin=$this->admin->getAdminInfoById($admin_id);
@@ -219,14 +221,14 @@
         }
 
         /**
-         * ´¦ÀíÉóºËÒ³ÃæÌá½»µÄÉóºË½á¹û
-         * @param string $admin_id ¹ÜÀíÔ±µÄid
-         * @param string $user_id ÓÃ»§µÄid
+         * å¤„ç†å®¡æ ¸é¡µé¢æäº¤çš„å®¡æ ¸ç»“æžœ
+         * @param string $admin_id ç®¡ç†å‘˜çš„id
+         * @param string $user_id ç”¨æˆ·çš„id
          */
         public function Checked($admin_id,$user_id){
             $remark=$_POST['remark'];
             date_default_timezone_set('PRC');
-            $create_date=date('y-m-d h:i:s',time());
+            $create_date=date('Y-m-d H:i:s');
             if(empty($remark)){
                 $remark=NULL;
                 $this->checked->insertInfo($admin_id,$user_id,$remark,$create_date);
@@ -240,8 +242,8 @@
         }
 
         /**
-         * ´òÓ¡ÉóºËºÏ¸ñµÄÓÃ»§ÐÅÏ¢
-         * @param string $id ÓÃ»§µÄid
+         * æ‰“å°å®¡æ ¸åˆæ ¼çš„ç”¨æˆ·ä¿¡æ¯
+         * @param string $id ç”¨æˆ·çš„id
          */
         public function PrintInfo($id){
             $list=$this->user->getUserInfoById($id);
@@ -250,9 +252,9 @@
         }
 
         /**
-         * ÏÔÊ¾ÉóºË²»ºÏ¸ñµÄÓÃ»§µÄ´íÎóÐÅÏ¢
-         * @param string $admin_id ¹ÜÀíÔ±µÄid
-         * @param string $user_id ÓÃ»§µÄid
+         * æ˜¾ç¤ºå®¡æ ¸ä¸åˆæ ¼çš„ç”¨æˆ·çš„é”™è¯¯ä¿¡æ¯
+         * @param string $admin_id ç®¡ç†å‘˜çš„id
+         * @param string $user_id ç”¨æˆ·çš„id
          */
         public function ViewWrongMsg($admin_id,$user_id){
             $dataChecked=$this->checked->getInfoByUserId($user_id);
