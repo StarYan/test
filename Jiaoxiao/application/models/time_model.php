@@ -3,27 +3,12 @@
  * Created by PhpStorm.
  * Edit by ChenZhixin
  */
-    class Coachandplace_model extends CI_Model{
+    class Time_model extends CI_Model{
 
-        private $table_name = 'coachandplace';
+        private $table_name = 'time';
 
         public function __construct(){
             parent::__construct();
-        }
-
-        /**
-         * 根据地点id查找信息
-         * @param $data
-         * @return bool
-         */
-        public function get_by_placeid($data){
-            $this->db->where($data);
-            $this->db->from($this->table_name);
-            $result = $this->db->get();
-            if ($result->num_rows() > 0) {
-                return $result->result_array();
-            }
-            return false;
         }
 
         /**
@@ -57,11 +42,7 @@
          * @return Int
          */
         public function count($where) {
-            if($where){
-                $this->db->where($where);
-            }else{
-                $this->db->select();
-            }
+            $this->db->where($where);
             $this->db->from($this->table_name);
             return $this->db->count_all_results();
         }
@@ -85,27 +66,12 @@
          * @return array/bool 返回数组
          */
         public function getall(){
-            $this->db->select("*");
+            $this->db->select();
             $result = $this->db->get($this->table_name);
-            if ($result->num_rows() > 0) {
-                return $result->result_array();
-            }
-            return false;
-        }
-
-        public function search($offset,$limit){
-            //$sql = 'SELECT place.name,coach.name FROM ((coachandplace JOIN place ON coachandplace.placeid=place.id) JOIN coach ON coachandplace.coachid=coach.id) limit ?,?;';
-            $sql = 'SELECT cp.id,p.name as pname,c.name as cname,t.time FROM (((coachandplace as cp JOIN place as p ON cp.placeid=p.id) JOIN coach  as c ON cp.coachid=c.id)JOIN time  as t ON cp.timeid=t.id) limit ?,?;';
-            $result = $this->db->query($sql,array($offset,$limit));
             if ($result->num_rows() > 0) {
                 return $result->result_object();
             }
             return false;
-        }
-
-        public function add($data){
-            $result = $this->db->insert($this->table_name,$data);
-            return $result;
         }
 
     }
