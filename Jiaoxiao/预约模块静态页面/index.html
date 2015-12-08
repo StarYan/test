@@ -67,21 +67,22 @@
                 </small>
             </a>
 
-            <button type="button" class="navbar-toggle navbar-btn btn " data-toggle="collapse" data-target="#select">
-                <i class="icon-reorder"></i>
-                点击预约
-            </button>
+
 
             <!-- 学员登录按钮 -->
             <ul class="nav flaty-nav pull-right">
                 <li>
                     <a href="#" class="md-trigger" data-modal="login" >
-                        <i class="icon-user"></i>
                         登录
                     </a>
                 </li>
             </ul>
             <!-- 学员登录按钮 -->
+
+            <button type="button" class="navbar-toggle  navbar-btn btn " data-toggle="collapse" data-target="#select">
+                <i class="icon-reorder"></i>
+                点击预约
+            </button>
         </div>
         <!-- END Navbar -->
 
@@ -146,16 +147,16 @@
                                 <div class="col-sm-12 col-lg-8 controls">
                                     <select class="form-control" name="coach" id="coach" data-rule-required="true">
                                         <option value=""> 选择教练 </option>
-                                        <option value="1">Option-1</option>
-                                        <option value="2">Option-2</option>
-                                        <option value="3">Option-3</option>
-                                        <option value="4">Option-4</option>
-                                        <option value="5">Option-5</option>
-                                        <option value="6">Option-6</option>
-                                        <option value="7">Option-7</option>
-                                        <option value="8">Option-8</option>
-                                        <option value="9">Option-9</option>
-                                        <option value="10">Option-10</option>
+                                        <!--<option value="1">Option-1</option>-->
+                                        <!--<option value="2">Option-2</option>-->
+                                        <!--<option value="3">Option-3</option>-->
+                                        <!--<option value="4">Option-4</option>-->
+                                        <!--<option value="5">Option-5</option>-->
+                                        <!--<option value="6">Option-6</option>-->
+                                        <!--<option value="7">Option-7</option>-->
+                                        <!--<option value="8">Option-8</option>-->
+                                        <!--<option value="9">Option-9</option>-->
+                                        <!--<option value="10">Option-10</option>-->
                                     </select>
                                 </div>
                             </div>
@@ -201,6 +202,21 @@
     <!-- 预约内容介绍 -->
         <div class="container" id="main-container" >
             <div id="main-content" style="margin-top: 100px;">
+                <!-- 教练推荐 -->
+                <div class="row" style="margin-top: 100px; z-index: -1;">
+                    <div class="col-md-12">
+                        <div class="box box-blue">
+                            <div class="box-title">
+                                <h3><i class="icon-th-list"></i>教练推荐</h3>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 教练推荐 -->
+                <br/><br/><br/>
+
                 <!-- 场地介绍 -->
                 <div class="row" style="margin-top: 100px; z-index: -1;">
                     <div class="col-md-12">
@@ -244,6 +260,7 @@
                 </div>
                 <!-- 场地介绍 -->
                 <br /><br /><br />
+
                 <!-- 教练介绍 -->
                 <div class="row" style="z-index: -1;">
                     <div class="col-md-12">
@@ -286,6 +303,7 @@
                 </div>
                 <!-- 教练介绍 -->
                 <br /><br /><br />
+
                 <!-- 车型介绍 -->
                 <div class="row" style="z-index: -1;">
                     <div class="col-md-12">
@@ -327,6 +345,7 @@
                     </div>
                 </div>
                 <!-- 车型介绍 -->
+
                 <footer>
                     <p>2015 © 蓝光驾校.</p>
                 </footer>
@@ -359,6 +378,88 @@
         <script src="js/flaty.js"></script>
         <script src="js/classie.js"></script>
         <script src="js/modalEffects.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#place").change(function(){
+                    var place_id = $("#place").val();
+                    var time_id = $("#time").val();
+                    var coach_id = $("#coach").val();
+                    $.ajax({
+                        url: "http://localhost:8080/TEST/Jiaoxiao/index.php/appointment/test/",
+                        type: 'post',
+                        data: {
+                            "place_id": place_id,
+                            "time_id": time_id,
+                            "coach_id": coach_id
+                        },
+                        dataType: 'jsonp',
+
+                        success: function (d) {
+                            var data = eval(d);
+                            alert(data['place'] + data['time'] + data['coach']);
+                        }
+                    });
+                });
+
+                $("#time").change(function() {
+                    var place_id = $("#place").val();
+                    var time_id = $("#time").val();
+                    var coach_id = $("#coach").val();
+                    $.ajax({
+                        url: "http://localhost:8080/TEST/Jiaoxiao/index.php/appointment/test/",
+                        type: 'post',
+                        data: {
+                            "place_id": place_id,
+                            "time_id": time_id,
+                            "coach_id": coach_id
+                        },
+                        dataType: 'jsonp',
+
+                        success: function (d) {
+                            var data = eval(d);
+                            alert(data['place'] + data['time'] + data['coach']);
+                        }
+                    });
+                });
+
+                $("#coach").change(function() {
+                    var place_id = $("#place").val();
+                    var time_id = $("#time").val();
+                    var coach_id = $("#coach").val();
+                    $.ajax({
+                        url: "http://localhost:8080/TEST/Jiaoxiao/index.php/appointment/test/",
+                        type: 'post',
+                        data: {
+                            "place_id": place_id,
+                            "time_id": time_id,
+                            "coach_id": coach_id
+                        },
+                        dataType: 'jsonp',
+
+                        success: function (d) {
+                            var data = eval(d);
+                            if(data['place']!=null){
+                                $("#place").empty();
+                                $("#place").append("<option value='place_id'>place_name</option>");
+                            }
+                            if(data['time']!=null){
+                                $("#time").empty();
+                                $("#time").append("<option value='place_id'>place_name</option>");
+                            }
+                            if(data['time']!=null){
+                                $("#coach").empty();
+                                $("#coach").append("<option value='place_id'>place_name</option>");
+                            }
+                            alert(data['place'] + data['time'] + data['coach']);
+                        }
+                    });
+                });
+
+//                $('#coach').trigger("change");
+
+            });
+        </script>
 
     </body>
 </html>
