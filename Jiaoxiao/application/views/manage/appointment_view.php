@@ -18,13 +18,13 @@
                         <label class="col-sm-2 col-lg-2 control-label">场地：</label>
                         <div class="col-sm-3 col-lg-3 controls">
                             <select class="form-control" tabindex="1" id="addplace">
-                                <option value="1">北师大</option>
+                                <!--<option value="1">北师大</option>-->
                             </select>
                         </div>
                         <label class="col-sm-2 col-lg-2 control-label">教练：</label>
                         <div class="col-sm-3 col-lg-3 controls">
                             <select class="form-control" tabindex="1" id="addcoach">
-                                <option value="1">王小明</option>
+
                             </select>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-lg-2 control-label">场地：</label>
                         <div class="col-sm-3 col-lg-3 controls">
-                            <select class="form-control" tabindex="1">
+                            <select class="form-control">
                                 <option value="">选项</option>
                             </select>
                         </div>
@@ -124,61 +124,75 @@
         </div>
     </div>
 </div>
-
+<script src="<?php echo base_url()?>assets/jquery/jquery-2.0.3.min.js"></script>
 <script type="text/javascript">
-    var addbut = document.getElementById("addbut");
-    var place = document.getElementById("addplace");
-    addbut.onclick = function(){
+    window.onload=function() {
+        var addbut = document.getElementById("addbut");
+        var place = document.getElementById("addplace");
+        addbut.onclick = function () {
 //1.获取文本框的数据
-        //通过JQuery的方式获取
-        var place = $("#addplace");
-        var coach = $("#addcoach");
-        var time = $("#addtime");
-        //获取节点的值
-        var placeval = place.val();
-        var coachval = coach.val();
-        var timeval = time.val();
-//2.将文本框的数据发送到服务器端的servlet
+            //通过JQuery的方式获取
+            var place = $("#addplace");
+            var coach = $("#addcoach");
+            var time = $("#addtime");
+            //获取节点的值
+            var placeval = place.val();
+            var coachval = coach.val();
+            var timeval = time.val();
+//2.将文本框的数据发送到服务器端
             $.ajax({
-                type:"POST",
-                url:'<?php echo site_url('manage_appointment/saveappoint')?>',
-                data:{
-                    placeid:placeval,
-                    coachid:coachval,
-                    timeid:timeval
+                type: "POST",
+                url: '<?php echo site_url('manage_appointment/saveappoint')?>',
+                data: {
+                    placeid: placeval,
+                    coachid: coachval,
+                    timeid: timeval
                 },
-                dataType:"json",
-                success:function(data){
+                dataType: "json",
+                success: function (data) {
                     alert(data.msg);
-/*//首先需要将传过来的DOM对象转化为jquery对象
-                    var jqueryObj = $(data);
-//获取message节点
-                    var messageNods = jqueryObj.children();
-//获取文本内容
-                    var responseText = messageNods.text();
-                    $("#result").html(responseText);*/
+                    /*//首先需要将传过来的DOM对象转化为jquery对象
+                     var jqueryObj = $(data);
+                     //获取message节点
+                     var messageNods = jqueryObj.children();
+                     //获取文本内容
+                     var responseText = messageNods.text();
+                     $("#result").html(responseText);*/
                 }
             });
-        alert(document.getElementById("addplace").value);
-    }
+            //alert(document.getElementById("addplace").value);
+        }
 
-    place.change = function(){
         $.ajax({
-            type:"POST",
-            url:'<?php echo site_url('manage_appointment/getplace')?>',
-            data:{
-            },
-            dataType:"json",
-            success:function(data){
+            type: "POST",
+            url: '<?php echo site_url('manage_appointment/getplace')?>',
+            data: {},
+            dataType: "json",
+            success: function (data) {
                 //var html = "";
                 $("#addplace").empty();
-                for(var i = 0;i<data.data.length;i++){
+                for (var i = 0; i < data.data.length; i++) {
                     var str = " <option value=" + data.data[i].id + ">" + data.data[i].name + "</option>";
                     $("#addplace").append(str);
                     //html += "ID:"+data.data[i].id +"name:"+data.data[i].name;
                 }
             }
         });
-    }
 
+        $.ajax({
+            type: "POST",
+            url: '<?php echo site_url('manage_appointment/getcoach')?>',
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                //var html = "";
+                $("#addcoach").empty();
+                for (var i = 0; i < data.data.length; i++) {
+                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].name + "</option>";
+                    $("#addcoach").append(str);
+                    //html += "ID:"+data.data[i].id +"name:"+data.data[i].name;
+                }
+            }
+        });
+    }
 </script>

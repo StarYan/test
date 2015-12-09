@@ -61,7 +61,7 @@
             $data['placeid'] = $this->input->post('placeid');
             $data['coachid'] = $this->input->post('coachid');
             $data['timeid'] = $this->input->post('timeid');
-            if($this->coachandplace_model->count($data)){
+            if(!$this->coachandplace_model->count($data)){
                 $result = $this->coachandplace_model->add($data);
                 if($result){
                     return $this->send_json(true,'成功');
@@ -80,4 +80,14 @@
                 return $this->send_json(false,'失败');
             }
         }
+
+        public function getcoach(){
+            $result = $this->coach_model->getall();
+            if($result){
+                return $this->send_json(true,'成功',$result);
+            }else{
+                return $this->send_json(false,'失败');
+            }
+        }
+
     }
