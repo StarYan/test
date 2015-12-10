@@ -59,15 +59,50 @@
         }
 
         public function find(){
-            $placeid = $this->input->post('placeid');
-            $coachid = $this->input->post('coachid');
-            $timeid = $this->input->post('timeid');
-            $place = $this->input->post('placeid');
-            $id = $this->input->post('id');
+            $placeid = $this->input->post('searchplace');
+            $coachid = $this->input->post('searchcoach');
+            $timeid = $this->input->post('searchtime');
+            $data = array('placeid' => $placeid,'coachid'=> $coachid,'timeid'=>$timeid);
+            $id = $this->input->post('adminid');
             $dataAdmin=$this->admin->getAdminInfoById($id);//获取登录管理员ID
             $list['dataAdmin']=$dataAdmin;
-
             /*----------------------------------------------------*/
+            $pagesize=3;
+            $count=$this->coachandplace_model->count($data);
+            $config['base_url']=site_url('manage_appointment/index/'.$dataAdmin->id);
+            $config['total_rows']=$count;
+            $config['per_page']=$pagesize;
+            $config['next_link']='>>';
+            $config['prev_link']='<<';
+            $config['first_link']='首页';
+            $config['last_link']='尾页';
+            $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
+            $config['full_tag_close']="</ul>";
+            $config['prev_tag_open']='<li>';
+            $config['prev_tag_close']='</li>';
+            $config['next_tag_open']='<li>';
+            $config['next_tag_close']='</li>';
+            $config['first_tag_open']='<li>';
+            $config['first_tag_close']='</li>';
+            $config['last_tag_open']='<li>';
+            $config['last_tag_close']='</li>';
+            $config['num_tag_open']='<li>';
+            $config['num_tag_close']='</li>';
+            $config['cur_tag_open']='<li><a>';
+            $config['cur_tag_close']='</a></li>';
+            $offset=intval($this->uri->segment(4));
+            $this->pagination->initialize($config);
+            //$result = $this->coachandplace_model->get("",$offset,$pagesize);
+            $result = $this->coachandplace_model->find($offset,$pagesize,$placeid,$coachid,$timeid);
+
+            $list['result']=$result;
+            $list['dataAdmin']=$dataAdmin;
+            $list['link']=$this->pagination->create_links();
+
+
+
+            $this->layout->view('/manage/appointment_view',$list);
+
 
         }
 

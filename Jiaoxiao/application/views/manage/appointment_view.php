@@ -60,17 +60,18 @@
                 <h3>查询</h3>
             </div>
             <div class="box-content">
-                <from class="form-horizontal" action="<?php echo site_url('manage_appointment/find')?>">
+                <form class="form-horizontal" action='<?php echo site_url('manage_appointment/find')?>' method="post">
+                    <input type="hidden" id="id" name='adminid' value='<?php echo $dataAdmin->id;?>'/>
                     <div class="form-group">
                         <label class="col-sm-2 col-lg-2 control-label">场地：</label>
                         <div class="col-sm-3 col-lg-3 controls">
-                            <select class="form-control" id="searchplace">
+                            <select class="form-control" id="searchplace" name="searchplace">
                                 <option value="">选项</option>
                             </select>
                         </div>
                         <label class="col-sm-2 col-lg-2 control-label">教练：</label>
                         <div class="col-sm-3 col-lg-3 controls">
-                            <select class="form-control" tabindex="1" id="searchcoach">
+                            <select class="form-control" tabindex="1" id="searchcoach" name="searchcoach">
                                 <option value="">选项</option>
                             </select>
                         </div>
@@ -79,7 +80,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-lg-2 control-label">时间：</label>
                         <div class="col-sm-3 col-lg-3 controls">
-                            <select class="form-control" tabindex="1" id="searchid">
+                            <select class="form-control" tabindex="1" id="searchtime" name="searchtime">
                                 <option value="1">10:00-12:00</option>
                                 <option value="2">13:00-15:00</option>
                                 <option value="3">16:00-18:00</option>
@@ -93,7 +94,7 @@
                             <button class="btn" type="button">取消</button>
                         </div>
                     </div>
-                </from>
+                </form>
                 <div class="table-responsive">
                     <table class="table table-striped table-hover fill-head">
                         <thead>
