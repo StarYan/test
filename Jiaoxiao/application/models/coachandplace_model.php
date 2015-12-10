@@ -108,4 +108,10 @@
             return $result;
         }
 
+        public function del($where){
+            $this->db->where($where);
+            $this->db->from($this->table_name);
+            $result = $this->db->delete();
+            return $result;
+        }
     }

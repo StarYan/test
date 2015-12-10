@@ -60,17 +60,17 @@
                 <h3>查询</h3>
             </div>
             <div class="box-content">
-                <from class="form-horizontal" action="#">
+                <from class="form-horizontal" action="<?php echo site_url('manage_appointment/find')?>">
                     <div class="form-group">
                         <label class="col-sm-2 col-lg-2 control-label">场地：</label>
                         <div class="col-sm-3 col-lg-3 controls">
-                            <select class="form-control">
+                            <select class="form-control" id="searchplace">
                                 <option value="">选项</option>
                             </select>
                         </div>
                         <label class="col-sm-2 col-lg-2 control-label">教练：</label>
                         <div class="col-sm-3 col-lg-3 controls">
-                            <select class="form-control" tabindex="1">
+                            <select class="form-control" tabindex="1" id="searchcoach">
                                 <option value="">选项</option>
                             </select>
                         </div>
@@ -79,8 +79,11 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-lg-2 control-label">时间：</label>
                         <div class="col-sm-3 col-lg-3 controls">
-                            <select class="form-control" tabindex="1">
-                                <option value="">选项</option>
+                            <select class="form-control" tabindex="1" id="searchid">
+                                <option value="1">10:00-12:00</option>
+                                <option value="2">13:00-15:00</option>
+                                <option value="3">16:00-18:00</option>
+                                <option value="4">20:00-22:00</option>
                             </select>
                         </div>
                     </div>
@@ -106,21 +109,59 @@
                         <?php if($result):?>
                         <?php foreach($result as $user):?>
                             <tr>
-                                <td><?php echo $user->id;?></td>
-                                <td><?php echo $user->pname;?></td>
-                                <td><?php echo $user->cname;?></td>
-                                <td><?php echo $user->time;?></td>
+                                <td ><?php echo $user->id;?></td>
+                                <td ><?php echo $user->pname;?></td>
+                                <td ><?php echo $user->cname;?></td>
+                                <td ><?php echo $user->time;?></td>
                                 <td>
-                                    <a class="btn btn-primary btn-sm" href="#">修改</a>
-                                    <a class="btn btn-danger btn-sm" href="#">删除</a>
+                                    <a class="btn btn-primary btn-sm change" data-time="<?php echo $user->time;?>" data-cname="<?php echo $user->cname;?>" data-pname="<?php echo $user->pname;?>" data-id="<?php echo $user->id;?>" data-toggle="modal" role="button" href="#modal-1">修改</a>
+                                    <a class="btn btn-danger btn-sm del" data-id="<?php echo $user->id;?>">删除</a>
                                 </td>
                             </tr>
                             <?php endforeach;?>
                         <?php endif;?>
                         </tbody>
                     </table>
+                    <div class="text-center">
+                        <?php echo $link;?>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" aria-hidden="true">×</button>
+                <h3 id="mymodalLabel">修改</h3>
+            </div>
+            <form action="<?php echo site_url('manage_appointment/modify')?>" method="post">
+                <div class="modal-body">
+                    <div class="form-group">
+                            <!--<input class="form-control" type="text" placeholder="">-->
+                        <ul class="list-group">
+                            <input type="hidden" name="id" class="modal-id">
+                            <li class="list-group-item">原时间：<span class="modal-time">00:00</span></li>
+                            <li class="list-group-item">原场地：<span class="modal-place" >none</span></li>
+                            <li class="list-group-item">原课程：<span class="modal-coach" >course name</span></li>
+                            <li class="list-group-item">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">修改为：</span>
+                                    <input type="text" class="form-control" placeholder="时间" aria-describedby="basic-addon1" name="time"/>
+                                    <input type="text" class="form-control" placeholder="场地" aria-describedby="basic-addon1" name="place"/>
+                                    <input type="text" class="form-control" placeholder="教练" aria-describedby="basic-addon1" name="coach"/>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" aria-hidden="true" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" data-dismiss="modal" type="submit">Save Change</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -151,13 +192,6 @@
                 dataType: "json",
                 success: function (data) {
                     alert(data.msg);
-                    /*//首先需要将传过来的DOM对象转化为jquery对象
-                     var jqueryObj = $(data);
-                     //获取message节点
-                     var messageNods = jqueryObj.children();
-                     //获取文本内容
-                     var responseText = messageNods.text();
-                     $("#result").html(responseText);*/
                 }
             });
             //alert(document.getElementById("addplace").value);
@@ -171,9 +205,11 @@
             success: function (data) {
                 //var html = "";
                 $("#addplace").empty();
+                $("#searchplace").empty();
                 for (var i = 0; i < data.data.length; i++) {
                     var str = " <option value=" + data.data[i].id + ">" + data.data[i].name + "</option>";
                     $("#addplace").append(str);
+                    $("#searchplace").append(str);
                     //html += "ID:"+data.data[i].id +"name:"+data.data[i].name;
                 }
             }
@@ -187,12 +223,36 @@
             success: function (data) {
                 //var html = "";
                 $("#addcoach").empty();
+                $("#searchcoach").empty();
                 for (var i = 0; i < data.data.length; i++) {
                     var str = " <option value=" + data.data[i].id + ">" + data.data[i].name + "</option>";
                     $("#addcoach").append(str);
+                    $("#searchcoach").append(str);
                     //html += "ID:"+data.data[i].id +"name:"+data.data[i].name;
                 }
             }
+        });
+
+        $(".change").click(function(){
+            //提取数据注入模态框
+            $(".modal-coach").html($(this).data("cname"));
+            $(".modal-place").html($(this).data("pname"));
+            $(".modal-time").html($(this).data("time"));
+            $(".modal-id").attr("value",$(this).data("id"));
+        });
+
+        $(".del").click(function(){
+            var id = $(this).data("id");
+            $.ajax({
+                type: "POST",
+                url: '<?php echo site_url('manage_appointment/delete')?>',
+                data: {id:id},
+                dataType: "json",
+                success: function (data) {
+                    alert(data.msg);
+                    location.reload();
+                }
+            });
         });
     }
 </script>

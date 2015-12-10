@@ -21,9 +21,9 @@
             $dataAdmin=$this->admin->getAdminInfoById($id);//获取登录管理员ID
             $list['dataAdmin']=$dataAdmin;
             /*----------------------------------------------------*/
-            $pagesize=10;
+            $pagesize=3;
             $count=$this->coachandplace_model->count("");
-
+            $config['base_url']=site_url('manage_appointment/index/'.$dataAdmin->id);
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
             $config['next_link']='>>';
@@ -48,6 +48,7 @@
             $this->pagination->initialize($config);
             //$result = $this->coachandplace_model->get("",$offset,$pagesize);
             $result = $this->coachandplace_model->search($offset,$pagesize);
+
             $list['result']=$result;
             $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
@@ -57,6 +58,22 @@
             $this->layout->view('/manage/appointment_view',$list);
         }
 
+        public function find(){
+            $placeid = $this->input->post('placeid');
+            $coachid = $this->input->post('coachid');
+            $timeid = $this->input->post('timeid');
+            $place = $this->input->post('placeid');
+            $id = $this->input->post('id');
+            $dataAdmin=$this->admin->getAdminInfoById($id);//获取登录管理员ID
+            $list['dataAdmin']=$dataAdmin;
+
+            /*----------------------------------------------------*/
+
+        }
+
+        /**
+         * 添加预约项
+         */
         public function saveappoint(){
             $data['placeid'] = $this->input->post('placeid');
             $data['coachid'] = $this->input->post('coachid');
@@ -72,6 +89,9 @@
             return $this->send_json(false,'已存在');
         }
 
+        /**
+         *ajax接口返回地点
+         */
         public function getplace(){
             $result = $this->place_model->getall();
             if($result){
@@ -81,6 +101,9 @@
             }
         }
 
+        /**
+         * ajax接口返回教练
+         */
         public function getcoach(){
             $result = $this->coach_model->getall();
             if($result){
@@ -90,4 +113,21 @@
             }
         }
 
+        /**
+         * ajax删除
+         */
+        public function delete(){
+            $data['id']=$this->input->post('id',true);
+            $result = $this->coachandplace_model->del($data);
+            if($result){
+                return $this->send_json(true,'成功',$result);
+            }else{
+                return $this->send_json(false,'失败');
+            }
+        }
+
+        public function modify(){
+            $data['id']=$this->input->post('id',true);
+
+        }
     }
