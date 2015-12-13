@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-11-29 09:47:50
+Date: 2015-12-13 12:27:13
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -23,6 +23,7 @@ CREATE TABLE `user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(128) NOT NULL,
   `num` varchar(128) NOT NULL,
+  `nickname` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
   `sex` tinyint(1) DEFAULT '0',
   `birthday` date NOT NULL,
@@ -32,17 +33,18 @@ CREATE TABLE `user` (
   `email` varchar(128) NOT NULL,
   `idcard` varchar(32) NOT NULL,
   `photo` varchar(128) NOT NULL,
-  `original_car_type` varchar(64) DEFAULT NULL COMMENT '用户原准驾车型',
-  `wanted_car_type` varchar(64) NOT NULL COMMENT '用户需要培训的车型',
-  `create_date` datetime NOT NULL COMMENT '注册日期',
-  `create_id` bigint(20) NOT NULL COMMENT '注册人ID',
-  `status` tinyint(1) DEFAULT '0' COMMENT '0代表未审核，1代表审核合格，2代表审核不合格',
-  `deleted` tinyint(1) DEFAULT '0' COMMENT '0代表显示,1代表不显示',
+  `original_car_type` varchar(64) DEFAULT NULL,
+  `wanted_car_type` varchar(64) NOT NULL,
+  `create_date` datetime NOT NULL,
+  `create_id` bigint(20) NOT NULL,
+  `update_id` bigint(20) DEFAULT NULL,
+  `update_date` datetime DEFAULT NULL,
+  `status` tinyint(1) DEFAULT '0',
+  `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`num`),
   KEY `ID` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '文世业', '1201010090', 'wenshiye', '1', '1993-01-17', '13631224950', '936818307', '北京师范大珠海分校', '936818307@qq.com', '440711199301175411', 'wen.jpg', null, 'C1', '2015-11-28 23:54:01', '1', '0', '0');
