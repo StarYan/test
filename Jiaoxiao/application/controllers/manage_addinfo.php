@@ -52,4 +52,67 @@
             redirect(site_url('/manage_addinfo/index/'.$dataAdmin));
         }
 
+        /**
+         * 提交教练信息
+         */
+        public function addcoach(){
+            $dataAdmin=$this->input->post('adminid',true);//获取登录管理员ID
+            $list['dataAdmin']=$dataAdmin;
+            /*----------------------------------------------------*/
+            $list['dataAdmin']=$dataAdmin;
+
+            //上传照片
+            $config['upload_path']='./uploads/';
+            $config['allowed_types']='png|jpg|jpeg';
+            $config['max_size']='40000';
+            $this->load->library('upload',$config);
+            $this->upload->do_upload('coach_img');
+            $img=$this->upload->data();
+
+            $data['name']=$this->input->post('coachname',true);
+            $data['tel']=$this->input->post('phone',true);
+            $data['price']=$this->input->post('money',true);
+            $data['description']=$this->input->post('coach_detail',true);
+
+
+            $data['img']=$img['file_name'];
+            if($data) {
+                $result = $this->coach_model->add($data);
+            }
+
+            //因图片无法用ajax提交暂用这种方法处理提交
+            redirect(site_url('/manage_addinfo/index/'.$dataAdmin));
+        }
+
+        /**
+         * 提交教练信息
+         */
+        public function addcartype(){
+            $dataAdmin=$this->input->post('adminid',true);//获取登录管理员ID
+            $list['dataAdmin']=$dataAdmin;
+            /*----------------------------------------------------*/
+            $list['dataAdmin']=$dataAdmin;
+
+            //上传照片
+            $config['upload_path']='./uploads/';
+            $config['allowed_types']='png|jpg|jpeg';
+            $config['max_size']='40000';
+            $this->load->library('upload',$config);
+            $this->upload->do_upload('car_img');
+            $img=$this->upload->data();
+
+            $data['type']=$this->input->post('type',true);
+            $data['number']=$this->input->post('number',true);
+            $data['coach_detail']=$this->input->post('car_detail',true);
+
+
+            $data['img']=$img['file_name'];
+            if($data) {
+                $result = $this->type_model->add($data);
+            }
+
+            //因图片无法用ajax提交暂用这种方法处理提交
+            redirect(site_url('/manage_addinfo/index/'.$dataAdmin));
+        }
+
     }

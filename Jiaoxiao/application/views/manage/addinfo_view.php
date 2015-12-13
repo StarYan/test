@@ -67,18 +67,14 @@
                 <!--添加教练信息-->
                 <div class="tab-pane" id="tab-1-2">
                     <div class="box-content">
-                        <form action="#" class="form-horizontal"  method="post">
-                            <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label" for="id">教练编号:</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="id" id="id" class="form-control" data-rule-required="true"  />
-                                </div>
-                            </div>
+                        <form action="<?php echo site_url('/manage_addinfo/addcoach')?>" class="form-horizontal"  method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="coachid" id="coachid" class="form-control" data-rule-required="true"  />
+
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="name">教练名字:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="name" id="name" class="form-control" data-rule-required="true"  />
+                                    <input type="text" name="coachname" id="coachname" class="form-control" data-rule-required="true"  />
                                 </div>
                             </div>
 
@@ -124,14 +120,7 @@
                 <!--添加车辆信息-->
                 <div class="tab-pane" id="tab-1-3">
                     <div class="box-content">
-                        <form action="#" class="form-horizontal" method="post">
-                            <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label" for="id">车辆编号:</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="id" id="id" class="form-control" data-rule-required="true"  />
-                                </div>
-                            </div>
-
+                        <form action="<?php echo site_url('/manage_addinfo/addcartype')?>" class="form-horizontal"  method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="type">车辆车型:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
@@ -149,7 +138,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label">车辆简介</label>
                                 <div class="col-sm-9 col-lg-10 controls">
-                                    <textarea class="form-control" rows="3" name="coach_detail" placeholder="填写车辆简介..."></textarea>
+                                    <textarea class="form-control" rows="3" name="car_detail" placeholder="填写车辆简介..."></textarea>
                                 </div>
                             </div>
 

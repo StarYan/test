@@ -3,9 +3,9 @@
  * Created by PhpStorm.
  * Edit by ChenZhixin
  */
-    class Coach_model extends CI_Model{
+    class Cartype_model extends CI_Model{
 
-        private $table_name = 'coach';
+        private $table_name = 'cartype';
 
         public function __construct(){
             parent::__construct();
