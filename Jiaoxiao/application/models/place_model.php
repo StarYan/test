@@ -74,4 +74,9 @@
             return false;
         }
 
+        public function add($data){
+            $result = $this->db->insert($this->table_name,$data);
+            return $result;
+        }
+
     }

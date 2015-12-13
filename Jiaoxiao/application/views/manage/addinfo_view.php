@@ -21,11 +21,12 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="tab-1-1">
                     <div class="box-content">
-                        <form action="#" class="form-horizontal"  method="post">
+                        <form action="<?php echo site_url('/manage_addinfo/addplace')?>" class="form-horizontal"  method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="adminid" id="adminid" value="<?php echo $dataAdmin->id;?>">
                             <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label" for="id">场地编号:</label>
+                                <label class="col-sm-3 col-lg-2 control-label" for="id">场地:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="id" id="id" class="form-control" data-rule-required="true"  />
+                                    <input type="text" name="name" id="name" class="form-control" data-rule-required="true"  />
                                 </div>
                             </div>
 
@@ -46,7 +47,9 @@
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="address_img">场地图片:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="file" name="address_img" id="address_img" class="form-control" data-rule-required="true" />
+                                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                                        <input type="file" name="img" id="img" class="form-control" data-rule-required="true" />
+                                    </div>
                                 </div>
                             </div>
 
