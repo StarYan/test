@@ -70,10 +70,10 @@
          * ÓÃ»§µÇÂ¼
          */
         public function login(){
-            $name = $this->input->post('username',true);
+            $nickname = $this->input->post('nickname',true);
             $password = $this->input->post('pwd',true);
-            if($name&&$password){
-                $data['name'] = $name;
+            if($nickname&&$password){
+                $data['nickname'] = $nickname;
                 $data['password'] = $password;
                 if($this->checklogin()){
                     unset($_SESSION);
