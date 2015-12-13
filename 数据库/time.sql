@@ -23,25 +23,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `place`
+-- 表的结构 `time`
 --
 
-CREATE TABLE IF NOT EXISTS `place` (
+CREATE TABLE IF NOT EXISTS `time` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) NOT NULL,
-  `address` varchar(128) NOT NULL,
-  `description` varchar(256) NOT NULL COMMENT '描述',
-  `img` varchar(256) NOT NULL,
+  `time` varchar(128) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='场地表' AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- 转存表中的数据 `place`
+-- 转存表中的数据 `time`
 --
 
-INSERT INTO `place` (`id`, `name`, `address`, `description`, `img`) VALUES
-(1, '北师大', '北师大', '无', ''),
-(2, '北理工', '北理工', '无', '');
+INSERT INTO `time` (`id`, `time`) VALUES
+(1, '10:00-12:00'),
+(2, '13:00-15:00'),
+(3, '16:00-18:00'),
+(4, '20:00-22:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

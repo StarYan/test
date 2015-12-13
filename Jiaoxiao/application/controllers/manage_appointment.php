@@ -99,11 +99,7 @@
             $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
 
-
-
             $this->layout->view('/manage/appointment_view',$list);
-
-
         }
 
         /**

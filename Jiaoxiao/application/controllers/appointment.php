@@ -42,7 +42,7 @@
         }
 
         /**
-         * 预约提交
+         * ajax预约提交
          */
         public function saveappointment(){
             $coachandplaceid = $this->input->post('coachandplaceid',true);

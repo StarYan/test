@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2015 年 11 月 29 日 09:22
+-- 生成日期: 2015 年 12 月 13 日 04:27
 -- 服务器版本: 5.5.20
 -- PHP 版本: 5.3.10
 
@@ -30,9 +30,26 @@ CREATE TABLE IF NOT EXISTS `coachandplace` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `placeid` int(11) NOT NULL,
   `coachid` int(11) NOT NULL,
-  `time` datetime NOT NULL COMMENT '预约时间id',
+  `timeid` int(11) NOT NULL COMMENT '预约时间id',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='教练与场地关系' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='教练与场地关系' AUTO_INCREMENT=12 ;
+
+--
+-- 转存表中的数据 `coachandplace`
+--
+
+INSERT INTO `coachandplace` (`id`, `placeid`, `coachid`, `timeid`) VALUES
+(1, 1, 1, 1),
+(2, 1, 1, 3),
+(3, 2, 1, 4),
+(4, 2, 1, 4),
+(5, 2, 1, 4),
+(6, 2, 1, 4),
+(7, 2, 1, 4),
+(8, 2, 1, 4),
+(9, 2, 1, 4),
+(10, 2, 1, 4),
+(11, 2, 1, 4);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
