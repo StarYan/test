@@ -18,8 +18,8 @@
         <!--flaty css styles-->
         <link rel="stylesheet" href="<?php echo base_url()?>css/flaty.css">
         <link rel="stylesheet" href="<?php echo base_url()?>css/flaty-responsive.css">
-
-
+        <script src="<?php echo base_url()?>js/jquery.min.js"></script>
+        <script src="<?php echo base_url()?>js/jquery.form.js"></script>
     </head>
     <body class="skin-blue">
         <!-- BEGIN Navbar -->
@@ -126,7 +126,6 @@
 
 
         <!--basic scripts-->
-        <script src="<?php echo base_url()?>js/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="<?php echo base_url()?>assets/jquery/jquery-2.0.3.min.js"><\/script>')</script>
         <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url()?>assets/nicescroll/jquery.nicescroll.min.js"></script>
@@ -155,5 +154,6 @@
 <!--            })-->
 <!---->
 <!--        </script>-->
+
     </body>
 </html>

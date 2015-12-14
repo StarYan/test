@@ -39,17 +39,19 @@
             $this->upload->do_upload('img');
             $img=$this->upload->data();
 
-            $data['name']=$this->input->post('name',true);
+            $data['p_name']=$this->input->post('name',true);
             $data['address']=$this->input->post('address',true);
             $data['description']=$this->input->post('address_detail',true);
 
             $data['img']=$img['file_name'];
             if($data) {
                 $result = $this->place_model->add($data);
+                if($result){
+                    return $this->send_json(true,'成功');
+                }
+                return $this->send_json(false,'失败');
             }
-
-            //因图片无法用ajax提交暂用这种方法处理提交
-            redirect(site_url('/manage_addinfo/index/'.$dataAdmin));
+            return $this->send_json(false,'提交失败');
         }
 
         /**
@@ -69,7 +71,7 @@
             $this->upload->do_upload('coach_img');
             $img=$this->upload->data();
 
-            $data['name']=$this->input->post('coachname',true);
+            $data['c_name']=$this->input->post('coachname',true);
             $data['tel']=$this->input->post('phone',true);
             $data['price']=$this->input->post('money',true);
             $data['description']=$this->input->post('coach_detail',true);

@@ -5,6 +5,29 @@
 <!-- * Time: 17:14-->
 <!-- */-->
 
+
+<script>
+    $(function(){
+        var options ={
+            dataType:  'json',
+            //url:"/main/cpanel/addpic",
+            beforeSubmit:function(){
+                return confirm('是否添加？');
+            },
+            success:function(data){
+                if(data.code==0){
+                    return confirm('添加成功');
+                    location.reload();
+                }else{
+                    return confirm(data.msg);
+                }
+            }
+        }
+        $('#placeform').ajaxForm(options);
+
+    });
+</script>
+
 <div class="col-md-12">
     <div class="box">
         <div class="box-title">
@@ -15,13 +38,12 @@
                 <li><a href="#tab-1-3" data-toggle="tab">添加车辆信息</a></li>
             </ul>
         </div>
-
         <div class="box-content">
             <!--添加场地信息-->
             <div class="tab-content">
                 <div class="tab-pane active" id="tab-1-1">
                     <div class="box-content">
-                        <form action="<?php echo site_url('/manage_addinfo/addplace')?>" class="form-horizontal"  method="post" enctype="multipart/form-data">
+                        <form id="placeform" action="<?php echo site_url('/manage_addinfo/addplace')?>" class="form-horizontal"  method="post" enctype="multipart/form-data">
                             <input type="hidden" name="adminid" id="adminid" value="<?php echo $dataAdmin->id;?>">
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="id">场地:</label>
