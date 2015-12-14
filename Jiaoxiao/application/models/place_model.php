@@ -79,6 +79,11 @@
             return $result;
         }
 
+        public function update($data,$where){
+            $result = $this->db->update($this->table_name,$data,$where);
+            return $result;
+        }
+
         public function getInfo($where){
             $result=$this->db->get_where($this->table_name,$where);
             if ($result->num_rows() > 0) {
