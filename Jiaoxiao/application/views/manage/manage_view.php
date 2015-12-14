@@ -12,7 +12,7 @@
 				<table class="table table-striped table-hover fill-head">
 					<thead>
 					<tr>
-						<th style="width:30%;">#ID</th>
+						<th style="width:30%;">#流水号</th>
 						<th style="width:30%;">姓名</th>
 						<th style="width:30%;">操作</th>
 					</tr>
@@ -20,7 +20,7 @@
 					<tbody>
 					<?php foreach($dataUser as $user):?>
 						<tr>
-							<td><?=$user->id?></td><td><?=$user->name?></td><td><a class="btn btn-primary btn-sm" href="<?php echo $href.'/'.$user->id?>"><?php echo $act;?></a></td>
+							<td>#<?=$user->num?></td><td><?=$user->name?></td><td><a class="btn btn-primary btn-sm" href="<?php echo $href.'/'.$user->id?>"><?php echo $act;?></a></td>
 						</tr>
 					<?php endforeach;?>
 					</tbody>

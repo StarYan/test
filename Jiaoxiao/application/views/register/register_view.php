@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Full Width Page - FLATY Admin</title>
+    <title>网上报名</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -150,19 +150,19 @@
                                 <div class="form-wizard" id="form-wizard-2">
                                     <ul class="row steps steps-fill">
                                         <li class="col-md-3">
-                                            <a href="#tab2-1" data-toggle="tab" class="step active">
+                                            <a href="#tab2-1"  data-toggle="tab" class="step active">
                                                 <span class="number">1</span>
                                                 <span class="desc"><i class="icon-ok"></i> 账号密码</span>
                                             </a>
                                         </li>
                                         <li class="col-md-3">
-                                            <a href="#tab2-2" data-toggle="tab" class="step">
+                                            <a href="#tab2-2"  data-toggle="tab" class="step">
                                                 <span class="number">2</span>
                                                 <span class="desc"><i class="icon-ok"></i> 个人信息</span>
                                             </a>
                                         </li>
                                         <li class="col-md-3">
-                                            <a href="#tab2-3" data-toggle="tab" class="step">
+                                            <a href="#tab2-3"  data-toggle="tab" class="step">
                                                 <span class="number">3</span>
                                                 <span class="desc"><i class="icon-ok"></i> 上传照片</span>
                                             </a>
@@ -182,13 +182,13 @@
                                             <div class="form-group">
                                                 <label for="nickname" class="col-sm-3 col-lg-2 control-label">账号名</label>
                                                 <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="nickname" id="nickname" class="form-control">
+                                                    <input type="text" name="nickname" id="nickname" class="form-control" required pattern="^[\u4e00-\u9fa5]{1,7}$|^[\dA-Za-z_]{1,14}$" title=" 7个汉字或14个字符" />
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="password" class="col-sm-3 col-lg-2 control-label">密码</label>
                                                 <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="password" id="password" class="form-control">
+                                                    <input type="text" name="password" id="password" class="form-control" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$" title="包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间" />
                                                 </div>
                                             </div>
                                         </div>
@@ -196,7 +196,7 @@
                                             <div class="form-group">
                                                 <label for="name" class="col-sm-3 col-lg-2 control-label">姓名</label>
                                                 <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="name" id="name" class="form-control">
+                                                    <input type="text" name="name" id="name" class="form-control" required pattern="^[\u4e00-\u9fa5]{1,7}$" title="7个汉字">
                                                 </div>
                                             </div>
 
@@ -204,7 +204,7 @@
                                                 <label class="col-sm-3 col-lg-2 control-label">性别</label>
                                                 <div class="col-sm-5 col-lg-3 controls">
                                                     <label class="radio-inline">
-                                                        <input type="radio" name="sex" value="男"> 男
+                                                        <input type="radio" name="sex" value="男" checked> 男
                                                     </label>
                                                     <label class="radio-inline">
                                                         <input type="radio" name="sex" value="女"> 女
@@ -214,39 +214,39 @@
                                             <div class="form-group">
                                                 <label class="col-sm-3 col-lg-2 control-label" for="birthday">出生日期</label>
                                                 <div class="col-sm-5 col-lg-3 controls">
-                                                    <input class="form-control date-picker" size="16" type="text" name="birthday" />
+                                                    <input class="form-control"  type="date" name="birthday" required />
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="id" class="col-sm-3 col-lg-2 control-label">身份证号</label>
                                                 <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="id" id="id" class="form-control">
+                                                    <input type="text" name="id" id="id" class="form-control" pattern="^([0-9]){7,18}(x|X)?$" title="请输入18位的身份证号码" required />
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="phone" class="col-sm-3 col-lg-2 control-label">手机号码</label>
                                                 <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="phone" id="phone" class="form-control">
+                                                    <input type="text" name="phone" id="phone" class="form-control" pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$" />
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="qq" class="col-sm-3 col-lg-2 control-label">QQ</label>
                                                 <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="qq" id="qq" class="form-control">
+                                                    <input type="text" name="qq" id="qq" class="form-control" pattern="[1-9][0-9]{4,14}" />
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="email" class="col-sm-3 col-lg-2 control-label">Email</label>
                                                 <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="email" id="email" class="form-control">
+                                                    <input type="email" name="email" id="email" class="form-control" data-rule-email="true" pattern="^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="address" class="col-sm-3 col-lg-2 control-label">住址</label>
                                                 <div class="col-sm-5 col-lg-3 controls">
-                                                    <textarea name="address" id="address" rows="5" class="form-control"></textarea>
+                                                    <textarea name="address" id="address" rows="5" class="form-control" required></textarea>
                                                 </div>
                                             </div>
 
@@ -259,25 +259,17 @@
                                                         <div class="fileupload-new img-thumbnail" style="width: 428px; height: 270px;">
                                                             <img src="#" alt="" />
                                                         </div>
-                                                        <input type="file" class="form-control default" name="img" />
+                                                        <input type="file" class="form-control default" name="img" required />
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="tab-pane" id="tab2-4">
                                             <div class="form-group">
-                                                <label class="col-sm-3 col-lg-2 control-label" for="original_car_type">原准驾车型</label>
-                                                <div class="col-sm-9 col-lg-10 controls">
-                                                    <input type="text" name="original_car_type" id="original_car_type" class="form-control">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
                                                 <label class="col-sm-3 col-lg-2 control-label">培训类别</label>
                                                 <div class="col-sm-9 col-lg-10 controls">
-                                                    <select class="form-control  chosen"  tabindex="1" id="select1">
-                                                        <option selected>-- 请选择培训类别 --</option>
-                                                        <option value="type1">普通机动车驾驶员培训</option>
+                                                    <select class="form-control  chosen"  tabindex="1" id="select1" required>
+                                                        <option value="type1" selected>普通机动车驾驶员培训</option>
                                                         <option value="type2">道路运输驾驶员从业资格培训</option>
                                                         <option value="type3">其他培训</option>
                                                     </select>
@@ -287,8 +279,8 @@
                                             <div class="form-group">
                                                 <label class="col-sm-3 col-lg-2 control-label">培训车型</label>
                                                 <div class="col-sm-9 col-lg-10 controls">
-                                                    <select class="form-control  chosen" name="wanted_car_type" id="select2">
-
+                                                    <select class="form-control  chosen" name="wanted_car_type" id="select2" required>
+                                                        <option value="C1" selected>C1</option>
                                                     </select>
                                                     <input type="text" style="display:none" id="others" class="form-control"  />
                                                 </div>
@@ -299,7 +291,7 @@
                                         <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
                                             <a href="#" class="btn button-previous">返回</a>
                                             <a href="#" class="btn btn-primary button-next">下一步</a>
-                                            <button  class="btn btn-primary button-submit" type="submit">提交</button>
+                                            <button  class="btn btn-primary " type="submit">提交</button>
                                             <button  class="btn btn-danger button-submit" type="reset">重置</button>
                                         </div>
                                     </div>

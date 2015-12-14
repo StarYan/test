@@ -208,7 +208,7 @@
                 $("#addplace").empty();
                 $("#searchplace").empty();
                 for (var i = 0; i < data.data.length; i++) {
-                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].name + "</option>";
+                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].p_name + "</option>";
                     $("#addplace").append(str);
                     $("#searchplace").append(str);
                     //html += "ID:"+data.data[i].id +"name:"+data.data[i].name;
@@ -226,7 +226,7 @@
                 $("#addcoach").empty();
                 $("#searchcoach").empty();
                 for (var i = 0; i < data.data.length; i++) {
-                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].name + "</option>";
+                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].c_name + "</option>";
                     $("#addcoach").append(str);
                     $("#searchcoach").append(str);
                     //html += "ID:"+data.data[i].id +"name:"+data.data[i].name;

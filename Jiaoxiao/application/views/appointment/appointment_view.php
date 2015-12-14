@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+Ôªø<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>º›–£‘§‘º</title>
+    <title>È©æÊ†°È¢ÑÁ∫¶</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,37 +24,37 @@
 </head>
 <body>
 
-<!-- µ«¬º±Ìµ• -->
+<!-- ÁôªÂΩïË°®Âçï -->
 <div class="md-modal md-effect-7" id="login">
     <div class="md-content">
-        <h3>”√ªßµ«¬º</h3>
+        <h3>Áî®Êà∑ÁôªÂΩï</h3>
         <div>
-            <form action="#" class="form-horizontal"  method="post">
+            <form  class="form-horizontal" >
                 <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label" for="username">”√ªß√˚:</label>
+                    <label class="col-sm-3 col-lg-2 control-label" for="nickname">Áî®Êà∑Âêç:</label>
                     <div class="col-sm-6 col-lg-10 controls">
-                        <input type="text" name="username" id="username" class="form-control" data-rule-required="true" data-rule-minlength="3" placeholder="«Î ‰»Î”√ªß√˚" />
+                        <input type="text" name="nickname" id="nickname" class="form-control" data-rule-required="true" data-rule-minlength="3" placeholder="ËØ∑ËæìÂÖ•Áî®Êà∑Âêç" />
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label" for="password">”√ªß√‹¬Î:</label>
+                    <label class="col-sm-3 col-lg-2 control-label" for="password">Áî®Êà∑ÂØÜÁ†Å:</label>
                     <div class="col-sm-6 col-lg-10 controls">
-                        <input type="password" name="password" id="password" class="form-control" data-rule-required="true" data-rule-minlength="6" placeholder="«Î ‰»Î”√ªß√‹¬Î" />
+                        <input type="password" name="password" id="password" class="form-control" data-rule-required="true" data-rule-minlength="6" placeholder="ËØ∑ËæìÂÖ•Áî®Êà∑ÂØÜÁ†Å" />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
-                        <input type="submit" class="btn btn-primary" value="µ«¬º">
-                        <input type="reset" class="btn" value="÷ÿ÷√">
+                        <input type="button" class="btn btn-primary" value="ÁôªÂΩï" id="log_in">
+                        <input type="reset" class="btn" value="ÈáçÁΩÆ">
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<!-- µ«¬º±Ìµ• -->
+<!-- ÁôªÂΩïË°®Âçï -->
 <div class="md-overlay"></div>
 
 <div class="a" >
@@ -63,25 +63,25 @@
         <a class="navbar-brand" href="#">
             <small>
                 <i class="icon-desktop"></i>
-                º›–£‘§‘º
+                È©æÊ†°È¢ÑÁ∫¶
             </small>
         </a>
 
 
 
-        <!-- —ß‘±µ«¬º∞¥≈• -->
+        <!-- Â≠¶ÂëòÁôªÂΩïÊåâÈíÆ -->
         <ul class="nav flaty-nav pull-right">
-            <li>
+            <li id="user">
                 <a href="#" class="md-trigger" data-modal="login" >
-                    µ«¬º
+                    ÁôªÂΩï
                 </a>
             </li>
         </ul>
-        <!-- —ß‘±µ«¬º∞¥≈• -->
+        <!-- Â≠¶ÂëòÁôªÂΩïÊåâÈíÆ -->
 
         <button type="button" class="navbar-toggle  navbar-btn btn " data-toggle="collapse" data-target="#select">
             <i class="icon-reorder"></i>
-            µ„ª˜‘§‘º
+            ÁÇπÂáªÈ¢ÑÁ∫¶
         </button>
     </div>
     <!-- END Navbar -->
@@ -89,22 +89,22 @@
     <!-- BEGIN Page Title -->
     <div class="page-title">
         <div>
-            <h1>¿∂π‚º›–£ª∂”≠ƒ˙</h1>
-            <h4>º›–£±Í”Ô</h4>
+            <h1>ËìùÂÖâÈ©æÊ†°Ê¨¢ËøéÊÇ®</h1>
+            <h4>È©æÊ†°Ê†áËØ≠</h4>
         </div>
     </div>
     <!-- END Page Title -->
 
-    <!-- ‘§‘º¿∏ -->
+    <!-- È¢ÑÁ∫¶Ê†è -->
     <div id="breadcrumbs" class="container">
         <form action="" class="form-horizontal" id="validation-form" method="post">
             <div class="collapse navbar-collapse row " id="select">
                 <div class="col-md-2">
                     <div class="form-group">
-                        <label for="place" class="col-sm-6 col-lg-4 control-label">≥°µÿ</label>
+                        <label for="place" class="col-sm-6 col-lg-4 control-label">Âú∫Âú∞</label>
                         <div class="col-sm-12 col-lg-8 controls">
                             <select class="form-control" name="place" id="place"  data-rule-required="true">
-                                <option value=""> —°‘Ò≥°µÿ </option>
+
                             </select>
                         </div>
                     </div>
@@ -112,15 +112,10 @@
 
                 <div class="col-md-2">
                     <div class="form-group">
-                        <label for="time" class="col-sm-6 col-lg-4 control-label"> ±º‰</label>
+                        <label for="time" class="col-sm-6 col-lg-4 control-label">Êó∂Èó¥</label>
                         <div class="col-sm-12 col-lg-8 controls">
                             <select class="form-control" name="time" id="time" data-rule-required="true">
-                                <option value=""> —°‘Ò ±º‰ </option>
-                                <option value="1"> 07:00 - 09:00 </option>
-                                <option value="2"> 10:00 - 12:00 </option>
-                                <option value="3"> 14:00 - 16:00 </option>
-                                <option value="4"> 15:00 - 17:00 </option>
-                                <option value="5"> 19:00 - 21:00 </option>
+
                             </select>
                         </div>
                     </div>
@@ -128,10 +123,9 @@
 
                 <div class="col-md-2">
                     <div class="form-group">
-                        <label for="coach" class="col-sm-6 col-lg-4 control-label">ΩÃ¡∑</label>
+                        <label for="coach" class="col-sm-6 col-lg-4 control-label">ÊïôÁªÉ</label>
                         <div class="col-sm-12 col-lg-8 controls">
                             <select class="form-control" name="coach" id="coach" data-rule-required="true">
-                                <option value=""> —°‘ÒΩÃ¡∑ </option>
 
                             </select>
                         </div>
@@ -140,10 +134,9 @@
 
                 <div class="col-md-2">
                     <div class="form-group">
-                        <label for="car" class="col-sm-6 col-lg-4 control-label">≥µ–Õ</label>
+                        <label for="car" class="col-sm-6 col-lg-4 control-label">ËΩ¶Âûã</label>
                         <div class="col-sm-12 col-lg-8 controls">
                             <select class="form-control" name="car" id="car" data-rule-required="true">
-                                <option value=""> —°‘Ò≥µ–Õ </option>
 
                             </select>
                         </div>
@@ -153,8 +146,8 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
-                            <input type="submit" class="btn btn-primary" value="‘§‘º" id="submit">
-                            <button type="button" class="btn btn-danger">»°œ˚</button>
+                            <input type="submit" class="btn btn-primary" value="È¢ÑÁ∫¶" id="submit">
+                            <button type="button" class="btn btn-danger">ÂèñÊ∂à</button>
                         </div>
                     </div>
                 </div>
@@ -162,62 +155,54 @@
 
         </form>
     </div>
-    <!-- ‘§‘º¿∏ -->
+    <!-- È¢ÑÁ∫¶Ê†è -->
 </div>
 
 
-<!-- ‘§‘ºƒ⁄»›ΩÈ…‹ -->
+<!-- È¢ÑÁ∫¶ÂÜÖÂÆπ‰ªãÁªç -->
 <div class="container" id="main-container" >
     <div id="main-content" style="margin-top: 100px;">
-        <!-- ΩÃ¡∑Õ∆ºˆ -->
+        <!-- ÊïôÁªÉÊé®Ëçê -->
         <div class="row" style="margin-top: 100px; z-index: -1;">
             <div class="col-md-12">
                 <div class="box box-blue">
                     <div class="box-title">
-                        <h3><i class="icon-th-list"></i>ΩÃ¡∑Õ∆ºˆ</h3>
+                        <h3><i class="icon-th-list"></i>ÊïôÁªÉÊé®Ëçê</h3>
                     </div>
 
 
                 </div>
             </div>
         </div>
-        <!-- ΩÃ¡∑Õ∆ºˆ -->
+        <!-- ÊïôÁªÉÊé®Ëçê -->
         <br/><br/><br/>
 
-        <!-- ≥°µÿΩÈ…‹ -->
+        <!-- Âú∫Âú∞‰ªãÁªç -->
         <div class="row" style="margin-top: 100px; z-index: -1;">
             <div class="col-md-12">
                 <div class="box box-blue">
                     <div class="box-title">
-                        <h3><i class="icon-th-list"></i>≥°µÿΩÈ…‹</h3>
+                        <h3><i class="icon-th-list"></i>Âú∫Âú∞‰ªãÁªç</h3>
                     </div>
                     <div class="box-content">
                         <div class="row">
                             <div class="col-md-6">
-                                <h4>≥°µÿÕº∆¨</h4>
+                                <h4>Âú∫Âú∞ÂõæÁâá</h4>
                                 <ul class="gallery">
                                     <li>
-                                        <a href="#" rel="prettyPhoto" title="Description of image">
+                                        <a href="#" rel="prettyPhoto" title="Âú∫Âú∞ÁÖßÁâá">
                                             <div>
-                                                <img src="img/demo/gallery/1_thumb.jpg" alt="" />
+                                                <img class="place" src="#" alt=""  />
                                                 <i></i>
                                             </div>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-md-6">
-                                <h4>≥°µÿœÍ«È</h4>
-                                <dl>
-                                    <dt>≥°µÿµÿ÷∑</dt>
-                                    <dd>π„∂´ °÷È∫£ –</dd>
-                                    <dt>≥°µÿ√Ë ˆ</dt>
-                                    <dd>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</dd>
-                                    <dd></dd>
-                                    <dt></dt>
-                                    <dd></dd>
-                                    <dt></dt>
-                                    <dd></dd>
+                            <div class="col-md-6 place">
+                                <h4>Âú∫Âú∞ËØ¶ÊÉÖ</h4>
+                                <dl class="place">
+
                                 </dl>
                             </div>
                         </div>
@@ -225,25 +210,25 @@
                 </div>
             </div>
         </div>
-        <!-- ≥°µÿΩÈ…‹ -->
+        <!-- Âú∫Âú∞‰ªãÁªç -->
         <br /><br /><br />
 
-        <!-- ΩÃ¡∑ΩÈ…‹ -->
+        <!-- ÊïôÁªÉ‰ªãÁªç -->
         <div class="row" style="z-index: -1;">
             <div class="col-md-12">
                 <div class="box box-blue">
                     <div class="box-title">
-                        <h3><i class="icon-th-list"></i>ΩÃ¡∑ΩÈ…‹</h3>
+                        <h3><i class="icon-th-list"></i>ÊïôÁªÉ‰ªãÁªç</h3>
                     </div>
                     <div class="box-content">
                         <div class="row">
                             <div class="col-md-6">
-                                <h4>ΩÃ¡∑Õº∆¨</h4>
-                                <ul class="gallery">
+                                <h4>ÊïôÁªÉÂõæÁâá</h4>
+                                <ul class="gallery ">
                                     <li>
                                         <a href="#" rel="prettyPhoto" title="Description of image">
                                             <div>
-                                                <img src="img/demo/gallery/2_thumb.jpg" alt="" />
+                                                <img class="coach" src="#" alt="" />
                                                 <i></i>
                                             </div>
                                         </a>
@@ -251,16 +236,9 @@
                                 </ul>
                             </div>
                             <div class="col-md-6">
-                                <h4>ΩÃ¡∑œÍ«È</h4>
-                                <dl class="dl-horizontal">
-                                    <dt>–’√˚</dt>
-                                    <dd>XXX</dd>
-                                    <dt>µÁª∞</dt>
-                                    <dd>13631224950</dd>
-                                    <dt>º€«Æ</dt>
-                                    <dd><i class="icon-jpy"></i>200/–° ±</dd>
-                                    <dt>–«º∂</dt>
-                                    <dd><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i></dd>
+                                <h4>ÊïôÁªÉËØ¶ÊÉÖ</h4>
+                                <dl class="dl-horizontal coach">
+
                                 </dl>
                             </div>
                         </div>
@@ -268,25 +246,25 @@
                 </div>
             </div>
         </div>
-        <!-- ΩÃ¡∑ΩÈ…‹ -->
+        <!-- ÊïôÁªÉ‰ªãÁªç -->
         <br /><br /><br />
 
-        <!-- ≥µ–ÕΩÈ…‹ -->
+        <!-- ËΩ¶Âûã‰ªãÁªç -->
         <div class="row" style="z-index: -1;">
             <div class="col-md-12">
                 <div class="box box-blue">
                     <div class="box-title">
-                        <h3><i class="icon-th-list"></i>≥µ–ÕΩÈ…‹</h3>
+                        <h3><i class="icon-th-list"></i>ËΩ¶Âûã‰ªãÁªç</h3>
                     </div>
                     <div class="box-content">
                         <div class="row">
                             <div class="col-md-6">
-                                <h4>≥µ¡æÕº∆¨</h4>
+                                <h4>ËΩ¶ËæÜÂõæÁâá</h4>
                                 <ul class="gallery">
                                     <li>
                                         <a href="#" rel="prettyPhoto" title="Description of image">
                                             <div>
-                                                <img src="img/demo/gallery/3_thumb.jpg" alt="" />
+                                                <img class="car" src="#" alt="" />
                                                 <i></i>
                                             </div>
                                         </a>
@@ -294,16 +272,9 @@
                                 </ul>
                             </div>
                             <div class="col-md-6">
-                                <h4>≥µ¡æœÍ«È</h4>
-                                <dl class="dl-horizontal">
-                                    <dt>≥µ≈∆∫≈¬Î</dt>
-                                    <dd>‘¡C88888</dd>
-                                    <dt>≥µ¡æ–Õ∫≈</dt>
-                                    <dd>C1</dd>
-                                    <dt></dt>
-                                    <dd></dd>
-                                    <dt></dt>
-                                    <dd></dd>
+                                <h4>ËΩ¶ËæÜËØ¶ÊÉÖ</h4>
+                                <dl class="dl-horizontal car">
+
                                 </dl>
                             </div>
                         </div>
@@ -311,16 +282,16 @@
                 </div>
             </div>
         </div>
-        <!-- ≥µ–ÕΩÈ…‹ -->
+        <!-- ËΩ¶Âûã‰ªãÁªç -->
 
         <footer>
-            <p>2015 ? ¿∂π‚º›–£.</p>
+            <p>2015 ? ËìùÂÖâÈ©æÊ†°.</p>
         </footer>
 
         <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="icon-chevron-up"></i></a>
     </div>
 </div>
-<!-- ‘§‘ºƒ⁄»›ΩÈ…‹ -->
+<!-- È¢ÑÁ∫¶ÂÜÖÂÆπ‰ªãÁªç -->
 
 
 <!--basic scripts-->
@@ -347,84 +318,198 @@
 <script src="<?php echo base_url()?>/js/modalEffects.js"></script>
 
 <script>
-    $(document).ready(function(){
-        //º”‘ÿ≥°µÿ–≈œ¢
+    window.onload=function() {
+
+
         $.ajax({
             type: "POST",
-            url: '<?php echo site_url('manage_appointment/getplace')?>',
+            url: '<?php echo site_url('appointment/allPlace')?>',
             data: {},
             dataType: "json",
             success: function (data) {
                 $("#place").empty();
-                var s="<option value=''> —°‘Ò≥°µÿ </option>";
-                $("#place").append(s);
+                $("#place").append("<option value=''>ÈÄâÊã©Âú∫Âú∞</option>");
                 for (var i = 0; i < data.data.length; i++) {
-                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].name + "</option>";
+                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].p_name + "</option>";
                     $("#place").append(str);
+
                 }
             }
         });
 
-        //º”‘ÿΩÃ¡∑–≈œ¢
         $.ajax({
             type: "POST",
-            url: '<?php echo site_url('manage_appointment/getcoach')?>',
+            url: '<?php echo site_url('appointment/allCoach')?>',
             data: {},
             dataType: "json",
             success: function (data) {
                 $("#coach").empty();
-                var s="<option value=''> —°‘ÒΩÃ¡∑ </option>";
-                $("#coach").append(s);
+                $("#coach").append("<option value=''>ÈÄâÊã©ÊïôÁªÉ</option>");
                 for (var i = 0; i < data.data.length; i++) {
-                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].name + "</option>";
+                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].c_name + "</option>";
                     $("#coach").append(str);
                 }
             }
         });
 
-        //º”‘ÿ≥µ¡æ–≈œ¢
         $.ajax({
             type: "POST",
-            url: '<?php echo site_url('manage_appointment/getcar')?>',
+            url: '<?php echo site_url('appointment/allTime')?>',
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                $("#time").empty();
+                $("#time").append("<option value=''>ÈÄâÊã©Êó∂Èó¥</option>");
+                for (var i = 0; i < data.data.length; i++) {
+                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].time + "</option>";
+                    $("#time").append(str);
+                }
+            }
+        });
+
+        $.ajax({
+            type: "POST",
+            url: '<?php echo site_url('appointment/allCar')?>',
             data: {},
             dataType: "json",
             success: function (data) {
                 $("#car").empty();
-                var s="<option value=''> —°‘Ò≥µ–Õ </option>";
-                $("#car").append(s);
+                $("#car").append("<option value=''>ÈÄâÊã©ËΩ¶Âûã</option>");
                 for (var i = 0; i < data.data.length; i++) {
-                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].name + "</option>";
+                    var str = " <option value=" + data.data[i].id + ">" + data.data[i].number + "</option>";
                     $("#car").append(str);
                 }
             }
         });
 
-        //Ã·Ωª‘§‘º–≈œ¢µΩ∫ÛÃ®Ω¯––‘§‘º
-        $("#submit").onclick(function(){
+
+        $("#place").change(function(){
             var placeid=$("#place").val();
-            var coachid=$("#coach").val();
             var timeid=$("#time").val();
-            var carid=$("#car").val();
-            var userid=<?=$dataUser->id?>;
+
             $.ajax({
                 type: "POST",
-                url: '<?php echo site_url('manage_appointment/saveappointment')?>',
+                url: '<?php echo site_url('appointment/coach')?>',
                 data: {
-                    placeid: placeid,
-                    coachid: coachid,
-                    timeid: timeid,
-                    carid:carid,
-                    userid:userid
+                    placeID:placeid,
+                    timeID:timeid
                 },
                 dataType: "json",
                 success: function (data) {
-                    alert(data.msg);
+                    $("#coach").empty();
+                    $("#coach").append("<option value=''>ÈÄâÊã©ÊïôÁªÉ</option>");
+                    for (var i = 0; i < data.data['result'].length; i++) {
+                        var str = " <option value=" + data.data['result'][i].coachid + ">" + data.data['result'][i].c_name + "</option>";
+                        $("#coach").append(str);
+                    }
+                    $("img.place").attr("src","<?php echo base_url()?>uploads/"+data.data['placeInfo'][0].img);
+                    var string="<dt>Âú∫Âú∞Âú∞ÂùÄ</dt><dd>"+data.data['placeInfo'][0].address +"</dd><dt>Âú∫Âú∞ÊèèËø∞</dt><dd>"+data.data['placeInfo'][0].description +"</dd>"
+                    $("dl.place").html(string);
                 }
             });
         });
 
-    });
-</script>
 
+        $("#time").change(function(){
+            var placeid=$("#place").val();
+            var timeid=$("#time").val();
+
+            $.ajax({
+                type: "POST",
+                url: '<?php echo site_url('appointment/coach')?>',
+                data: {
+                    placeID:placeid,
+                    timeID:timeid
+                },
+                dataType: "json",
+                success: function (data) {
+                    $("#coach").empty();
+                    $("#coach").append("<option value=''>ÈÄâÊã©ÊïôÁªÉ</option>");
+                    for (var i = 0; i < data.data['result'].length; i++) {
+                        var str = " <option value=" + data.data['result'][i].coachid + ">" + data.data['result'][i].c_name + "</option>";
+                        $("#coach").append(str);
+                    }
+                    $("img.place").attr("src","<?php echo base_url()?>uploads/"+data.data['placeInfo'][0].img);
+                    var string="<dt>Âú∫Âú∞Âú∞ÂùÄ</dt><dd>"+data.data['placeInfo'][0].address +"</dd><dt>Âú∫Âú∞ÊèèËø∞</dt><dd>"+data.data['placeInfo'][0].description +"</dd>"
+                    $("dl.place").html(string);
+                }
+            });
+        });
+
+
+        $("#coach").change(function(){
+            var coachid=$("#coach").val();
+
+            $.ajax({
+                type: "POST",
+                url: '<?php echo site_url('appointment/placeAndTime')?>',
+                data: {
+                    coachID:coachid
+                },
+                dataType: "json",
+                success: function (data) {
+                    $("img.coach").attr("src","<?php echo base_url()?>uploads/"+data.data['coachInfo'][0].img);
+                    var string="<dt>ÂßìÂêç</dt><dd>"+data.data['coachInfo'][0].c_name +"</dd><dt>ÁîµËØù</dt><dd>"+data.data['coachInfo'][0].tel +"</dd><dt>‰ª∑Èí±</dt><dd>"+data.data['coachInfo'][0].price +"</dd><dt>ÊòüÁ∫ß</dt><dd>"+data.data['coachInfo'][0].star +"</dd>";
+                    $("dl.coach").html(string);
+                }
+            });
+        });
+
+        $("#car").change(function(){
+            var carid=$("#car").val();
+
+            $.ajax({
+                type: "POST",
+                url: '<?php echo site_url('appointment/carInfo')?>',
+                data: {
+                    carID:carid
+                },
+                dataType: "json",
+                success: function (data) {
+                    $("img.car").attr("src","<?php echo base_url()?>uploads/"+data.data['carInfo'][0].img);
+                    var string="<dt>ËΩ¶ÁâåÂè∑Á†Å</dt><dd>"+data.data['carInfo'][0].number +"</dd><dt>ËΩ¶ËæÜÂûãÂè∑</dt><dd>"+data.data['carInfo'][0].type +"</dd><dt>ËΩ¶ËæÜËØ¶ÊÉÖ</dt><dd>"+data.data['carInfo'][0].car_detail +"</dd>";
+                    $("dl.car").html(string);
+                }
+            });
+        });
+
+        $("#submit").click(function() {
+            var userid=$("#userid").val();
+            var placeid=$("#place").val();
+            var timeid=$("#time").val();
+            var coachid=$("#coach").val();
+            var carid=$("#car").val();
+
+//            if(userid==""){
+//                alert("ËØ∑ÂÖàÁôªÂΩïÔºåÂÜçËøõË°åÈ¢ÑÁ∫¶");
+//            }
+        });
+        
+        $("#log_in").click(function() {
+
+            var nickname=$("#nickname").val();
+            var password=$("#password").val();
+//            alert(nickname);
+            $.ajax({
+                type: "POST",
+                url: '<?php echo site_url('appointment/login')?>',
+                data: {
+                    nickname:nickname,
+                    password:password
+                },
+                dataType: "json",
+                success: function (data) {
+                    alert('111');
+                    alert(data.data['result'].nickname);
+                    if(data.data['result']==""){
+                        alert(data.msg);
+                    }
+                }
+            });
+        });
+
+       
+    }
+</script>
 </body>
 </html>

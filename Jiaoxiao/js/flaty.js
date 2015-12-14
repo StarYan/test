@@ -848,7 +848,7 @@ $(function() {
 
         $('#form-wizard-2').find('.button-previous').hide();
         $('#form-wizard-2 .button-submit').click(function () {
-            alert('Finished!');
+
         }).hide();
     }
 

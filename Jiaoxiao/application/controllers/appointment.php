@@ -12,17 +12,44 @@
             $this->load->model('coachandplace_model');
             $this->load->model('appointment_model');
             $this->load->model('user_model');
+            $this->load->model('coach_model');
+            $this->load->model('time_model');
+            $this->load->model('cartype_model');
         }
 
         public function appointmentmodel(){
-            $this->load->view('appointment_view');
+            $this->load->view('appointment/appointment_view');
         }
 
         /**
-         * ajax接口查找场地
+         * ajax接口查找所有场地
          */
-        public function place(){
+        public function allPlace(){
             $result = $this->place_model->getall();
+            return $this->send_json(true,"",$result);
+        }
+
+        /**
+         * ajax接口查找所有教练
+         */
+        public function allCoach(){
+            $result = $this->coach_model->getall();
+            return $this->send_json(true,"",$result);
+        }
+
+        /**
+         * ajax接口查找所有时间段
+         */
+        public function allTime(){
+            $result = $this->time_model->getall();
+            return $this->send_json(true,"",$result);
+        }
+
+        /**
+         * ajax接口查找所有车型
+         */
+        public function allCar(){
+            $result = $this->cartype_model->getall();
             return $this->send_json(true,"",$result);
         }
 
@@ -30,15 +57,43 @@
          * ajax接口查找教练
          */
         public function coach(){
-            $placeid = $this->input->post('id',true);
-            $time = $this->input->post('time',true);
-            if($placeid && $time){
-                $data['placeid'] = $placeid;
-                $data['time'] = $time;
-                $result = $this->coachandplace_model->get_by_placeid($data);
-                return $this->send_json(true,"成功",$result);
+            $placeID = $this->input->post('placeID',true);
+            $timeID = $this->input->post('timeID',true);
+            if($placeID||$timeID){
+                $data['placeid'] = $placeID;
+                $data['timeid'] = $timeID;
+                $result = $this->coachandplace_model->get_by_id($data);
+                $place['id']=$placeID;
+                $placeInfo=$this->place_model->getInfo($place);
+                $list['placeInfo']=$placeInfo;
+                $list['result']=$result;
+                return $this->send_json(true,"",$list);
             }
-            return $this->send_json(flase,"查找错误");
+        }
+
+        /**
+         * ajax接口根据教练id查找对应的场地信息和时间信息
+         */
+        public function placeAndTime(){
+            $coachID = $this->input->post('coachID',true);
+
+            if($coachID){
+                $data['id'] = $coachID;
+                $coachInfo=$this->coach_model->getInfo($data);
+                $list['coachInfo']=$coachInfo;
+                return $this->send_json(true,"",$list);
+            }
+        }
+
+        public function carInfo(){
+            $carID = 1;
+
+            if($carID){
+                $data['id'] = $carID;
+                $carInfo=$this->cartype_model->getInfo($data);
+                $list['carInfo']=$carInfo;
+                return $this->send_json(true,"",$list);
+            }
         }
 
         /**
@@ -70,17 +125,23 @@
          * 用户登录
          */
         public function login(){
-            $nickname = $this->input->post('nickname',true);
-            $password = $this->input->post('pwd',true);
+            $nickname = 'wenshiye';
+            $password = '1';
             if($nickname&&$password){
                 $data['nickname'] = $nickname;
                 $data['password'] = $password;
-                if($this->checklogin()){
-                    unset($_SESSION);
-                }
+//                if($this->checklogin()){
+//                    unset($_SESSION);
+//                }
                 $result = $this->user_model->get_by_name_and_pwd($data);
-                $_SESSION = $result;
-                return $this->send_json(true,"登录成功");
+//                $_SESSION = $result;
+//                var_dump($result);
+                $list['result']=$result;
+                if($result){
+                    return $this->send_json(true,"",$list);
+                }else{
+                    return $this->send_json(false,"登录失败，请查看密码或用户名是否正确");
+                }
             }
             return $this->send_json(false,"登录失败，请查看密码或用户名是否正确");
         }

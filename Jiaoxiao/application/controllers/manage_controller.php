@@ -268,4 +268,16 @@
             $this->layout->view('/manage/wrongmessage_view',$data);
         }
 
+        /**
+         * 删除已经通知的用户
+         * @param string $user_id 用户的id
+         * @param string $admin_id 管理员的id
+         */
+        public function Deleted($user_id,$admin_id){
+            $this->user->deletedByUserId($user_id,$admin_id);
+            $dataAdmin=$this->admin->getAdminInfoById($admin_id);
+            $data['dataAdmin']=$dataAdmin;
+            redirect('manage_controller/UnPassed/'.$admin_id);
+        }
+
     }

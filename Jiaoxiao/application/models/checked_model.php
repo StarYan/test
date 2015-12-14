@@ -49,4 +49,5 @@ class Checked_model extends CI_Model{
     }
 
 
+
 }

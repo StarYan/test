@@ -79,4 +79,12 @@
             return $result;
         }
 
+        public function getInfo($where){
+            $result=$this->db->get_where($this->table_name,$where);
+            if ($result->num_rows() > 0) {
+                return $result->result_array();
+            }
+            return false;
+        }
+
     }

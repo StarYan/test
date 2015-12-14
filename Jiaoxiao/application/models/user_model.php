@@ -95,7 +95,7 @@
          * @return array information of the user
          */
         public function getStudentInfoByStatus($status,$offset,$pagesize){
-            $sql="select * from user where status=$status and deleted=0 order by id limit $offset,$pagesize";
+            $sql="select * from user where status=$status and deleted=0 order by id DESC limit $offset,$pagesize ";
             $query=$this->db->query($sql);
             $data=$query->result();
             return $data;
@@ -140,6 +140,18 @@
             $this->db->insert('user',$data);
 //            $data['flag']=1;
 //            $this->load->view('register_view',$data);
+        }
+
+
+        /**
+         * 根据审核记录的id把审核记录的deleted改为1表示改记录已删除
+         * @param string $id 审核记录的id
+         * @param string $admin_id 管理员的id
+         */
+        public function deletedByUserId($user_id,$admin_id){
+            $update_date=date('Y-m-d H:i:s');
+            $sql="UPDATE user SET deleted=1,update_id=$admin_id,update_date='$update_date' WHERE id=$user_id";
+            $this->db->query($sql);
         }
 
     }

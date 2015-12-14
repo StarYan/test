@@ -51,7 +51,6 @@ class Register extends MY_Controller{
         }else{
             $data['sex']=0;
         }
-        $data['original_car_type']=$_POST['original_car_type'];
         $data['wanted_car_type']=$_POST['wanted_car_type'];
         $data['birthday']=$_POST['birthday'];
         $data['idcard']=$_POST['id'];
