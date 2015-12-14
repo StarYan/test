@@ -10,7 +10,6 @@
     $(function(){
         var options ={
             dataType:  'json',
-            //url:"/main/cpanel/addpic",
             beforeSubmit:function(){
                 return confirm('是否添加？');
             },
@@ -23,8 +22,40 @@
                 }
             }
         }
-        $('#placeform').ajaxForm(options);
 
+        var optioncoach ={
+            dataType:  'json',
+            beforeSubmit:function(){
+                return confirm('是否添加？');
+            },
+            success:function(data){
+                if(data.code==0){
+                    return confirm('添加成功');
+                    location.reload();
+                }else{
+                    return confirm(data.msg);
+                }
+            }
+        }
+
+        var optioncar ={
+            dataType:  'json',
+            beforeSubmit:function(){
+                return confirm('是否添加？');
+            },
+            success:function(data){
+                if(data.code==0){
+                    return confirm('添加成功');
+                    location.reload();
+                }else{
+                    return confirm(data.msg);
+                }
+            }
+        }
+
+        $('#placeform').ajaxForm(options);
+        $('#coachform').ajaxForm(optioncoach);
+        $('#cartypeform').ajaxForm(optioncar);
     });
 </script>
 
@@ -89,7 +120,7 @@
                 <!--添加教练信息-->
                 <div class="tab-pane" id="tab-1-2">
                     <div class="box-content">
-                        <form action="<?php echo site_url('/manage_addinfo/addcoach')?>" class="form-horizontal"  method="post" enctype="multipart/form-data">
+                        <form id="coachform" action="<?php echo site_url('/manage_addinfo/addcoach')?>" class="form-horizontal"  method="post" enctype="multipart/form-data">
                             <input type="hidden" name="coachid" id="coachid" class="form-control" data-rule-required="true"  />
 
 
@@ -142,7 +173,7 @@
                 <!--添加车辆信息-->
                 <div class="tab-pane" id="tab-1-3">
                     <div class="box-content">
-                        <form action="<?php echo site_url('/manage_addinfo/addcartype')?>" class="form-horizontal"  method="post" enctype="multipart/form-data">
+                        <form id="cartypeform" action="<?php echo site_url('/manage_addinfo/addcartype')?>" class="form-horizontal"  method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="type">车辆车型:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
