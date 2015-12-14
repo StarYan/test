@@ -1,7 +1,7 @@
-<?php
+ï»¿<?php
 /**
  * Created by PhpStorm.
- * ÓÃ»§Ô¤Ô¼Ä£¿é
+ * ç”¨æˆ·é¢„çº¦æ¨¡å—
  */
     class Appointment extends MY_Controller{
 
@@ -22,7 +22,7 @@
         }
 
         /**
-         * ajax½Ó¿Ú²éÕÒËùÓĞ³¡µØ
+         * ajaxæ¥å£æŸ¥æ‰¾æ‰€æœ‰åœºåœ°
          */
         public function allPlace(){
             $result = $this->place_model->getall();
@@ -30,7 +30,7 @@
         }
 
         /**
-         * ajax½Ó¿Ú²éÕÒËùÓĞ½ÌÁ·
+         * ajaxæ¥å£æŸ¥æ‰¾æ‰€æœ‰æ•™ç»ƒ
          */
         public function allCoach(){
             $result = $this->coach_model->getall();
@@ -38,7 +38,7 @@
         }
 
         /**
-         * ajax½Ó¿Ú²éÕÒËùÓĞÊ±¼ä¶Î
+         * ajaxæ¥å£æŸ¥æ‰¾æ‰€æœ‰æ—¶é—´æ®µ
          */
         public function allTime(){
             $result = $this->time_model->getall();
@@ -46,7 +46,7 @@
         }
 
         /**
-         * ajax½Ó¿Ú²éÕÒËùÓĞ³µĞÍ
+         * ajaxæ¥å£æŸ¥æ‰¾æ‰€æœ‰è½¦å‹
          */
         public function allCar(){
             $result = $this->cartype_model->getall();
@@ -54,7 +54,7 @@
         }
 
         /**
-         * ajax½Ó¿Ú²éÕÒ½ÌÁ·
+         * ajaxæ¥å£æŸ¥æ‰¾æ•™ç»ƒ
          */
         public function coach(){
             $placeID = $this->input->post('placeID',true);
@@ -72,7 +72,7 @@
         }
 
         /**
-         * ajax½Ó¿Ú¸ù¾İ½ÌÁ·id²éÕÒ¶ÔÓ¦µÄ³¡µØĞÅÏ¢ºÍÊ±¼äĞÅÏ¢
+         * ajaxæ¥å£æ ¹æ®æ•™ç»ƒidæŸ¥æ‰¾å¯¹åº”çš„åœºåœ°ä¿¡æ¯å’Œæ—¶é—´ä¿¡æ¯
          */
         public function placeAndTime(){
             $coachID = $this->input->post('coachID',true);
@@ -97,36 +97,48 @@
         }
 
         /**
-         * ajaxÔ¤Ô¼Ìá½»
+         * ajaxé¢„çº¦æäº¤
          */
         public function saveappointment(){
-            $coachandplaceid = $this->input->post('coachandplaceid',true);
-            $userid = $this->input->post('userid',true);
-            $time = $this->input->post('time',true);
-            $cartype = $this->input->post('cartype',true);
-            if($coachandplaceid&&$userid&&$time&&$cartype){
-                $data['coachandplaceid'] = $coachandplaceid;
-                $data['userid'] = $userid;
-                $data['time'] = $time;
-                $data['cartype'] = $cartype;
+            $nickname=$this->input->post('nickname',true);
+            $placeID=$this->input->post('placeID',true);
+            $coachID=$this->input->post('coachID',true);
+            $carID=$this->input->post('carID',true);
+            $timeID=$this->input->post('timeID',true);
 
-                $where['userid'] = $userid;
+            if($nickname&&$placeID&&$coachID&&$carID&&$timeID){
+                $data['placeID'] = $placeID;
+                $data['coachID'] = $coachID;
+                $data['timeID'] = $timeID;
+                $dataCoachAndPlace=$this->coachandplace_model->get_by_id($data);
+                $coachandplace_id=$dataCoachAndPlace[0]['id'];
+
+                $user['nickname']=$nickname;
+                $dataUser=$this->user_model->get_by_name_and_pwd($user);
+                $userID=$dataUser['id'];
+
+
+
+                $where['userid'] = $userID;
+                $where['coachandplaceid']=$coachandplace_id;
+                $where['carid']=$carID;
+
                 if($this->appointment_model->get($where)){
-                    $this->appointment_model->update($data);
+                    $this->appointment_model->update($where);
                 }else{
-                    $this->appointment_model->add($data);
+                    $this->appointment_model->add($where);
                 }
-                return $this->send_json(true,"³É¹¦");
+                return $this->send_json(true,"æˆåŠŸ");
             }
-            return $this->send_json(false,"Ô¤Ô¼Ê§°Ü");
+            return $this->send_json(false,"é¢„çº¦å¤±è´¥");
         }
 
         /**
-         * ÓÃ»§µÇÂ¼
+         * ç”¨æˆ·ç™»å½•
          */
         public function login(){
-            $nickname = 'wenshiye';
-            $password = '1';
+            $nickname = $this->input->post('nickname',true);
+            $password = $this->input->post('password',true);
             if($nickname&&$password){
                 $data['nickname'] = $nickname;
                 $data['password'] = $password;
@@ -138,20 +150,20 @@
 //                var_dump($result);
                 $list['result']=$result;
                 if($result){
-                    return $this->send_json(true,"",$list);
+                    return $this->send_json(true,'ç™»å½•æˆåŠŸ',$list);
                 }else{
-                    return $this->send_json(false,"µÇÂ¼Ê§°Ü£¬Çë²é¿´ÃÜÂë»òÓÃ»§ÃûÊÇ·ñÕıÈ·");
+                    return $this->send_json(false,'ç™»å½•å¤±è´¥ï¼Œè¯·æŸ¥çœ‹å¯†ç æˆ–ç”¨æˆ·åæ˜¯å¦æ­£ç¡®');
                 }
             }
-            return $this->send_json(false,"µÇÂ¼Ê§°Ü£¬Çë²é¿´ÃÜÂë»òÓÃ»§ÃûÊÇ·ñÕıÈ·");
+            return $this->send_json(false,'ç™»å½•å¤±è´¥ï¼Œè¯·æŸ¥çœ‹å¯†ç æˆ–ç”¨æˆ·åæ˜¯å¦æ­£ç¡®');
         }
 
         /**
-         * ÓÃ»§×¢Ïú
+         * ç”¨æˆ·æ³¨é”€
          */
         public function logout(){
             unset($_SESSION);
-            return $this->send_json(true,"×¢Ïú³É¹¦");
+            return $this->send_json(true,"æ³¨é”€æˆåŠŸ");
         }
 
     }

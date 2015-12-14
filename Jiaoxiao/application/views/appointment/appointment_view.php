@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -71,10 +71,13 @@
 
         <!-- 学员登录按钮 -->
         <ul class="nav flaty-nav pull-right">
-            <li id="user">
-                <a href="#" class="md-trigger" data-modal="login" >
+            <li  id="log">
+                <a href="#" class="md-trigger" data-modal="login" id="user" value="login" >
                     登录
                 </a>
+            </li>
+            <li id="logout">
+
             </li>
         </ul>
         <!-- 学员登录按钮 -->
@@ -146,7 +149,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
-                            <input type="submit" class="btn btn-primary" value="预约" id="submit">
+                            <input type="button" class="btn btn-primary" value="预约" id="submit">
                             <button type="button" class="btn btn-danger">取消</button>
                         </div>
                     </div>
@@ -473,23 +476,49 @@
             });
         });
 
+
+
         $("#submit").click(function() {
-            var userid=$("#userid").val();
+            var nickname=$("#log").text();
             var placeid=$("#place").val();
             var timeid=$("#time").val();
             var coachid=$("#coach").val();
             var carid=$("#car").val();
 
-//            if(userid==""){
-//                alert("请先登录，再进行预约");
-//            }
-        });
-        
-        $("#log_in").click(function() {
+            if($("#user").text()!=""){
+                alert("请先登录，再进行预约");
+            }else{
+                if(nickname&&placeid&&timeid&&coachid&&carid){
 
+                    $.ajax({
+                        type: "POST",
+                        url: '<?php echo site_url('appointment/saveappointment')?>',
+                        data: {
+                            nickname:nickname,
+                            placeID:placeid,
+                            timeID:timeid,
+                            coachID:coachid,
+                            carID:carid
+                        },
+                        dataType: "json",
+                        success: function (data) {
+                            alert('预约成功');
+                        }
+                    });
+
+                }else{
+                    alert('请选择好所有的预约信息再进行提交');
+                }
+            }
+        });
+
+        /**
+         * 用户登录验证ajax
+         */
+        $("#log_in").click(function() {
             var nickname=$("#nickname").val();
             var password=$("#password").val();
-//            alert(nickname);
+
             $.ajax({
                 type: "POST",
                 url: '<?php echo site_url('appointment/login')?>',
@@ -499,10 +528,15 @@
                 },
                 dataType: "json",
                 success: function (data) {
-                    alert('111');
-                    alert(data.data['result'].nickname);
-                    if(data.data['result']==""){
+                    if(data.code==1){
                         alert(data.msg);
+                    }else{
+                        $(".md-overlay").trigger('click');
+                        $("#log").empty();
+                        var login="<a>"+data.data['result'].nickname+"</a>";
+                        $("#log").html(login);
+                        var logout="<a class='md-trigger' href='<?php echo site_url()?>/appointment/appointmentmodel'><i class='icon-off'></i> 注销</a>"
+                        $("#logout").html(logout);
                     }
                 }
             });
