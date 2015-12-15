@@ -67,6 +67,7 @@
          */
         public function getall(){
             $this->db->select();
+            $this->db->order_by('star','desc');
             $result = $this->db->get($this->table_name);
             if ($result->num_rows() > 0) {
                 return $result->result_object();

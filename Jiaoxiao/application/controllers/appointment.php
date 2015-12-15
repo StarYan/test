@@ -85,8 +85,11 @@
             }
         }
 
+        /**
+         * ajax接口获取车辆信息
+         */
         public function carInfo(){
-            $carID = 1;
+            $carID = $this->input->post('carID',true);
 
             if($carID){
                 $data['id'] = $carID;
@@ -142,12 +145,11 @@
             if($nickname&&$password){
                 $data['nickname'] = $nickname;
                 $data['password'] = $password;
-//                if($this->checklogin()){
-//                    unset($_SESSION);
-//                }
+                if($this->checklogin()){
+                    unset($_SESSION);
+                }
                 $result = $this->user_model->get_by_name_and_pwd($data);
-//                $_SESSION = $result;
-//                var_dump($result);
+                $_SESSION = $result;
                 $list['result']=$result;
                 if($result){
                     return $this->send_json(true,'登录成功',$list);

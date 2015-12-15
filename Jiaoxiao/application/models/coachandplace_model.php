@@ -22,6 +22,7 @@
             $this->db->join('place','place.id=coachandplace.placeid');
             $this->db->join('coach','coach.id=coachandplace.coachid');
             $this->db->join('time','time.id=coachandplace.timeid');
+            $this->db->order_by('star','desc');
             $result = $this->db->get();
             if ($result->num_rows() > 0) {
                 return $result->result_array();

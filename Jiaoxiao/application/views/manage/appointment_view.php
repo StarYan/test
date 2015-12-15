@@ -131,6 +131,7 @@
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="modal-1" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">

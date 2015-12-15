@@ -45,6 +45,13 @@
             <div id="sidebar" class="navbar-collapse collapse">
                 <!-- BEGIN Navlist -->
                 <ul class="nav nav-list">
+                    <li >
+                        <a href="<?php echo site_url('manage_appointment/appointmentInfo/'.$dataAdmin->id)?>">
+                            <i class="icon-star"></i>
+                            <span>学员预约信息</span>
+                        </a>
+                    </li>
+
                     <li>
                         <a href="<?php echo site_url('manage_addinfo/index/'.$dataAdmin->id)?>">
                             <i class="icon-star"></i>

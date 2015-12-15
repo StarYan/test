@@ -20,7 +20,19 @@
     <link rel="stylesheet" href="<?php echo base_url()?>/css/flaty.css">
     <link rel="stylesheet" href="<?php echo base_url()?>/css/flaty-responsive.css">
 
+    <style>
+        .gallery > li {
+            margin-left: 14px;
+            margin-right: 14px;
+        }
 
+        .gallery > li > .gallery-tools {
+            height: 40px;
+            bottom: 0;
+        }
+
+
+    </style>
 </head>
 <body>
 
@@ -150,7 +162,7 @@
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
                             <input type="button" class="btn btn-primary" value="预约" id="submit">
-                            <button type="button" class="btn btn-danger">取消</button>
+                            <button type="reset" class="btn btn-danger">取消</button>
                         </div>
                     </div>
                 </div>
@@ -173,6 +185,11 @@
                         <h3><i class="icon-th-list"></i>教练推荐</h3>
                     </div>
 
+                    <div class="box-content">
+                        <ul class="gallery" id="hot">
+
+                        </ul>
+                    </div>
 
                 </div>
             </div>
@@ -181,7 +198,7 @@
         <br/><br/><br/>
 
         <!-- 场地介绍 -->
-        <div class="row" style="margin-top: 100px; z-index: -1;">
+        <div class="row" style=" z-index: -1;">
             <div class="col-md-12">
                 <div class="box box-blue">
                     <div class="box-title">
@@ -195,7 +212,7 @@
                                     <li>
                                         <a href="#" rel="prettyPhoto" title="场地照片">
                                             <div>
-                                                <img class="place" src="#" alt=""  />
+                                                <img class="place" src="<?php echo base_url()?>images/14.jpg" alt=""  />
                                                 <i></i>
                                             </div>
                                         </a>
@@ -205,7 +222,7 @@
                             <div class="col-md-6 place">
                                 <h4>场地详情</h4>
                                 <dl class="place">
-
+                                    <dd>此处展示所选场地的详细信息</dd>
                                 </dl>
                             </div>
                         </div>
@@ -231,7 +248,7 @@
                                     <li>
                                         <a href="#" rel="prettyPhoto" title="Description of image">
                                             <div>
-                                                <img class="coach" src="#" alt="" />
+                                                <img class="coach" src="<?php echo base_url()?>images/14.jpg" alt="" />
                                                 <i></i>
                                             </div>
                                         </a>
@@ -240,8 +257,8 @@
                             </div>
                             <div class="col-md-6">
                                 <h4>教练详情</h4>
-                                <dl class="dl-horizontal coach">
-
+                                <dl class="coach">
+                                    <dd>此处展示所选教练的详细信息</dd>
                                 </dl>
                             </div>
                         </div>
@@ -267,7 +284,7 @@
                                     <li>
                                         <a href="#" rel="prettyPhoto" title="Description of image">
                                             <div>
-                                                <img class="car" src="#" alt="" />
+                                                <img class="car" src="<?php echo base_url()?>images/14.jpg" alt="" />
                                                 <i></i>
                                             </div>
                                         </a>
@@ -276,8 +293,8 @@
                             </div>
                             <div class="col-md-6">
                                 <h4>车辆详情</h4>
-                                <dl class="dl-horizontal car">
-
+                                <dl class="car">
+                                    <dd>此处展示所选车辆的详细信息</dd>
                                 </dl>
                             </div>
                         </div>
@@ -340,6 +357,9 @@
             }
         });
 
+
+
+
         $.ajax({
             type: "POST",
             url: '<?php echo site_url('appointment/allCoach')?>',
@@ -351,6 +371,11 @@
                 for (var i = 0; i < data.data.length; i++) {
                     var str = " <option value=" + data.data[i].id + ">" + data.data[i].c_name + "</option>";
                     $("#coach").append(str);
+                }
+                $("#hot").empty();
+                for(var i = 0; i < 5; i++){
+                    var hot='<li><a href="#" rel="prettyPhoto" title="教练推荐"> <div> <img src="'+'<?php echo base_url()?>images/'+ data.data[i].img+'" alt="" /> <i></i> </div> </a> <div class="gallery-tools"> <p><h4><strong style="color:white;">'+ data.data[i].c_name+'教练</strong></h4></p> </div> </li>';
+                    $("#hot").append(hot);
                 }
             }
         });
@@ -405,9 +430,16 @@
                         var str = " <option value=" + data.data['result'][i].coachid + ">" + data.data['result'][i].c_name + "</option>";
                         $("#coach").append(str);
                     }
+
                     $("img.place").attr("src","<?php echo base_url()?>uploads/"+data.data['placeInfo'][0].img);
                     var string="<dt>场地地址</dt><dd>"+data.data['placeInfo'][0].address +"</dd><dt>场地描述</dt><dd>"+data.data['placeInfo'][0].description +"</dd>"
                     $("dl.place").html(string);
+
+                    $("#hot").empty();
+                    for(var i = 0; i < 5; i++){
+                        var hot='<li><a href="#" rel="prettyPhoto" title="教练推荐"> <div> <img src="'+'<?php echo base_url()?>images/'+ data.data['result'][i].img+'" alt="" /> <i></i> </div> </a> <div class="gallery-tools"> <p><h4><strong style="color:white;">'+ data.data['result'][i].c_name+'教练</strong></h4></p> </div> </li>';
+                        $("#hot").append(hot);
+                    }
                 }
             });
         });
@@ -435,6 +467,12 @@
                     $("img.place").attr("src","<?php echo base_url()?>uploads/"+data.data['placeInfo'][0].img);
                     var string="<dt>场地地址</dt><dd>"+data.data['placeInfo'][0].address +"</dd><dt>场地描述</dt><dd>"+data.data['placeInfo'][0].description +"</dd>"
                     $("dl.place").html(string);
+
+                    $("#hot").empty();
+                    for(var i = 0; i < 5; i++){
+                        var hot='<li><a href="#" rel="prettyPhoto" title="教练推荐"> <div> <img src="'+'<?php echo base_url()?>images/'+ data.data['result'][i].img+'" alt="" /> <i></i> </div> </a> <div class="gallery-tools"> <p><h4><strong style="color:white;">'+ data.data['result'][i].c_name+'教练</strong></h4></p> </div> </li>';
+                        $("#hot").append(hot);
+                    }
                 }
             });
         });
