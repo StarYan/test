@@ -92,7 +92,12 @@
             $offset=intval($this->uri->segment(4));
             $this->pagination->initialize($config);
             //$result = $this->coachandplace_model->get("",$offset,$pagesize);
-            $result = $this->coachandplace_model->find($offset,$pagesize,$placeid,$coachid,$timeid);
+            if($count){
+                $result = $this->coachandplace_model->find($offset,$pagesize,$placeid,$coachid,$timeid);
+            }else{
+                $result = 0;
+            }
+
 
             $list['result']=$result;
             $list['dataAdmin']=$dataAdmin;
