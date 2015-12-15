@@ -79,21 +79,21 @@
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="id">场地:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="name" id="name" class="form-control" data-rule-required="true"  />
+                                    <input type="text" name="name" id="name" class="form-control" data-rule-required="true" required  />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="address">场地地址:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="address" id="address" class="form-control" data-rule-required="true"  />
+                                    <input type="text" name="address" id="address" class="form-control" data-rule-required="true" required />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label">场地详情:</label>
                                 <div class="col-sm-9 col-lg-10 controls">
-                                    <textarea class="form-control" rows="3" name="address_detail" placeholder="填写场地的详细信息..."></textarea>
+                                    <textarea class="form-control" rows="3" name="address_detail" placeholder="填写场地的详细信息..." required></textarea>
                                 </div>
                             </div>
 
@@ -101,7 +101,7 @@
                                 <label class="col-sm-3 col-lg-2 control-label" for="address_img">场地图片:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
                                     <div class="fileupload fileupload-new" data-provides="fileupload">
-                                        <input type="file" name="img" id="img" class="form-control" data-rule-required="true" />
+                                        <input type="file" name="img" id="img" class="form-control" data-rule-required="true" required />
                                     </div>
                                 </div>
                             </div>
@@ -121,41 +121,41 @@
                 <div class="tab-pane" id="tab-1-2">
                     <div class="box-content">
                         <form id="coachform" action="<?php echo site_url('/manage_addinfo/addcoach')?>" class="form-horizontal"  method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="coachid" id="coachid" class="form-control" data-rule-required="true"  />
+                            <input type="hidden" name="coachid" id="coachid" class="form-control" data-rule-required="true" required />
 
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="name">教练名字:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="coachname" id="coachname" class="form-control" data-rule-required="true"  />
+                                    <input type="text" name="coachname" id="coachname" class="form-control" data-rule-required="true" required />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="phone">教练电话:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="phone" id="phone" class="form-control" data-rule-required="true" data-rule-maxlength="11"  />
+                                    <input type="text" name="phone" id="phone" class="form-control" data-rule-required="true" data-rule-maxlength="11" required />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="money">教练价格:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="money" id="money" class="form-control" data-rule-required="true"  />
+                                    <input type="text" name="money" id="money" class="form-control" data-rule-required="true" required />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label">教练简介</label>
                                 <div class="col-sm-9 col-lg-10 controls">
-                                    <textarea class="form-control" rows="3" name="coach_detail" placeholder="填写教练简介..."></textarea>
+                                    <textarea class="form-control" rows="3" name="coach_detail" placeholder="填写教练简介..." required ></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="coach_img">教练图片:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="file" name="coach_img" id="coach_img" class="form-control" data-rule-required="true"   />
+                                    <input type="file" name="coach_img" id="coach_img" class="form-control" data-rule-required="true" required  />
                                 </div>
                             </div>
 
@@ -177,28 +177,28 @@
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="type">车辆车型:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="type" id="type" class="form-control" data-rule-required="true"  />
+                                    <input type="text" name="type" id="type" class="form-control" data-rule-required="true" required />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="number">车牌号码:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="number" id="number" class="form-control" data-rule-required="true" />
+                                    <input type="text" name="number" id="number" class="form-control" data-rule-required="true" required />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label">车辆简介</label>
                                 <div class="col-sm-9 col-lg-10 controls">
-                                    <textarea class="form-control" rows="3" name="car_detail" placeholder="填写车辆简介..."></textarea>
+                                    <textarea class="form-control" rows="3" name="car_detail" placeholder="填写车辆简介..." required ></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="car_img">车辆图片:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="file" name="car_img" id="car_img" class="form-control" data-rule-required="true"  />
+                                    <input type="file" name="car_img" id="car_img" class="form-control" data-rule-required="true" required />
                                 </div>
                             </div>
 
