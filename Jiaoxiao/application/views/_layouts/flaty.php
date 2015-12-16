@@ -48,21 +48,21 @@
                     <li >
                         <a href="<?php echo site_url('manage_appointment/appointmentInfo/'.$dataAdmin->id)?>">
                             <i class="icon-star"></i>
-                            <span>学员预约信息</span>
+                            <span>学员预约管理</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="<?php echo site_url('manage_addinfo/index/'.$dataAdmin->id)?>">
                             <i class="icon-star"></i>
-                            <span>信息添加</span>
+                            <span>场地教练车型信息添加</span>
                         </a>
                     </li>
 
                     <li >
                         <a href="<?php echo site_url('manage_appointment/index/'.$dataAdmin->id)?>">
                             <i class="icon-star"></i>
-                            <span>预约管理</span>
+                            <span>场地教练管理</span>
                         </a>
                     </li>
 
