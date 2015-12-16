@@ -60,7 +60,7 @@
                     </li>
 
                     <li >
-                        <a href="<?php echo site_url('manage_appointment/index/'.$dataAdmin->id)?>">
+                        <a href="<?php echo site_url('manage_coachandplace/index/'.$dataAdmin->id)?>">
                             <i class="icon-star"></i>
                             <span>预约管理</span>
                         </a>

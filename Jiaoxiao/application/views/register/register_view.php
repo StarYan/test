@@ -214,7 +214,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-3 col-lg-2 control-label" for="birthday">出生日期</label>
                                                 <div class="col-sm-5 col-lg-3 controls">
-                                                    <input class="form-control"  type="date" name="birthday" required />
+                                                    <input class="form-control"  type="date" id="birthday" name="birthday" required />
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -259,7 +259,7 @@
                                                         <div class="fileupload-new img-thumbnail" style="width: 428px; height: 270px;">
                                                             <img src="#" alt="" />
                                                         </div>
-                                                        <input type="file" class="form-control default" name="img" required />
+                                                        <input type="file" id="img" class="form-control default" name="img" required />
                                                     </div>
                                                 </div>
                                             </div>
@@ -269,7 +269,8 @@
                                                 <label class="col-sm-3 col-lg-2 control-label">培训类别</label>
                                                 <div class="col-sm-9 col-lg-10 controls">
                                                     <select class="form-control  chosen"  tabindex="1" id="select1" required>
-                                                        <option value="type1" selected>普通机动车驾驶员培训</option>
+                                                        <option value="" selected>-- 请选择培训类别 --</option>
+                                                        <option value="type1" >普通机动车驾驶员培训</option>
                                                         <option value="type2">道路运输驾驶员从业资格培训</option>
                                                         <option value="type3">其他培训</option>
                                                     </select>
@@ -280,7 +281,6 @@
                                                 <label class="col-sm-3 col-lg-2 control-label">培训车型</label>
                                                 <div class="col-sm-9 col-lg-10 controls">
                                                     <select class="form-control  chosen" name="wanted_car_type" id="select2" required>
-                                                        <option value="C1" selected>C1</option>
                                                     </select>
                                                     <input type="text" style="display:none" id="others" class="form-control"  />
                                                 </div>
@@ -291,7 +291,7 @@
                                         <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
                                             <a href="#" class="btn button-previous">返回</a>
                                             <a href="#" class="btn btn-primary button-next">下一步</a>
-                                            <button  class="btn btn-primary " type="submit">提交</button>
+                                            <button  class="btn btn-primary button-submit" type="submit" id="submit">提交</button>
                                             <button  class="btn btn-danger button-submit" type="reset">重置</button>
                                         </div>
                                     </div>
@@ -328,6 +328,81 @@
 
 <!--flaty scripts-->
 <script src="<?php echo base_url()?>js/flaty.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#submit").click(function(){
+            var ni=$("#nickname").val();
+            var p=$("#password").val();
+            var s=$("#sex").val();
+            var na=$("#name").val();
+            var b=$("#birthday").val();
+            var i=$("#id").val();
+            var ph=$("#phone").val();
+            var q=$("#qq").val();
+            var e=$("#email").val();
+            var a=$("#address").val();
+            var im=$("#img").val();
+            var s1=$("#select1").val();
+            var s2=$("#select2").val();
+
+            if(ni==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            if(p==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            if(s==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }if(na==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            if(b==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            if(i==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            if(ph==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            if(q==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            if(a==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            if(e==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            if(im==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            if(s1==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            if(s2==""){
+                alert("注册失败，请按要求填写注册信息");
+                return false;
+            }
+            alert("注册成功");
+
+        });
+
+    });
+</script>
 
 </body>
 </html>
