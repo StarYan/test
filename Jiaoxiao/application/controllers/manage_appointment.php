@@ -1,4 +1,8 @@
 ﻿<?php
+
+/**
+ * 学院预约管理
+ */
     class Manage_appointment extends MY_Controller{
         public function __construct(){
             parent::__construct();
@@ -54,7 +58,7 @@
             $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
 
-            $this->layout->view('/manage/appointmentInfo_view',$list);
+            $this->layout->view('/manage/appointment_view',$list);
         }
 
 

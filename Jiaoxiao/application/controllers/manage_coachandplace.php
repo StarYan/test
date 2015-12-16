@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * 教练场地管理
+ */
     class Manage_coachandplace extends MY_Controller{
         public function __construct(){
             parent::__construct();
@@ -24,7 +28,7 @@
             /*----------------------------------------------------*/
             $pagesize=3;
             $count=$this->coachandplace_model->count("");
-            $config['base_url']=site_url('manage_appointment/index/'.$dataAdmin->id);
+            $config['base_url']=site_url('manage_coachandplace/index/'.$dataAdmin->id);
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
             $config['next_link']='>>';
@@ -54,7 +58,7 @@
             $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
 
-            $this->layout->view('/manage/appointment_view',$list);
+            $this->layout->view('/manage/coachandplace_view',$list);
         }
 
         public function find(){
@@ -68,7 +72,7 @@
             /*----------------------------------------------------*/
             $pagesize=3;
             $count=$this->coachandplace_model->count($data);
-            $config['base_url']=site_url('manage_appointment/index/'.$dataAdmin->id);
+            $config['base_url']=site_url('manage_coachandplace/index/'.$dataAdmin->id);
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
             $config['next_link']='>>';
@@ -103,7 +107,7 @@
             $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
 
-            $this->layout->view('/manage/appointment_view',$list);
+            $this->layout->view('/manage/coachandplace_view',$list);
         }
 
         /**
