@@ -10,6 +10,7 @@
             $this->load->model('checked_model','checked');
             $this->load->model('coach_model');
             $this->load->model('place_model');
+            $this->load->model('cartype_model');
             $this->load->model('time_model');//加个时间表
             $this->load->model('coachandplace_model');//加个时间id列
         }
@@ -115,14 +116,14 @@
 
             $data['type'] = $this->input->post('type', true);
             $data['number'] = $this->input->post('number', true);
-            $data['coach_detail'] = $this->input->post('car_detail', true);
-            $result = $this->coach_model->count($data);
+            $data['car_detail'] = $this->input->post('car_detail', true);
+            $result = $this->cartype_model->count($data);
             if ($result) {
                 return $this->send_json(false, '已成功提交');
             } else {
                 $data['img'] = $img['file_name'];
                 if ($data) {
-                    $result = $this->type_model->add($data);
+                    $result = $this->cartype_model->add($data);
                     if ($result) {
                         return $this->send_json(true, '成功');
                     }
