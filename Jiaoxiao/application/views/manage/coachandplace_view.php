@@ -185,7 +185,7 @@
 //2.将文本框的数据发送到服务器端
             $.ajax({
                 type: "POST",
-                url: '<?php echo site_url('manage_coachacdplace/saveappoint')?>',
+                url: '<?php echo site_url('manage_coachandplace/saveappoint')?>',
                 data: {
                     placeid: placeval,
                     coachid: coachval,
@@ -201,7 +201,7 @@
 
         $.ajax({
             type: "POST",
-            url: '<?php echo site_url('manage_coachacdplace/getplace')?>',
+            url: '<?php echo site_url('manage_coachandplace/getplace')?>',
             data: {},
             dataType: "json",
             success: function (data) {
@@ -219,7 +219,7 @@
 
         $.ajax({
             type: "POST",
-            url: '<?php echo site_url('manage_coachacdplace/getcoach')?>',
+            url: '<?php echo site_url('manage_coachandplace/getcoach')?>',
             data: {},
             dataType: "json",
             success: function (data) {
@@ -247,7 +247,7 @@
             var id = $(this).data("id");
             $.ajax({
                 type: "POST",
-                url: '<?php echo site_url('manage_coachacdplace/delete')?>',
+                url: '<?php echo site_url('manage_coachandplace/delete')?>',
                 data: {id:id},
                 dataType: "json",
                 success: function (data) {
