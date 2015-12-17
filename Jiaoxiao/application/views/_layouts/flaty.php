@@ -67,6 +67,13 @@
                     </li>
 
                     <li >
+                        <a href="<?php echo site_url('news_controller/admin/'.$dataAdmin->id)?>">
+                            <i class="icon-edit"></i>
+                            <span>新闻信息管理</span>
+                        </a>
+                    </li>
+
+                    <li >
                         <a href="<?php echo site_url('manage_controller/UnChecked/'.$dataAdmin->id)?>">
                             <i class="icon-check"></i>
                             <span>未审核</span>
