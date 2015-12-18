@@ -35,7 +35,7 @@
                                         <div class="btn-group">
                                             <a class="btn btn-sm show-tooltip" title="View" href="#"><i class="icon-zoom-in"></i></a>
                                             <a class="btn btn-sm show-tooltip" title="Edit" href="#"><i class="icon-edit"></i></a>
-                                            <a class="btn btn-sm btn-danger show-tooltip" title="Delete" href="#"><i class="icon-trash"></i></a>
+                                            <a class="btn btn-sm btn-danger show-tooltip del" title="Delete" data-id="<?php echo $appointment->id;?>"><i class="icon-trash"></i></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -54,3 +54,20 @@
 </div>
 
 <!--显示学员的预约信息-->
+<script type="text/javascript">
+    window.onload=function() {
+        $(".del").click(function(){
+            var id = $(this).data("id");
+            $.ajax({
+                type: "POST",
+                url: '<?php echo site_url('manage_appointment/delete')?>',
+                data: {id:id},
+                dataType: "json",
+                success: function (data) {
+                    alert(data.msg);
+                    location.reload();
+                }
+            });
+        });
+    }
+</script>

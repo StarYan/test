@@ -61,6 +61,8 @@
             $this->layout->view('/manage/appointment_view',$list);
         }
 
-
+        public function delete(){
+            $this->input->post();
+        }
 
     }
