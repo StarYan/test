@@ -67,7 +67,7 @@
                     </li>
 
                     <li >
-                        <a href="<?php echo site_url('news_controller/admin/'.$dataAdmin->id)?>">
+                        <a href="<?php echo site_url('manage_news/admin/'.$dataAdmin->id)?>">
                             <i class="icon-edit"></i>
                             <span>新闻信息管理</span>
                         </a>

@@ -5,7 +5,7 @@
             <div class="box-title">
                 <h3><i class="icon-table"></i> 新闻信息</h3>
                 <div class="box-tool">
-                    <a class="btn btn-primary" href="<?php echo site_url('/news_controller/create').'/'.$dataAdmin->id ?>"> 添加新闻信息</a>
+                    <a class="btn btn-primary" href="<?php echo site_url('/manage_news/create').'/'.$dataAdmin->id ?>"> 添加新闻信息</a>
                 </div>
             </div>
             <div class="box-content">
@@ -34,9 +34,9 @@
                                     <td class="text-center"><span class="label label-success"><?php echo $newsInfo['create_id'];?></span></td>
                                     <td class="visible-md visible-lg text-center">
                                         <div class="btn-group">
-                                            <a class="btn btn-sm show-tooltip" title="查看" href="<?php echo site_url('/news_controller/view').'/'.$newsInfo['id'].'/'.$dataAdmin->id; ?>"><i class="icon-zoom-in"></i></a>
-                                            <a class="btn btn-sm show-tooltip" title="修改" href="<?php echo site_url('/news_controller/update').'/'.$newsInfo['id'].'/'.$dataAdmin->id; ?>"><i class="icon-edit"></i></a>
-                                            <a class="btn btn-sm btn-danger show-tooltip" title="删除" href="<?php echo site_url('/news_controller/delete').'/'.$newsInfo['id'].'/'.$dataAdmin->id; ?>"><i class="icon-trash"></i></a>
+                                            <a class="btn btn-sm show-tooltip" title="查看" href="<?php echo site_url('/manage_news/view').'/'.$newsInfo['id'].'/'.$dataAdmin->id; ?>"><i class="icon-zoom-in"></i></a>
+                                            <a class="btn btn-sm show-tooltip" title="修改" href="<?php echo site_url('/manage_news/update').'/'.$newsInfo['id'].'/'.$dataAdmin->id; ?>"><i class="icon-edit"></i></a>
+                                            <a class="btn btn-sm btn-danger show-tooltip" title="删除" href="<?php echo site_url('/manage_news/delete').'/'.$newsInfo['id'].'/'.$dataAdmin->id; ?>"><i class="icon-trash"></i></a>
                                         </div>
                                     </td>
                                 </tr>

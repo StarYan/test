@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 
 /**
  * Created by PhpStorm.
@@ -6,7 +6,7 @@
  * Date: 2015/12/16
  * Time: 21:43
  */
-class news_controller extends MY_Controller{
+class Manage_news extends MY_Controller{
     public function __construct() {
         parent::__construct();
         $this->load->model('news_model','news');
@@ -15,23 +15,23 @@ class news_controller extends MY_Controller{
     }
 
     /**
-     * ¼ÓÔØÌí¼ÓĞÂÎÅĞÅÏ¢µÄºóÌ¨Ò³Ãæ
-     * @param string $id ¹ÜÀíÔ±µÄID
+     * åŠ è½½æ·»åŠ æ–°é—»ä¿¡æ¯çš„åå°é¡µé¢
+     * @param string $id ç®¡ç†å‘˜çš„ID
      */
     public function admin($id){
-        $dataAdmin=$this->admin->getAdminInfoById($id);//»ñÈ¡µÇÂ¼¹ÜÀíÔ±ID
+        $dataAdmin=$this->admin->getAdminInfoById($id);//è·å–ç™»å½•ç®¡ç†å‘˜ID
         $list['dataAdmin']=$dataAdmin;
 
         $pagesize=10;
         $where['deleted']=0;
         $count=$this->news->count($where);
-        $config['base_url']=site_url('news_controller/admin/'.$dataAdmin->id);
+        $config['base_url']=site_url('manage_news/admin/'.$dataAdmin->id);
         $config['total_rows']=$count;
         $config['per_page']=$pagesize;
         $config['next_link']='>>';
         $config['prev_link']='<<';
-        $config['first_link']='Ê×Ò³';
-        $config['last_link']='Î²Ò³';
+        $config['first_link']='é¦–é¡µ';
+        $config['last_link']='å°¾é¡µ';
         $config['full_tag_open']="<ul class='pagination'>";
         $config['full_tag_close']="</ul>";
         $config['prev_tag_open']='<li>';
@@ -54,12 +54,12 @@ class news_controller extends MY_Controller{
         $list['dataAdmin']=$dataAdmin;
         $list['link']=$this->pagination->create_links();
 
-        $this->layout->view('/news/admin',$list);
+        $this->layout->view('/manage/manage_news/admin',$list);
     }
 
     /**
-     * ±£´æÔö¼ÓµÄĞÂÎÅĞÅÏ¢
-     * @param string $id ¹ÜÀíÔ±µÄID
+     * ä¿å­˜å¢åŠ çš„æ–°é—»ä¿¡æ¯
+     * @param string $id ç®¡ç†å‘˜çš„ID
      */
     public function create($id){
         $data['title']=$this->input->post('title');
@@ -67,9 +67,9 @@ class news_controller extends MY_Controller{
         $data['content']=$this->input->post('content');
 
         if(!isset($data['title'])&&!isset($data['link'])&&!isset($data['content'])){
-            $dataAdmin=$this->admin->getAdminInfoById($id);//»ñÈ¡µÇÂ¼¹ÜÀíÔ±ID
+            $dataAdmin=$this->admin->getAdminInfoById($id);//è·å–ç™»å½•ç®¡ç†å‘˜ID
             $list['dataAdmin']=$dataAdmin;
-            $this->layout->view('/news/create',$list);
+            $this->layout->view('/manage/manage_news/create',$list);
         }else{
             $data['create_date']=date('Y-m-d H:i:s');
             $data['create_id']=$id;
@@ -79,9 +79,9 @@ class news_controller extends MY_Controller{
     }
 
     /**
-     * É¾³ıÖ¸¶¨µÄĞÂÎÅĞÅÏ¢
-     * @param string $newsID ĞÂÎÅĞÅÏ¢µÄID
-     * @param string $adminID ¹ÜÀíÔ±µÄID
+     * åˆ é™¤æŒ‡å®šçš„æ–°é—»ä¿¡æ¯
+     * @param string $newsID æ–°é—»ä¿¡æ¯çš„ID
+     * @param string $adminID ç®¡ç†å‘˜çš„ID
      */
     public function delete($newsID,$adminID){
         $where['id']=$newsID;
@@ -90,9 +90,9 @@ class news_controller extends MY_Controller{
     }
 
     /**
-     * ¸ü¸ÄÖ¸¶¨µÄĞÂÎÅĞÅÏ¢
-     * @param string $newsID ĞÂÎÅĞÅÏ¢µÄID
-     * @param string $adminID ¹ÜÀíÔ±µÄID
+     * æ›´æ”¹æŒ‡å®šçš„æ–°é—»ä¿¡æ¯
+     * @param string $newsID æ–°é—»ä¿¡æ¯çš„ID
+     * @param string $adminID ç®¡ç†å‘˜çš„ID
      */
     public function update($newsID,$adminID){
         $where['id']=$newsID;
@@ -104,10 +104,10 @@ class news_controller extends MY_Controller{
 
         if(!isset($data['title'])&&!isset($data['link'])&&!isset($data['content'])){
             $result=$this->news->select($where);
-            $dataAdmin=$this->admin->getAdminInfoById($adminID);//»ñÈ¡µÇÂ¼¹ÜÀíÔ±ID
+            $dataAdmin=$this->admin->getAdminInfoById($adminID);//è·å–ç™»å½•ç®¡ç†å‘˜ID
             $list['dataAdmin']=$dataAdmin;
             $list['result']=$result;
-            $this->layout->view('/news/update',$list);
+            $this->layout->view('/manage/manage_news/update',$list);
         }else{
             $this->news->update($data,$where);
             $this->view($newsID,$adminID);
@@ -115,17 +115,31 @@ class news_controller extends MY_Controller{
     }
 
     /**
-     * ²é¿´Ö¸¶¨µÄĞÂÎÅĞÅÏ¢
-     * @param string $newsID ĞÂÎÅĞÅÏ¢µÄID
-     * @param string $adminID ¹ÜÀíÔ±µÄID
+     * æŸ¥çœ‹æŒ‡å®šçš„æ–°é—»ä¿¡æ¯
+     * @param string $newsID æ–°é—»ä¿¡æ¯çš„ID
+     * @param string $adminID ç®¡ç†å‘˜çš„ID
      */
     public function view($newsID,$adminID){
         $where['id']=$newsID;
         $result=$this->news->select($where);
-        $dataAdmin=$this->admin->getAdminInfoById($adminID);//»ñÈ¡µÇÂ¼¹ÜÀíÔ±ID
+        $dataAdmin=$this->admin->getAdminInfoById($adminID);//è·å–ç™»å½•ç®¡ç†å‘˜ID
         $list['dataAdmin']=$dataAdmin;
         $list['result']=$result;
-        $this->layout->view('/news/view',$list);
+        $this->layout->view('/manage/manage_news/view',$list);
+    }
+
+    /**
+     * æŠŠæ–°é—»ä¿¡æ¯æ˜¾ç¤ºåˆ°å…¥å£é¡µé¢
+     */
+    public function show(){
+        $where['deleted']=0;
+        $result=$this->news->select($where);
+        if($result){
+            return $this->send_json(true,"",$result);
+        }
+        else{
+            return $this->send_json(false,"è¯»å–æ–°é—»ä¿¡æ¯å¤±è´¥");
+        }
     }
 
 }
