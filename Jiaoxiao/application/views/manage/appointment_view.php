@@ -18,7 +18,7 @@
                             <th class="text-center">教练</th>
                             <td class="text-center">时间</th>
                             <td class="text-center">车辆</th>
-                            <th class="visible-md visible-lg text-center" style="width:130px">操作</th>
+                            <th class=text-center" style="width:130px">操作</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -31,7 +31,7 @@
                                     <td class="text-center"><?php echo $appointment->c_name;?></td>
                                     <td class="text-center"><?php echo $appointment->time;?></td>
                                     <td class="text-center"><span class="label label-success"><?php echo $appointment->number;?></span></td>
-                                    <td class="visible-md visible-lg text-center">
+                                    <td class="text-center">
                                         <div class="btn-group">
                                             <a class="btn btn-sm show-tooltip" title="View" href="#"><i class="icon-zoom-in"></i></a>
                                             <a class="btn btn-sm show-tooltip" title="Edit" href="#"><i class="icon-edit"></i></a>

@@ -61,8 +61,20 @@
             $this->layout->view('/manage/appointment_view',$list);
         }
 
+        /**
+         * ajax删除学员预约项
+         */
         public function delete(){
-            $this->input->post();
+            $id = $this->input->post('id',true);
+            $data['id'] = $id;
+            if($id){
+                $result = $this->appointment_model->delete($data);
+                if($result){
+                    return $this->send_json(true,'成功删除');
+                }
+                return $this->send_json(false,'删除失败');
+            }
+            return $this->send_json(false,'失败');
         }
 
     }

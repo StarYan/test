@@ -64,4 +64,12 @@
             $this->db->from($this->table_name);
             return $this->db->count_all_results();
         }
+
+        public function delete($where){
+            if($where){
+                $result = $this->db->delete($this->table_name,$where);
+                return $result;
+            }
+            return false;
+        }
     }
