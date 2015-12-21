@@ -2372,10 +2372,10 @@ a.tile:hover {
     width: 100%;
     position: absolute;
     height: 60px;
-    bottom: -60px;
+    bottom: 0;
     background-color: rgb(88,177,252);
     opacity: 0.8;
-    padding: 3px;
+    padding: 0px;
     text-align: center;
     -webkit-transition: all 0.7s ease;
        -moz-transition: all 0.7s ease;
@@ -2383,6 +2383,7 @@ a.tile:hover {
          -o-transition: all 0.7s ease;
             transition: all 0.7s ease;
 }
+
 .gallery > li:hover > .gallery-tools {
     bottom: 0;
 }
