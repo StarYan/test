@@ -150,7 +150,7 @@
                 $data['nickname'] = $nickname;
                 $data['password'] = $password;
                 if($this->checklogin()){
-                    unset($_SESSION);
+                    $this->session->sess_destroy();
                 }
                 $result = $this->user_model->get_by_name_and_pwd($data);
                 if($result){
