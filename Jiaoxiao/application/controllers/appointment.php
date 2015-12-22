@@ -168,7 +168,7 @@
          * 用户注销
          */
         public function logout(){
-            $this->session->unset();
+           $this->session->sess_destroy();
             return $this->send_json(true,"注销成功");
         }
 
