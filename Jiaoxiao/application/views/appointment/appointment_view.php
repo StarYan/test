@@ -84,9 +84,19 @@
         <!-- 学员登录按钮 -->
         <ul class="nav flaty-nav pull-right">
             <li  id="log">
+                <?php $udata =$this->session->id;?>
+                <?php if(!$udata): ?>
                 <a href="#" class="md-trigger" data-modal="login" id="user" value="login" >
                     登录
                 </a>
+                <?php else: ?>
+                    <li>
+                    <a>欢迎来到蓝光驾校。<?php echo $ndata = $this->session->nickname;?></a>
+                    </li>
+                <li>
+                    <a class='md-trigger logout' href='#'><i class='icon-off'></i> 注销</a>
+                </li>
+                <?php endif; ?>
             </li>
             <li id="logout">
 
@@ -540,7 +550,7 @@
                         },
                         dataType: "json",
                         success: function (data) {
-                            alert('预约成功');
+                            alert(data.msg);
                         }
                     });
 
@@ -550,6 +560,19 @@
             }
         });
 
+        $(".logout").click(function() {
+            $.ajax({
+                type: "POST",
+                url: '<?php echo site_url('appointment/logout')?>',
+                data: {
+                },
+                dataType: "json",
+                success: function (data) {
+                    alert(data.msg);
+                    location.reload();
+                }
+            });
+        });
         /**
          * 用户登录验证ajax
          */
@@ -566,7 +589,9 @@
                 },
                 dataType: "json",
                 success: function (data) {
-                    if(data.code==1){
+                    alert(data.msg);
+                    location.reload();
+                    /*if(data.code==1){
                         alert(data.msg);
                     }else{
                         $(".md-overlay").trigger('click');
@@ -575,7 +600,7 @@
                         $("#log").html(login);
                         var logout="<a class='md-trigger' href='<?php echo site_url()?>/appointment/appointmentmodel'><i class='icon-off'></i> 注销</a>"
                         $("#logout").html(logout);
-                    }
+                    }*/
                 }
             });
         });

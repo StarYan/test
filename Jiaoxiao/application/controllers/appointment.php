@@ -103,6 +103,10 @@
          * ajax预约提交
          */
         public function saveappointment(){
+            $userid = $this->session->id();
+            if(!$userid){
+                return $this->send_json('请先登录');
+            }
             $nickname=$this->input->post('nickname',true);
             $placeID=$this->input->post('placeID',true);
             $coachID=$this->input->post('coachID',true);
@@ -149,9 +153,9 @@
                     unset($_SESSION);
                 }
                 $result = $this->user_model->get_by_name_and_pwd($data);
-                $_SESSION = $result;
-                $list['result']=$result;
                 if($result){
+                    $_SESSION = $result;
+                    $list['result']=$result;
                     return $this->send_json(true,'登录成功',$list);
                 }else{
                     return $this->send_json(false,'登录失败，请查看密码或用户名是否正确');
@@ -164,7 +168,7 @@
          * 用户注销
          */
         public function logout(){
-            unset($_SESSION);
+            $this->session->unset();
             return $this->send_json(true,"注销成功");
         }
 
