@@ -61,17 +61,10 @@ class Evaluate extends MY_Controller{
         if($nickname&&$password){
             $data['nickname'] = $nickname;
             $data['password'] = $password;
-//            if($this->checklogin()){
-//                unset($_SESSION);
-//            }
             $result = $this->user->get_by_name_and_pwd($data);
-            if($result['id']){
-                $this->input->set_cookie("nickname",$result['nickname'],3600);
-                $this->input->set_cookie("password",$result['password'],3600);
-                $this->input->set_cookie("id",$result['id'],3600);
-            }
-            $_SESSION = $result;
+
             if($result){
+                $this->session->set_userdata('userData',$result);
                 $list['result']=$result;
                 return $this->send_json(true,'登录成功',$list);
             }else{
@@ -79,6 +72,14 @@ class Evaluate extends MY_Controller{
             }
         }
         return $this->send_json(false,'登录失败，请查看密码或用户名是否正确');
+    }
+
+    /**
+     * 用户注销
+     */
+    public function logout(){
+        $this->session->sess_destroy();
+        redirect('/evaluate/goEvaluate');
     }
 
     /**

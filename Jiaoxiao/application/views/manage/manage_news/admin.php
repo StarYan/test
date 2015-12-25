@@ -31,7 +31,7 @@
                                     <td class="text-center"><a href="<?php echo $newsInfo['link'];?>" target="_blank"><?php echo $newsInfo['link'];?></a></td>
                                     <td class="text-center"><?php echo $newsInfo['content'];?></td>
                                     <td class="text-center"><?php echo $newsInfo['create_date'];?></td>
-                                    <td class="text-center"><span class="label label-success"><?php echo $newsInfo['create_id'];?></span></td>
+                                    <td class="text-center"><span class="label label-info"><?php echo $newsInfo['create_id'];?></span></td>
                                     <td class="visible-md visible-lg text-center">
                                         <div class="btn-group">
                                             <a class="btn btn-sm show-tooltip" title="查看" href="<?php echo site_url('/manage_news/view').'/'.$newsInfo['id'].'/'.$dataAdmin->id; ?>"><i class="icon-zoom-in"></i></a>

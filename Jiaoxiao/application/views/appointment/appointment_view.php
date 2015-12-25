@@ -91,7 +91,7 @@
                 </a>
                 <?php else: ?>
                     <li>
-                    <a>欢迎来到蓝光驾校。<?php echo $ndata = $this->session->nickname;?></a>
+                    <a>欢迎来到蓝光驾校,<?php echo $ndata = $this->session->nickname;?></a>
                     </li>
                 <li>
                     <a class='md-trigger logout' href='#'><i class='icon-off'></i> 注销</a>

@@ -31,7 +31,7 @@
     <div class="md-content">
         <h3>用户登录</h3>
         <div>
-            <form  class="form-horizontal" >
+            <form  class="form-horizontal"  >
                 <div class="form-group">
                     <label class="col-sm-3 col-lg-2 control-label" for="nickname">用户名:</label>
                     <div class="col-sm-6 col-lg-10 controls">
@@ -136,14 +136,25 @@
 
         <!-- 学员登录按钮 -->
         <ul class="nav flaty-nav pull-right">
-            <li  id="log">
+            <?php $userData=$this->session->userData;?>
+            <?php if($userData) {?>
+            <li>
+                <a  class="md-trigger" >
+                    欢迎来到蓝光驾校，<?=$userData['nickname']?>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('evaluate/logout')?>" class="md-trigger" >
+                    <i class="icon-off"></i>
+                </a>
+            </li>
+            <?php }else {?>
+            <li>
                 <a href="#" class="md-trigger" data-modal="login" id="user" value="login" >
                     登录
                 </a>
             </li>
-            <li id="logout">
-
-            </li>
+            <?php }?>
         </ul>
         <!-- 学员登录按钮 -->
 
@@ -251,37 +262,9 @@
 <script>
     $(document).ready(function(){
 
-        /**
-         * 用户登录验证ajax
-         */
-        $("#log_in").click(function() {
-            var nickname=$("#nickname").val();
-            var password=$("#password").val();
-
-            $.ajax({
-                type: "POST",
-                url: '<?php echo site_url('evaluate/login')?>',
-                data: {
-                    nickname:nickname,
-                    password:password
-                },
-                dataType: "json",
-                success: function (data) {
-                    if(data.code==1){
-                        alert(data.msg);
-                    }else{
-                        $(".md-overlay").trigger('click');
-                        $("#log").empty();
-                        var login="<a data-id="+ data.data['result'].id +">"+data.data['result'].nickname+"</a>";
-                        $("#log").html(login);
-                        var logout="<a class='md-trigger' href='<?php echo site_url()?>/evaluate/goEvaluate'><i class='icon-off'></i> 注销</a>"
-                        $("#logout").html(logout);
-                    }
-                }
-            });
-        });
 
         $(".evaluate").click(function(){
+            $("#submit").removeAttr('data-id');
             var id="";
             $("#modal-12").addClass('md-show');
 
@@ -320,14 +303,16 @@
 
                 }
             });
+        });
 
-            $("#submit").click(function(){
-                var userid=$("#log a").data('id');
-                var coachid=$(this).data('id');
-                var star=$("#evaluate-star").val();
-                var remark=$("#remark").val();
+        $("#submit").click(function(){
 
-                if(userid){
+            var userid="<?=$userData['id']?>";
+            var coachid=$(this).data('id');
+            var star=$("#evaluate-star").val();
+            var remark=$("#remark").val();
+            if(userid){
+                if(star){
                     $.ajax({
                         type:"POST",
                         url: '<?php echo site_url('/evaluate/acceptEvaluate')?>',
@@ -344,12 +329,13 @@
                         }
                     });
                 }else{
-                    alert('请先登录再进行评价');
-                    return false;
+                    alert('请进行评价再进行提交');
                 }
-            });
 
-
+            }else{
+                alert('请先登录再进行评价');
+                return false;
+            }
         });
 
         $(".md-overlay").click(function(){
@@ -366,6 +352,26 @@
         });
 
 
+        /**
+         * 用户登录验证ajax
+         */
+        $("#log_in").click(function() {
+            var nickname=$("#nickname").val();
+            var password=$("#password").val();
+            $.ajax({
+                type: "POST",
+                url: '<?php echo site_url('evaluate/login')?>',
+                data: {
+                    nickname:nickname,
+                    password:password
+                },
+                dataType: "json",
+                success: function (data) {
+                    alert(data.msg);
+                    location.reload();
+                }
+            });
+        });
     });
 </script>
 </html>

@@ -55,7 +55,7 @@
 <!--查询-->
 <div class="row">
     <div class="col-md-12">
-        <div class="box box-gray">
+        <div class="box box-blue">
             <div class="box-title">
                 <h3>查询</h3>
             </div>
@@ -160,8 +160,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn" aria-hidden="true" data-dismiss="modal">Close</button>
-                    <button class="btn btn-primary" data-dismiss="modal" type="submit">Save Change</button>
+                    <button class="btn" aria-hidden="true" data-dismiss="modal">关闭</button>
+                    <button class="btn btn-primary" data-dismiss="modal" type="submit">保存修改</button>
                 </div>
             </form>
         </div>

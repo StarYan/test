@@ -10,31 +10,48 @@ class Register extends MY_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->model('user_model','user');
+        $this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+        $this->load->helper('cookie');
+
     }
 
     /**
-     * ¼ÓÔØÍøÉÏ±¨ÃûÒ³Ãæ
+     * åŠ è½½ç½‘ä¸ŠæŠ¥åé¡µé¢
      */
     public function GoRegister(){
         $this->load->view('/register/register_view');
     }
 
     /**
-     * ±£´æÓÃ»§µÄ±¨ÃûĞÅÏ¢
-     * @param string $nickname ÕËºÅÃû
-     * @param string $password ÕËºÅÃÜÂë
-     * @param string $name ÓÃ»§ĞÕÃû
-     * @param string $sex ĞÔ±ğ
-     * @param string $birthday ÓÃ»§³öÉúÈÕÆÚ
-     * @param string $id ÓÃ»§Éí·İÖ¤ºÅÂë
-     * @param string $phone ÊÖ»úºÅÂë
-     * @param string $qq QQºÅÂë
-     * @param string $email ÓÃ»§ÓÊÏäµØÖ·
-     * @param string $address ÓÃ»§µØÖ·
-     * @param string $img Éí·İÖ¤ÕÕÆ¬ĞÅÏ¢
+     * æ£€æµ‹è´¦å·åæ˜¯å¦å·²ç»å­˜åœ¨çš„ajaxæ¥å£
+     */
+    public function CheckNickname(){
+        $where['nickname']=$this->input->post('nickname',true);
+        $num=$this->user->count($where);
+        if($num){
+            echo json_encode(false);
+        }else{
+            echo json_encode(true);
+        }
+    }
+
+    /**
+     * ä¿å­˜ç”¨æˆ·çš„æŠ¥åä¿¡æ¯
+     * @param string $nickname è´¦å·å
+     * @param string $password è´¦å·å¯†ç 
+     * @param string $name ç”¨æˆ·å§“å
+     * @param string $sex æ€§åˆ«
+     * @param string $birthday ç”¨æˆ·å‡ºç”Ÿæ—¥æœŸ
+     * @param string $id ç”¨æˆ·èº«ä»½è¯å·ç 
+     * @param string $phone æ‰‹æœºå·ç 
+     * @param string $qq QQå·ç 
+     * @param string $email ç”¨æˆ·é‚®ç®±åœ°å€
+     * @param string $address ç”¨æˆ·åœ°å€
+     * @param string $img èº«ä»½è¯ç…§ç‰‡ä¿¡æ¯
      */
     public function Save(){
-        //ÉÏ´«ÕÕÆ¬
+        //ä¸Šä¼ ç…§ç‰‡
         $config['upload_path']='./uploads/';
         $config['allowed_types']='png|jpg|jpeg';
         $config['max_size']='40000';
@@ -42,11 +59,13 @@ class Register extends MY_Controller{
         $this->upload->do_upload('img');
         $img=$this->upload->data();
 
+
+
         $data['nickname']=$_POST['nickname'];
         $data['password']=$_POST['password'];
         $data['name']=$_POST['name'];
         $sex=$_POST['sex'];
-        if(strcmp($sex,"ÄĞ")){
+        if(strcmp($sex,"ç”·")){
             $data['sex']=1;
         }else{
             $data['sex']=0;
@@ -69,7 +88,50 @@ class Register extends MY_Controller{
         $crc2 = abs(crc32($mdv2));
         $data['num']=bcmul($crc1,$crc2);
         $data['create_id']=$data['num'];
-        $this->user->save($data);
+        $result=$this->user->save($data);
+        if($result){
+            echo json_encode(true);
+        }else{
+            echo json_encode(false);
+        }
+    }
+
+    /**
+     * ç”¨æˆ·ç™»å½•
+     */
+    public function Login(){
+
+        $nickname = $this->input->post('user_nickname',true);
+        $password = $this->input->post('user_password',true);
+        $checked = $this->input->post('check',true);
+        if($nickname&&$password){
+            $data['nickname'] = $nickname;
+            $data['password'] = $password;
+            if($this->checklogin()){
+                $this->session->sess_destroy();
+            }
+            $result = $this->user->get_by_name_and_pwd($data);
+            if($result){
+                if($checked){
+                    $this->input->set_cookie("nickname",$nickname,3600*24*365);
+                }else{
+                    delete_cookie("nickname");
+                }
+                $_SESSION = $result;
+                return $this->send_json(true,'');
+            }
+            return $this->send_json(false,'è¯·ç¡®è®¤æ‚¨çš„è´¦å·æˆ–è€…å¯†ç æ˜¯å¦å¡«å†™æ­£ç¡®');
+        }
+        return $this->send_json(false,'è¯·å¡«å†™æ‚¨çš„è´¦å·æˆ–è€…å¯†ç ');
+
+    }
+
+    /**
+     * ç”¨æˆ·æ³¨é”€
+     */
+    public function logout(){
+        $this->session->sess_destroy();
+        return $this->send_json(true,"æ³¨é”€æˆåŠŸ");
     }
 
 }

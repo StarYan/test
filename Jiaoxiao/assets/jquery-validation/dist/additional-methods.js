@@ -615,3 +615,34 @@ jQuery.validator.addMethod("extension", function(value, element, param) {
 	param = typeof param === "string" ? param.replace(/,/g, '|') : "png|jpe?g|gif";
 	return this.optional(element) || value.match(new RegExp(".(" + param + ")$", "i"));
 }, jQuery.format("Please enter a value with a valid extension."));
+
+
+//判断身份证的格式
+jQuery.validator.addMethod("isIDCard", function(value, element) {
+	var id = /^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/;
+	return this.optional(element) || (id.test(value));
+}, "请正确填写您的身份证号");
+
+//判断手机号码的格式
+jQuery.validator.addMethod("isPhone", function(value, element) {
+	var phone = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/;
+	return this.optional(element) || (phone.test(value));
+}, "请正确填写您的手机号码");
+
+//判断输入的密码格式
+jQuery.validator.addMethod("psd", function(value, element) {
+	var psd = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+	return this.optional(element) || (psd.test(value));
+}, "8-20个字符，包含大小写字母和数字的组合，不能使用特殊字符");
+
+//判断账号名的格式
+jQuery.validator.addMethod("nickname", function(value, element) {
+	var nickname = /^[\u4e00-\u9fa5]{1,7}$|^[\dA-Za-z_]{1,14}$/;
+	return this.optional(element) || (nickname.test(value));
+}, "账号名只能由最多7个汉字或者14个英文字符组成");
+
+//判断用户姓名的格式
+jQuery.validator.addMethod("username", function(value, element) {
+	var username = /^[\u4e00-\u9fa5]{1,7}$/;
+	return this.optional(element) || (username.test(value));
+}, "最多由7个汉字组成，请正确填写您的名字");

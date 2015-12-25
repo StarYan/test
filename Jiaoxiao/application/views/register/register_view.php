@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="<?php echo base_url()?>css/flaty.css">
     <link rel="stylesheet" href="<?php echo base_url()?>css/flaty-responsive.css">
 
+    <style>
+        input.error {
+            border:1px solid red;
+        }
+    </style>
 
     <script type="text/javascript">
 
@@ -97,17 +102,12 @@
 <body>
 <!-- BEGIN Navbar -->
 <div id="navbar" class="navbar">
-    <button type="button" class="navbar-toggle navbar-btn collapsed" data-toggle="collapse" data-target="#sidebar">
-        <span class="icon-reorder"></span>
-    </button>
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand col-md-offset-1" href="#">
         <small>
-            <i class="icon-desktop"></i>
+            <i class=""></i>
             蓝光驾校
         </small>
     </a>
-
-
 </div>
 <!-- END Navbar -->
 
@@ -116,198 +116,393 @@
 
     <!-- BEGIN Content -->
     <div id="main-content">
-        <!-- BEGIN Page Title -->
-        <div class="page-title">
-            <div>
-                <h1> 网上报名</h1>
-                <h4></h4>
-            </div>
-        </div>
-        <!-- END Page Title -->
-
-        <!-- BEGIN Breadcrumb -->
-        <div id="breadcrumbs">
-            <ul class="breadcrumb">
-                <li>
-                    <i class="icon-home"></i>
-                    <a href="#">首页</a>
-                    <span class="divider"></span>
-                </li>
-                <li class="active"></li>
-            </ul>
-        </div>
-        <!-- END Breadcrumb -->
 
         <!-- BEGIN Main Content -->
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-7 col-md-offset-1">
                 <div class="box">
                     <div class="box-title">
-                        <h3><i class="icon-edit"></i> 填写报名信息</h3>
+                        <h3> 蓝光驾校网上报名</h3>
+                        <div class="box-tool">
+                            <a href="<?php echo site_url('/main/goMain')?>" class="btn btn-primary" ><i class="icon-home"></i> 首页</a>
+                        </div>
                     </div>
                     <div class="box-content">
-                            <form action="<?php echo site_url('/register/Save')?>" class="form-horizontal" method="post" enctype="multipart/form-data">
-                                <div class="form-wizard" id="form-wizard-2">
-                                    <ul class="row steps steps-fill">
-                                        <li class="col-md-3">
-                                            <a href="#tab2-1"  data-toggle="tab" class="step active">
-                                                <span class="number">1</span>
-                                                <span class="desc"><i class="icon-ok"></i> 账号密码</span>
-                                            </a>
-                                        </li>
-                                        <li class="col-md-3">
-                                            <a href="#tab2-2"  data-toggle="tab" class="step">
-                                                <span class="number">2</span>
-                                                <span class="desc"><i class="icon-ok"></i> 个人信息</span>
-                                            </a>
-                                        </li>
-                                        <li class="col-md-3">
-                                            <a href="#tab2-3"  data-toggle="tab" class="step">
-                                                <span class="number">3</span>
-                                                <span class="desc"><i class="icon-ok"></i> 上传照片</span>
-                                            </a>
-                                        </li>
-                                        <li class="col-md-3">
-                                            <a href="#tab2-4" data-toggle="tab" class="step">
-                                                <span class="number">4</span>
-                                                <span class="desc"><i class="icon-ok"></i> 报名信息</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-primary"></div>
-                                    </div>
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="tab2-1">
-                                            <div class="form-group">
-                                                <label for="nickname" class="col-sm-3 col-lg-2 control-label">账号名</label>
-                                                <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="nickname" id="nickname" class="form-control" required pattern="^[\u4e00-\u9fa5]{1,7}$|^[\dA-Za-z_]{1,14}$" title=" 7个汉字或14个字符" />
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="password" class="col-sm-3 col-lg-2 control-label">密码</label>
-                                                <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="password" id="password" class="form-control" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$" title="包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane" id="tab2-2">
-                                            <div class="form-group">
-                                                <label for="name" class="col-sm-3 col-lg-2 control-label">姓名</label>
-                                                <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="name" id="name" class="form-control" required pattern="^[\u4e00-\u9fa5]{1,7}$" title="7个汉字">
-                                                </div>
-                                            </div>
+                        <form action="" class="form-horizontal" id="register_form" method="post">
 
-                                            <div class="form-group">
-                                                <label class="col-sm-3 col-lg-2 control-label">性别</label>
-                                                <div class="col-sm-5 col-lg-3 controls">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="sex" value="男" checked> 男
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="sex" value="女"> 女
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-sm-3 col-lg-2 control-label" for="birthday">出生日期</label>
-                                                <div class="col-sm-5 col-lg-3 controls">
-                                                    <input class="form-control"  type="date" id="birthday" name="birthday" required />
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="id" class="col-sm-3 col-lg-2 control-label">身份证号</label>
-                                                <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="id" id="id" class="form-control" pattern="^([0-9]){7,18}(x|X)?$" title="请输入18位的身份证号码" required />
-                                                </div>
-                                            </div>
+                            <div class="form-group">
+                                <label for="nickname" class="col-sm-3 col-lg-2 control-label">账号名</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <input type="text" name="nickname" id="nickname" class="form-control"  />
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-sm-3 col-lg-2 control-label">密码</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <input type="password" name="password" id="password" class="form-control" />
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label" for="confirm_password">确认密码</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <input type="password" name="confirm_password" id="confirm_password" class="form-control"   />
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
 
-                                            <div class="form-group">
-                                                <label for="phone" class="col-sm-3 col-lg-2 control-label">手机号码</label>
-                                                <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="phone" id="phone" class="form-control" pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$" />
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="qq" class="col-sm-3 col-lg-2 control-label">QQ</label>
-                                                <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="text" name="qq" id="qq" class="form-control" pattern="[1-9][0-9]{4,14}" />
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="email" class="col-sm-3 col-lg-2 control-label">Email</label>
-                                                <div class="col-sm-5 col-lg-3 controls">
-                                                    <input type="email" name="email" id="email" class="form-control" data-rule-email="true" pattern="^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$">
-                                                </div>
-                                            </div>
+                            <hr>
 
-                                            <div class="form-group">
-                                                <label for="address" class="col-sm-3 col-lg-2 control-label">住址</label>
-                                                <div class="col-sm-5 col-lg-3 controls">
-                                                    <textarea name="address" id="address" rows="5" class="form-control" required></textarea>
-                                                </div>
-                                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-sm-3 col-lg-2 control-label">姓名</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <input type="text" name="name" id="name" class="form-control">
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
 
-                                        </div>
-                                        <div class="tab-pane" id="tab2-3">
-                                            <div class="form-group">
-                                                <label class="col-sm-3 col-lg-2 control-label">上传身份证照片</label>
-                                                <div class="col-sm-9 col-lg-10 controls">
-                                                    <div class="fileupload fileupload-new" data-provides="fileupload">
-                                                        <div class="fileupload-new img-thumbnail" style="width: 428px; height: 270px;">
-                                                            <img src="#" alt="" />
-                                                        </div>
-                                                        <input type="file" id="img" class="form-control default" name="img" required />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane" id="tab2-4">
-                                            <div class="form-group">
-                                                <label class="col-sm-3 col-lg-2 control-label">培训类别</label>
-                                                <div class="col-sm-9 col-lg-10 controls">
-                                                    <select class="form-control  chosen"  tabindex="1" id="select1" required>
-                                                        <option value="" selected>-- 请选择培训类别 --</option>
-                                                        <option value="type1" >普通机动车驾驶员培训</option>
-                                                        <option value="type2">道路运输驾驶员从业资格培训</option>
-                                                        <option value="type3">其他培训</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label">性别</label>
+                                <div class="col-sm-5 col-lg-3 controls">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="sex" value="男" checked> 男
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="sex" value="女"> 女
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label" for="birthday">出生日期</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <input class="form-control"  type="date" id="birthday" name="birthday" required />
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+                            <div class="form-group">
+                                <label for="id" class="col-sm-3 col-lg-2 control-label">身份证号</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <input type="text" name="id" id="id" class="form-control"  />
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
 
-                                            <div class="form-group">
-                                                <label class="col-sm-3 col-lg-2 control-label">培训车型</label>
-                                                <div class="col-sm-9 col-lg-10 controls">
-                                                    <select class="form-control  chosen" name="wanted_car_type" id="select2" required>
-                                                    </select>
-                                                    <input type="text" style="display:none" id="others" class="form-control"  />
-                                                </div>
-                                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="col-sm-3 col-lg-2 control-label">手机号码</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <input type="text" name="phone" id="phone" class="form-control"  />
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+                            <div class="form-group">
+                                <label for="qq" class="col-sm-3 col-lg-2 control-label">QQ</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <input type="text" name="qq" id="qq" class="form-control" pattern="[1-9][0-9]{4,14}" />
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-3 col-lg-2 control-label">Email：</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <input type="email" name="email" id="email" class="form-control"  >
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address" class="col-sm-3 col-lg-2 control-label">住址</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <textarea name="address" id="address" rows="3" class="form-control" ></textarea>
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+
+                            <hr>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label">上传身份证照片</label>
+                                <div class="col-sm-9 col-lg-10 controls">
+                                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                                        <div class="fileupload-new img-thumbnail"  id="imgDiv" style="width: 428px; height: 270px;">
+                                            <img  id="imgShow" style="width: 428px; height: 270px;" />
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
-                                            <a href="#" class="btn button-previous">返回</a>
-                                            <a href="#" class="btn btn-primary button-next">下一步</a>
-                                            <button  class="btn btn-primary button-submit" type="submit" id="submit">提交</button>
-                                            <button  class="btn btn-danger button-submit" type="reset">重置</button>
-                                        </div>
+                                        <input type="file" id="img" class="form-control default" name="img"  style="width: 428px;" />
                                     </div>
                                 </div>
-                            </form>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+
+                            <hr>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label">培训类别</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <select class="form-control  chosen"  tabindex="1" id="select1" name="select1" >
+                                        <option value="" selected>-- 请选择培训类别 --</option>
+                                        <option value="type1" >普通机动车驾驶员培训</option>
+                                        <option value="type2">道路运输驾驶员从业资格培训</option>
+                                        <option value="type3">其他培训</option>
+                                    </select>
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label">培训车型</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <select class="form-control  chosen" name="wanted_car_type" id="select2" name="select2" >
+                                    </select>
+                                    <input type="text" style="display:none" id="others" class="form-control"  />
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
+                                    <input type="submit" class="btn btn-primary" value="报名">
+                                    <button type="reset" class="btn">重置</button>
+                                </div>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
 
+            <div class="col-md-3">
+                <div class="box box-blue">
+                    <div class="box-title">
+                        <h3><i class="icon-user"></i> 预约登录</h3>
+                    </div>
+                    <?php if($this->session->nickname) :?>
+                    <div class="box-content" >
+                        <div class="alert alert-info">
+                            <h4>蓝光驾校欢迎您，<?=$this->session->nickname;?></h4><br/>
+                            <p><a class="btn btn-primary" href="<?php echo site_url('/appointment/appointmentmodel')?>">点击进入预约页面 >></a> &nbsp;<a class="btn btn-danger" id="logout"><i class="icon-off"></i> 注销</a></p>
+                        </div>
+                    </div>
+                    <?php else :?>
+                    <div class="box-content">
+                        <form action="" class="form-horizontal" id="login_form" method="post" >
+                            <div class="form-group">
+                                <label for="user_nickname" class="sr-only">账号名</label>
+                                <div class="col-sm-9 col-sm-offset-2 col-lg-10 col-lg-offset-1 controls">
+                                    <input type="text" name="user_nickname" id="user_nickname" class="form-control" placeholder="账号名" value="<?php if(!empty($_COOKIE['nickname'])){echo $_COOKIE['nickname'];}else{echo "";} ?>" />
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="user_password" class="sr-only">密码</label>
+                                <div class="col-sm-9 col-sm-offset-2 col-lg-10 col-lg-offset-1 controls">
+                                    <input type="password" name="user_password" id="user_password" class="form-control" placeholder="账号密码" />
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-9 col-sm-offset-2 col-lg-10 col-lg-offset-1 controls">
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="check" value="1" name="check" /> 记住账号
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-9 col-sm-offset-2 col-lg-10 col-lg-offset-1">
+                                    <input type="submit" class="btn btn-primary" value="登录">
+                                    <button type="reset" class="btn">重置</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <?php endif; ?>
+                </div>
+
+                <div class="box box-blue">
+                    <div class="box-title">
+                        <h3><i class="icon-list"></i> 驾校教练排名</h3>
+                    </div>
+                    <div class="box-content">
+                        <ul class="messages nice-scroll" style="height: 400px">
+                            <li>
+                                <img src="img/demo/avatar/avatar2.jpg" alt="">
+                                <div>
+                                    <div>
+                                        <h5>David</h5>
+                                        <span class="time"><i class="icon-time"></i> 26 minutes ago</span>
+                                    </div>
+                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure ...</p>
+                                    <div class="messages-actions">
+                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
+                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
+                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/demo/avatar/avatar3.jpg" alt="">
+                                <div>
+                                    <div>
+                                        <h5>Sarah</h5>
+                                        <span class="time"><i class="icon-time"></i> 1 days ago</span>
+                                    </div>
+                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa.</p>
+                                    <div class="messages-actions">
+                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
+                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
+                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/demo/avatar/avatar4.jpg" alt="">
+                                <div>
+                                    <div>
+                                        <h5>Emma</h5>
+                                        <span class="time"><i class="icon-time"></i> 4 days ago</span>
+                                    </div>
+                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
+                                    <div class="messages-actions">
+                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
+                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
+                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/demo/avatar/avatar5.jpg" alt="">
+                                <div>
+                                    <div>
+                                        <h5>John</h5>
+                                        <span class="time"><i class="icon-time"></i> 2 weeks ago</span>
+                                    </div>
+                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem...</p>
+                                    <div class="messages-actions">
+                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
+                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
+                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/demo/avatar/avatar1.jpg" alt="">
+                                <div>
+                                    <div>
+                                        <h5>Penny <span class="label label-info">Admin</span></h5>
+                                        <span class="time"><i class="icon-time"></i> 14 July</span>
+                                    </div>
+                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
+                                    <div class="messages-actions">
+                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
+                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
+                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box box-blue">
+
+                    <div class="box-title">
+                        <h3><i class="icon-list"></i> 驾校新闻</h3>
+                    </div>
+                    <div class="box-content">
+                        <ul class="messages nice-scroll" style="height: 370px">
+                            <li>
+                                <img src="img/demo/avatar/avatar2.jpg" alt="">
+                                <div>
+                                    <div>
+                                        <h5>David</h5>
+                                        <span class="time"><i class="icon-time"></i> 26 minutes ago</span>
+                                    </div>
+                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure ...</p>
+                                    <div class="messages-actions">
+                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
+                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
+                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/demo/avatar/avatar3.jpg" alt="">
+                                <div>
+                                    <div>
+                                        <h5>Sarah</h5>
+                                        <span class="time"><i class="icon-time"></i> 1 days ago</span>
+                                    </div>
+                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa.</p>
+                                    <div class="messages-actions">
+                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
+                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
+                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/demo/avatar/avatar4.jpg" alt="">
+                                <div>
+                                    <div>
+                                        <h5>Emma</h5>
+                                        <span class="time"><i class="icon-time"></i> 4 days ago</span>
+                                    </div>
+                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
+                                    <div class="messages-actions">
+                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
+                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
+                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/demo/avatar/avatar5.jpg" alt="">
+                                <div>
+                                    <div>
+                                        <h5>John</h5>
+                                        <span class="time"><i class="icon-time"></i> 2 weeks ago</span>
+                                    </div>
+                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem...</p>
+                                    <div class="messages-actions">
+                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
+                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
+                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/demo/avatar/avatar1.jpg" alt="">
+                                <div>
+                                    <div>
+                                        <h5>Penny <span class="label label-info">Admin</span></h5>
+                                        <span class="time"><i class="icon-time"></i> 14 July</span>
+                                    </div>
+                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
+                                    <div class="messages-actions">
+                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
+                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
+                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
         <!-- END Main Content -->
 
+
+        <!-- END Content -->
         <footer>
-            <p>2015  蓝光驾校.</p>
+            <p>2015 © 蓝光驾校</p>
         </footer>
-        <br/> <br/> <br/>
+
         <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="icon-chevron-up"></i></a>
     </div>
     <!-- END Content -->
@@ -329,77 +524,172 @@
 <!--flaty scripts-->
 <script src="<?php echo base_url()?>js/flaty.js"></script>
 
+<script src="<?php echo base_url()?>/assets/jquery-validation/dist/jquery.validate.js"></script>
+<script src="<?php echo base_url()?>/assets/jquery-validation/dist/additional-methods.js"></script>
+<script src="<?php echo base_url()?>/js/uploadPreview.js"></script>
 <script>
     $(document).ready(function(){
-        $("#submit").click(function(){
-            var ni=$("#nickname").val();
-            var p=$("#password").val();
-            var s=$("#sex").val();
-            var na=$("#name").val();
-            var b=$("#birthday").val();
-            var i=$("#id").val();
-            var ph=$("#phone").val();
-            var q=$("#qq").val();
-            var e=$("#email").val();
-            var a=$("#address").val();
-            var im=$("#img").val();
-            var s1=$("#select1").val();
-            var s2=$("#select2").val();
-
-            if(ni==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            if(p==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            if(s==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }if(na==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            if(b==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            if(i==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            if(ph==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            if(q==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            if(a==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            if(e==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            if(im==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            if(s1==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            if(s2==""){
-                alert("注册失败，请按要求填写注册信息");
-                return false;
-            }
-            alert("注册成功");
-
+        $("#register_form").submit(function(){
+            $.ajax({
+                type: "POST",
+                url: '<?php echo site_url('/register/Save')?>',
+                data: $(this).serialize(),
+                dataType: "json",
+                success : function (data) {
+                    if(data){
+                        alert('报名成功');
+                        location.reload();
+                    }else{
+                        alert('报名失败');
+                        location.reload();
+                    }
+                }
+            });
         });
+
+        $("#login_form").submit(function(){
+            $.ajax({
+                type: "POST",
+                url: '<?php echo site_url('/register/Login')?>',
+                data: $(this).serialize(),
+                dataType: "json",
+                success : function (data) {
+                    if(data.code){
+                        alert(data.msg);
+                    }
+                }
+            });
+        });
+
+        $("#logout").click(function() {
+            $.ajax({
+                type: "POST",
+                url: '<?php echo site_url('register/Logout')?>',
+                data: {
+                },
+                dataType: "json",
+                success: function (data) {
+                    alert(data.msg);
+                    location.reload();
+                }
+            });
+        });
+
+
+
+        $("#register_form").validate({
+
+            rules: {
+                nickname: {
+                    required :true,
+                    remote :{
+                        url :"<?php echo site_url('/register/CheckNickname')?>",
+                        type :"post",
+                        dataType:"json",
+                        data :{
+                            nickname :function(){return $("#nickname").val();}
+                        }
+                    },
+                    nickname :true
+                },
+                password: {
+                    required :true,
+                    psd :true
+                },
+                confirm_password: {
+                    required :true,
+                    equalTo :"#password",
+                    psd :true
+                },
+                name :{
+                    required :true,
+                    username :true
+                },
+                birthday :{
+                    required :true
+                },
+                id :{
+                    required :true,
+                    isIDCard :true
+                },
+                phone :{
+                    required :true,
+                    isPhone :true
+                },
+                qq :{
+
+                },
+                email :{
+                    email :true
+                },
+                address :{
+                    required :true
+                },
+                img :{
+                    required :true
+                },
+                select1 :{
+                    required :true
+                },
+                select2 :{
+                    required :true
+                }
+
+            },
+            messages :{
+                nickname: {
+                  required :"账号名不能为空",
+                  remote :"该账号名已存在"
+                },
+                password: {
+                  required :"密码不能为空"
+                },
+                confirm_password: {
+                    required :"请再次输入密码",
+                    equalTo :"请确保密码一致"
+                },
+                name: {
+                    required :"姓名不能为空"
+                },
+                birthday: {
+                    required :"出生日期不能为空"
+                },
+                id :{
+                    required :"身份证号码不能为空",
+                    isIDCard :"请正确填写您的身份证号"
+                },
+                phone :{
+                    required :"手机号码不能为空",
+                    isPhone :"请正确填写您的手机号码"
+                },
+                qq :{
+
+                },
+                email :{
+                    email :"请正确填写您的电子邮箱"
+                },
+                address :{
+                    required :"地址不能为空"
+                },
+                img :{
+                    required :"请上传身份证照"
+                },
+                select1 :{
+                    required :"请选择培训类别"
+                },
+                select2 :{
+                    required :"请选择培训车型"
+                }
+            },
+            errorPlacement: function(error,element) {
+                    error.appendTo(element.parent("div").next("label"));
+            },
+            debug:true
+        });
+
+        new uploadPreview({ UpBtn: "img", DivShow: "imgDiv", ImgShow: "imgShow" });
+
+
 
     });
 </script>

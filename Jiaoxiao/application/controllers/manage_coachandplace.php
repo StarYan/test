@@ -1,7 +1,7 @@
-<?php
+ï»¿<?php
 
 /**
- * ½ÌÁ·³¡µØ¹ÜÀí
+ * æ•™ç»ƒåœºåœ°ç®¡ç†
  */
     class Manage_coachandplace extends MY_Controller{
         public function __construct(){
@@ -14,16 +14,16 @@
             $this->load->model('checked_model','checked');
             $this->load->model('coach_model');
             $this->load->model('place_model');
-            $this->load->model('time_model');//¼Ó¸öÊ±¼ä±í
-            $this->load->model('coachandplace_model');//¼Ó¸öÊ±¼äidÁÐ
+            $this->load->model('time_model');//åŠ ä¸ªæ—¶é—´è¡¨
+            $this->load->model('coachandplace_model');//åŠ ä¸ªæ—¶é—´idåˆ—
             $this->load->model('appointment_model');
         }
 
         /**
-         * Ô¤Ô¼ºóÌ¨½çÃæ
+         * é¢„çº¦åŽå°ç•Œé¢
          */
         public function index($id){
-            $dataAdmin=$this->admin->getAdminInfoById($id);//»ñÈ¡µÇÂ¼¹ÜÀíÔ±ID
+            $dataAdmin=$this->admin->getAdminInfoById($id);//èŽ·å–ç™»å½•ç®¡ç†å‘˜ID
             $list['dataAdmin']=$dataAdmin;
             /*----------------------------------------------------*/
             $pagesize=3;
@@ -33,8 +33,8 @@
             $config['per_page']=$pagesize;
             $config['next_link']='>>';
             $config['prev_link']='<<';
-            $config['first_link']='Ê×Ò³';
-            $config['last_link']='Î²Ò³';
+            $config['first_link']='é¦–é¡µ';
+            $config['last_link']='å°¾é¡µ';
             $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
             $config['full_tag_close']="</ul>";
             $config['prev_tag_open']='<li>';
@@ -67,7 +67,7 @@
             $timeid = $this->input->post('searchtime');
             $data = array('placeid' => $placeid,'coachid'=> $coachid,'timeid'=>$timeid);
             $id = $this->input->post('adminid');
-            $dataAdmin=$this->admin->getAdminInfoById($id);//»ñÈ¡µÇÂ¼¹ÜÀíÔ±ID
+            $dataAdmin=$this->admin->getAdminInfoById($id);//èŽ·å–ç™»å½•ç®¡ç†å‘˜ID
             $list['dataAdmin']=$dataAdmin;
             /*----------------------------------------------------*/
             $pagesize=3;
@@ -77,8 +77,8 @@
             $config['per_page']=$pagesize;
             $config['next_link']='>>';
             $config['prev_link']='<<';
-            $config['first_link']='Ê×Ò³';
-            $config['last_link']='Î²Ò³';
+            $config['first_link']='é¦–é¡µ';
+            $config['last_link']='å°¾é¡µ';
             $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
             $config['full_tag_close']="</ul>";
             $config['prev_tag_open']='<li>';
@@ -111,7 +111,7 @@
         }
 
         /**
-         * Ìí¼ÓÔ¤Ô¼Ïî
+         * æ·»åŠ é¢„çº¦é¡¹
          */
         public function saveappoint(){
             $data['placeid'] = $this->input->post('placeid');
@@ -120,48 +120,49 @@
             if(!$this->coachandplace_model->count($data)){
                 $result = $this->coachandplace_model->add($data);
                 if($result){
-                    return $this->send_json(true,'³É¹¦');
+                    return $this->send_json(true,'æˆåŠŸ');
                 }else{
-                    return $this->send_json(false,'Ê§°Ü');
+                    return $this->send_json(false,'å¤±è´¥');
                 }
             }
-            return $this->send_json(false,'ÒÑ´æÔÚ');
+            return $this->send_json(false,'å·²å­˜åœ¨');
         }
 
         /**
-         *ajax½Ó¿Ú·µ»ØµØµã
+         *ajaxæŽ¥å£è¿”å›žåœ°ç‚¹
          */
         public function getplace(){
             $result = $this->place_model->getall();
             if($result){
-                return $this->send_json(true,'³É¹¦',$result);
+                return $this->send_json(true,'æˆåŠŸ',$result);
+
             }else{
-                return $this->send_json(false,'Ê§°Ü');
+                return $this->send_json(false,'å¤±è´¥');
             }
         }
 
         /**
-         * ajax½Ó¿Ú·µ»Ø½ÌÁ·
+         * ajaxæŽ¥å£è¿”å›žæ•™ç»ƒ
          */
         public function getcoach(){
             $result = $this->coach_model->getall();
             if($result){
-                return $this->send_json(true,'³É¹¦',$result);
+                return $this->send_json(true,'æˆåŠŸ',$result);
             }else{
-                return $this->send_json(false,'Ê§°Ü');
+                return $this->send_json(false,'å¤±è´¥');
             }
         }
 
         /**
-         * ajaxÉ¾³ý
+         * ajaxåˆ é™¤
          */
         public function delete(){
             $data['id']=$this->input->post('id',true);
             $result = $this->coachandplace_model->del($data);
             if($result){
-                return $this->send_json(true,'³É¹¦',$result);
+                return $this->send_json(true,'æˆåŠŸ',$result);
             }else{
-                return $this->send_json(false,'Ê§°Ü');
+                return $this->send_json(false,'å¤±è´¥');
             }
         }
 

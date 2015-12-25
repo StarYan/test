@@ -41,7 +41,7 @@
          * @param $where
          * @return Int
          */
-        public function count($where) {
+        public function count($where=array()) {
             $this->db->where($where);
             $this->db->from($this->table_name);
             return $this->db->count_all_results();
@@ -75,17 +75,30 @@
             return false;
         }
 
+        /**
+         * 添加数据到'coach'表
+         * @param $data
+         * @return CI_DB_active_record
+         */
         public function add($data){
             $result = $this->db->insert($this->table_name,$data);
             return $result;
         }
 
-        public function getInfo($where){
-            $result=$this->db->get_where($this->table_name,$where);
+        /**
+         * 查询表中的数据
+         * @param array $where 条件数据数组
+         * @param integer $limit 结果集每页纪录数
+         * @param integer $offset 结果集的偏移
+         * @return array 返回一个结果数组
+         */
+        public function select($where=array(),$limit=0,$offset=0){
+            $result=$this->db->get_where($this->table_name,$where,$offset,$limit);
             if ($result->num_rows() > 0) {
                 return $result->result_array();
             }
             return false;
         }
+
 
     }

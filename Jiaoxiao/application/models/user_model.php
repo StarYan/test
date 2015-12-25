@@ -137,9 +137,8 @@
          * 保存用户信息
          */
         public function save($data){
-            $this->db->insert('user',$data);
-//            $data['flag']=1;
-//            $this->load->view('register_view',$data);
+            $query=$this->db->insert('user',$data);
+            return $query;
         }
 
 

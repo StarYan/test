@@ -62,8 +62,11 @@ class News_model extends CI_Model{
      * @return array 返回一个结果数组
      */
     public function select($where=array(),$limit=0,$offset=0){
-        $query=$this->db->get_where($this->table_name,$where,$offset,$limit);
-        return $query->result_array();
+        $result=$this->db->get_where($this->table_name,$where,$offset,$limit);
+        if ($result->num_rows() > 0) {
+            return $result->result_array();
+        }
+        return false;
     }
 
     /**
