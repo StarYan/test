@@ -5,11 +5,11 @@
             <div class="box-title">
                 <h3><i class="icon-reorder"></i> 修改新闻信息</h3>
                 <div class="box-tool">
-                    <a class="btn btn-primary" href="<?php echo site_url('/manage_news/admin').'/'.$dataAdmin->id ?>"> 返回列表</a>
+                    <a class="btn btn-primary" href="<?php echo site_url('/manage_news/admin') ?>"> 返回列表</a>
                 </div>
             </div>
             <div class="box-content">
-                <form action="<?php echo site_url('/manage_news/update').'/'.$result[0]['id'].'/'.$dataAdmin->id?>" class="form-horizontal form-bordered" method="post">
+                <form action="<?php echo site_url('/manage_news/update').'/'.$result[0]['id']?>" class="form-horizontal form-bordered" method="post">
                     <div class="form-group">
                         <label for="title" class="col-xs-3 col-lg-2 control-label">新闻标题</label>
                         <div class="col-sm-9 col-lg-10 controls">

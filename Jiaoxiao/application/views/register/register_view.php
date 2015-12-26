@@ -279,7 +279,7 @@
                     <?php if($this->session->nickname) :?>
                     <div class="box-content" >
                         <div class="alert alert-info">
-                            <h4>蓝光驾校欢迎您，<?=$this->session->nickname;?></h4><br/>
+                            <h4>蓝光驾校欢迎您，<?=$this->session->nickname; ?></h4><br/>
                             <p><a class="btn btn-primary" href="<?php echo site_url('/appointment/appointmentmodel')?>">点击进入预约页面 >></a> &nbsp;<a class="btn btn-danger" id="logout"><i class="icon-off"></i> 注销</a></p>
                         </div>
                     </div>

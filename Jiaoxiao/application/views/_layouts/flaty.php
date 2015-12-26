@@ -45,51 +45,51 @@
             <div id="sidebar" class="navbar-collapse collapse">
                 <!-- BEGIN Navlist -->
                 <ul class="nav nav-list">
-                    <li >
-                        <a href="<?php echo site_url('manage_appointment/appointmentInfo/'.$dataAdmin->id)?>">
+                    <li class="<?php if(!empty($Appointment_class)){echo $Appointment_class;}?>">
+                        <a href="<?php echo site_url('manage_appointment/appointmentInfo/')?>">
                             <i class="icon-star"></i>
                             <span>学员预约管理</span>
                         </a>
                     </li>
 
-                    <li>
-                        <a href="<?php echo site_url('manage_addinfo/index/'.$dataAdmin->id)?>">
+                    <li class="<?php if(!empty($AddInfo_class)){echo $AddInfo_class;}?>">
+                        <a href="<?php echo site_url('manage_addinfo/index/')?>">
                             <i class="icon-star"></i>
                             <span>场地教练车型信息添加</span>
                         </a>
                     </li>
 
-                    <li >
-                        <a href="<?php echo site_url('manage_coachandplace/index/'.$dataAdmin->id)?>">
+                    <li class="<?php if(!empty($CoachAndPlace_class)){echo $CoachAndPlace_class;}?>">
+                        <a href="<?php echo site_url('manage_coachandplace/index/')?>">
                             <i class="icon-star"></i>
                             <span>场地教练管理</span>
                         </a>
                     </li>
 
-                    <li >
-                        <a href="<?php echo site_url('manage_news/admin/'.$dataAdmin->id)?>">
+                    <li class="<?php if(!empty($News_class)){echo $News_class;}?>">
+                        <a href="<?php echo site_url('manage_news/admin/')?>">
                             <i class="icon-edit"></i>
                             <span>新闻信息管理</span>
                         </a>
                     </li>
 
-                    <li >
-                        <a href="<?php echo site_url('manage_controller/UnChecked/'.$dataAdmin->id)?>">
+                    <li class="<?php if(!empty($UnChecked_class)){echo $UnChecked_class;}?>">
+                        <a href="<?php echo site_url('manage_controller/UnChecked/')?>"  >
                             <i class="icon-check"></i>
                             <span>未审核</span>
                         </a>
                     </li>
 
-                    <li >
-                        <a href="<?php echo site_url('manage_controller/Pass/'.$dataAdmin->id)?>">
-                            <i class="icon-check-sign"></i>
+                    <li class="<?php if(!empty($Pass_class)){echo $Pass_class;}?>">
+                        <a href="<?php echo site_url('manage_controller/Pass/')?>">
+                            <i class="icon-ok-sign"></i>
                             <span>审核合格</span>
                         </a>
                     </li>
 
-                    <li >
-                        <a href="<?php echo site_url('manage_controller/UnPassed/'.$dataAdmin->id)?>">
-                            <i class="icon-check-sign"></i>
+                    <li class="<?php if(!empty($UnPassed_class)){echo $UnPassed_class;}?>">
+                        <a href="<?php echo site_url('manage_controller/UnPassed/')?>">
+                            <i class="icon-remove-sign"></i>
                             <span>审核不合格</span>
                         </a>
                     </li>

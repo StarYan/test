@@ -19,11 +19,8 @@
             $this->load->model('coachandplace_model');//加个时间id列
         }
 
-        public function index($id){
-            $dataAdmin=$this->admin->getAdminInfoById($id);//获取登录管理员ID
-            $list['dataAdmin']=$dataAdmin;
-            /*----------------------------------------------------*/
-            $list['dataAdmin']=$dataAdmin;
+        public function index(){
+            $list['AddInfo_class']='active';
             $this->layout->view('/manage/addinfo_view',$list);
         }
 
@@ -31,11 +28,6 @@
          * 提交地点信息
          */
         public function addplace(){
-            $dataAdmin=$this->input->post('adminid',true);//获取登录管理员ID
-            $list['dataAdmin']=$dataAdmin;
-            /*----------------------------------------------------*/
-            $list['dataAdmin']=$dataAdmin;
-
             //上传照片
             $config['upload_path']='./uploads/';
             $config['allowed_types']='png|jpg|jpeg';
@@ -67,10 +59,6 @@
          * 提交教练信息
          */
         public function addcoach(){
-            $dataAdmin=$this->input->post('adminid',true);//获取登录管理员ID
-            $list['dataAdmin']=$dataAdmin;
-            /*----------------------------------------------------*/
-            $list['dataAdmin']=$dataAdmin;
 
             //上传照片
             $config['upload_path']='./uploads/';
@@ -105,11 +93,6 @@
          */
         public function addcartype()
         {
-            $dataAdmin = $this->input->post('adminid', true);//获取登录管理员ID
-            $list['dataAdmin'] = $dataAdmin;
-            /*----------------------------------------------------*/
-            $list['dataAdmin'] = $dataAdmin;
-
             //上传照片
             $config['upload_path'] = './uploads/';
             $config['allowed_types'] = 'png|jpg|jpeg';

@@ -22,13 +22,11 @@
         /**
          * 预约后台界面
          */
-        public function index($id){
-            $dataAdmin=$this->admin->getAdminInfoById($id);//获取登录管理员ID
-            $list['dataAdmin']=$dataAdmin;
-            /*----------------------------------------------------*/
+        public function index(){
+
             $pagesize=3;
             $count=$this->coachandplace_model->count("");
-            $config['base_url']=site_url('manage_coachandplace/index/'.$dataAdmin->id);
+            $config['base_url']=site_url('manage_coachandplace/index/');
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
             $config['next_link']='>>';
@@ -51,12 +49,10 @@
             $config['cur_tag_close']='</a></li>';
             $offset=intval($this->uri->segment(4));
             $this->pagination->initialize($config);
-            //$result = $this->coachandplace_model->get("",$offset,$pagesize);
             $result = $this->coachandplace_model->search($offset,$pagesize);
-
             $list['result']=$result;
-            $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
+            $list['CoachAndPlace_class']='active';
 
             $this->layout->view('/manage/coachandplace_view',$list);
         }
@@ -66,13 +62,10 @@
             $coachid = $this->input->post('searchcoach');
             $timeid = $this->input->post('searchtime');
             $data = array('placeid' => $placeid,'coachid'=> $coachid,'timeid'=>$timeid);
-            $id = $this->input->post('adminid');
-            $dataAdmin=$this->admin->getAdminInfoById($id);//获取登录管理员ID
-            $list['dataAdmin']=$dataAdmin;
-            /*----------------------------------------------------*/
+
             $pagesize=3;
             $count=$this->coachandplace_model->count($data);
-            $config['base_url']=site_url('manage_coachandplace/index/'.$dataAdmin->id);
+            $config['base_url']=site_url('manage_coachandplace/index/');
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
             $config['next_link']='>>';
@@ -93,19 +86,16 @@
             $config['num_tag_close']='</li>';
             $config['cur_tag_open']='<li><a>';
             $config['cur_tag_close']='</a></li>';
-            $offset=intval($this->uri->segment(4));
+            $offset=intval($this->uri->segment(3));
             $this->pagination->initialize($config);
-            //$result = $this->coachandplace_model->get("",$offset,$pagesize);
             if($count){
                 $result = $this->coachandplace_model->find($offset,$pagesize,$placeid,$coachid,$timeid);
             }else{
                 $result = 0;
             }
-
-
             $list['result']=$result;
-            $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
+            $list['CoachAndPlace_class']='active';
 
             $this->layout->view('/manage/coachandplace_view',$list);
         }

@@ -23,13 +23,11 @@
         /**
          * 查看学员预约的信息汇总
          */
-        public function appointmentInfo($id){
-            $dataAdmin=$this->admin->getAdminInfoById($id);//获取登录管理员ID
-            $list['dataAdmin']=$dataAdmin;
-            /*----------------------------------------------------*/
+        public function appointmentInfo(){
+
             $pagesize=10;
             $count=$this->appointment_model->count();
-            $config['base_url']=site_url('manage_appointment/appointmentInfo/'.$dataAdmin->id);
+            $config['base_url']=site_url('manage_appointment/appointmentInfo/');
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
             $config['next_link']='>>';
@@ -53,10 +51,9 @@
             $offset=intval($this->uri->segment(4));
             $this->pagination->initialize($config);
             $result = $this->appointment_model->getById($offset,$pagesize);
-
             $list['result']=$result;
-            $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
+            $list['Appointment_class']='active';
 
             $this->layout->view('/manage/appointment_view',$list);
         }

@@ -6,12 +6,16 @@
             $this->load->model('user_model','user');
             $this->load->model('admin_model','admin');
             $this->load->model('checked_model','checked');
+            $this->load->library('session');
         }
 
         /**
          * 进入后台登录界面
          */
         public function Login(){
+            if($_SESSION['id']){
+                unset($_SESSION['id']);
+            }
             $this->load->view('/manage/login_view');
         }
 
@@ -27,10 +31,10 @@
 
             if(!empty($dataAdmin)){
                 if($dataAdmin->password==$password){
-                    $list['dataAdmin']=$dataAdmin;
+                    $_SESSION['id']=$dataAdmin->id;
                     $pagesize=10;
                     $count=$this->user->getUserCountByStatus(0);
-                    $config['base_url']=site_url('manage_controller/UnChecked/'.$dataAdmin->id);
+                    $config['base_url']=site_url('manage_controller/UnChecked/');
                     $config['total_rows']=$count;
                     $config['per_page']=$pagesize;
                     $config['next_link']='下一页';
@@ -51,16 +55,16 @@
                     $config['num_tag_close']='</li>';
                     $config['cur_tag_open']='<li><a>';
                     $config['cur_tag_close']='</a></li>';
-                    $offset=intval($this->uri->segment(4));
+                    $offset=intval($this->uri->segment(3));
                     $this->pagination->initialize($config);
                     $dataUser=$this->user->getStudentInfoByStatus(0,$offset,$pagesize);
 
                     $list['dataUser']=$dataUser;
                     $list['dataAdmin']=$dataAdmin;
                     $list['link']=$this->pagination->create_links();
-                    $list['href']=site_url('/manage_controller/Check/'.$dataAdmin->id);
+                    $list['href']=site_url('/manage_controller/Check/');
                     $list['act']='<i class="icon-check"></i>&nbsp;&nbsp;审核';
-                    $list['class1']='active';
+                    $list['UnChecked_class']='active';
 
                     $this->layout->view('/manage/manage_view',$list);
                 }else{
@@ -79,10 +83,11 @@
          *在后台界面显示未审核的用户
          * @param string $id 管理员的id
          */
-        public function UnChecked($id){
+        public function UnChecked(){
+            $id=$_SESSION['id'];
             $pagesize=10;
             $count=$this->user->getUserCountByStatus(0);
-            $config['base_url']=site_url('manage_controller/UnChecked/'.$id);
+            $config['base_url']=site_url('manage_controller/UnChecked/');
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
             $config['next_link']='下一页';
@@ -103,7 +108,7 @@
             $config['num_tag_close']='</li>';
             $config['cur_tag_open']='<li><a>';
             $config['cur_tag_close']='</a></li>';
-            $offset=intval($this->uri->segment(4));
+            $offset=intval($this->uri->segment(3));
             $this->pagination->initialize($config);
             $dataUser=$this->user->getStudentInfoByStatus(0,$offset,$pagesize);
             $dataAdmin=$this->admin->getAdminInfoById($id);
@@ -111,9 +116,9 @@
             $list['dataUser']=$dataUser;
             $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
-            $list['href']=site_url('/manage_controller/Check/'.$id);
+            $list['href']=site_url('/manage_controller/Check/');
             $list['act']='<i class="icon-check"></i>&nbsp;&nbsp;审核';
-            $list['class1']='active';
+            $list['UnChecked_class']='active';
 
             $this->layout->view('/manage/manage_view',$list);
 
@@ -124,10 +129,11 @@
          * 在后台页面显示审核合格的用户
          * @param string $id 管理员的id
          */
-        public function Pass($id){
+        public function Pass(){
+            $id=$_SESSION['id'];
             $pagesize=10;
             $count=$this->user->getUserCountByStatus(1);
-            $config['base_url']=site_url('manage_controller/UnChecked/'.$id);
+            $config['base_url']=site_url('manage_controller/Pass/');
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
             $config['next_link']='下一页';
@@ -148,7 +154,7 @@
             $config['num_tag_close']='</li>';
             $config['cur_tag_open']='<li><a>';
             $config['cur_tag_close']='</a></li>';
-            $offset=intval($this->uri->segment(4));
+            $offset=intval($this->uri->segment(3));
             $this->pagination->initialize($config);
             $dataUser=$this->user->getStudentInfoByStatus(1,$offset,$pagesize);
             $dataAdmin=$this->admin->getAdminInfoById($id);
@@ -158,7 +164,7 @@
             $list['link']=$this->pagination->create_links();
             $list['href']=site_url('/manage_controller/PrintInfo');
             $list['act']='<i class="icon-print"></i>&nbsp;&nbsp;打印';
-            $list['class2']='active';
+            $list['Pass_class']='active';
 
             $this->layout->view('/manage/manage_view',$list);
 
@@ -168,10 +174,11 @@
          *在后台显示审核不合格的用户
          * @param string $id 管理员的id
          */
-        public function UnPassed($id){
+        public function UnPassed(){
+            $id=$_SESSION['id'];
             $pagesize=10;
             $count=$this->user->getUserCountByStatus(2);
-            $config['base_url']=site_url('manage_controller/UnChecked/'.$id);
+            $config['base_url']=site_url('manage_controller/UnPass/');
             $config['total_rows']=$count;
             $config['per_page']=$pagesize;
             $config['next_link']='下一页';
@@ -192,7 +199,7 @@
             $config['num_tag_close']='</li>';
             $config['cur_tag_open']='<li><a>';
             $config['cur_tag_close']='</a></li>';
-            $offset=intval($this->uri->segment(4));
+            $offset=intval($this->uri->segment(3));
             $this->pagination->initialize($config);
             $dataUser=$this->user->getStudentInfoByStatus(2,$offset,$pagesize);
             $dataAdmin=$this->admin->getAdminInfoById($id);
@@ -200,32 +207,33 @@
             $list['dataUser']=$dataUser;
             $list['dataAdmin']=$dataAdmin;
             $list['link']=$this->pagination->create_links();
-            $list['href']=site_url('/manage_controller/ViewWrongMsg/'.$id);
+            $list['href']=site_url('/manage_controller/ViewWrongMsg/');
             $list['act']='<i class="icon-eye-open"></i>&nbsp;&nbsp;查看详情';
-            $list['class3']='active';
+            $list['UnPassed_class']='active';
 
             $this->layout->view('/manage/manage_view',$list);
         }
 
         /**
          * 对已经报名的用户信息进行审核
-         * @param string $admin_id 管理员的id
          * @param string $user_id 用户的id
          */
-        public function Check($admin_id,$user_id){
+        public function Check($user_id){
+            $admin_id=$_SESSION['id'];
             $dataAdmin=$this->admin->getAdminInfoById($admin_id);
             $dataUser=$this->user->getUserInfoById($user_id);
             $list['dataAdmin']=$dataAdmin;
             $list['dataUser']=$dataUser;
+            $list['UnChecked_class']='active';
             $this->layout->view('/manage/check_view',$list);
         }
 
         /**
          * 处理审核页面提交的审核结果
-         * @param string $admin_id 管理员的id
          * @param string $user_id 用户的id
          */
-        public function Checked($admin_id,$user_id){
+        public function Checked($user_id){
+            $admin_id=$_SESSION['id'];
             $remark=$_POST['remark'];
             date_default_timezone_set('PRC');
             $create_date=date('Y-m-d H:i:s');
@@ -233,11 +241,11 @@
                 $remark=NULL;
                 $this->checked->insertInfo($admin_id,$user_id,$remark,$create_date);
                 $this->user->changeStatusById($user_id,1);
-                redirect('/manage_controller/UnChecked/'.$admin_id);
+                redirect('/manage_controller/UnChecked/');
             }else{
                 $this->checked->insertInfo($admin_id,$user_id,$remark,$create_date);
                 $this->user->changeStatusById($user_id,2);
-                redirect('/manage_controller/UnChecked/'.$admin_id);
+                redirect('/manage_controller/UnChecked/');
             }
         }
 
@@ -253,10 +261,10 @@
 
         /**
          * 显示审核不合格的用户的错误信息
-         * @param string $admin_id 管理员的id
          * @param string $user_id 用户的id
          */
-        public function ViewWrongMsg($admin_id,$user_id){
+        public function ViewWrongMsg($user_id){
+            $admin_id=$_SESSION['id'];
             $dataChecked=$this->checked->getInfoByUserId($user_id);
             $dataUser=$this->user->getUserInfoById($dataChecked->user_id);
             $dataAdmin=$this->admin->getAdminInfoById($admin_id);
@@ -265,19 +273,18 @@
             $data['dataAdmin']=$dataAdmin;
             $data['dataChecked']=$dataChecked;
             $data['checkedAdmin']=$checkedAdmin;
+            $data['UnPassed_class']='active';
             $this->layout->view('/manage/wrongmessage_view',$data);
         }
 
         /**
          * 删除已经通知的用户
          * @param string $user_id 用户的id
-         * @param string $admin_id 管理员的id
          */
-        public function Deleted($user_id,$admin_id){
+        public function Deleted($user_id){
+            $admin_id=$_SESSION['id'];
             $this->user->deletedByUserId($user_id,$admin_id);
-            $dataAdmin=$this->admin->getAdminInfoById($admin_id);
-            $data['dataAdmin']=$dataAdmin;
-            redirect('manage_controller/UnPassed/'.$admin_id);
+            redirect('manage_controller/UnPassed/');
         }
 
     }

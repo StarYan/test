@@ -75,7 +75,6 @@
                 <div class="tab-pane active" id="tab-1-1">
                     <div class="box-content">
                         <form id="placeform" action="<?php echo site_url('/manage_addinfo/addplace')?>" class="form-horizontal"  method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="adminid" id="adminid" value="<?php echo $dataAdmin->id;?>">
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="id">场地:</label>
                                 <div class="col-sm-6 col-lg-4 controls">

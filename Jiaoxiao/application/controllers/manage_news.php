@@ -16,16 +16,16 @@ class Manage_news extends MY_Controller{
 
     /**
      * 加载添加新闻信息的后台页面
-     * @param string $id 管理员的ID
      */
-    public function admin($id){
+    public function admin(){
+        $id=$_SESSION['id'];
         $dataAdmin=$this->admin->getAdminInfoById($id);//获取登录管理员ID
         $list['dataAdmin']=$dataAdmin;
 
         $pagesize=10;
         $where['deleted']=0;
         $count=$this->news->count($where);
-        $config['base_url']=site_url('manage_news/admin/'.$dataAdmin->id);
+        $config['base_url']=site_url('manage_news/admin/');
         $config['total_rows']=$count;
         $config['per_page']=$pagesize;
         $config['next_link']='>>';
@@ -46,22 +46,22 @@ class Manage_news extends MY_Controller{
         $config['num_tag_close']='</li>';
         $config['cur_tag_open']='<li><a>';
         $config['cur_tag_close']='</a></li>';
-        $offset=intval($this->uri->segment(4));
+        $offset=intval($this->uri->segment(3));
         $this->pagination->initialize($config);
         $result = $this->news->select($where,$offset,$pagesize);
 
         $list['result']=$result;
         $list['dataAdmin']=$dataAdmin;
         $list['link']=$this->pagination->create_links();
-
+        $list['News_class']='active';
         $this->layout->view('/manage/manage_news/admin',$list);
     }
 
     /**
      * 保存增加的新闻信息
-     * @param string $id 管理员的ID
      */
-    public function create($id){
+    public function create(){
+        $id=$_SESSION['id'];
         $data['title']=$this->input->post('title');
         $data['link']=$this->input->post('link');
         $data['content']=$this->input->post('content');
@@ -71,34 +71,35 @@ class Manage_news extends MY_Controller{
             $list['dataAdmin']=$dataAdmin;
             $this->layout->view('/manage/manage_news/create',$list);
         }else{
+            date_default_timezone_set('PRC');
             $data['create_date']=date('Y-m-d H:i:s');
             $data['create_id']=$id;
             $this->news->insert($data);
-            $this->admin($id);
+            $this->admin();
         }
     }
 
     /**
      * 删除指定的新闻信息
      * @param string $newsID 新闻信息的ID
-     * @param string $adminID 管理员的ID
      */
-    public function delete($newsID,$adminID){
+    public function delete($newsID){
         $where['id']=$newsID;
         $this->news->delete($where);
-        $this->admin($adminID);
+        $this->admin();
     }
 
     /**
      * 更改指定的新闻信息
      * @param string $newsID 新闻信息的ID
-     * @param string $adminID 管理员的ID
      */
-    public function update($newsID,$adminID){
+    public function update($newsID){
+        $adminID=$_SESSION['id'];
         $where['id']=$newsID;
         $data['title']=$this->input->post('title');
         $data['link']=$this->input->post('link');
         $data['content']=$this->input->post('content');
+        date_default_timezone_set('PRC');
         $data['create_date']=date('Y-m-d H:i:s');
         $data['create_id']=$adminID;
 
@@ -117,9 +118,9 @@ class Manage_news extends MY_Controller{
     /**
      * 查看指定的新闻信息
      * @param string $newsID 新闻信息的ID
-     * @param string $adminID 管理员的ID
      */
-    public function view($newsID,$adminID){
+    public function view($newsID){
+        $adminID=$_SESSION['id'];
         $where['id']=$newsID;
         $result=$this->news->select($where);
         $dataAdmin=$this->admin->getAdminInfoById($adminID);//获取登录管理员ID

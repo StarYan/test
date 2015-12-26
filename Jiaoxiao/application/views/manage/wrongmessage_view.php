@@ -11,7 +11,7 @@
             <div class="box-title">
                 <h3><i class="icon-file"></i><?=$dataUser->name?>的错误信息</h3>
                 <div class="box-tool">
-                    <a class="btn btn-primary" href="<?php echo site_url('manage_controller/UnPassed/'.$dataAdmin->id)?>"><i class="icon-chevron-left"></i> 返回列表</a>
+                    <a class="btn btn-primary" href="<?php echo site_url('manage_controller/UnPassed/')?>"><i class="icon-chevron-left"></i> 返回列表</a>
                 </div>
             </div>
             <div class="box-content" style="height: 505px;">
@@ -42,7 +42,7 @@
                 <br/>
                 <div class="form-group last">
                     <div class="col-sm-9 col-sm-offset-14 col-lg-10 col-lg-offset-9">
-                        <a type="button" class="btn btn-danger" href="<?php echo site_url('manage_controller/Deleted/'.$dataChecked->user_id.'/'.$dataAdmin->id)?>"> 已通知</a>
+                        <a type="button" class="btn btn-danger" href="<?php echo site_url('manage_controller/Deleted/'.$dataChecked->user_id)?>"> 已通知</a>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
             <div class="box-title">
                 <h3><i class="icon-file"></i> 新闻信息</h3>
                 <div class="box-tool">
-                    <a class="btn btn-primary" href="<?php echo site_url('/manage_news/admin').'/'.$dataAdmin->id ?>"> 返回列表</a>
+                    <a class="btn btn-primary" href="<?php echo site_url('/manage_news/admin') ?>"> 返回列表</a>
                 </div>
             </div>
             <div class="box-content">

@@ -57,11 +57,11 @@
                 </div>
 
                 <div class="box-tool">
-                    <a  href="<?php echo site_url().'/manage_controller/Checked/'.$dataAdmin->id.'/'.$dataUser->id?>" class="btn btn-primary">审核通过</a>
+                    <a  href="<?php echo site_url().'/manage_controller/Checked/'.'/'.$dataUser->id?>" class="btn btn-primary">审核通过</a>
                 </div>
             </div>
             <div class="box-content ">
-                <form action="<?php echo site_url().'/manage_controller/Checked/'.$dataAdmin->id.'/'.$dataUser->id?>" class="form-horizontal form-row-separated" method="post">
+                <form action="<?php echo site_url().'/manage_controller/Checked/'.'/'.$dataUser->id?>" class="form-horizontal form-row-separated" method="post">
                     <div class="form-group">
                         <label for="WrongMessage" class="col-xs-3 col-lg-2 control-label">审核结果</label>
                         <div class="col-sm-9 col-lg-10 controls">
