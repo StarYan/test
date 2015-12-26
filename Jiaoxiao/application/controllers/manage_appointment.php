@@ -48,9 +48,10 @@
             $config['num_tag_close']='</li>';
             $config['cur_tag_open']='<li><a>';
             $config['cur_tag_close']='</a></li>';
-            $offset=intval($this->uri->segment(4));
+            $offset=intval($this->uri->segment(3));
             $this->pagination->initialize($config);
-            $result = $this->appointment_model->getById($offset,$pagesize);
+            $where['a_deleted']=0;
+            $result = $this->appointment_model->getById($where,$offset,$pagesize);
             $list['result']=$result;
             $list['link']=$this->pagination->create_links();
             $list['Appointment_class']='active';
@@ -63,9 +64,9 @@
          */
         public function delete(){
             $id = $this->input->post('id',true);
-            $data['id'] = $id;
+            $where['a_id'] = $id;
             if($id){
-                $result = $this->appointment_model->delete($data);
+                $result = $this->appointment_model->delete($where);
                 if($result){
                     return $this->send_json(true,'成功删除');
                 }

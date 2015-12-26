@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-12-16 10:27:45
+Date: 2015-12-26 13:58:29
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,25 +20,22 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `appointment`;
 CREATE TABLE `appointment` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `a_id` int(11) NOT NULL AUTO_INCREMENT,
   `coachandplaceid` int(11) NOT NULL COMMENT '教练与场地关系ID',
   `userid` int(11) NOT NULL COMMENT '用户id',
   `carid` bigint(20) NOT NULL COMMENT '车型',
-  PRIMARY KEY (`id`)
+  `a_deleted` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`a_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='预约';
 
 -- ----------------------------
 -- Records of appointment
 -- ----------------------------
-INSERT INTO `appointment` VALUES ('1', '1', '45', '2');
-INSERT INTO `appointment` VALUES ('2', '3', '46', '1');
-INSERT INTO `appointment` VALUES ('3', '1', '45', '2');
-INSERT INTO `appointment` VALUES ('4', '1', '45', '2');
-INSERT INTO `appointment` VALUES ('5', '1', '45', '2');
-INSERT INTO `appointment` VALUES ('6', '9', '46', '1');
-INSERT INTO `appointment` VALUES ('7', '1', '45', '2');
-INSERT INTO `appointment` VALUES ('8', '3', '46', '2');
-INSERT INTO `appointment` VALUES ('9', '1', '45', '2');
-INSERT INTO `appointment` VALUES ('10', '1', '45', '2');
-INSERT INTO `appointment` VALUES ('11', '2', '46', '2');
-INSERT INTO `appointment` VALUES ('12', '1', '45', '1');
+INSERT INTO `appointment` VALUES ('2', '3', '46', '1', '0');
+INSERT INTO `appointment` VALUES ('6', '9', '46', '1', '0');
+INSERT INTO `appointment` VALUES ('7', '1', '45', '2', '1');
+INSERT INTO `appointment` VALUES ('8', '3', '46', '2', '0');
+INSERT INTO `appointment` VALUES ('9', '1', '45', '2', '1');
+INSERT INTO `appointment` VALUES ('10', '1', '45', '2', '0');
+INSERT INTO `appointment` VALUES ('11', '2', '46', '2', '0');
+INSERT INTO `appointment` VALUES ('12', '1', '45', '1', '0');

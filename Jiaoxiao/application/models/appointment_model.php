@@ -31,7 +31,9 @@
             return $this->db->insert($this->table_name,$data);
         }
 
-        public function getById($offset='',$limit=''){
+
+        public function getById($where=array(),$offset='',$limit=''){
+            $this->db->where($where);
             $this->db->from($this->table_name);
             $this->db->join('user','appointment.userid=user.id');
             $this->db->join('cartype','appointment.carid=cartype.id');
@@ -67,7 +69,7 @@
 
         public function delete($where){
             if($where){
-                $result = $this->db->delete($this->table_name,$where);
+                $result = $this->db->update($this->table_name,array('a_deleted'=>1),$where);
                 return $result;
             }
             return false;

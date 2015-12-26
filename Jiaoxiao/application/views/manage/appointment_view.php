@@ -33,9 +33,9 @@
                                     <td class="text-center"><span class="label label-success"><?php echo $appointment->number;?></span></td>
                                     <td class="text-center">
                                         <div class="btn-group">
-                                            <a class="btn btn-sm show-tooltip change" title="View" href="#modal-1" data-toggle="modal" role="button" data-name="<?php echo $appointment->name;?>" data-num="<?php echo $appointment->num;?>" data-sex="<?php echo $appointment->sex;?>"
+                                            <a class="btn btn-sm show-tooltip change" title="查看" href="#modal-1" data-toggle="modal" role="button" data-name="<?php echo $appointment->name;?>" data-num="<?php echo $appointment->num;?>" data-sex="<?php echo $appointment->sex;?>"
                                                data-phone="<?php echo $appointment->phone;?>" data-qq="<?php echo $appointment->qq;?>" data-address="<?php echo $appointment->address;?>" data-email="<?php echo $appointment->email;?>" data-idcard="<?php echo $appointment->idcard;?>"><i class="icon-zoom-in"></i></a>
-                                            <a class="btn btn-sm btn-danger show-tooltip del" title="Delete" data-id="<?php echo $appointment->id;?>"><i class="icon-trash"></i></a>
+                                            <a class="btn btn-sm btn-danger show-tooltip del" title="删除" data-id="<?php echo $appointment->a_id;?>"><i class="icon-trash"></i></a>
                                         </div>
                                     </td>
                                 </tr>
