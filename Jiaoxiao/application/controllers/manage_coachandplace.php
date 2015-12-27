@@ -33,7 +33,7 @@
             $config['prev_link']='<<';
             $config['first_link']='首页';
             $config['last_link']='尾页';
-            $config['full_tag_open']="<ul class='pagination pagination-lg pagination-colory'>";
+            $config['full_tag_open']="<ul class='pagination pagination-colory'>";
             $config['full_tag_close']="</ul>";
             $config['prev_tag_open']='<li>';
             $config['prev_tag_close']='</li>';
@@ -47,7 +47,7 @@
             $config['num_tag_close']='</li>';
             $config['cur_tag_open']='<li><a>';
             $config['cur_tag_close']='</a></li>';
-            $offset=intval($this->uri->segment(4));
+            $offset=intval($this->uri->segment(3));
             $this->pagination->initialize($config);
             $result = $this->coachandplace_model->search($offset,$pagesize);
             $list['result']=$result;

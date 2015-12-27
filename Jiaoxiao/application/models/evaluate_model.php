@@ -68,5 +68,53 @@ class Evaluate_model extends CI_Model{
         return $query->result_array();
     }
 
+    /**
+     * @param array $where
+     * @return int
+     */
+    public function count($where=array()){
+        if($where){
+            $this->db->where($where);
+        }else{
+            $this->db->select();
+        }
+        $this->db->from($this->table_name);
+        return $this->db->count_all_results();
+    }
+
+    /**
+     * 获取星星的总数
+     * @param array $where
+     * @return mixed
+     */
+    public function starSum($where=array()){
+        $this->db->where($where);
+        $this->db->select_sum('star');
+        $query = $this->db->get($this->table_name);
+        return $query->row();
+    }
+
+    /**
+     * @param array $where
+     * @param string $offset
+     * @param string $limit
+     * @return bool
+     */
+    public function getById($where=array(),$offset='',$limit=''){
+        $this->db->where($where);
+        $this->db->from($this->table_name);
+        $this->db->select('evaluate.id,c_name,user.name,evaluate.create_date,evaluate.star,evaluate.remark,evaluate.deleted');
+        $this->db->join('user','evaluate.user_id=user.id');
+        $this->db->join('coach','evaluate.coach_id=coach.id');
+        $this->db->limit($limit,$offset);
+
+
+        $result = $this->db->get();
+        if ($result->num_rows() > 0) {
+            return $result->result_object();
+        }
+        return false;
+    }
+
 
 }

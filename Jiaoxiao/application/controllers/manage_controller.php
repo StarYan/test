@@ -13,8 +13,9 @@
          * 进入后台登录界面
          */
         public function Login(){
-            if($_SESSION['id']){
+            if(!empty($_SESSION['id'])){
                 unset($_SESSION['id']);
+                unset($_SESSION['username']);
             }
             $this->load->view('/manage/login_view');
         }
@@ -32,6 +33,7 @@
             if(!empty($dataAdmin)){
                 if($dataAdmin->password==$password){
                     $_SESSION['id']=$dataAdmin->id;
+                    $_SESSION['username']=$dataAdmin->username;
                     $pagesize=10;
                     $count=$this->user->getUserCountByStatus(0);
                     $config['base_url']=site_url('manage_controller/UnChecked/');
@@ -84,7 +86,12 @@
          * @param string $id 管理员的id
          */
         public function UnChecked(){
-            $id=$_SESSION['id'];
+            if(!empty($_SESSION['id'])){
+                $id=$_SESSION['id'];
+            }else{
+                redirect('/manage_controller/Login');
+            }
+
             $pagesize=10;
             $count=$this->user->getUserCountByStatus(0);
             $config['base_url']=site_url('manage_controller/UnChecked/');
@@ -130,7 +137,11 @@
          * @param string $id 管理员的id
          */
         public function Pass(){
-            $id=$_SESSION['id'];
+            if(!empty($_SESSION['id'])){
+                $id=$_SESSION['id'];
+            }else{
+                redirect('/manage_controller/Login');
+            }
             $pagesize=10;
             $count=$this->user->getUserCountByStatus(1);
             $config['base_url']=site_url('manage_controller/Pass/');
@@ -175,7 +186,11 @@
          * @param string $id 管理员的id
          */
         public function UnPassed(){
-            $id=$_SESSION['id'];
+            if(!empty($_SESSION['id'])){
+                $id=$_SESSION['id'];
+            }else{
+                redirect('/manage_controller/Login');
+            }
             $pagesize=10;
             $count=$this->user->getUserCountByStatus(2);
             $config['base_url']=site_url('manage_controller/UnPass/');
@@ -219,7 +234,11 @@
          * @param string $user_id 用户的id
          */
         public function Check($user_id){
-            $admin_id=$_SESSION['id'];
+            if(!empty($_SESSION['id'])){
+                $admin_id=$_SESSION['id'];
+            }else{
+                redirect('/manage_controller/Login');
+            }
             $dataAdmin=$this->admin->getAdminInfoById($admin_id);
             $dataUser=$this->user->getUserInfoById($user_id);
             $list['dataAdmin']=$dataAdmin;
@@ -233,7 +252,11 @@
          * @param string $user_id 用户的id
          */
         public function Checked($user_id){
-            $admin_id=$_SESSION['id'];
+            if(!empty($_SESSION['id'])){
+                $admin_id=$_SESSION['id'];
+            }else{
+                redirect('/manage_controller/Login');
+            }
             $remark=$_POST['remark'];
             date_default_timezone_set('PRC');
             $create_date=date('Y-m-d H:i:s');
@@ -264,7 +287,11 @@
          * @param string $user_id 用户的id
          */
         public function ViewWrongMsg($user_id){
-            $admin_id=$_SESSION['id'];
+            if(!empty($_SESSION['id'])){
+                $admin_id=$_SESSION['id'];
+            }else{
+                redirect('/manage_controller/Login');
+            }
             $dataChecked=$this->checked->getInfoByUserId($user_id);
             $dataUser=$this->user->getUserInfoById($dataChecked->user_id);
             $dataAdmin=$this->admin->getAdminInfoById($admin_id);
@@ -282,7 +309,11 @@
          * @param string $user_id 用户的id
          */
         public function Deleted($user_id){
-            $admin_id=$_SESSION['id'];
+            if(!empty($_SESSION['id'])){
+                $admin_id=$_SESSION['id'];
+            }else{
+                redirect('/manage_controller/Login');
+            }
             $this->user->deletedByUserId($user_id,$admin_id);
             redirect('manage_controller/UnPassed/');
         }

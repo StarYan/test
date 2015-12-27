@@ -83,7 +83,7 @@
 
         <!-- 学员登录按钮 -->
         <ul class="nav flaty-nav pull-right">
-            <li  id="log">
+            <li >
                 <?php $udata =$this->session->id;?>
                 <?php if(!$udata): ?>
                 <a href="#" class="md-trigger" data-modal="login" id="user" value="login" >
@@ -97,9 +97,6 @@
                     <a class='md-trigger logout' href='#'><i class='icon-off'></i> 注销</a>
                 </li>
                 <?php endif; ?>
-            </li>
-            <li id="logout">
-
             </li>
         </ul>
         <!-- 学员登录按钮 -->
@@ -527,22 +524,17 @@
 
 
         $("#submit").click(function() {
-            var nickname=$("#log").text();
             var placeid=$("#place").val();
             var timeid=$("#time").val();
             var coachid=$("#coach").val();
             var carid=$("#car").val();
 
-            if($("#user").text()!=""){
-                alert("请先登录，再进行预约");
-            }else{
-                if(nickname&&placeid&&timeid&&coachid&&carid){
+                if(placeid&&timeid&&coachid&&carid){
 
                     $.ajax({
                         type: "POST",
                         url: '<?php echo site_url('appointment/saveappointment')?>',
                         data: {
-                            nickname:nickname,
                             placeID:placeid,
                             timeID:timeid,
                             coachID:coachid,
@@ -557,7 +549,7 @@
                 }else{
                     alert('请选择好所有的预约信息再进行提交');
                 }
-            }
+
         });
 
         $(".logout").click(function() {

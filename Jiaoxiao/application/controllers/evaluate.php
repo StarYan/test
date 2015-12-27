@@ -105,6 +105,7 @@ class Evaluate extends MY_Controller{
         $data['coach_id']=$this->input->post('coachID',true);
         $data['star']=$this->input->post('star',true);
         $data['remark']=$this->input->post('remark',true);
+        date_default_timezone_set('PRC');
         $data['create_date']=date('Y-m-d H:i:s');
 
         $where['user_id']=$data['user_id'];
@@ -113,15 +114,25 @@ class Evaluate extends MY_Controller{
         $query=$this->evaluate->select($where);
         if(!$query){
             $result=$this->evaluate->insert($data);
+
+            //获得教练的平均星级并更新到教练表
+            $whereCoach['coach_id']=$data['coach_id'];
+            $coachCount=$this->evaluate->count($whereCoach);//该教练被评价的次数
+            $coachStar=$this->evaluate->starSum($whereCoach);//该教练获得的星星
+            $star=$coachStar->star/($coachCount*5)*5;
+            $dataCoach['star']=round($star);//四舍五入取整
+            $list['id']=$data['coach_id'];
+            $this->coach->update($dataCoach,$list);
+
+
             if($result){
                 return $this->send_json(true,'评价成功');
             }else{
-                return $this->send_json(true,'评价失败');
+                return $this->send_json(false,'评价失败');
             }
         }else{
-            return $this->send_json(true,'不能重复评价该教练');
+            return $this->send_json(false,'不能重复评价该教练');
         }
-
 
     }
 }

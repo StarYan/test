@@ -53,32 +53,77 @@
     </div>
 </div>
 
-<div class="modal fade" id="modal-1" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="close" aria-hidden="true" data-dismiss="modal" type="button">X</button>
-                <h3 id="myModalLabel">详情</h3>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <!--<input class="form-control" type="text" placeholder="">-->
-                    <ul class="list-group">
-                        <input type="hidden" name="id" class="modal-id">
-                        <li class="list-group-item">姓名：<span class="modal-name">00:00</span></li>
-                        <li class="list-group-item">编号：<span class="modal-num" >none</span></li>
-                        <li class="list-group-item">性别：<span class="modal-sex" >course name</span></li>
-                        <li class="list-group-item">电话：<span class="modal-phone" >course name</span></li>
-                        <li class="list-group-item">QQ：<span class="modal-qq" >course name</span></li>
-                        <li class="list-group-item">地址：<span class="modal-address" >course name</span></li>
-                        <li class="list-group-item">Email：<span class="modal-email" >course name</span></li>
-                        <li class="list-group-item">身份证号：<span class="modal-idcard" >course name</span></li>
-                    </ul>
+<div class="modal fade row" id="modal-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content box box-blue">
+            <div class="box-title">
+                <h3 id="myModalLabel"><i class="icon-eye-open"></i> 查看详情</h3>
+                <div class="box-tool">
+                    <a  aria-hidden="true" data-dismiss="modal"><i class="icon-remove"></i></a>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button class="btn" aria-hidden="true" data-dismiss="modal">关闭</button>
+            <div class="box-content">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-lg-2 control-label">姓名</label>
+                        <div class="col-sm-9 col-lg-10 controls">
+                            <input type="text" readonly class="form-control input-sm modal-name" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 col-lg-2 control-label">编号</label>
+                        <div class="col-sm-9 col-lg-10 controls">
+                            <input type="text" readonly class="form-control input-sm modal-num" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 col-lg-2 control-label">性别</label>
+                        <div class="col-sm-9 col-lg-10 controls">
+                            <input type="text" readonly class="form-control input-sm modal-sex" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 col-lg-2 control-label">电话</label>
+                        <div class="col-sm-9 col-lg-10 controls">
+                            <input type="text" readonly class="form-control input-sm modal-phone" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 col-lg-2 control-label">QQ</label>
+                        <div class="col-sm-9 col-lg-10 controls">
+                            <input type="text" readonly class="form-control input-sm modal-qq" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 col-lg-2 control-label">地址</label>
+                        <div class="col-sm-9 col-lg-10 controls">
+                            <input type="text" readonly class="form-control input-sm modal-address" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 col-lg-2 control-label">Email</label>
+                        <div class="col-sm-9 col-lg-10 controls">
+                            <input type="text" readonly class="form-control input-sm modal-email" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 col-lg-2 control-label">身份证号</label>
+                        <div class="col-sm-9 col-lg-10 controls">
+                            <input type="text" readonly class="form-control input-sm modal-idcard" />
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -101,14 +146,21 @@
         });
         $(".change").click(function(){
             //提取数据注入模态框
-            $(".modal-name").html($(this).data("name"));
-            $(".modal-num").html($(this).data("num"));
-            $(".modal-sex").html($(this).data("sex"));
-            $(".modal-phone").html($(this).data("phone"));
-            $(".modal-qq").html($(this).data("qq"));
-            $(".modal-email").html($(this).data("email"));
-            $(".modal-address").html($(this).data("address"));
-            $(".modal-idcard").html($(this).data("idcard"));
+            $(".modal-name").val($(this).data("name"));
+            $(".modal-num").val($(this).data("num"));
+            if($(this).data("sex")==1){
+                $(".modal-sex").val("男");
+            }else if($(this).data("sex")==0){
+                $(".modal-sex").val("女");
+            }else{
+                $(".modal-sex").val("");
+            }
+
+            $(".modal-phone").val($(this).data("phone"));
+            $(".modal-qq").val($(this).data("qq"));
+            $(".modal-email").val($(this).data("email"));
+            $(".modal-address").val($(this).data("address"));
+            $(".modal-idcard").val($(this).data("idcard"));
         });
     }
 </script>

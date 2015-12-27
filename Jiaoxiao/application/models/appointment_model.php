@@ -12,11 +12,20 @@
             parent::__construct();
         }
 
+        /**
+         * 更新数据
+         * @param $data
+         */
         public function update($data){
             $this->db->where('userid',$data['userid']);
             $this->db->update($this->table_name,$data);
         }
 
+        /**
+         * 获取数据
+         * @param $where
+         * @return bool
+         */
         public function get($where){
             $this->db->where($where);
             $this->db->from($this->table_name);
@@ -27,11 +36,21 @@
             return false;
         }
 
+        /**
+         * 添加数据
+         * @param $data
+         * @return CI_DB_active_record
+         */
         public function add($data){
             return $this->db->insert($this->table_name,$data);
         }
 
-
+        /**
+         * @param array $where
+         * @param string $offset
+         * @param string $limit
+         * @return bool
+         */
         public function getById($where=array(),$offset='',$limit=''){
             $this->db->where($where);
             $this->db->from($this->table_name);
@@ -41,9 +60,8 @@
             $this->db->join('place','place.id=coachandplace.placeid');
             $this->db->join('coach','coach.id=coachandplace.coachid');
             $this->db->join('time','time.id=coachandplace.timeid');
-            if($limit&&$offset){
-                $this->db->limit($limit,$offset);
-            }
+            $this->db->limit($limit,$offset);
+
 
             $result = $this->db->get();
             if ($result->num_rows() > 0) {
@@ -67,6 +85,11 @@
             return $this->db->count_all_results();
         }
 
+        /**
+         * 把数据的a_deleted的值改为1，表示已经删除该数据
+         * @param $where
+         * @return bool|CI_DB_active_record
+         */
         public function delete($where){
             if($where){
                 $result = $this->db->update($this->table_name,array('a_deleted'=>1),$where);

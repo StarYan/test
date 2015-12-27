@@ -18,7 +18,11 @@ class Manage_news extends MY_Controller{
      * 加载添加新闻信息的后台页面
      */
     public function admin(){
-        $id=$_SESSION['id'];
+        if(!empty($_SESSION['id'])){
+            $id=$_SESSION['id'];
+        }else{
+            redirect('/manage_controller/Login');
+        }
         $dataAdmin=$this->admin->getAdminInfoById($id);//获取登录管理员ID
         $list['dataAdmin']=$dataAdmin;
 
@@ -61,7 +65,11 @@ class Manage_news extends MY_Controller{
      * 保存增加的新闻信息
      */
     public function create(){
-        $id=$_SESSION['id'];
+        if(!empty($_SESSION['id'])){
+            $id=$_SESSION['id'];
+        }else{
+            redirect('/manage_controller/Login');
+        }
         $data['title']=$this->input->post('title');
         $data['link']=$this->input->post('link');
         $data['content']=$this->input->post('content');
@@ -94,7 +102,11 @@ class Manage_news extends MY_Controller{
      * @param string $newsID 新闻信息的ID
      */
     public function update($newsID){
-        $adminID=$_SESSION['id'];
+        if(!empty($_SESSION['id'])){
+            $adminID=$_SESSION['id'];
+        }else{
+            redirect('/manage_controller/Login');
+        }
         $where['id']=$newsID;
         $data['title']=$this->input->post('title');
         $data['link']=$this->input->post('link');
@@ -120,7 +132,11 @@ class Manage_news extends MY_Controller{
      * @param string $newsID 新闻信息的ID
      */
     public function view($newsID){
-        $adminID=$_SESSION['id'];
+        if(!empty($_SESSION['id'])){
+            $adminID=$_SESSION['id'];
+        }else{
+            redirect('/manage_controller/Login');
+        }
         $where['id']=$newsID;
         $result=$this->news->select($where);
         $dataAdmin=$this->admin->getAdminInfoById($adminID);//获取登录管理员ID

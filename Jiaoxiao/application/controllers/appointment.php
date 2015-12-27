@@ -103,41 +103,36 @@
          * ajax预约提交
          */
         public function saveappointment(){
-            $userid = $this->session->id();
-            if(!$userid){
-                return $this->send_json('请先登录');
-            }
-            $nickname=$this->input->post('nickname',true);
-            $placeID=$this->input->post('placeID',true);
-            $coachID=$this->input->post('coachID',true);
-            $carID=$this->input->post('carID',true);
-            $timeID=$this->input->post('timeID',true);
+            if(empty($_SESSION['id'])){
+                return $this->send_json(false,'请先登录');
+            }else{
+                $userid = $_SESSION['id'];
+                $placeID=$this->input->post('placeID',true);
+                $coachID=$this->input->post('coachID',true);
+                $carID=$this->input->post('carID',true);
+                $timeID=$this->input->post('timeID',true);
 
-            if($nickname&&$placeID&&$coachID&&$carID&&$timeID){
-                $data['placeID'] = $placeID;
-                $data['coachID'] = $coachID;
-                $data['timeID'] = $timeID;
-                $dataCoachAndPlace=$this->coachandplace_model->get_by_id($data);
-                $coachandplace_id=$dataCoachAndPlace[0]['id'];
+                if($placeID&&$coachID&&$carID&&$timeID){
+                    $data['placeID'] = $placeID;
+                    $data['coachID'] = $coachID;
+                    $data['timeID'] = $timeID;
+                    $dataCoachAndPlace=$this->coachandplace_model->get_by_id($data);
+                    $coachandplace_id=$dataCoachAndPlace[0]['id'];
+                    $where['userid'] = $userid;
+                    $where['coachandplaceid']=$coachandplace_id;
+                    $where['carid']=$carID;
 
-                $user['nickname']=$nickname;
-                $dataUser=$this->user_model->get_by_name_and_pwd($user);
-                $userID=$dataUser['id'];
-
-
-
-                $where['userid'] = $userID;
-                $where['coachandplaceid']=$coachandplace_id;
-                $where['carid']=$carID;
-
-                if($this->appointment_model->get($where)){
-                    $this->appointment_model->update($where);
-                }else{
-                    $this->appointment_model->add($where);
+                    if($this->appointment_model->get($where)){
+                        $this->appointment_model->update($where);
+                    }else{
+                        $this->appointment_model->add($where);
+                    }
+                    return $this->send_json(true,"成功");
                 }
-                return $this->send_json(true,"成功");
+                return $this->send_json(false,"预约失败");
             }
-            return $this->send_json(false,"预约失败");
+
+
         }
 
         /**

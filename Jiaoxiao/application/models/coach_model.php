@@ -100,5 +100,13 @@
             return false;
         }
 
+        /**
+         * Updates a particular model
+         * @param array $data 需要更新的数据数组
+         * @param array $where 条件数据数组
+         */
+        public function update($data,$where){
+            $this->db->update($this->table_name,$data,$where);
+        }
 
     }

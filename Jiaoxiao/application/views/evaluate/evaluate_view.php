@@ -325,7 +325,7 @@
                         dataType:"json",
                         success: function(data){
                             alert(data.msg);
-
+                            location.reload();
                         }
                     });
                 }else{
