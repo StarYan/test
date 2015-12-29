@@ -45,6 +45,13 @@
             <div id="sidebar" class="navbar-collapse collapse">
                 <!-- BEGIN Navlist -->
                 <ul class="nav nav-list">
+                    <li class="<?php if(!empty($Ranking_class)){echo $Ranking_class;}?>">
+                        <a href="<?php echo site_url('manage_ranking/admin/')?>">
+                            <i class="icon-star"></i>
+                            <span>驾校排名管理</span>
+                        </a>
+                    </li>
+
                     <li class="<?php if(!empty($Evaluate_class)){echo $Evaluate_class;}?>">
                         <a href="<?php echo site_url('manage_evaluate/index/')?>">
                             <i class="icon-star"></i>
@@ -53,7 +60,7 @@
                     </li>
 
                     <li class="<?php if(!empty($Appointment_class)){echo $Appointment_class;}?>">
-                        <a href="<?php echo site_url('manage_appointment/appointmentInfo/')?>">
+                        <a href="<?php echo site_url('manage_appointment/index/')?>">
                             <i class="icon-star"></i>
                             <span>学员预约管理</span>
                         </a>

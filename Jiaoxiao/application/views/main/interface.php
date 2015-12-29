@@ -114,86 +114,11 @@
                     <div class="box-title">
                         <h3><i class="icon-list"></i> 最新考试通过率排名</h3>
                         <div class="box-tool">
-                            <a data-action="collapse" href="#"><i class="icon-chevron-up"></i></a>
+
                         </div>
                     </div>
                     <div class="box-content">
-                        <ul class="messages nice-scroll" style="height: 300px">
-                            <li>
-                                <img src="img/demo/avatar/avatar2.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>David</h5>
-                                        <span class="time"><i class="icon-time"></i> 26 minutes ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure ...</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar3.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Sarah</h5>
-                                        <span class="time"><i class="icon-time"></i> 1 days ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar4.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Emma</h5>
-                                        <span class="time"><i class="icon-time"></i> 4 days ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar5.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>John</h5>
-                                        <span class="time"><i class="icon-time"></i> 2 weeks ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem...</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar1.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Penny <span class="label label-info">Admin</span></h5>
-                                        <span class="time"><i class="icon-time"></i> 14 July</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
+                        <ul class="iconic nice-scroll pass_rate" style="height: 300px">
                         </ul>
                     </div>
                 </div>
@@ -205,86 +130,11 @@
                     <div class="box-title">
                         <h3><i class="icon-list"></i> 驾校打分排名</h3>
                         <div class="box-tool">
-                            <a data-action="collapse" href="#"><i class="icon-chevron-up"></i></a>
+
                         </div>
                     </div>
                     <div class="box-content">
-                        <ul class="messages nice-scroll" style="height: 300px">
-                            <li>
-                                <img src="img/demo/avatar/avatar2.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>David</h5>
-                                        <span class="time"><i class="icon-time"></i> 26 minutes ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure ...</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar3.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Sarah</h5>
-                                        <span class="time"><i class="icon-time"></i> 1 days ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar4.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Emma</h5>
-                                        <span class="time"><i class="icon-time"></i> 4 days ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar5.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>John</h5>
-                                        <span class="time"><i class="icon-time"></i> 2 weeks ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem...</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar1.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Penny <span class="label label-info">Admin</span></h5>
-                                        <span class="time"><i class="icon-time"></i> 14 July</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
+                        <ul class="iconic nice-scroll score" style="height: 300px">
                         </ul>
                     </div>
                 </div>
@@ -325,6 +175,47 @@
     <script src="<?php echo base_url()?>js/classie.js"></script>
     <script src="<?php echo base_url()?>js/modalEffects.js"></script>
 
+<script>
+    $(document).ready(function(){
+        $.ajax({
+            type: "POST",
+            url: '<?php echo site_url('manage_ranking/showRankingByPassRate')?>',
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                $(".pass_rate").empty();
+                if(data.code==0){
+                    for (var i = 0; i < data.data.length; i++){
+                        var str='<li><div><dl><dt><h4><strong><i class="icon-star blue"></i> <a>'+data.data[i]['school_name']+'</a></strong></h4></dt> <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;考试通过率 : '+data.data[i]['pass_rate']+'% <a target="_blank" href="'+data.data[i]['school_url']+'" class="btn btn-primary" style="float: right;margin-right: 10px;">进入驾校官网 <i class="icon-chevron-right"></i></a></dd><hr/></dl></div></li>';
+                        $(".pass_rate").append(str);
+                    }
+                }else{
+                    alert(data.msg);
+                }
+
+            }
+        });
+
+        $.ajax({
+            type: "POST",
+            url: '<?php echo site_url('manage_ranking/showRankingByScore')?>',
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                $(".score").empty();
+                if(data.code==0){
+                    for (var i = 0; i < data.data.length; i++){
+                        var str='<li><div><dl><dt><h4><strong><i class="icon-star blue"></i> <a>'+data.data[i]['school_name']+'</a></strong></h4></dt> <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;驾校分数 : '+data.data[i]['score']+'分 <a target="_blank" href="'+data.data[i]['school_url']+'" class="btn btn-primary" style="float: right;margin-right: 10px;">进入驾校官网 <i class="icon-chevron-right"></i></a></dd><hr/></dl></div></li>';
+                        $(".score").append(str);
+                    }
+                }else{
+                    alert(data.msg);
+                }
+
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

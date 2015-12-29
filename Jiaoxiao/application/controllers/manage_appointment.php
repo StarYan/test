@@ -23,7 +23,7 @@
         /**
          * 查看学员预约的信息汇总
          */
-        public function appointmentInfo(){
+        public function index(){
 
             $pagesize=10;
             $count=$this->appointment_model->count();

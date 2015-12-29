@@ -5,7 +5,6 @@
 			<div class="box-title">
 				<h3><i class="icon-table"></i>管理员：<?php echo $this->session->username?></h3>
 				<div class="box-tool">
-					<a data-action="collapse" href="#"></a>
 				</div>
 			</div>
 			<div class="box-content">

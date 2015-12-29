@@ -15,7 +15,7 @@ class Manage_news extends MY_Controller{
     }
 
     /**
-     * 加载添加新闻信息的后台页面
+     * 加载新闻信息的后台页面
      */
     public function admin(){
         if(!empty($_SESSION['id'])){
@@ -94,7 +94,7 @@ class Manage_news extends MY_Controller{
     public function delete($newsID){
         $where['id']=$newsID;
         $this->news->delete($where);
-        $this->admin();
+        redirect('/manage_news/admin');
     }
 
     /**
