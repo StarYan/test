@@ -351,6 +351,7 @@
             showSelectedRating: false
         });
 
+        
 
         /**
          * 用户登录验证ajax
