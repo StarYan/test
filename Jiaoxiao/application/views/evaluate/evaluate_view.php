@@ -140,7 +140,7 @@
             <?php if($userData) {?>
             <li>
                 <a  class="md-trigger" >
-                    欢迎来到蓝光驾校，<?=$userData['nickname']?>
+                    欢迎来到蓝光驾校，<?php echo $userData['nickname'];?>
                 </a>
             </li>
             <li>
@@ -200,11 +200,11 @@
                                 <?php if($dataCoach):?>
                                     <?php foreach($dataCoach as $coach):?>
                                         <tr class="table-flag-blue">
-                                            <td ><?=$coach['id']?></td>
-                                            <td ><?=$coach['c_name']?></td>
+                                            <td ><?php echo $coach['id'];?></td>
+                                            <td ><?php echo $coach['c_name'];?></td>
 
                                             <td class="text-center">
-                                                <a href="#" class="md-trigger btn btn-primary evaluate" data-modal="modal-12"  data-id="<?=$coach['id']?>">评价</a>
+                                                <a href="#" class="md-trigger btn btn-primary evaluate" data-modal="modal-12"  data-id="<?php echo $coach['id'];?>">评价</a>
                                             </td>
                                         </tr>
                                     <?php endforeach;?>
