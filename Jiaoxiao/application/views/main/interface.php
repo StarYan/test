@@ -295,7 +295,7 @@
             success: function (data) {
                 $(".pass_rate").empty();
                 if(data.code==0){
-                    for (var i = 0; i < data.data.length; i++){
+                    for (var i = 0; i < 3; i++){
                         var str='<li><div><dl><dt><h4><strong><span class="label label-info">'+(i+1)+'</span> <a href="#">'+data.data[i]['school_name']+'</a></strong></h4></dt> <dd style="margin-top:20px;">考试通过率 : '+data.data[i]['pass_rate']+'% <a target="_blank" href="'+data.data[i]['school_url']+'" class="btn btn-primary" style="float: right;margin-right: 10px;">进入驾校官网 <i class="icon-chevron-right"></i></a></dd></dl></div></li>';
                         $(".pass_rate").append(str);
                     }
@@ -314,7 +314,7 @@
             success: function (data) {
                 $(".score").empty();
                 if(data.code==0){
-                    for (var i = 0; i < data.data.length; i++){
+                    for (var i = 0; i < 3; i++){
                         var str='<li><div><dl><dt><h4><strong><span class="label label-info">'+(i+1)+'</span> <a href="#">'+data.data[i]['school_name']+'</a></strong></h4></dt> <dd style="margin-top:20px;">驾校分数 : '+data.data[i]['score']+'分 <a target="_blank" href="'+data.data[i]['school_url']+'" class="btn btn-primary" style="float: right;margin-right: 10px;">进入驾校官网 <i class="icon-chevron-right"></i></a></dd></dl></div></li>';
                         $(".score").append(str);
                     }
