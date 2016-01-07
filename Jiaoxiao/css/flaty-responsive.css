@@ -77,14 +77,14 @@
         width: 388px;
         border-bottom: 0;
     }
-    #main-content {margin-left: 0 !important;}
+    #main-content {margin-left: 0 !important;width: 100%;}
     label {
         font-weight: bold;
         padding-bottom: 5px;
     }
 
     .container{
-        background-color:rgba(233,240,249,0.9);
+
     }
 
     .a{
