@@ -491,12 +491,14 @@
             var timeid=$("#time").val();
             var coachid=$("#coach").val();
             var carid=$("#car").val();
+            var userid=<?php echo $this->session->id;?>
 
-                if(placeid&&timeid&&coachid&&carid){
+                if(userid&&placeid&&timeid&&coachid&&carid){
                     $.ajax({
                         type: "POST",
                         url: '<?php echo site_url('appointment/saveappointment')?>',
                         data: {
+                            userID:userid,
                             placeID:placeid,
                             timeID:timeid,
                             coachID:coachid,
@@ -507,6 +509,8 @@
                             if(data.code){
                                 alert(data.msg);
                                 window.location.href="<?php echo site_url('appointment/index')?>";
+                            }else{
+                                alert(data.msg);
                             }
                         }
                     });

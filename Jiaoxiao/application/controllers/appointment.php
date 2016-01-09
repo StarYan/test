@@ -103,10 +103,10 @@
          * ajax预约提交
          */
         public function saveappointment(){
-            if(empty($_SESSION['id'])){
+            if(!$this->input->post('userID',true)){
                 return $this->send_json(false,'请先登录');
             }else{
-                $userid = $_SESSION['id'];
+                $userid = $this->input->post('userID',true);
                 $placeID=$this->input->post('placeID',true);
                 $coachID=$this->input->post('coachID',true);
                 $carID=$this->input->post('carID',true);
