@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Created by PhpStorm.
  * 用户预约模块
@@ -17,8 +17,8 @@
             $this->load->model('cartype_model');
         }
 
-        public function appointmentmodel(){
-            $this->load->view('appointment/appointment_view');
+        public function index(){
+            $this->load->view('appointment/appointmentLogin_view');
         }
 
         /**
@@ -151,12 +151,12 @@
                 if($result){
                     $_SESSION = $result;
                     $list['result']=$result;
-                    return $this->send_json(true,'登录成功',$list);
+                    $this->load->view('appointment/appointment_view');
                 }else{
-                    return $this->send_json(false,'登录失败，请查看密码或用户名是否正确');
+                    $this->load->view('appointment/appointmentLogin_view');
                 }
             }
-            return $this->send_json(false,'登录失败，请查看密码或用户名是否正确');
+            $this->load->view('appointment/appointmentLogin_view');
         }
 
         /**
@@ -164,7 +164,7 @@
          */
         public function logout(){
            $this->session->sess_destroy();
-            return $this->send_json(true,"注销成功");
+           return $this->send_json(true,"注销成功");
         }
 
     }

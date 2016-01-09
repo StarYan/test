@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -21,20 +21,28 @@
     <link rel="stylesheet" href="<?php echo base_url()?>css/flaty-responsive.css">
 
     <style>
-        .interface > div{
-            padding: 30px;
+        .login-form {
+            padding: 80px;
+            padding-bottom: 140px;
+            background-color: rgb(88,177,252);
+            color: white;
         }
 
-        .interface > div:hover{
+        .login-form {
             transition:border linear .2s,box-shadow linear .5s;
             -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
             -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
             outline:none;
-            border-color:rgba(239,126,77,.75);
-            box-shadow:0 0 28px rgba(239,126,67,.5);
-            -moz-box-shadow:0 0 28px rgba(239,126,67,.5);
-            -webkit-box-shadow:0 0 28px rgba(239,126,67,3);
+            border-color:rgba(88,177,252,.75);
+            box-shadow:0 0 28px rgba(88,177,242,.5);
+            -moz-box-shadow:0 0 28px rgba(88,177,242,.5);
+            -webkit-box-shadow:0 0 28px rgba(88,177,242,3);
         }
+
+        .form-group{
+            margin-top: 5%;
+        }
+
 
         .company-info > p{
             margin: 15px;
@@ -59,52 +67,10 @@
             color:white;
         }
 
-        .new_messages{
-            list-style: none;
-            height:auto;
-            margin:0;
-            padding:0px;
-
-        }
-
-        .new_messages > li{
-            transition:border linear .2s,box-shadow linear .5s;
-            -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
-            -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
-            outline:none;
-            border-color:rgba(88,177,252,.75);
-            box-shadow:0 0 28px rgba(88,177,242,.5);
-            -moz-box-shadow:0 0 28px rgba(88,177,242,.5);
-            -webkit-box-shadow:0 0 28px rgba(88,177,242,3);
-             padding: 25px;
-             height: 185px;
-             width:46%;
-             float: left;
-             margin: 21px;
-         }
-
-        .new_messages a {
-            color:black;
-        }
-
-        .new_messages > li > div > a :hover{
-            color:rgb(88,177,252);
-        }
-
-        @media (max-width: 767px) {
-            .new_messages > li{
-                width:100%;
-                float: none;
-                margin: 0;
-            }
-        }
-
     </style>
-
 
 </head>
 <body >
-
 <!-- BEGIN Navbar -->
 <div  class="navbar" style="height: 310px;">
     <div class="container ">
@@ -140,9 +106,7 @@
                     </ul>
                 </nav>
             </div>
-
         </div>
-
 
         <div class="row text-center " style="margin: 8% auto">
             <div style="color: white;">
@@ -156,95 +120,33 @@
 </div>
 <!-- END Navbar -->
 
-<div class="container " style="margin-top: 3%;">
-    <div class="row col-md-2 col-md-offset-1 text-center" style="background-color: rgb(239,126,67);color: white; margin-bottom:10px;  ">
-        <h3>学车流程</h3>
-    </div>
-</div>
-
-<div class="container ">
-    <div class="row  col-md-10 col-md-offset-1" style="background-color: rgb(239,126,67); margin-bottom:10px;  ">
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row text-center col-md-10 col-md-offset-1 interface">
-        <div class="col-xs-12 col-sm-12 col-md-4 " >
-            <a href="<?php echo site_url('register/goRegister')?>" rel="prettyPhoto" title="在线报名">
-                <div>
-                    <img src="<?php echo base_url()?>images/register.png" alt="" />
-                    <i></i>
+<div class="container" style="margin-top: 6%;">
+    <div class="row col-md-10 col-md-offset-1">
+        <div class="login-form col-md-10 col-md-offset-1">
+            <form class="form-horizontal text-center" action="<?php echo site_url('appointment/login')?>" method="post">
+                <h2>预 约 登 录</h2>
+                <hr/>
+                <div class="form-group">
+                    <div class="controls">
+                        <input type="text" placeholder="用户名" name="nickname"  class="form-control" required />
+                    </div>
                 </div>
-            </a>
-            <h3><strong ><a href="<?php echo site_url('register/goRegister')?>" rel="prettyPhoto" title="在线报名" style="color:rgba(239,126,67,.75);">在线报名</a></strong></h3>
-            <p>
-                进行在线报名操作页面
-            </p>
-
-        </div>
-
-
-
-        <div class="col-xs-12 col-sm-12  col-md-4" >
-            <a href="<?php echo site_url('appointment/index')?>" rel="prettyPhoto" title="网上预约">
-                <div>
-                    <img src="<?php echo base_url()?>images/appointment.png" alt="" />
-                    <i></i>
+                <div class="form-group">
+                    <div class="controls">
+                        <input type="password" placeholder="用户密码" name="password"  class="form-control" required />
+                    </div>
                 </div>
-            </a>
 
-            <h3><strong ><a href="<?php echo site_url('appointment/index')?>" rel="prettyPhoto" title="网上预约" style="color:rgba(239,126,67,.75);">网上预约</a></strong></h3>
-            <p>
-                进入网上预约操作页面
-            </p>
-        </div>
-        <div class="col-xs-12 col-sm-12  col-md-4 " >
-            <a href="<?php echo site_url('/evaluate/goEvaluate')?>" rel="prettyPhoto" title="学员评价">
-                <div>
-                    <img src="<?php echo base_url()?>images/evaluation.png" alt=""  />
-                    <i></i>
+                <br/>
+                <div class="form-group">
+                    <div class="controls">
+                        <button type="submit" class="btn btn-primary form-control">登 录</button>
+                    </div>
                 </div>
-            </a>
-            <h3><strong ><a href="<?php echo site_url('/evaluate/goEvaluate')?>" rel="prettyPhoto" title="学员评价" style="color:rgba(239,126,67,.75);">学员评价</a></strong></h3>
-            <p>
-                进入学员评价操作页面
-            </p>
+            </form>
         </div>
-
     </div>
 
-
-</div>
-
-<div class="container " style="margin-top: 3%;">
-    <div class="row col-md-2 col-md-offset-1 text-center" style="background-color: rgb(88,177,242);color: white; margin-bottom:10px;  ">
-        <h3>本周热点新闻</h3>
-    </div>
-</div>
-
-<div class="container ">
-    <div class="row  col-md-10 col-md-offset-1" style="background-color: rgb(88,177,242); margin-bottom:20px; ">
-    </div>
-</div>
-
-<div class="container ">
-            <div class="row col-md-10 col-md-offset-1">
-                <ul class="new_messages" >
-
-                </ul>
-            </div>
-</div>
-
-<div class="container" style="margin-top: 2%;">
-    <div class="text-center col-md-2 col-md-offset-9" style="background-color: rgb(88,177,242); margin-bottom:10px;  ">
-        <h3><a href="#" style="color: white">更多新闻 >></a></h3>
-    </div>
-</div>
-
-<div class="container ">
-    <div class="row  col-md-10 col-md-offset-1" style="background-color: rgb(88,177,242); margin-bottom:20px; ">
-    </div>
 </div>
 
 <div class="container" style="margin-top: 8%;height: 250px; background-color: rgb(88,177,242);color:white;padding:20px;" >
@@ -293,7 +195,6 @@
 </div>
 
 
-
 <!--basic scripts-->
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
 <script>window.jQuery || document.write('<script src="<?php echo base_url()?>assets/jquery/jquery-2.0.3.min.js"><\/script>')</script>
@@ -315,49 +216,7 @@
 <!--flaty scripts-->
 <script src="<?php echo base_url()?>js/flaty.js"></script>
 <script src="<?php echo base_url()?>js/classie.js"></script>
-<script src="<?php echo base_url()?>js/modalEffects.js"></script>
 
-<script>
-    $(document).ready(function(){
-        $.ajax({
-            type: "POST",
-            url: '<?php echo site_url('manage_news/show')?>',
-            data: {},
-            dataType: "json",
-            success: function (data) {
-                $(".new_messages").empty();
-                if(data.code==0){
-                    for (var i = 0; i < 10; i++){
-                        var str='<li><a class="hidden-xs hidden-sm col-md-4 text-center"><img src="<?php echo base_url()?>/images/info.png" /></a><div class="col-xs-18 col-sm-12 col-md-8"><a href="'+data.data[i]['link']+'"><h4><strong>'+data.data[i]['title']+'</strong></h4></a><p style="overflow: hidden;height: 40px; line-height: 20px; margin-bottom: 25px; margin-top: 16px;">'+data.data[i]['content']+'</p><p><span>发布时间 ：'+data.data[i]['create_date']+'</span><a href="'+data.data[i]['link']+'" class="pull-right" >阅读全文 >></a></p></div></li>';
-                        $(".new_messages").append(str);
-                    }
-
-                    $(".new_messages li").mouseover(function(){
-                        $(this).css("background-color","rgba(88,177,242,.4)");
-                    });
-
-                    $(".new_messages li").mouseout(function(){
-                        $(this).css("background-color","white");
-                    });
-
-                    $(".pull-right").mouseover(function(){
-                        $(this).css("text-decoration","underline");
-                    });
-
-                    $(".pull-right").mouseout(function(){
-                        $(this).css("text-decoration","none");
-                    });
-                }else{
-                    alert(data.msg);
-                }
-
-            }
-        });
-
-
-
-    });
-</script>
 
 </body>
 </html>

@@ -36,37 +36,6 @@
 </head>
 <body>
 
-<!-- 登录表单 -->
-<div class="md-modal md-effect-7" id="login">
-    <div class="md-content">
-        <h3>用户登录</h3>
-        <div>
-            <form  class="form-horizontal" >
-                <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label" for="nickname">用户名:</label>
-                    <div class="col-sm-6 col-lg-10 controls">
-                        <input type="text" name="nickname" id="nickname" class="form-control" data-rule-required="true" data-rule-minlength="3" placeholder="请输入用户名" />
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label" for="password">用户密码:</label>
-                    <div class="col-sm-6 col-lg-10 controls">
-                        <input type="password" name="password" id="password" class="form-control" data-rule-required="true" data-rule-minlength="6" placeholder="请输入用户密码" />
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
-                        <input type="button" class="btn btn-primary" value="登录" id="log_in">
-                        <input type="reset" class="btn" value="重置">
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- 登录表单 -->
 <div class="md-overlay"></div>
 
 <div class="a" >
@@ -85,18 +54,12 @@
         <ul class="nav flaty-nav pull-right">
             <li >
                 <?php $udata =$this->session->id;?>
-                <?php if(!$udata): ?>
-                <a href="#" class="md-trigger" data-modal="login" id="user" value="login" >
-                    登录
-                </a>
-                <?php else: ?>
                     <li>
                     <a>欢迎来到蓝光驾校,<?php echo $ndata = $this->session->nickname;?></a>
                     </li>
                 <li>
                     <a class='md-trigger logout' href='#'><i class='icon-off'></i> 注销</a>
                 </li>
-                <?php endif; ?>
             </li>
         </ul>
         <!-- 学员登录按钮 -->
@@ -530,7 +493,6 @@
             var carid=$("#car").val();
 
                 if(placeid&&timeid&&coachid&&carid){
-
                     $.ajax({
                         type: "POST",
                         url: '<?php echo site_url('appointment/saveappointment')?>',
@@ -542,7 +504,10 @@
                         },
                         dataType: "json",
                         success: function (data) {
-                            alert(data.msg);
+                            if(data.code){
+                                alert(data.msg);
+                                window.location.href="<?php echo site_url('appointment/index')?>";
+                            }
                         }
                     });
 
@@ -561,41 +526,11 @@
                 dataType: "json",
                 success: function (data) {
                     alert(data.msg);
-                    location.reload();
+                    window.location.href="<?php echo site_url('appointment/index')?>";
                 }
             });
         });
-        /**
-         * 用户登录验证ajax
-         */
-        $("#log_in").click(function() {
-            var nickname=$("#nickname").val();
-            var password=$("#password").val();
 
-            $.ajax({
-                type: "POST",
-                url: '<?php echo site_url('appointment/login')?>',
-                data: {
-                    nickname:nickname,
-                    password:password
-                },
-                dataType: "json",
-                success: function (data) {
-                    alert(data.msg);
-                    location.reload();
-                    /*if(data.code==1){
-                        alert(data.msg);
-                    }else{
-                        $(".md-overlay").trigger('click');
-                        $("#log").empty();
-                        var login="<a>"+data.data['result'].nickname+"</a>";
-                        $("#log").html(login);
-                        var logout="<a class='md-trigger' href='<?php echo site_url()?>/appointment/appointmentmodel'><i class='icon-off'></i> 注销</a>"
-                        $("#logout").html(logout);
-                    }*/
-                }
-            });
-        });
 
        
     }
