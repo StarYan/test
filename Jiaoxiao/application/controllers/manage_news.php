@@ -80,7 +80,7 @@ class Manage_news extends MY_Controller{
             $this->layout->view('/manage/manage_news/create',$list);
         }else{
             date_default_timezone_set('PRC');
-            $data['create_date']=date('Y-m-d H:i:s');
+            $data['create_date']=date('Y-m-d');
             $data['create_id']=$id;
             $this->news->insert($data);
             $this->admin();
@@ -112,7 +112,7 @@ class Manage_news extends MY_Controller{
         $data['link']=$this->input->post('link');
         $data['content']=$this->input->post('content');
         date_default_timezone_set('PRC');
-        $data['create_date']=date('Y-m-d H:i:s');
+        $data['create_date']=date('Y-m-d');
         $data['create_id']=$adminID;
 
         if(!isset($data['title'])&&!isset($data['link'])&&!isset($data['content'])){

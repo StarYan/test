@@ -10,6 +10,7 @@ class Register extends MY_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->model('user_model','user');
+        $this->load->model('coach_model','coach');
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         $this->load->helper('cookie');
@@ -132,6 +133,19 @@ class Register extends MY_Controller{
     public function logout(){
         $this->session->sess_destroy();
         return $this->send_json(true,"注销成功");
+    }
+
+    /**
+     * 获取教练信息的ajax接口
+     */
+    public function coachInformation(){
+        $coachData=$this->coach->getall();
+
+        if($coachData){
+            $this->send_json(true,'',$coachData);
+        }else{
+            $this->send_json(false,'没有教练信息');
+        }
     }
 
 }

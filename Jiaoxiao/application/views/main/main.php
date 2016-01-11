@@ -99,6 +99,7 @@
             }
         }
 
+
     </style>
 
 
@@ -217,7 +218,7 @@
 
 </div>
 
-<div class="container " style="margin-top: 3%;">
+<div class="container " style="margin-top: 5%;">
     <div class="row col-md-2 col-md-offset-1 text-center" style="background-color: rgb(88,177,242);color: white; margin-bottom:10px;  ">
         <h3>本周热点新闻</h3>
     </div>
@@ -319,6 +320,7 @@
 
 <script>
     $(document).ready(function(){
+
         $.ajax({
             type: "POST",
             url: '<?php echo site_url('manage_news/show')?>',
@@ -328,7 +330,7 @@
                 $(".new_messages").empty();
                 if(data.code==0){
                     for (var i = 0; i < 10; i++){
-                        var str='<li><a class="hidden-xs hidden-sm col-md-4 text-center"><img src="<?php echo base_url()?>/images/info.png" /></a><div class="col-xs-18 col-sm-12 col-md-8"><a href="'+data.data[i]['link']+'"><h4><strong>'+data.data[i]['title']+'</strong></h4></a><p style="overflow: hidden;height: 40px; line-height: 20px; margin-bottom: 25px; margin-top: 16px;">'+data.data[i]['content']+'</p><p><span>发布时间 ：'+data.data[i]['create_date']+'</span><a href="'+data.data[i]['link']+'" class="pull-right" >阅读全文 >></a></p></div></li>';
+                        var str='<li><div class="col-xs-18 col-sm-12 col-md-12"><a target="_blank" href="'+data.data[i]['link']+'"><h4><strong>'+data.data[i]['title']+'</strong></h4></a><p style="overflow: hidden;height: 40px; line-height: 20px; margin-bottom: 25px; margin-top: 16px;">'+data.data[i]['content']+'</p><p><span>发布时间 ：'+data.data[i]['create_date']+'</span><a target="_blank" href="'+data.data[i]['link']+'" class="pull-right" >阅读全文 >></a></p></div></li>';
                         $(".new_messages").append(str);
                     }
 

@@ -18,12 +18,7 @@
     <!--flaty css styles-->
     <link rel="stylesheet" href="<?php echo base_url()?>css/flaty.css">
     <link rel="stylesheet" href="<?php echo base_url()?>css/flaty-responsive.css">
-
-    <style>
-        input.error {
-            border:1px solid red;
-        }
-    </style>
+    <link rel="stylesheet" href="<?php echo base_url()?>/css/bootstrap-stars.css">
 
     <script type="text/javascript">
 
@@ -98,38 +93,178 @@
         }
 
     </script>
+
+    <style>
+
+        .company-info > p{
+            margin: 15px;
+        }
+
+        .copyright{
+            height:50px;
+            background-color: white;
+            color:black;
+            padding:15px;
+            font-size: 13px;
+        }
+
+        .title {
+            border-bottom:1px solid white;
+        }
+
+        .friend-link > li{
+            padding-left:5px;
+        }
+        .friend-link > li > h5 >a{
+            color:white;
+        }
+
+
+        .box-content {
+            transition:border linear .2s,box-shadow linear .5s;
+            -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
+            -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
+            outline:none;
+            border-color:rgba(88,177,252,.75);
+            box-shadow:0 0 28px rgba(88,177,242,.5);
+            -moz-box-shadow:0 0 28px rgba(88,177,242,.5);
+            -webkit-box-shadow:0 0 28px rgba(88,177,242,3);
+
+        }
+
+        .coach-rank-list {
+            padding: 0px;
+            list-style: none;
+        }
+
+        .coach-rank-list > li {
+            height: 50px;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .coach-rank-list > li.active{
+            height:auto;
+        }
+
+        .rank-list-title {
+            font-size: 14px;
+            height: 50px;
+            padding: 5px;
+        }
+
+        .rank-list-num {
+            margin: 0;
+            color: white;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            background: rgba(88,177,252,.75);;
+            text-align: center;
+        }
+
+        .list-coach-name {
+            margin: 0;
+            color: black;
+            padding: 10px;
+            height: 40px;
+            text-align: left;
+        }
+
+        .list-coach-star{
+            margin: 0;
+            color: black;
+            padding: 10px;
+            height: 40px;
+            text-align: right;
+        }
+
+        .rank-list-content{
+            padding:10px;
+            color: #999;
+        }
+
+        .list-coach-img{
+            padding:0;
+            margin:0;
+            height: 96px;
+            width: 96px;
+        }
+
+
+    </style>
 </head>
 <body>
 <!-- BEGIN Navbar -->
-<div id="navbar" class="navbar">
-    <a class="navbar-brand col-md-offset-1" href="#">
-        <small>
-            <i class=""></i>
-            蓝光驾校
-        </small>
-    </a>
+<div  class="navbar" style="height: 310px;">
+    <div class="container ">
+        <div class="row col-md-10 col-md-offset-1">
+            <div class="col-md-5">
+                <a class="navbar-brand" href="#">
+                    <h2>
+                        <strong>
+                            LanGuang 蓝光驾校
+                        </strong>
+                    </h2>
+                </a>
+            </div>
+
+            <div class="col-md-7 hidden-sm hidden-xs">
+                <nav style="float: right;">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#"><h4><i class="icon-home"></i> 驾校首页</h4></a>
+                        </li>
+
+                        <li>
+                            <a href="#"><h4><i class="icon-list"></i> 驾校新闻</h4></a>
+                        </li>
+
+                        <li>
+                            <a href="#"><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
+                        </li>
+
+                        <li>
+                            <a href="#"><h4><i class="icon-phone"></i> 联系我们</h4></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+
+        <div class="row text-center " style="margin: 8% auto">
+            <div style="color: white;">
+                <h1>蓝光驾校欢迎您</h1>
+                <br/>
+                <p><h3>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h3></p>
+            </div>
+        </div>
+    </div>
+
 </div>
 <!-- END Navbar -->
 
+
+
+
+
 <!-- BEGIN Container -->
-<div class="container" id="main-container">
-
-    <!-- BEGIN Content -->
-    <div id="main-content">
-
-        <!-- BEGIN Main Content -->
+<div class="container" style="margin-top: 6%;" >
         <div class="row">
             <div class="col-md-7 col-md-offset-1">
                 <div class="box">
-                    <div class="box-title">
-                        <h3> 蓝光驾校网上报名</h3>
-                        <div class="box-tool">
-                            <a href="<?php echo site_url('/main/goMain')?>" class="btn btn-primary" ><i class="icon-home"></i> 首页</a>
+                    <div class="container" >
+                        <div class="row box-content" style="background-color: rgb(88,177,242);color: white; padding-left: 6%; ">
+                            <h3>蓝光驾校网上报名</h3>
                         </div>
                     </div>
-                    <div class="box-content">
-                        <form action="" class="form-horizontal" id="register_form" method="post">
 
+                    <div class="box-content">
+                        <form  class="form-horizontal" id="register_form" method="post">
                             <div class="form-group">
                                 <label for="nickname" class="col-sm-3 col-lg-2 control-label">账号名</label>
                                 <div class="col-sm-6 col-lg-4 controls">
@@ -271,10 +406,12 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="box box-blue">
-                    <div class="box-title">
-                        <h3><i class="icon-user"></i> 预约登录</h3>
+            <div class="col-md-3 hidden-xs">
+                <div class="box row">
+                    <div class="container">
+                        <div class="row box-content text-center" style="background-color: rgb(88,177,242);color: white;  ">
+                            <h3>预约登录</h3>
+                        </div>
                     </div>
                     <?php if($this->session->nickname) :?>
                     <div class="box-content" >
@@ -321,193 +458,70 @@
                     <?php endif; ?>
                 </div>
 
-                <div class="box box-blue">
-                    <div class="box-title">
-                        <h3><i class="icon-list"></i> 驾校教练排名</h3>
+                <div class="box row">
+                    <div class="container " style="margin-top: 3%;">
+                        <div class="row box-content text-center" style="background-color: rgb(88,177,242);color: white;  ">
+                            <h3>人气教练</h3>
+                        </div>
                     </div>
-                    <div class="box-content">
-                        <ul class="messages nice-scroll" style="height: 400px">
-                            <li>
-                                <img src="img/demo/avatar/avatar2.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>David</h5>
-                                        <span class="time"><i class="icon-time"></i> 26 minutes ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure ...</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar3.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Sarah</h5>
-                                        <span class="time"><i class="icon-time"></i> 1 days ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar4.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Emma</h5>
-                                        <span class="time"><i class="icon-time"></i> 4 days ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar5.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>John</h5>
-                                        <span class="time"><i class="icon-time"></i> 2 weeks ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem...</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar1.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Penny <span class="label label-info">Admin</span></h5>
-                                        <span class="time"><i class="icon-time"></i> 14 July</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
+                    <div class="box-content ">
+                        <ul class="coach-rank-list">
                         </ul>
                     </div>
                 </div>
 
-                <div class="box box-blue">
-
-                    <div class="box-title">
-                        <h3><i class="icon-list"></i> 驾校新闻</h3>
-                    </div>
-                    <div class="box-content">
-                        <ul class="messages nice-scroll" style="height: 370px">
-                            <li>
-                                <img src="img/demo/avatar/avatar2.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>David</h5>
-                                        <span class="time"><i class="icon-time"></i> 26 minutes ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure ...</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar3.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Sarah</h5>
-                                        <span class="time"><i class="icon-time"></i> 1 days ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar4.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Emma</h5>
-                                        <span class="time"><i class="icon-time"></i> 4 days ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar5.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>John</h5>
-                                        <span class="time"><i class="icon-time"></i> 2 weeks ago</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem...</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/demo/avatar/avatar1.jpg" alt="">
-                                <div>
-                                    <div>
-                                        <h5>Penny <span class="label label-info">Admin</span></h5>
-                                        <span class="time"><i class="icon-time"></i> 14 July</span>
-                                    </div>
-                                    <p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
-                                    <div class="messages-actions">
-                                        <a class="show-tooltip" href="#" title="Approve"><i class="icon-ok green"></i></a>
-                                        <a class="show-tooltip" href="#" title="Disapprove"><i class="icon-remove orange"></i></a>
-                                        <a class="show-tooltip" href="#" title="Remove"><i class="icon-trash red"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
 
             </div>
         </div>
-        <!-- END Main Content -->
+</div>
 
+<div class="container" style="margin-top: 8%;height: 250px; background-color: rgb(88,177,242);color:white;padding:20px;" >
+    <div class="row col-md-10 col-md-offset-1" >
+        <div class="col-xs-12 col-sm-12 col-md-3 company-info" >
+            <div class="title">
+                <h2>联系方式</h2>
+            </div>
+            <p><h5>驾校地址</h5></p>
+            <p><h5><i class="icon-phone"></i> 驾校电话</h5></p>
+            <p><h5><i class="icon-print"></i> 驾校传真号</h5></p>
+            <p><h5><i class="icon-globe"></i> 驾校网址</h5></p>
+            <p><h5><i class="icon-envelope"></i> 驾校邮箱</h5></p>
+        </div>
 
-        <!-- END Content -->
-        <footer>
-            <p>2015 © 蓝光驾校</p>
-        </footer>
+        <div class="col-md-7 company-info hidden-xs hidden-sm " style="float: right" >
+            <div class="title">
+                <h2 >友情链接</h2>
+            </div>
+            <ul class="nav nav-pills friend-link ">
+                <li><h5><a href="#"> 百度 |</a></h5></li>
+                <li><h5><a href="#"> 腾讯 |</a></h5></li>
+                <li><h5><a href="#"> Google |</a></h5></li>
+                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
+                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
+                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
+                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
+                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
+            </ul>
+        </div>
 
         <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="icon-chevron-up"></i></a>
     </div>
-    <!-- END Content -->
+
 </div>
-<!-- END Container -->
+
+<div class="copyright">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 蓝光驾校</span> |
+                <span>京ICP备11008151号</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 
 <!--basic scripts-->
@@ -527,8 +541,158 @@
 <script src="<?php echo base_url()?>/assets/jquery-validation/dist/jquery.validate.js"></script>
 <script src="<?php echo base_url()?>/assets/jquery-validation/dist/additional-methods.js"></script>
 <script src="<?php echo base_url()?>/js/uploadPreview.js"></script>
+<script src="<?php echo base_url()?>/js/jquery.barrating.js"></script>
 <script>
     $(document).ready(function(){
+        $.ajax({
+            type: "POST",
+            url: '<?php echo site_url("/register/coachInformation")?>',
+            data: {},
+            dataType: "json",
+            success: function(data){
+                $(".coach-rank-list").empty();
+                var str1='<li data-list-collapse="accordion" class="active" >'+
+                            '<div class="container rank-list-title">'+
+                            '<a href="#">'+
+                            '<span class="col-md-3 rank-list-num" style="background-color: #ff100c">'+1+'</span>'+
+                            '<span class="col-md-5 list-coach-name">'+data.data[0]['c_name']+'</span>'+
+                            '<span class="col-md-5 list-coach-star">'+
+                            '<select data-coach-star="'+data.data[0]['star']+'" name="rating">'+
+                            '<option value="" selected>0</option>'+
+                            '<option value="1">1</option>'+
+                            '<option value="2">2</option>'+
+                            '<option value="3">3</option>'+
+                            '<option value="4">4</option>'+
+                            '<option value="5">5</option>'+
+                            '</select>'+
+                            '</span>'+
+                            '</a>'+
+                            '</div>'+
+                            '<div class="container rank-list-content">'+
+                            '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/images/teacher-male.png" /></div>'+
+                            '<div class="list-coach-detail col-md-8">'+
+                            '<p>所属驾校：<a href="'+data.data[0]['school_url']+'">'+data.data[0]['school_name']+'</a></p>'+
+                            '<p>价格：'+data.data[0]['price']+'/小时</p>'+
+                            '<p>电话：'+data.data[0]['tel']+'</p>'+
+                            '<p><a href="#" class="btn btn-primary pull-right">查看</a></p>'+
+                            '</div>'+
+                            '</div>'+
+                            '</li>';
+                $(".coach-rank-list").append(str1);
+
+                var str2='<li data-list-collapse="accordion" >'+
+                    '<div class="container rank-list-title">'+
+                    '<a href="#">'+
+                    '<span class="col-md-3 rank-list-num" style="background-color: #ffa700">'+2+'</span>'+
+                    '<span class="col-md-5 list-coach-name">'+data.data[1]['c_name']+'</span>'+
+                    '<span class="col-md-5 list-coach-star">'+
+                    '<select data-coach-star="'+data.data[1]['star']+'" name="rating">'+
+                    '<option value="" selected>0</option>'+
+                    '<option value="1">1</option>'+
+                    '<option value="2">2</option>'+
+                    '<option value="3">3</option>'+
+                    '<option value="4">4</option>'+
+                    '<option value="5">5</option>'+
+                    '</select>'+
+                    '</span>'+
+                    '</a>'+
+                    '</div>'+
+                    '<div class="container rank-list-content">'+
+                    '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/images/teacher-male.png" /></div>'+
+                    '<div class="list-coach-detail col-md-8">'+
+                    '<p>所属驾校：<a href="'+data.data[1]['school_url']+'">'+data.data[1]['school_name']+'</a></p>'+
+                    '<p>价格：'+data.data[1]['price']+'/小时</p>'+
+                    '<p>电话：'+data.data[1]['tel']+'</p>'+
+                    '<p><a href="#" class="btn btn-primary pull-right">查看</a></p>'+
+                    '</div>'+
+                    '</div>'+
+                    '</li>';
+                $(".coach-rank-list").append(str2);
+
+                var str3='<li data-list-collapse="accordion" >'+
+                    '<div class="container rank-list-title">'+
+                    '<a href="#">'+
+                    '<span class="col-md-3 rank-list-num" style="background-color: #ffe400">'+3+'</span>'+
+                    '<span class="col-md-5 list-coach-name">'+data.data[2]['c_name']+'</span>'+
+                    '<span class="col-md-5 list-coach-star">'+
+                    '<select data-coach-star="'+data.data[2]['star']+'" name="rating">'+
+                    '<option value="" selected>0</option>'+
+                    '<option value="1">1</option>'+
+                    '<option value="2">2</option>'+
+                    '<option value="3">3</option>'+
+                    '<option value="4">4</option>'+
+                    '<option value="5">5</option>'+
+                    '</select>'+
+                    '</span>'+
+                    '</a>'+
+                    '</div>'+
+                    '<div class="container rank-list-content">'+
+                    '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/images/teacher-male.png" /></div>'+
+                    '<div class="list-coach-detail col-md-8">'+
+                    '<p>所属驾校：<a href="'+data.data[1]['school_url']+'">'+data.data[2]['school_name']+'</a></p>'+
+                    '<p>价格：'+data.data[2]['price']+'/小时</p>'+
+                    '<p>电话：'+data.data[2]['tel']+'</p>'+
+                    '<p><a href="#" class="btn btn-primary pull-right">查看</a></p>'+
+                    '</div>'+
+                    '</div>'+
+                    '</li>';
+                $(".coach-rank-list").append(str3);
+
+                for(var i=3;i < 10;i++){
+                    var str='<li data-list-collapse="accordion">'+
+                            '<div class="container rank-list-title">'+
+                            '<a target="_blank" href="#">'+
+                            '<span class="col-md-3 rank-list-num">'+(i+1)+'</span>'+
+                            '<span class="col-md-5 list-coach-name">'+data.data[i]['c_name']+'</span>'+
+                            '<span class="col-md-5 list-coach-star">'+
+                            '<select data-coach-star="'+data.data[i]['star']+'" name="rating">'+
+                            '<option value="" selected>0</option>'+
+                            '<option value="1">1</option>'+
+                            '<option value="2">2</option>'+
+                            '<option value="3">3</option>'+
+                            '<option value="4">4</option>'+
+                            '<option value="5">5</option>'+
+                            '</select>'+
+                            '</span>'+
+                            '</a>'+
+                            '</div>'+
+                            '<div class="container rank-list-content">'+
+                            '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/images/teacher-male.png" /></div>'+
+                            '<div class="list-coach-detail col-md-8">'+
+                            '<p>所属驾校：<a target="_blank" href="'+data.data[i]['school_url']+'">'+data.data[i]['school_name']+'</a></p>'+
+                            '<p>价格：'+data.data[i]['price']+'/小时</p>'+
+                            '<p>电话：'+data.data[i]['tel']+'</p>'+
+                            '<p><a target="_blank" href="#" class="btn btn-primary pull-right">查看</a></p>'+
+                            '</div>'+
+                            '</div>'+
+                            '</li>';
+
+                    $(".coach-rank-list").append(str);
+                }
+
+                for(var i=0;i < 10;i++){
+                    $('[data-coach-star="'+data.data[i]['star']+'"]').barrating({
+                        theme: 'bootstrap-stars',
+                        readonly:true,
+                        showSelectedRating: false
+                    });
+                    $('[data-coach-star="'+data.data[i]['star']+'"]').barrating('set', data.data[i]['star']);
+                }
+
+                $(function () {!function () {
+                    var a = $('[data-list-collapse="accordion"]');
+                    a.mouseenter(function () {
+                        $(this).siblings(a).removeClass("active"), $(this).addClass("active")
+                    })
+                }()
+                });
+            }
+        });
+
+
+
+
+
         $("#register_form").submit(function(){
             $.ajax({
                 type: "POST",
