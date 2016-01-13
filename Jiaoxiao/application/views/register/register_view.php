@@ -161,7 +161,7 @@
             padding: 10px;
             width: 40px;
             height: 40px;
-            background: rgba(88,177,252,.75);;
+            background: #3498db;
             text-align: center;
         }
 
@@ -193,19 +193,26 @@
             width: 96px;
         }
 
+        .list-coach-detail{
+            padding:10px;
+        }
+
+        .register-title > a :hover{
+            text-decoration: underline;
+        }
 
     </style>
 </head>
 <body>
 <!-- BEGIN Navbar -->
-<div  class="navbar" style="height: 310px;">
+<div  class="navbar" style="height: 270px;">
     <div class="container ">
         <div class="row col-md-10 col-md-offset-1">
             <div class="col-md-5">
                 <a class="navbar-brand" href="#">
                     <h2>
                         <strong>
-                            LanGuang 蓝光驾校
+                            珠海网上驾校
                         </strong>
                     </h2>
                 </a>
@@ -215,11 +222,11 @@
                 <nav style="float: right;">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#"><h4><i class="icon-home"></i> 驾校首页</h4></a>
+                            <a href="<?php echo site_url('/main/goInterface')?>"><h4><i class="icon-home"></i> 驾校首页</h4></a>
                         </li>
 
                         <li>
-                            <a href="#"><h4><i class="icon-list"></i> 驾校新闻</h4></a>
+                            <a href="<?php echo site_url('/main/goMain')?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
                         </li>
 
                         <li>
@@ -238,7 +245,7 @@
 
         <div class="row text-center " style="margin: 8% auto">
             <div style="color: white;">
-                <h1>蓝光驾校欢迎您</h1>
+                <h1>珠海网上驾校欢迎您</h1>
                 <br/>
                 <p><h3>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h3></p>
             </div>
@@ -253,18 +260,19 @@
 
 
 <!-- BEGIN Container -->
-<div class="container" style="margin-top: 6%;" >
+<div class="container"  style="margin-top: 3%;" >
         <div class="row">
             <div class="col-md-7 col-md-offset-1">
                 <div class="box">
                     <div class="container" >
-                        <div class="row box-content" style="background-color: rgb(88,177,242);color: white; padding-left: 6%; ">
-                            <h3>蓝光驾校网上报名</h3>
+                        <div class="row box-content register-title" style="background-color: rgb(88,177,242);color: white; ">
+                            <h3 class="col-md-6">珠海网上驾校网上报名</h3>
+                            <a href="<?php echo site_url('appointment/index')?>"  class="col-md-3 text-center pull-right" style="color: white;margin:8px 0;" ><h5>已有账号，请直接登陆</h5></a>
                         </div>
                     </div>
 
                     <div class="box-content">
-                        <form  class="form-horizontal" id="register_form" method="post">
+                        <form class="form-horizontal"  action="<?php echo site_url('/register/Save')?>" method="post" enctype="multipart/form-data" >
                             <div class="form-group">
                                 <label for="nickname" class="col-sm-3 col-lg-2 control-label">账号名</label>
                                 <div class="col-sm-6 col-lg-4 controls">
@@ -357,18 +365,29 @@
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label">上传身份证照片</label>
-                                <div class="col-sm-9 col-lg-10 controls">
+                                <div class=" col-sm-9 col-lg-10 controls">
                                     <div class="fileupload fileupload-new" data-provides="fileupload">
-                                        <div class="fileupload-new img-thumbnail"  id="imgDiv" style="width: 428px; height: 270px;">
-                                            <img  id="imgShow" style="width: 428px; height: 270px;" />
+                                        <div class="hidden-xs fileupload-new img-thumbnail"  id="imgDiv" style="width: 428px; height: 270px; border:0;">
+                                            <img  id="imgShow" style="width: 428px; height: 270px; border:0;" />
                                         </div>
-                                        <input type="file" id="img" class="form-control default" name="img"  style="width: 428px;" />
+                                        <input type="file" id="img" class="form-control default" name="img"  style="border:0; margin:10px;" />
                                     </div>
                                 </div>
                                 <label class="control-label" style="color:red"></label>
                             </div>
 
                             <hr>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label">报名驾校</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <select class="form-control  chosen"  tabindex="1"  name="school" >
+                                        <option value="" selected>-- 请选择驾校 --</option>
+                                        <option value="01" >蓝光驾校</option>
+                                    </select>
+                                </div>
+                                <label class="control-label" style="color:red"></label>
+                            </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label">培训类别</label>
@@ -396,7 +415,7 @@
 
                             <div class="form-group">
                                 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
-                                    <input type="submit" class="btn btn-primary" value="报名">
+                                    <button type="submit" class="btn btn-primary" >报名</button>
                                     <button type="reset" class="btn">重置</button>
                                 </div>
                             </div>
@@ -406,60 +425,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 hidden-xs">
+            <div class=" hidden-xs col-md-3">
                 <div class="box row">
-                    <div class="container">
-                        <div class="row box-content text-center" style="background-color: rgb(88,177,242);color: white;  ">
-                            <h3>预约登录</h3>
-                        </div>
-                    </div>
-                    <?php if($this->session->nickname) :?>
-                    <div class="box-content" >
-                        <div class="alert alert-info">
-                            <h4>蓝光驾校欢迎您，<?=$this->session->nickname; ?></h4><br/>
-                            <p><a class="btn btn-primary" href="<?php echo site_url('/appointment/appointmentmodel')?>">点击进入预约页面 >></a> &nbsp;<a class="btn btn-danger" id="logout"><i class="icon-off"></i> 注销</a></p>
-                        </div>
-                    </div>
-                    <?php else :?>
-                    <div class="box-content">
-                        <form action="" class="form-horizontal" id="login_form" method="post" >
-                            <div class="form-group">
-                                <label for="user_nickname" class="sr-only">账号名</label>
-                                <div class="col-sm-9 col-sm-offset-2 col-lg-10 col-lg-offset-1 controls">
-                                    <input type="text" name="user_nickname" id="user_nickname" class="form-control" placeholder="账号名" value="<?php if(!empty($_COOKIE['nickname'])){echo $_COOKIE['nickname'];}else{echo "";} ?>" />
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="user_password" class="sr-only">密码</label>
-                                <div class="col-sm-9 col-sm-offset-2 col-lg-10 col-lg-offset-1 controls">
-                                    <input type="password" name="user_password" id="user_password" class="form-control" placeholder="账号密码" />
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-sm-9 col-sm-offset-2 col-lg-10 col-lg-offset-1 controls">
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="check" value="1" name="check" /> 记住账号
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-sm-9 col-sm-offset-2 col-lg-10 col-lg-offset-1">
-                                    <input type="submit" class="btn btn-primary" value="登录">
-                                    <button type="reset" class="btn">重置</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <?php endif; ?>
-                </div>
-
-                <div class="box row">
-                    <div class="container " style="margin-top: 3%;">
+                    <div class="container " >
                         <div class="row box-content text-center" style="background-color: rgb(88,177,242);color: white;  ">
                             <h3>人气教练</h3>
                         </div>
@@ -469,8 +437,6 @@
                         </ul>
                     </div>
                 </div>
-
-
             </div>
         </div>
 </div>
@@ -513,14 +479,12 @@
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-12">
-                <span>Copyright &copy; 蓝光驾校</span> |
+                <span>Copyright &copy; 珠海网上驾校</span> |
                 <span>京ICP备11008151号</span>
             </div>
         </div>
     </div>
 </div>
-
-
 
 
 
@@ -554,7 +518,7 @@
                 var str1='<li data-list-collapse="accordion" class="active" >'+
                             '<div class="container rank-list-title">'+
                             '<a href="#">'+
-                            '<span class="col-md-3 rank-list-num" style="background-color: #ff100c">'+1+'</span>'+
+                            '<span class="col-md-3 rank-list-num" style="background-color: rgba(231, 76, 60,1.0)">'+1+'</span>'+
                             '<span class="col-md-5 list-coach-name">'+data.data[0]['c_name']+'</span>'+
                             '<span class="col-md-5 list-coach-star">'+
                             '<select data-coach-star="'+data.data[0]['star']+'" name="rating">'+
@@ -583,7 +547,7 @@
                 var str2='<li data-list-collapse="accordion" >'+
                     '<div class="container rank-list-title">'+
                     '<a href="#">'+
-                    '<span class="col-md-3 rank-list-num" style="background-color: #ffa700">'+2+'</span>'+
+                    '<span class="col-md-3 rank-list-num" style="background-color: rgba(230, 126, 34,1.0)">'+2+'</span>'+
                     '<span class="col-md-5 list-coach-name">'+data.data[1]['c_name']+'</span>'+
                     '<span class="col-md-5 list-coach-star">'+
                     '<select data-coach-star="'+data.data[1]['star']+'" name="rating">'+
@@ -612,7 +576,7 @@
                 var str3='<li data-list-collapse="accordion" >'+
                     '<div class="container rank-list-title">'+
                     '<a href="#">'+
-                    '<span class="col-md-3 rank-list-num" style="background-color: #ffe400">'+3+'</span>'+
+                    '<span class="col-md-3 rank-list-num" style="background-color: rgba(241, 196, 15,1.0)">'+3+'</span>'+
                     '<span class="col-md-5 list-coach-name">'+data.data[2]['c_name']+'</span>'+
                     '<span class="col-md-5 list-coach-star">'+
                     '<select data-coach-star="'+data.data[2]['star']+'" name="rating">'+
@@ -690,26 +654,6 @@
         });
 
 
-
-
-
-        $("#register_form").submit(function(){
-            $.ajax({
-                type: "POST",
-                url: '<?php echo site_url('/register/Save')?>',
-                data: $(this).serialize(),
-                dataType: "json",
-                success : function (data) {
-                    if(data){
-                        alert('报名成功');
-                        location.reload();
-                    }else{
-                        alert('报名失败');
-                        location.reload();
-                    }
-                }
-            });
-        });
 
         $("#login_form").submit(function(){
             $.ajax({
@@ -853,6 +797,11 @@
 
         new uploadPreview({ UpBtn: "img", DivShow: "imgDiv", ImgShow: "imgShow" });
 
+        <?php
+            if(!empty($flag)){
+                echo 'alert("报名成功")';
+             }
+        ?>
 
 
     });

@@ -17,8 +17,31 @@
             $this->load->model('cartype_model');
         }
 
-        public function index(){
-            $this->load->view('appointment/appointmentLogin_view');
+        /**
+         * 进入预约登录页面
+         */
+        public function index($flag=""){
+            if($this->checklogin()){
+                $this->session->sess_destroy();
+            }
+            if(empty($flag)){
+                $this->load->view('/appointment/appointmentLogin_view');
+            }else{
+                $data['flag']=$flag;
+                $this->load->view('/appointment/appointmentLogin_view',$data);
+            }
+
+        }
+
+        /**
+         * 进入预约页面
+         */
+        public function goAppointment(){
+            if($this->checklogin()){
+                $this->load->view('appointment/appointment_view');
+            }else{
+                redirect('appointment/index');
+            }
         }
 
         /**
@@ -144,19 +167,14 @@
             if($nickname&&$password){
                 $data['nickname'] = $nickname;
                 $data['password'] = $password;
-                if($this->checklogin()){
-                    $this->session->sess_destroy();
-                }
                 $result = $this->user_model->get_by_name_and_pwd($data);
                 if($result){
                     $_SESSION = $result;
-                    $list['result']=$result;
-                    $this->load->view('appointment/appointment_view');
+                    redirect('/appointment/goAppointment');
                 }else{
-                    $this->load->view('appointment/appointmentLogin_view');
+                    redirect(array('/appointment/index','flag'=>1));
                 }
             }
-            $this->load->view('appointment/appointmentLogin_view');
         }
 
         /**

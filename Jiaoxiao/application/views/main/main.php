@@ -107,14 +107,14 @@
 <body >
 
 <!-- BEGIN Navbar -->
-<div  class="navbar" style="height: 310px;">
+<div  class="navbar" style="height: 270px;">
     <div class="container ">
         <div class="row col-md-10 col-md-offset-1">
             <div class="col-md-5">
                 <a class="navbar-brand" href="#">
                     <h2>
                         <strong>
-                            LanGuang 蓝光驾校
+                            珠海网上驾校
                         </strong>
                     </h2>
                 </a>
@@ -124,15 +124,15 @@
                 <nav style="float: right;">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#"><h4><i class="icon-home"></i> 驾校首页</h4></a>
+                            <a href="<?php echo site_url('/main/goInterface')?>"><h4><i class="icon-home"></i> 驾校首页</h4></a>
                         </li>
 
                         <li>
-                            <a href="#"><h4><i class="icon-list"></i> 驾校新闻</h4></a>
+                            <a href="<?php echo site_url('/main/goMain')?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
                         </li>
 
                         <li>
-                            <a href="#"><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
+                            <a href=""><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
                         </li>
 
                         <li>
@@ -147,7 +147,7 @@
 
         <div class="row text-center " style="margin: 8% auto">
             <div style="color: white;">
-                <h1>蓝光驾校欢迎您</h1>
+                <h1>珠海网上驾校欢迎您</h1>
                 <br/>
                 <p><h3>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h3></p>
             </div>
@@ -171,7 +171,7 @@
 
 <div class="container">
     <div class="row text-center col-md-10 col-md-offset-1 interface">
-        <div class="col-xs-12 col-sm-12 col-md-4 " >
+        <div class="col-xs-12 col-sm-12 col-md-3 " >
             <a href="<?php echo site_url('register/goRegister')?>" rel="prettyPhoto" title="在线报名">
                 <div>
                     <img src="<?php echo base_url()?>images/register.png" alt="" />
@@ -180,14 +180,27 @@
             </a>
             <h3><strong ><a href="<?php echo site_url('register/goRegister')?>" rel="prettyPhoto" title="在线报名" style="color:rgba(239,126,67,.75);">在线报名</a></strong></h3>
             <p>
-                进行在线报名操作页面
+                进入在线报名操作页面
+            </p>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-3 " >
+            <a href="<?php echo site_url('register/goRegister')?>" rel="prettyPhoto" title="科目一视频培训">
+                <div>
+                    <img src="<?php echo base_url()?>images/register.png" alt="" />
+                    <i></i>
+                </div>
+            </a>
+            <h3><strong ><a href="#>" rel="prettyPhoto" title="科目一视频培训" style="color:rgba(239,126,67,.75);">科目一视频培训</a></strong></h3>
+            <p>
+                进入科目一视频培训页面
             </p>
 
         </div>
 
 
-
-        <div class="col-xs-12 col-sm-12  col-md-4" >
+        <div class="col-xs-12 col-sm-12  col-md-3" >
             <a href="<?php echo site_url('appointment/index')?>" rel="prettyPhoto" title="网上预约">
                 <div>
                     <img src="<?php echo base_url()?>images/appointment.png" alt="" />
@@ -200,7 +213,9 @@
                 进入网上预约操作页面
             </p>
         </div>
-        <div class="col-xs-12 col-sm-12  col-md-4 " >
+
+
+        <div class="col-xs-12 col-sm-12  col-md-3" >
             <a href="<?php echo site_url('/evaluate/goEvaluate')?>" rel="prettyPhoto" title="学员评价">
                 <div>
                     <img src="<?php echo base_url()?>images/evaluation.png" alt=""  />
@@ -286,7 +301,7 @@
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-12">
-                <span>Copyright &copy; 蓝光驾校</span> |
+                <span>Copyright &copy; 珠海网上驾校</span> |
                 <span>京ICP备11008151号</span>
             </div>
         </div>

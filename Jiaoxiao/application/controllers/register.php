@@ -12,16 +12,20 @@ class Register extends MY_Controller{
         $this->load->model('user_model','user');
         $this->load->model('coach_model','coach');
         $this->load->helper(array('form', 'url'));
-        $this->load->library('form_validation');
         $this->load->helper('cookie');
-
     }
 
     /**
      * 加载网上报名页面
      */
-    public function GoRegister(){
-        $this->load->view('/register/register_view');
+    public function GoRegister($flag=""){
+        if(empty($flag)){
+            $this->load->view('/register/register_view');
+        }else{
+            $data['flag']=$flag;
+            $this->load->view('/register/register_view',$data);
+        }
+
     }
 
     /**
@@ -71,6 +75,7 @@ class Register extends MY_Controller{
         }else{
             $data['sex']=0;
         }
+        $data['school']=$_POST['school'];
         $data['wanted_car_type']=$_POST['wanted_car_type'];
         $data['birthday']=$_POST['birthday'];
         $data['idcard']=$_POST['id'];
@@ -91,9 +96,8 @@ class Register extends MY_Controller{
         $data['create_id']=$data['num'];
         $result=$this->user->save($data);
         if($result){
-            echo json_encode(true);
-        }else{
-            echo json_encode(false);
+            $flag=1;
+            redirect(array('/register/GoRegister','flag'=>$flag));
         }
     }
 

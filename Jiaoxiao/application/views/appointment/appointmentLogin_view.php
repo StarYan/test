@@ -21,14 +21,15 @@
     <link rel="stylesheet" href="<?php echo base_url()?>css/flaty-responsive.css">
 
     <style>
-        .login-form {
-            padding: 80px;
-            padding-bottom: 140px;
-            background-color: rgb(88,177,252);
-            color: white;
+        body{
+            background-color: rgba(88,177,252,0.7);
         }
 
         .login-form {
+            margin-top: 5%;
+            padding: 80px;
+            background-color: rgb(88,177,252);
+            color: white;
             transition:border linear .2s,box-shadow linear .5s;
             -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
             -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
@@ -49,37 +50,45 @@
         }
 
         .copyright{
+            margin-top: 5%;
             height:50px;
-            background-color: white;
-            color:black;
+            background-color: rgb(88,177,242);
+            color:white;
             padding:15px;
             font-size: 13px;
         }
 
-        .title {
-            border-bottom:1px solid white;
+        .register-link a :hover {
+            text-decoration: underline;
         }
 
-        .friend-link > li{
-            padding-left:5px;
+        /*手机分辨率*/
+        @media (max-width: 767px) {
+            body {
+                background-color: rgba(88,177,252,1);
+            }
         }
-        .friend-link > li > h5 >a{
-            color:white;
+
+        /*平板分辨率*/
+        @media (min-width: 768px) and (max-width: 979px) {
+            body {
+                background-color: rgba(88,177,252,1);
+            }
         }
 
     </style>
 
 </head>
-<body >
+<body>
 <!-- BEGIN Navbar -->
-<div  class="navbar" style="height: 310px;">
+<div  class="navbar" style="height: auto;">
     <div class="container ">
         <div class="row col-md-10 col-md-offset-1">
             <div class="col-md-5">
                 <a class="navbar-brand" href="#">
                     <h2>
                         <strong>
-                            LanGuang 蓝光驾校
+                            珠海网上驾校
                         </strong>
                     </h2>
                 </a>
@@ -89,11 +98,11 @@
                 <nav style="float: right;">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#"><h4><i class="icon-home"></i> 驾校首页</h4></a>
+                            <a href="<?php echo site_url('/main/goInterface')?>"><h4><i class="icon-home"></i> 驾校首页</h4></a>
                         </li>
 
                         <li>
-                            <a href="#"><h4><i class="icon-list"></i> 驾校新闻</h4></a>
+                            <a href="<?php echo site_url('/main/goMain')?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
                         </li>
 
                         <li>
@@ -108,24 +117,28 @@
             </div>
         </div>
 
-        <div class="row text-center " style="margin: 8% auto">
-            <div style="color: white;">
-                <h1>蓝光驾校欢迎您</h1>
-                <br/>
-                <p><h3>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h3></p>
-            </div>
-        </div>
     </div>
 
 </div>
 <!-- END Navbar -->
 
-<div class="container" style="margin-top: 6%;">
+<div class="container" >
     <div class="row col-md-10 col-md-offset-1">
-        <div class="login-form col-md-10 col-md-offset-1">
-            <form class="form-horizontal text-center" action="<?php echo site_url('appointment/login')?>" method="post">
-                <h2>预 约 登 录</h2>
-                <hr/>
+        <div class="hidden-xs hidden-sm col-md-6 text-center " style="padding: 80px;margin-top: 5%;">
+            <div style="color: white;">
+                <h1>珠海网上驾校欢迎您</h1>
+                <br/>
+                <p><h1>微 笑 是 我 们 的 语 言</h1></p>
+                <p><h1>文 明 是 我 们 的 信 念</h1></p>
+                <p><h1>教 学 是 我 们 的 责 任</h1></p>
+                <p><h1>成 功 是 我 们 的 心 愿</h1></p>
+            </div>
+        </div>
+
+        <div class="login-form col-xs-18 col-sm-12 col-md-6">
+            <form class="form-horizontal text-center" id="login-form" method="post" action="<?php echo site_url('/appointment/login')?>">
+                <h1><strong>预 约 登 录</strong></h1>
+                <br>
                 <div class="form-group">
                     <div class="controls">
                         <input type="text" placeholder="用户名" name="nickname"  class="form-control" required />
@@ -136,11 +149,16 @@
                         <input type="password" placeholder="用户密码" name="password"  class="form-control" required />
                     </div>
                 </div>
-
                 <br/>
                 <div class="form-group">
                     <div class="controls">
-                        <button type="submit" class="btn btn-primary form-control">登 录</button>
+                        <button type="submit" class="btn form-control" style="background-color: white; color: black ">登 录</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="controls pull-right register-link" >
+                        <a href="<?php echo site_url('/register/goRegister')?>" style="color: white;"><h5>注册新账号</h5></a>
                     </div>
                 </div>
             </form>
@@ -149,45 +167,12 @@
 
 </div>
 
-<div class="container" style="margin-top: 8%;height: 250px; background-color: rgb(88,177,242);color:white;padding:20px;" >
-    <div class="row col-md-10 col-md-offset-1" >
-        <div class="col-xs-12 col-sm-12 col-md-3 company-info" >
-            <div class="title">
-                <h2>联系方式</h2>
-            </div>
-            <p><h5>驾校地址</h5></p>
-            <p><h5><i class="icon-phone"></i> 驾校电话</h5></p>
-            <p><h5><i class="icon-print"></i> 驾校传真号</h5></p>
-            <p><h5><i class="icon-globe"></i> 驾校网址</h5></p>
-            <p><h5><i class="icon-envelope"></i> 驾校邮箱</h5></p>
-        </div>
-
-        <div class="col-md-7 company-info hidden-xs hidden-sm " style="float: right" >
-            <div class="title">
-                <h2 >友情链接</h2>
-            </div>
-            <ul class="nav nav-pills friend-link ">
-                <li><h5><a href="#"> 百度 |</a></h5></li>
-                <li><h5><a href="#"> 腾讯 |</a></h5></li>
-                <li><h5><a href="#"> Google |</a></h5></li>
-                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
-                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
-                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
-                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
-                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
-            </ul>
-        </div>
-
-        <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="icon-chevron-up"></i></a>
-    </div>
-
-</div>
 
 <div class="copyright">
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-12">
-                <span>Copyright &copy; 蓝光驾校</span> |
+                <span>Copyright &copy; 珠海网上驾校</span> |
                 <span>京ICP备11008151号</span>
             </div>
         </div>
@@ -217,6 +202,11 @@
 <script src="<?php echo base_url()?>js/flaty.js"></script>
 <script src="<?php echo base_url()?>js/classie.js"></script>
 
+<script>
+<?php if(!empty($flag)){
+        echo 'alert("请输入正确的账号或者密码")';
+}?>
+</script>
 
 </body>
 </html>

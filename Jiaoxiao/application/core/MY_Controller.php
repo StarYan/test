@@ -17,6 +17,7 @@ class MY_Controller extends CI_Controller {
         $this->load->helper('url');
         $this->load->library('session');
         $this->userid = $this->session->id;
+        date_default_timezone_set('PRC');//设置时间为中国时区
     }
 
     /**
