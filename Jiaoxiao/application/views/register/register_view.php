@@ -205,7 +205,7 @@
 </head>
 <body>
 <!-- BEGIN Navbar -->
-<div  class="navbar" style="height: 270px;">
+<div class="navbar" style="height: 270px;">
     <div class="container ">
         <div class="row col-md-10 col-md-offset-1">
             <div class="col-md-5">
@@ -222,15 +222,16 @@
                 <nav style="float: right;">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="<?php echo site_url('/main/goInterface')?>"><h4><i class="icon-home"></i> 驾校首页</h4></a>
+                            <a href="<?php echo site_url('/main/goInterface') ?>"><h4><i class="icon-home"></i> 驾校首页
+                                </h4></a>
                         </li>
 
                         <li>
-                            <a href="<?php echo site_url('/main/goMain')?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
+                            <a href="<?php echo site_url('/main/goMain') ?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
                         </li>
 
                         <li>
-                            <a href="#"><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
+                            <a href=""><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
                         </li>
 
                         <li>
@@ -245,9 +246,12 @@
 
         <div class="row text-center " style="margin: 8% auto">
             <div style="color: white;">
-                <h1>珠海网上驾校欢迎您</h1>
+                <h1><strong>珠海网上驾校欢迎您</strong></h1>
                 <br/>
-                <p><h3>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h3></p>
+
+                <p>
+
+                <h2>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h2></p>
             </div>
         </div>
     </div>
@@ -255,12 +259,8 @@
 </div>
 <!-- END Navbar -->
 
-
-
-
-
 <!-- BEGIN Container -->
-<div class="container"  style="margin-top: 3%;" >
+<div class="container"  style="margin-top: 1%;" >
         <div class="row">
             <div class="col-md-7 col-md-offset-1">
                 <div class="box">
@@ -272,7 +272,7 @@
                     </div>
 
                     <div class="box-content">
-                        <form class="form-horizontal"  action="<?php echo site_url('/register/Save')?>" method="post" enctype="multipart/form-data" >
+                        <form class="form-horizontal" id="register-form"  action="<?php echo site_url('/register/Save')?>" method="post" enctype="multipart/form-data" >
                             <div class="form-group">
                                 <label for="nickname" class="col-sm-3 col-lg-2 control-label">账号名</label>
                                 <div class="col-sm-6 col-lg-4 controls">
@@ -425,7 +425,7 @@
                 </div>
             </div>
 
-            <div class=" hidden-xs col-md-3">
+            <div class="hidden-xs col-md-3">
                 <div class="box row">
                     <div class="container " >
                         <div class="row box-content text-center" style="background-color: rgb(88,177,242);color: white;  ">
@@ -441,7 +441,7 @@
         </div>
 </div>
 
-<div class="container" style="margin-top: 8%;height: 250px; background-color: rgb(88,177,242);color:white;padding:20px;" >
+<div class="container" style="margin-top: 3%;height: 250px; background-color: rgb(88,177,242);color:white;padding:20px;" >
     <div class="row col-md-10 col-md-offset-1" >
         <div class="col-xs-12 col-sm-12 col-md-3 company-info" >
             <div class="title">
@@ -655,37 +655,7 @@
 
 
 
-        $("#login_form").submit(function(){
-            $.ajax({
-                type: "POST",
-                url: '<?php echo site_url('/register/Login')?>',
-                data: $(this).serialize(),
-                dataType: "json",
-                success : function (data) {
-                    if(data.code){
-                        alert(data.msg);
-                    }
-                }
-            });
-        });
-
-        $("#logout").click(function() {
-            $.ajax({
-                type: "POST",
-                url: '<?php echo site_url('register/Logout')?>',
-                data: {
-                },
-                dataType: "json",
-                success: function (data) {
-                    alert(data.msg);
-                    location.reload();
-                }
-            });
-        });
-
-
-
-        $("#register_form").validate({
+        $("#register-form").validate({
 
             rules: {
                 nickname: {
@@ -791,8 +761,7 @@
             },
             errorPlacement: function(error,element) {
                     error.appendTo(element.parent("div").next("label"));
-            },
-            debug:true
+            }
         });
 
         new uploadPreview({ UpBtn: "img", DivShow: "imgDiv", ImgShow: "imgShow" });

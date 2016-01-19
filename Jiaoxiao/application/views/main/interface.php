@@ -81,14 +81,14 @@
 </head>
 <body >
 <!-- BEGIN Navbar -->
-<div  class="navbar" style="height: 270px;">
+<div class="navbar" style="height: 270px;">
     <div class="container ">
         <div class="row col-md-10 col-md-offset-1">
             <div class="col-md-5">
                 <a class="navbar-brand" href="#">
                     <h2>
                         <strong>
-                             珠海网上驾校
+                            珠海网上驾校
                         </strong>
                     </h2>
                 </a>
@@ -98,15 +98,16 @@
                 <nav style="float: right;">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="<?php echo site_url('/main/goInterface')?>"><h4><i class="icon-home"></i> 驾校首页</h4></a>
+                            <a href="<?php echo site_url('/main/goInterface') ?>"><h4><i class="icon-home"></i> 驾校首页
+                                </h4></a>
                         </li>
 
                         <li>
-                            <a href="<?php echo site_url('/main/goMain')?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
+                            <a href="<?php echo site_url('/main/goMain') ?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
                         </li>
 
                         <li>
-                            <a href="#"><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
+                            <a href=""><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
                         </li>
 
                         <li>
@@ -120,11 +121,14 @@
 
 
         <div class="row text-center " style="margin: 8% auto">
-                <div style="color: white;">
-                    <h1>珠海网上驾校欢迎您</h1>
-                    <br/>
-                    <p><h3>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h3></p>
-                </div>
+            <div style="color: white;">
+                <h1><strong>珠海网上驾校欢迎您</strong></h1>
+                <br/>
+
+                <p>
+
+                <h2>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h2></p>
+            </div>
         </div>
     </div>
 
