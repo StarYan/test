@@ -30,10 +30,11 @@
             -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
             -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
             outline:none;
-            border-color:rgba(239,126,77,.75);
-            box-shadow:0 0 28px rgba(239,126,67,.5);
-            -moz-box-shadow:0 0 28px rgba(239,126,67,.5);
-            -webkit-box-shadow:0 0 28px rgba(239,126,67,3);
+            border-color:rgba(88,177,252,.75);
+            box-shadow:0 0 28px rgba(88,177,242,.5);
+            -moz-box-shadow:0 0 28px rgba(88,177,242,.5);
+            -webkit-box-shadow:0 0 28px rgba(88,177,242,.5);
+            background-color: rgba(52, 152, 219,.2);
         }
 
         .company-info > p{
@@ -59,43 +60,30 @@
             color:white;
         }
 
-        .new_messages{
-            list-style: none;
-            height:auto;
-            margin:0;
-            padding:0px;
-
+        .news-content{
+            padding: 0 0 0 30px;
         }
 
-        .new_messages > li{
-            transition:border linear .2s,box-shadow linear .5s;
-            -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
-            -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
-            outline:none;
-            border-color:rgba(88,177,252,.75);
-            box-shadow:0 0 28px rgba(88,177,242,.5);
-            -moz-box-shadow:0 0 28px rgba(88,177,242,.5);
-            -webkit-box-shadow:0 0 28px rgba(88,177,242,3);
-             padding: 25px;
-             height: 185px;
-             width:46%;
-             float: left;
-             margin: 21px;
-         }
-
-        .new_messages a {
-            color:black;
+        .news{
+            padding: 0;
+            margin: 0;
+        }
+        
+        .news > li{
+            margin-top: 10px;
+            padding: 0;
         }
 
-        .new_messages > li > div > a :hover{
-            color:rgb(88,177,252);
+        .news > li :hover{
+            color: rgb(88,177,242);
         }
+
+
 
         @media (max-width: 767px) {
-            .new_messages > li{
-                width:100%;
-                float: none;
-                margin: 0;
+            .news-content{
+                padding: 0;
+                margin-top: 3%;
             }
         }
 
@@ -107,7 +95,7 @@
 <body >
 
 <!-- BEGIN Navbar -->
-<div  class="navbar" style="height: 270px;">
+<div class="navbar" style="height: 270px;">
     <div class="container ">
         <div class="row col-md-10 col-md-offset-1">
             <div class="col-md-5">
@@ -124,11 +112,12 @@
                 <nav style="float: right;">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="<?php echo site_url('/main/goInterface')?>"><h4><i class="icon-home"></i> 驾校首页</h4></a>
+                            <a href="<?php echo site_url('/main/goInterface') ?>"><h4><i class="icon-home"></i> 驾校首页
+                                </h4></a>
                         </li>
 
                         <li>
-                            <a href="<?php echo site_url('/main/goMain')?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
+                            <a href="<?php echo site_url('/main/goMain') ?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
                         </li>
 
                         <li>
@@ -147,9 +136,12 @@
 
         <div class="row text-center " style="margin: 8% auto">
             <div style="color: white;">
-                <h1>珠海网上驾校欢迎您</h1>
+                <h1><strong>珠海网上驾校欢迎您</strong></h1>
                 <br/>
-                <p><h3>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h3></p>
+
+                <p>
+
+                <h2>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h2></p>
             </div>
         </div>
     </div>
@@ -157,28 +149,15 @@
 </div>
 <!-- END Navbar -->
 
-<div class="container " style="margin-top: 3%;">
-    <div class="row col-md-2 col-md-offset-1 text-center" style="background-color: rgb(239,126,67);color: white; margin-bottom:10px;  ">
-        <h3>学车流程</h3>
-    </div>
-</div>
-
-<div class="container ">
-    <div class="row  col-md-10 col-md-offset-1" style="background-color: rgb(239,126,67); margin-bottom:10px;  ">
-    </div>
-</div>
-
-
-<div class="container">
+<div class="container" style="margin-top: 5%">
     <div class="row text-center col-md-10 col-md-offset-1 interface">
         <div class="col-xs-12 col-sm-12 col-md-3 " >
             <a href="<?php echo site_url('register/goRegister')?>" rel="prettyPhoto" title="在线报名">
                 <div>
-                    <img src="<?php echo base_url()?>images/register.png" alt="" />
-                    <i></i>
+                    <i class="icon-list-alt" style="font-size: 85px; color: rgb(88,177,242);"></i>
                 </div>
             </a>
-            <h3><strong ><a href="<?php echo site_url('register/goRegister')?>" rel="prettyPhoto" title="在线报名" style="color:rgba(239,126,67,.75);">在线报名</a></strong></h3>
+            <h3><strong ><a href="<?php echo site_url('register/goRegister')?>" rel="prettyPhoto" title="在线报名" style="color:black;">在线报名</a></strong></h3>
             <p>
                 进入在线报名操作页面
             </p>
@@ -186,13 +165,12 @@
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-3 " >
-            <a href="<?php echo site_url('register/goRegister')?>" rel="prettyPhoto" title="科目一视频培训">
+            <a href="#" rel="prettyPhoto" title="科目一视频培训">
                 <div>
-                    <img src="<?php echo base_url()?>images/register.png" alt="" />
-                    <i></i>
+                    <i class="icon-film" style="font-size: 85px; color: rgb(88,177,242);"></i>
                 </div>
             </a>
-            <h3><strong ><a href="#>" rel="prettyPhoto" title="科目一视频培训" style="color:rgba(239,126,67,.75);">科目一视频培训</a></strong></h3>
+            <h3><strong ><a href="#>" rel="prettyPhoto" title="科目一视频培训" style="color:black;">科目一视频培训</a></strong></h3>
             <p>
                 进入科目一视频培训页面
             </p>
@@ -203,12 +181,11 @@
         <div class="col-xs-12 col-sm-12  col-md-3" >
             <a href="<?php echo site_url('appointment/index')?>" rel="prettyPhoto" title="网上预约">
                 <div>
-                    <img src="<?php echo base_url()?>images/appointment.png" alt="" />
-                    <i></i>
+                    <i class="icon-laptop" style="font-size: 85px; color: rgb(88,177,242);"></i>
                 </div>
             </a>
 
-            <h3><strong ><a href="<?php echo site_url('appointment/index')?>" rel="prettyPhoto" title="网上预约" style="color:rgba(239,126,67,.75);">网上预约</a></strong></h3>
+            <h3><strong ><a href="<?php echo site_url('appointment/index')?>" rel="prettyPhoto" title="网上预约" style="color:black;">网上预约</a></strong></h3>
             <p>
                 进入网上预约操作页面
             </p>
@@ -216,13 +193,12 @@
 
 
         <div class="col-xs-12 col-sm-12  col-md-3" >
-            <a href="<?php echo site_url('/evaluate/goEvaluate')?>" rel="prettyPhoto" title="学员评价">
+            <a href="<?php echo site_url('/evaluate/index')?>" rel="prettyPhoto" title="学员评价">
                 <div>
-                    <img src="<?php echo base_url()?>images/evaluation.png" alt=""  />
-                    <i></i>
+                    <i class="icon-star" style="font-size: 85px; color: rgb(88,177,242);"></i>
                 </div>
             </a>
-            <h3><strong ><a href="<?php echo site_url('/evaluate/goEvaluate')?>" rel="prettyPhoto" title="学员评价" style="color:rgba(239,126,67,.75);">学员评价</a></strong></h3>
+            <h3><strong ><a href="<?php echo site_url('/evaluate/index')?>" rel="prettyPhoto" title="学员评价" style="color:black;">学员评价</a></strong></h3>
             <p>
                 进入学员评价操作页面
             </p>
@@ -233,35 +209,63 @@
 
 </div>
 
-<div class="container " style="margin-top: 5%;">
-    <div class="row col-md-2 col-md-offset-1 text-center" style="background-color: rgb(88,177,242);color: white; margin-bottom:10px;  ">
-        <h3>本周热点新闻</h3>
-    </div>
-</div>
 
-<div class="container ">
-    <div class="row  col-md-10 col-md-offset-1" style="background-color: rgb(88,177,242); margin-bottom:20px; ">
-    </div>
-</div>
-
-<div class="container ">
+<div class="container" style="margin-top: 8%;">
             <div class="row col-md-10 col-md-offset-1">
-                <ul class="new_messages" >
+                <div id="carousel-example-generic" class="carousel slide col-md-5" data-ride="carousel" >
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
 
-                </ul>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a href="http://news.china.com/domestic/945/20151210/20909862.html" target="_blank">
+                                <img src="<?php echo base_url()?>/images/news01.jpg" style="height: 274px;" alt="...">
+                                <div class="carousel-caption" style="left: 0;right: 0;">
+                                    <h5 style="background-color: rgba(0,0,0,0.5);padding: 10px;">不用去驾校：中国将试点小汽车驾驶人自学直考</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="http://news.51jiaxiao.com/article/7130.html" target="_blank">
+                                <img src="<?php echo base_url()?>/images/news02.jpg" style="height: 274px;" alt="...">
+                                <div class="carousel-caption" style="left: 0;right: 0;">
+                                    <h5 style="background-color: rgba(0,0,0,0.5);padding: 10px;">男子花1.5万元驾考作弊 科目一刚开考就被抓</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="http://news.51jiaxiao.com/article/7100.html" target="_blank">
+                                <img src="<?php echo base_url()?>/images/news03.jpg" style="height: 274px;" alt="...">
+                                <div class="carousel-caption" style="left: 0;right: 0;">
+                                    <h5 style="background-color: rgba(0,0,0,0.5);padding: 10px;">驾驶培训教学与考试大纲修改研讨会在北京召开</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-7 news-content">
+                    <div class="container">
+                        <div class="row col-md-4 text-center" style="background-color: rgb(88,177,242);color: white; margin-bottom:0px;  ">
+                            <h4>热点资讯</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12" style="background-color: rgb(88,177,242);"></div>
+
+                    <ul style="list-style: none" class="news">
+
+                    </ul>
+                </div>
             </div>
 </div>
 
-<div class="container" style="margin-top: 2%;">
-    <div class="text-center col-md-2 col-md-offset-9" style="background-color: rgb(88,177,242); margin-bottom:10px;  ">
-        <h3><a href="#" style="color: white">更多新闻 >></a></h3>
-    </div>
-</div>
-
-<div class="container ">
-    <div class="row  col-md-10 col-md-offset-1" style="background-color: rgb(88,177,242); margin-bottom:20px; ">
-    </div>
-</div>
 
 <div class="container" style="margin-top: 8%;height: 250px; background-color: rgb(88,177,242);color:white;padding:20px;" >
     <div class="row col-md-10 col-md-offset-1" >
@@ -335,35 +339,21 @@
 
 <script>
     $(document).ready(function(){
-
         $.ajax({
             type: "POST",
             url: '<?php echo site_url('manage_news/show')?>',
             data: {},
             dataType: "json",
             success: function (data) {
-                $(".new_messages").empty();
+                $(".news").empty();
                 if(data.code==0){
-                    for (var i = 0; i < 10; i++){
-                        var str='<li><div class="col-xs-18 col-sm-12 col-md-12"><a target="_blank" href="'+data.data[i]['link']+'"><h4><strong>'+data.data[i]['title']+'</strong></h4></a><p style="overflow: hidden;height: 40px; line-height: 20px; margin-bottom: 25px; margin-top: 16px;">'+data.data[i]['content']+'</p><p><span>发布时间 ：'+data.data[i]['create_date']+'</span><a target="_blank" href="'+data.data[i]['link']+'" class="pull-right" >阅读全文 >></a></p></div></li>';
-                        $(".new_messages").append(str);
+                    for (var i = 0; i < 8; i++){
+                    var str = '<li><a href="'+data.data[i]['link']+
+                        '" target="_blank" style="color: black; font-size: 14px;"><span style="font-weight: 700;color: rgb(88,177,242);">• &nbsp;</span><span> '+data.data[i]['title']
+                        +' </span></a><span class="pull-right">'+data.data[i]['create_date']
+                        +'</span></li>';
+                        $(".news").append(str);
                     }
-
-                    $(".new_messages li").mouseover(function(){
-                        $(this).css("background-color","rgba(88,177,242,.4)");
-                    });
-
-                    $(".new_messages li").mouseout(function(){
-                        $(this).css("background-color","white");
-                    });
-
-                    $(".pull-right").mouseover(function(){
-                        $(this).css("text-decoration","underline");
-                    });
-
-                    $(".pull-right").mouseout(function(){
-                        $(this).css("text-decoration","none");
-                    });
                 }else{
                     alert(data.msg);
                 }

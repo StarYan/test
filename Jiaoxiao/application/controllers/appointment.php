@@ -102,7 +102,7 @@
 
             if($coachID){
                 $data['id'] = $coachID;
-                $coachInfo=$this->coach_model->getInfo($data);
+                $coachInfo=$this->coach_model->select($data);
                 $list['coachInfo']=$coachInfo;
                 return $this->send_json(true,"",$list);
             }
