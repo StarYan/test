@@ -4,6 +4,7 @@
  * User: Administrator_Wen
  * Date: 2015/12/6
  * Time: 15:28
+ * 预约报名
  */
 
 class Register extends MY_Controller{
