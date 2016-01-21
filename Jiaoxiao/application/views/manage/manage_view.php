@@ -19,7 +19,7 @@
 					<tbody>
 					<?php foreach($dataUser as $user):?>
 						<tr>
-							<td>#<?=$user->num?></td><td><?=$user->name?></td><td><a class="btn btn-primary btn-sm" href="<?php echo $href.'/'.$user->id?>"><?php echo $act;?></a></td>
+							<td>#<?php echo $user->num;?></td><td><?php echo$user->name?></td><td><a class="btn btn-primary btn-sm" href="<?php echo $href.'/'.$user->id?>"><?php echo $act;?></a></td>
 						</tr>
 					<?php endforeach;?>
 					</tbody>
