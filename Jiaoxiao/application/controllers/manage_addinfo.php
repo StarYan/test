@@ -1,7 +1,7 @@
 ﻿<?php
 
 /**
- * 教练场地信息添加
+ * 后台教练场地信息添加
  */
     class Manage_addinfo extends MY_Controller{
         public function __construct(){
