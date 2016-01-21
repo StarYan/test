@@ -76,12 +76,22 @@
             color:white;
         }
 
+        .navbar{
+            height: 270px;
+        }
+
+        @media (max-width: 767px) {
+            .navbar{
+                height: 70px;
+            }
+        }
+
     </style>
 
 </head>
 <body >
 <!-- BEGIN Navbar -->
-<div class="navbar" style="height: 270px;">
+<div class="navbar">
     <div class="container ">
         <div class="row col-md-10 col-md-offset-1">
             <div class="col-md-5">
@@ -120,14 +130,11 @@
         </div>
 
 
-        <div class="row text-center " style="margin: 8% auto">
+        <div class="row text-center hidden-sm hidden-xs" style="margin: 8% auto">
             <div style="color: white;">
                 <h1><strong>珠海网上驾校欢迎您</strong></h1>
                 <br/>
-
-                <p>
-
-                <h2>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h2></p>
+                <p><h2>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h2></p>
             </div>
         </div>
     </div>

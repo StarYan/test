@@ -215,6 +215,10 @@
             color:white;
         }
 
+        .navbar{
+            height: 270px;
+        }
+
 
         @media (max-width: 767px) {
             .profile-body {
@@ -234,7 +238,7 @@
             }
 
             .profile-edit > div {
-                margin: 0;
+                margin: 3px 0 3px 0;
             }
 
             .profile-edit > form > div {
@@ -245,23 +249,21 @@
                 border: none;
             }
 
-            .container{
-                width: 100%;
-                margin: 0;
-                padding: 0;
-            }
 
             .nav-header{
                 width:100%;
             }
 
+            .navbar{
+                height: 70px;
+            }
         }
     </style>
 
 </head>
 <body>
 <!-- BEGIN Navbar -->
-<div class="navbar" style="height: 270px;">
+<div class="navbar">
     <div class="container ">
         <div class="row col-md-10 col-md-offset-1">
             <div class="col-md-5">
@@ -300,7 +302,7 @@
         </div>
 
 
-        <div class="row text-center " style="margin: 8% auto">
+        <div class="row text-center  hidden-xs" style="margin: 8% auto">
             <div style="color: white;">
                 <h1><strong>珠海网上驾校欢迎您</strong></h1>
                 <br/>
@@ -400,7 +402,7 @@
                                         <div class="col-xs-12 col-md-3"><strong>学员留言：</strong></div>
                                         <div class="col-xs-12 col-md-9"><textarea class="form-control" rows="2" name="remark"></textarea></div>
 
-                                        <button type="submit" class="btn btn-primary col-md-3 pull-right submit" data-id="<?php echo $coach['id']; ?>">提交</button>
+                                        <input type="button" class="btn btn-primary col-md-3 pull-right submit" value="提交">
 
                                     </form>
                                 </div>
@@ -664,8 +666,10 @@
                 type :"POST",
                 url :"<?php echo site_url('/evaluate/acceptEvaluate') ?>",
                 data :$(this).closest("form").serialize(),
+                dataType: "json",
                 success :function(data){
                     alert(data.msg);
+                    location.reload();
                 }
             });
         });

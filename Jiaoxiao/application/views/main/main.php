@@ -78,12 +78,18 @@
             color: rgb(88,177,242);
         }
 
-
+        .navbar{
+            height: 270px;
+        }
 
         @media (max-width: 767px) {
             .news-content{
                 padding: 0;
                 margin-top: 3%;
+            }
+
+            .navbar{
+                height: 70px;
             }
         }
 
@@ -95,7 +101,7 @@
 <body >
 
 <!-- BEGIN Navbar -->
-<div class="navbar" style="height: 270px;">
+<div class="navbar">
     <div class="container ">
         <div class="row col-md-10 col-md-offset-1">
             <div class="col-md-5">
@@ -134,7 +140,7 @@
         </div>
 
 
-        <div class="row text-center " style="margin: 8% auto">
+        <div class="row text-center hidden-sm hidden-xs" style="margin: 8% auto">
             <div style="color: white;">
                 <h1><strong>珠海网上驾校欢迎您</strong></h1>
                 <br/>
