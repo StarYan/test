@@ -98,6 +98,8 @@
         }
 
         public function search($offset,$limit){
+            $this->db->select();
+            $this->db->from($this->table_name);
             $this->db->join('place','place.id=coachandplace.placeid');
             $this->db->join('coach','coach.id=coachandplace.coachid');
             $this->db->join('time','time.id=coachandplace.timeid');
