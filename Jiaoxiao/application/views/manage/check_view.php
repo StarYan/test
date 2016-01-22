@@ -14,7 +14,7 @@
                 <h3><i class="icon-file"></i>用户信息</h3>
                 <div class="box-tool">
                     <div class="box-tool">
-                        <a class="btn btn-primary" href="<?php echo site_url('manage_controller/UnChecked/'.$dataAdmin->id)?>"><i class="icon-chevron-left"></i> 返回列表</a>
+                        <a class="btn btn-primary" href="<?php echo site_url('manage_controller/UnChecked/')?>"><i class="icon-chevron-left"></i> 返回列表</a>
                     </div>
                 </div>
             </div>

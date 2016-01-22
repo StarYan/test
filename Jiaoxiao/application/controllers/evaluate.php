@@ -69,7 +69,7 @@ class Evaluate extends MY_Controller{
             $list['link']=$this->pagination->create_links();
             $this->load->view('/evaluate/evaluate_view',$list);
         }else{
-
+            redirect('evaluate/index');
         }
 
 
@@ -120,7 +120,6 @@ class Evaluate extends MY_Controller{
      * ajax接口接受用户评价信息并保存到表'evaluate'
      */
     public function acceptEvaluate(){
-
         $data['user_id']=$this->input->post('userID',true);
         $data['coach_id']=$this->input->post('coachID',true);
         $data['star']=$this->input->post('star',true);
@@ -146,13 +145,13 @@ class Evaluate extends MY_Controller{
                 $list['id']=$data['coach_id'];
                 $this->coach->update($dataCoach,$list);
                 if($result){
-                    return $this->send_json(true,'评价成功');
+                    return $this->send_json(true,"评价成功");
                 }
             }else{
-                return $this->send_json(false,'不能重复评价该教练');
+                return $this->send_json(false,"不能重复评价该教练");
             }
         }else{
-            return $this->send_json(false,'请对教练进行评价再提交');
+            return $this->send_json(false,"请对教练进行评价再提交");
         }
     }
 }
