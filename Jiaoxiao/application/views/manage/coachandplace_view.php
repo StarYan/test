@@ -81,6 +81,7 @@
                         <label class="col-sm-2 col-lg-2 control-label">时间：</label>
                         <div class="col-sm-3 col-lg-3 controls">
                             <select class="form-control" tabindex="1" id="searchtime" name="searchtime">
+                                <option value="0">全部</option>
                                 <option value="1">10:00-12:00</option>
                                 <option value="2">13:00-15:00</option>
                                 <option value="3">16:00-18:00</option>
@@ -111,11 +112,11 @@
                         <?php foreach($result as $user):?>
                             <tr>
                                 <td ><?php echo $user->id;?></td>
-                                <td ><?php echo $user->pname;?></td>
-                                <td ><?php echo $user->cname;?></td>
+                                <td ><?php echo $user->p_name;?></td>
+                                <td ><?php echo $user->c_name;?></td>
                                 <td ><?php echo $user->time;?></td>
                                 <td>
-                                    <a class="btn btn-primary btn-sm change" data-time="<?php echo $user->time;?>" data-cname="<?php echo $user->cname;?>" data-pname="<?php echo $user->pname;?>" data-id="<?php echo $user->id;?>" data-toggle="modal" role="button" href="#modal-1">修改</a>
+                                    <a class="btn btn-primary btn-sm change" data-time="<?php echo $user->time;?>" data-cname="<?php echo $user->c_name;?>" data-pname="<?php echo $user->p_name;?>" data-id="<?php echo $user->id;?>" data-toggle="modal" role="button" href="#modal-1">修改</a>
                                     <a class="btn btn-danger btn-sm del" data-id="<?php echo $user->id;?>">删除</a>
                                 </td>
                             </tr>
@@ -167,6 +168,7 @@
         </div>
     </div>
 </div>
+
 <script src="<?php echo base_url()?>assets/jquery/jquery-2.0.3.min.js"></script>
 <script type="text/javascript">
     window.onload=function() {
@@ -226,6 +228,8 @@
                 //var html = "";
                 $("#addcoach").empty();
                 $("#searchcoach").empty();
+                var str = "<option value="+0+">"+"全部"+"</option>";
+                $("#searchcoach").append(str);
                 for (var i = 0; i < data.data.length; i++) {
                     var str = " <option value=" + data.data[i].id + ">" + data.data[i].c_name + "</option>";
                     $("#addcoach").append(str);

@@ -58,10 +58,17 @@ class Manage_coachandplace extends MY_Controller{
     }
 
     public function find(){
-        $placeid = $this->input->post('searchplace');
-        $coachid = $this->input->post('searchcoach');
+        $data['placeid'] = $this->input->post('searchplace');
         $timeid = $this->input->post('searchtime');
-        $data = array('placeid' => $placeid,'coachid'=> $coachid,'timeid'=>$timeid);
+        $coachid = $this->input->post('searchcoach');
+        if($timeid){
+            $data['timeid'] = $timeid;
+        }
+        if($coachid){
+            $data['coachid'] = $coachid;
+        }
+
+        //$data = array('placeid' => $placeid,'coachid'=> $coachid,'timeid'=>$timeid);
 
         $pagesize=3;
         $count=$this->coachandplace_model->count($data);
@@ -89,7 +96,7 @@ class Manage_coachandplace extends MY_Controller{
         $offset=intval($this->uri->segment(3));
         $this->pagination->initialize($config);
         if($count){
-            $result = $this->coachandplace_model->find($offset,$pagesize,$placeid,$coachid,$timeid);
+            $result = $this->coachandplace_model->find($offset,$pagesize,$data);
         }else{
             $result = 0;
         }
