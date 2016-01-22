@@ -58,7 +58,7 @@ class Manage_coachandplace extends MY_Controller{
     }
 
     public function find(){
-        $data['placeid'] = $this->input->post('searchplace');
+        $placeid = $this->input->post('searchplace');
         $timeid = $this->input->post('searchtime');
         $coachid = $this->input->post('searchcoach');
         if($timeid){
@@ -67,7 +67,9 @@ class Manage_coachandplace extends MY_Controller{
         if($coachid){
             $data['coachid'] = $coachid;
         }
-
+        if($placeid){
+            $data['placeid'] = $placeid;
+        }
         //$data = array('placeid' => $placeid,'coachid'=> $coachid,'timeid'=>$timeid);
 
         $pagesize=3;

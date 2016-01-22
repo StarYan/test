@@ -98,7 +98,7 @@
         }
 
         public function search($offset,$limit){
-            $this->db->select();
+            $this->db->select('coachandplace.id,place.p_name,coach.c_name,time.time');
             $this->db->from($this->table_name);
             $this->db->join('place','place.id=coachandplace.placeid');
             $this->db->join('coach','coach.id=coachandplace.coachid');
@@ -106,7 +106,7 @@
             $this->db->limit($limit, $offset);
             $result = $this->db->get();
             //$sql = 'SELECT place.name,coach.name FROM ((coachandplace JOIN place ON coachandplace.placeid=place.id) JOIN coach ON coachandplace.coachid=coach.id) limit ?,?;';
-            //$sql = 'SELECT cp.id,p.p_name as pname,c.c_name as cname,t.time FROM (((coachandplace as cp JOIN place as p ON cp.placeid=p.id) JOIN coach  as c ON cp.coachid=c.id)JOIN time  as t ON cp.timeid=t.id) limit ?,?;';
+            //$sql = 'SELECT cp.id,p.p_name as p_name,c.c_name as c_name,t.time FROM (((coachandplace as cp JOIN place as p ON cp.placeid=p.id) JOIN coach  as c ON cp.coachid=c.id)JOIN time  as t ON cp.timeid=t.id) limit ?,?;';
             //$result = $this->db->query($sql,array($offset,$limit));
             if ($result->num_rows() > 0) {
                 return $result->result_object();

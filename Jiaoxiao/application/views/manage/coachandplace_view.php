@@ -210,6 +210,8 @@
                 //var html = "";
                 $("#addplace").empty();
                 $("#searchplace").empty();
+                var str = " <option value="+0+">" +"全部"+ "</option>";
+                $("#searchplace").append(str);
                 for (var i = 0; i < data.data.length; i++) {
                     var str = " <option value=" + data.data[i].id + ">" + data.data[i].p_name + "</option>";
                     $("#addplace").append(str);
