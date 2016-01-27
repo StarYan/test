@@ -58,9 +58,10 @@ class Manage_coachandplace extends MY_Controller{
     }
 
     public function find(){
-        $placeid = $this->input->post('searchplace');
-        $timeid = $this->input->post('searchtime');
-        $coachid = $this->input->post('searchcoach');
+        $placeid = $this->input->get('searchplace');
+        $timeid = $this->input->get('searchtime');
+        $coachid = $this->input->get('searchcoach');
+        $data = "";
         if($timeid){
             $data['timeid'] = $timeid;
         }
@@ -72,9 +73,14 @@ class Manage_coachandplace extends MY_Controller{
         }
         //$data = array('placeid' => $placeid,'coachid'=> $coachid,'timeid'=>$timeid);
 
-        $pagesize=3;
-        $count=$this->coachandplace_model->count($data);
-        $config['base_url']=site_url('manage_coachandplace/index/');
+        $pagesize=2;
+        if($data){
+            $count=$this->coachandplace_model->count($data);
+        }else{
+            $count=$this->coachandplace_model->count("");
+        }
+        $config['page_query_string'] = TRUE;
+        $config['base_url']=site_url('manage_coachandplace/find?searchplace='.$placeid.'&searchtime='.$timeid.'&searchcoach='.$coachid);
         $config['total_rows']=$count;
         $config['per_page']=$pagesize;
         $config['next_link']='>>';
@@ -95,7 +101,12 @@ class Manage_coachandplace extends MY_Controller{
         $config['num_tag_close']='</li>';
         $config['cur_tag_open']='<li><a>';
         $config['cur_tag_close']='</a></li>';
-        $offset=intval($this->uri->segment(3));
+        $offset=intval($this->uri->segment(0));
+        if($this->input->get('per_page')){
+            $offset = $this->input->get('per_page');
+        }else{
+            $offset = 0;
+        }
         $this->pagination->initialize($config);
         if($count){
             $result = $this->coachandplace_model->find($offset,$pagesize,$data);

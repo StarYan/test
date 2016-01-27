@@ -60,8 +60,8 @@
                 <h3>查询</h3>
             </div>
             <div class="box-content">
-                <form class="form-horizontal" action='<?php echo site_url('manage_coachandplace/find')?>' method="post">
-                    <input type="hidden" id="id" name='adminid' value='<?php echo $dataAdmin->id;?>'/>
+                <form class="form-horizontal" action='<?php echo site_url('manage_coachandplace/find')?>' method="get">
+                    <!--<input type="hidden" id="id" name='adminid' value='<?php /*echo $dataAdmin->id;*/?>'/>-->
                     <div class="form-group">
                         <label class="col-sm-2 col-lg-2 control-label">场地：</label>
                         <div class="col-sm-3 col-lg-3 controls">
