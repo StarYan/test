@@ -374,6 +374,7 @@ class School extends MY_Controller{
         $school_id=$res[0]['id'];
         $studentWhere['school_id']=$school_id;
         $studentWhere['deleted']=0;
+        $studentWhere['status']=1;
         $pagesize=10;
         $count=$this->user->count($studentWhere);
         $config['base_url']=site_url('school/studentAdmin/');

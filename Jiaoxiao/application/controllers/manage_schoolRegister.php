@@ -193,7 +193,8 @@ class Manage_schoolRegister extends MY_Controller{
         $nickname=$this->input->post('nickname',true);
         $password=$this->input->post('password',true);
 
-        if(!empty($this->session->userdata('schoolRegister'))){
+        $schoolRegister=$this->session->userdata('schoolRegister');
+        if(!empty($schoolRegister)){
             $this->session->sess_destroy();
         }
 
