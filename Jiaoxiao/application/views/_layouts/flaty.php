@@ -45,6 +45,13 @@
             <div id="sidebar" class="navbar-collapse collapse">
                 <!-- BEGIN Navlist -->
                 <ul class="nav nav-list">
+                    <li class="<?php if(!empty($SchoolRegister_class)){echo $SchoolRegister_class;}?>">
+                        <a href="<?php echo site_url('manage_schoolRegister/admin/')?>">
+                            <i class="icon-list"></i>
+                            <span>驾校注册信息管理</span>
+                        </a>
+                    </li>
+
                     <li class="<?php if(!empty($Ranking_class)){echo $Ranking_class;}?>">
                         <a href="<?php echo site_url('manage_ranking/admin/')?>">
                             <i class="icon-star"></i>

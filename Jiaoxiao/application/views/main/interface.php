@@ -76,11 +76,34 @@
             color:white;
         }
 
+        .news-content{
+            padding: 0 0 0 30px;
+        }
+
+        .news{
+            padding: 0;
+            margin: 0;
+        }
+
+        .news > li{
+            margin-top: 10px;
+            padding: 0;
+        }
+
+        .news > li :hover{
+            color: rgb(88,177,242);
+        }
+
         .navbar{
             height: 270px;
         }
 
         @media (max-width: 767px) {
+            .news-content{
+                padding: 0;
+                margin-top: 3%;
+            }
+
             .navbar{
                 height: 70px;
             }
@@ -117,11 +140,11 @@
                         </li>
 
                         <li>
-                            <a href=""><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
+                            <a href="<?php echo site_url('/school/schoolIntroduction')?>"><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
                         </li>
 
                         <li>
-                            <a href="#"><h4><i class="icon-phone"></i> 联系我们</h4></a>
+                            <a href="<?php echo base_url()?>/feedback.html"><h4><i class="icon-phone"></i> 投诉建议</h4></a>
                         </li>
                     </ul>
                 </nav>
@@ -143,13 +166,12 @@
 <!-- END Navbar -->
 
 
-<div class="container" style="margin-top: 8%;">
+<div class="container" style="margin-top: 3%;">
         <div class="row text-center col-md-10 col-md-offset-1 interface">
-            <div class="col-xs-12 col-sm-12 col-md-4 " >
+            <div class="col-xs-12 col-sm-12 col-md-4" >
                 <a href="<?php echo site_url('/main/goMain')?>" rel="prettyPhoto" title="学车入口">
                     <div>
-                        <img src="<?php echo base_url()?>images/wheel.jpg" alt="" />
-                        <i></i>
+                        <span class="glyphicon glyphicon-road" style="font-size: 85px; color: rgb(88,177,242);"></span>
                     </div>
                 </a>
                 <h3><strong style="color:rgba(88,177,252,.75);"><a href="<?php echo site_url('/main/goMain')?>" rel="prettyPhoto" title="学车入口">学车入口</a></strong></h3>
@@ -160,24 +182,22 @@
             </div>
 
             <div class="col-xs-12 col-sm-12  col-md-4" >
-                <a href="http://61.145.229.204:8181/weblogin.aspx" rel="prettyPhoto" title="驾校入口">
+                <a href="<?php echo site_url('/manage_schoolRegister/goRegister')?>" rel="prettyPhoto" title="驾校入口">
                     <div>
-                        <img src="<?php echo base_url()?>images/entrance.jpg" alt="" />
-                        <i></i>
+                        <span class="glyphicon glyphicon-log-in" style="font-size: 85px; color: rgb(88,177,242);"></span>
                     </div>
                 </a>
 
-                <h3><strong style="color:rgba(88,177,252,.75);"><a href="http://61.145.229.204:8181/weblogin.aspx" rel="prettyPhoto" title="驾校入口">驾校入口</a></strong></h3>
+                <h3><strong style="color:rgba(88,177,252,.75);"><a href="<?php echo site_url('/manage_schoolRegister/goRegister')?>" rel="prettyPhoto" title="驾校入口">驾校入口</a></strong></h3>
                 <p>
-                    进入珠海市机动车驾驶员培训管理信息系统
+                    进入注册驾校平台
                 </p>
             </div>
 
             <div class="col-xs-12 col-sm-12  col-md-4" >
                 <a href="http://www.zhits.com.cn/view/main.html?menu=13" rel="prettyPhoto" title="行业管理">
                     <div>
-                        <img src="<?php echo base_url()?>images/logo_big.png" alt=""  />
-                        <i></i>
+                        <span class="glyphicon glyphicon-cog" style="font-size: 85px; color: rgb(88,177,242);"></span>
                     </div>
                 </a>
                 <h3><strong style="color:rgba(88,177,252,.75);"><a href="http://www.zhits.com.cn/view/main.html?menu=13" rel="prettyPhoto" title="行业管理">行业管理</a></strong></h3>
@@ -186,10 +206,69 @@
                 </p>
             </div>
 
+
         </div>
 </div>
 
-<div class="container" style="margin-top: 8%;">
+
+<div class="container" style="margin-top: 5%;">
+    <div class="row col-md-10 col-md-offset-1">
+        <div id="carousel-example-generic" class="carousel slide col-md-5" data-ride="carousel" >
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <a href="http://news.china.com/domestic/945/20151210/20909862.html" target="_blank">
+                        <img src="<?php echo base_url()?>/images/news01.jpg" style="height: 274px;" alt="...">
+                        <div class="carousel-caption" style="left: 0;right: 0;">
+                            <h5 style="background-color: rgba(0,0,0,0.5);padding: 10px;">不用去驾校：中国将试点小汽车驾驶人自学直考</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="http://news.51jiaxiao.com/article/7130.html" target="_blank">
+                        <img src="<?php echo base_url()?>/images/news02.jpg" style="height: 274px;" alt="...">
+                        <div class="carousel-caption" style="left: 0;right: 0;">
+                            <h5 style="background-color: rgba(0,0,0,0.5);padding: 10px;">男子花1.5万元驾考作弊 科目一刚开考就被抓</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="http://news.51jiaxiao.com/article/7100.html" target="_blank">
+                        <img src="<?php echo base_url()?>/images/news03.jpg" style="height: 274px;" alt="...">
+                        <div class="carousel-caption" style="left: 0;right: 0;">
+                            <h5 style="background-color: rgba(0,0,0,0.5);padding: 10px;">驾驶培训教学与考试大纲修改研讨会在北京召开</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-7 news-content">
+            <div class="container">
+                <div class="row col-md-4 text-center" style="background-color: rgb(88,177,242);color: white; margin-bottom:0px;  ">
+                    <h4>热点资讯</h4>
+                </div>
+            </div>
+
+            <div class="col-md-12" style="background-color: rgb(88,177,242);"></div>
+
+            <ul style="list-style: none" class="news">
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="margin-top: 5%;">
     <div class="row col-md-10 col-md-offset-1">
         <div class="hidden-md hidden-sm hidden-lg col-xs-12" style="background-color: rgba(88,177,252,.75);color:white;height: 50px;padding:1px;">
             <h2>驾校考试通过率排名<span><a href="#" class="btn btn-primary" style="float: right">更多</a></span></h2>
@@ -298,6 +377,28 @@
 
 <script>
     $(document).ready(function(){
+        $.ajax({
+            type: "POST",
+            url: '<?php echo site_url('manage_news/show')?>',
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                $(".news").empty();
+                if(data.code==0){
+                    for (var i = 0; i < 8; i++){
+                        var str = '<li><a href="'+data.data[i]['link']+
+                            '" target="_blank" style="color: black; font-size: 14px;"><span style="font-weight: 700;color: rgb(88,177,242);">• &nbsp;</span><span> '+data.data[i]['title']
+                            +' </span></a><span class="pull-right">'+data.data[i]['create_date']
+                            +'</span></li>';
+                        $(".news").append(str);
+                    }
+                }else{
+                    alert(data.msg);
+                }
+
+            }
+        });
+
         $.ajax({
             type: "POST",
             url: '<?php echo site_url('manage_ranking/showRankingByPassRate')?>',

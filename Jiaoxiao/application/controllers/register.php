@@ -12,8 +12,11 @@ class Register extends MY_Controller{
         parent::__construct();
         $this->load->model('user_model','user');
         $this->load->model('coach_model','coach');
+        $this->load->model('school_model','school');
+        $this->load->model('schoolRegister_model','schoolRegister');
         $this->load->helper(array('form', 'url'));
         $this->load->helper('cookie');
+        date_default_timezone_set('PRC');
     }
 
     /**
@@ -65,18 +68,17 @@ class Register extends MY_Controller{
         $this->upload->do_upload('img');
         $img=$this->upload->data();
 
-
-
         $data['nickname']=$_POST['nickname'];
         $data['password']=$_POST['password'];
         $data['name']=$_POST['name'];
-        $sex=$_POST['sex'];
-        if(strcmp($sex,"男")){
-            $data['sex']=1;
-        }else{
-            $data['sex']=0;
-        }
-        $data['school']=$_POST['school'];
+        $data['sex']=$_POST['sex'];
+
+        $licence=$_POST['school'];
+        $schoolWhere['licence']=$licence;
+        $res=$this->school->search($schoolWhere);
+        $school_id=$res[0]['id'];
+        $data['school_id']=$school_id;
+        $data['coach_id']=$this->input->post('coach',true);
         $data['wanted_car_type']=$_POST['wanted_car_type'];
         $data['birthday']=$_POST['birthday'];
         $data['idcard']=$_POST['id'];
@@ -141,13 +143,57 @@ class Register extends MY_Controller{
     }
 
     /**
-     * 获取教练信息的ajax接口
+     * 获取所有教练信息的ajax接口
      */
     public function coachInformation(){
         $coachData=$this->coach->getall();
 
         if($coachData){
             $this->send_json(true,'',$coachData);
+        }else{
+            $this->send_json(false,'没有教练信息');
+        }
+    }
+
+    /**
+     * 获取学校信息的ajax接口
+     */
+    public function schoolInformation(){
+        $schoolData=$this->schoolRegister->search();
+
+        if($schoolData){
+            $this->send_json(true,'',$schoolData);
+        }else{
+            $this->send_json(false,'没有驾校信息');
+        }
+    }
+
+    /**
+     * 获取指定学校的教练信息的ajax接口
+     */
+    public function getCoachBySchool(){
+        $licence=$this->input->post('licence',true);
+        $schoolWhere['licence']=$licence;
+        $schoolData=$this->school->search($schoolWhere);
+        $school_id=$schoolData[0]['id'];
+        $coachWhere['school_id']=$school_id;
+        $coachWhere['deleted']=0;
+        $coachData=$this->coach->select($coachWhere);
+
+        if($coachData){
+            $this->send_json(true,'',$coachData);
+        }else{
+            $this->send_json(false,'没有教练信息');
+        }
+    }
+
+    public function getCoachById(){
+        $coachID=$this->input->post('coachID',true);
+        $where['id']=$coachID;
+        $data=$this->coach->select($where);
+
+        if($data){
+            $this->send_json(true,'',$data);
         }else{
             $this->send_json(false,'没有教练信息');
         }

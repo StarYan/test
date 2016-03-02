@@ -1,40 +1,42 @@
--- phpMyAdmin SQL Dump
--- version 3.4.10.1
--- http://www.phpmyadmin.net
---
--- 主机: localhost
--- 生成日期: 2015 年 12 月 13 日 09:05
--- 服务器版本: 5.5.20
--- PHP 版本: 5.3.10
+/*
+Navicat MySQL Data Transfer
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+Source Server         : localhost
+Source Server Version : 50617
+Source Host           : localhost:3306
+Source Database       : jiaxiao
 
+Target Server Type    : MYSQL
+Target Server Version : 50617
+File Encoding         : 65001
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+Date: 2016-01-30 13:41:03
+*/
 
---
--- 数据库: `gitjiaxiao`
---
+SET FOREIGN_KEY_CHECKS=0;
 
--- --------------------------------------------------------
-
---
--- 表的结构 `cartype`
---
-
-CREATE TABLE IF NOT EXISTS `cartype` (
+-- ----------------------------
+-- Table structure for `cartype`
+-- ----------------------------
+DROP TABLE IF EXISTS `cartype`;
+CREATE TABLE `cartype` (
   `id` int(128) NOT NULL AUTO_INCREMENT,
-  `type` varchar(128) NOT NULL,
+  `style` varchar(128) NOT NULL,
+  `brand` varchar(512) NOT NULL COMMENT '车辆的品牌',
+  `type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0表示手动，1表示自动',
+  `age` int(3) NOT NULL,
   `number` varchar(128) NOT NULL,
   `car_detail` varchar(128) NOT NULL,
   `img` varchar(256) NOT NULL,
+  `school_id` bigint(20) NOT NULL COMMENT '驾校ID',
+  `deleted` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='车辆类型' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='车辆类型';
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- ----------------------------
+-- Records of cartype
+-- ----------------------------
+INSERT INTO `cartype` VALUES ('1', 'C1', '奥迪', '0', '2', '粤C9527', 'black', '', '1', '1');
+INSERT INTO `cartype` VALUES ('2', 'C1', '奥迪', '1', '3', '粤B9525', 'white', '', '1', '0');
+INSERT INTO `cartype` VALUES ('3', 'A1', '奥迪', '0', '1', '粤C8888', '', '1415668652055_middle7.jpg', '1', '0');
+INSERT INTO `cartype` VALUES ('4', 'C1', 'SYO', '0', '1', '贵A4236学', '', 'c2fdfc039245d6881ea287fca0c27d1ed31b24c1.jpg', '8', '0');

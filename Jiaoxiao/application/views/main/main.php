@@ -127,11 +127,11 @@
                         </li>
 
                         <li>
-                            <a href=""><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
+                            <a href="<?php echo site_url('/school/schoolIntroduction')?>"><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
                         </li>
 
                         <li>
-                            <a href="#"><h4><i class="icon-phone"></i> 联系我们</h4></a>
+                            <a href="<?php echo base_url()?>/feedback.html"><h4><i class="icon-phone"></i> 投诉建议</h4></a>
                         </li>
                     </ul>
                 </nav>

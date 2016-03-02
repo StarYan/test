@@ -2341,7 +2341,8 @@ a.tile:hover {
 }
 .gallery > li {
     display: inline-block;
-    margin: 5px;
+    margin-left: 60px;
+    margin-right: 60px;
     overflow: hidden;
     position: relative;
 }
@@ -2351,7 +2352,7 @@ a.tile:hover {
 }
 .gallery > li > a > div > i {
     display: block;
-    background-color: #222;
+    background-color: rgb(182,209,242);
     opacity: 0;
     position: absolute;
     top: 0;
@@ -2370,9 +2371,9 @@ a.tile:hover {
 .gallery > li > .gallery-tools {
     width: 100%;
     position: absolute;
-    height: 30px;
-    bottom: -30px;
-    background-color: #222;
+    height: 60px;
+    bottom: -60px;
+    background-color: rgb(88,177,252);
     opacity: 0.8;
     padding: 3px;
     text-align: center;

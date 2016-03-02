@@ -55,7 +55,7 @@
          * @param int $limit 查询几条
          * @param string $order_by 排序字段 ex: name desc
          */
-        public function get($where, $offset, $limit, $order_by = '')
+        public function get($where, $offset=0, $limit=0, $order_by = '')
         {
             if (!empty($order_by)) {
                 $this->db->order_by($order_by);
@@ -135,10 +135,14 @@
 
         /**
          * 保存用户信息
+         * @param $data
+         * @return bool
          */
         public function save($data){
-            $query=$this->db->insert('user',$data);
-            return $query;
+            if($this->db->insert('user',$data)){
+                return true;
+            }
+            return false;
         }
 
 
@@ -151,6 +155,51 @@
             $update_date=date('Y-m-d H:i:s');
             $sql="UPDATE user SET deleted=1,update_id=$admin_id,update_date='$update_date' WHERE id=$user_id";
             $this->db->query($sql);
+        }
+
+        /**
+         * 模糊查询数据
+         * @param array $where
+         * @param int $limit
+         * @param int $offset
+         * @return bool
+         */
+        public function fuzzy_search($where=array(),$limit=0,$offset=0){
+            $this->db->from($this->table_name);
+            if(!empty($where)){
+                $this->db->like($where);
+            }
+            $this->db->where('deleted',0);
+            $this->db->limit($limit,$offset);
+            $query = $this->db->get();
+            if ($query) {
+                return $query->result_object();
+            }
+            return false;
+        }
+
+        /**
+         * Updates a particular model
+         * @param array $data 需要更新的数据数组
+         * @param array $where 条件数据数组
+         */
+        public function update($data,$where){
+            $this->db->update($this->table_name,$data,$where);
+        }
+
+        /**
+         * 把数据的deleted的值改为1，不显示该数据
+         * @param $where
+         * @return bool
+         */
+        public function delete($where){
+            if($where){
+                if($this->db->update($this->table_name,array('deleted'=>1),$where)){
+                    return true;
+                }
+                return false;
+            }
+            return false;
         }
 
     }
