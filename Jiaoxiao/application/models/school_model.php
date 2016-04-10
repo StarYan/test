@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /**
  * Class School_model
@@ -123,6 +123,49 @@ class School_model extends CI_Model{
         $this->db->where('deleted',0);
         $this->db->from($this->table_name);
         return $this->db->count_all_results();
+    }
+
+    /**
+     * 按条件查找
+     * @param array $where 查询数组
+     * @param int $offset 开始条数
+     * @param int $limit 查询几条
+     * @param string $order_by 排序字段 ex: name desc
+     */
+    public function get($where, $offset=0, $limit=0, $order_by = '') {
+        if (!empty($order_by)) {
+            $this->db->order_by($order_by,'desc');
+        }
+        if (empty($where)) {
+            $where = array();
+        }
+        $this->db->where($where);
+        $this->db->from($this->table_name);
+        $this->db->limit($limit, $offset);
+
+        $result = $this->db->get();
+        if ($result->num_rows() > 0) {
+            return $result->result_object();
+        }
+        return false;
+    }
+
+    /**
+     * 根据 $field 进行降序排列输出数据
+     * @param $field
+     * @param $where
+     * @return bool
+     */
+    public function orderBy($field,$where){
+        $this->db->order_by($field,'desc');
+        $this->db->where($where);
+        $query=$this->db->get($this->table_name);
+        if($query){
+            return $query->result_array();
+        }
+        else{
+            return false;
+        }
     }
 
 }

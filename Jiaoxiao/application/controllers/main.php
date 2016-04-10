@@ -1,10 +1,10 @@
-<?php
+ï»¿<?php
 /**
  * Created by PhpStorm.
  * User: Administrator_Wen
  * Date: 2015/12/10
  * Time: 11:20
- * Òýµ¼Ò³
+ * å¼•å¯¼é¡µ
  */
 class Main extends MY_Controller
 {
@@ -15,20 +15,53 @@ class Main extends MY_Controller
         $this->load->model('user_model', 'user');
         $this->load->model('admin_model', 'admin');
         $this->load->model('checked_model', 'checked');
+        $this->load->model('school_model','school');
+        $this->load->model('coach_model','coach');
     }
 
     /**
-     * ¼ÝÐ£¹ÜÀíÏµÍ³Ïà¹ØÈë¿Ú
+     * é©¾æ ¡ç®¡ç†ç³»ç»Ÿç›¸å…³å…¥å£
      */
     public function goInterface(){
         $this->load->view('/main/interface');
     }
 
     /**
-     * ¼ÝÐ£¹ÜÀíÏµÍ³Ö÷½çÃæ
+     * é©¾æ ¡ç®¡ç†ç³»ç»Ÿä¸»ç•Œé¢
      */
     public function goMain(){
         $this->load->view('/main/main');
+    }
+
+
+    /**
+     * ä¸»ç•Œé¢çš„é©¾æ ¡ä¿¡æ¯/æ•™ç»ƒä¿¡æ¯æœç´¢åŠŸèƒ½
+     */
+    public function search(){
+        $searchInfo=$this->input->post('searchInfo',true);
+        if($searchInfo){
+            $schoolWhere['school_name']=$searchInfo;
+            $coachWhere['c_name']=$searchInfo;
+            $schoolCount=$this->school->count($schoolWhere);
+            if($schoolCount){
+                $schoolResult = $this->school->search($schoolWhere);
+                $list['dataSchool']=$schoolResult;
+                $list['link']="";
+                $this->load->view('/schoolIntroduction/admin',$list);
+            }else{
+                $coachCount=$this->coach->count($coachWhere);
+                if($coachCount){
+                    $coachResult = $this->coach->get($coachWhere);
+                    $list['dataCoach']=$coachResult;
+                    $list['link']="";
+                    $this->load->view('/schoolIntroduction/adminCoach',$list);
+                }else{
+                    redirect('/main/goInterface');
+                }
+            }
+        }else{
+            redirect('/main/goInterface');
+        }
     }
 
 }

@@ -1,4 +1,4 @@
-﻿<!--显示学员的预约信息-->
+<!--显示学员的预约信息-->
 <div class="row">
     <div class="col-md-12">
         <div class="box box-blue">

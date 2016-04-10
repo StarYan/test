@@ -1,4 +1,4 @@
-﻿<!--添加驾校管理信息-->
+<!--添加驾校管理信息-->
 <div class="row">
     <div class="col-md-12">
         <div class="box box-blue">

@@ -1,4 +1,4 @@
-﻿<!--修改驾校排名管理信息-->
+<!--修改驾校排名管理信息-->
 <div class="row">
     <div class="col-md-12">
         <div class="box box-blue">

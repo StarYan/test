@@ -1,4 +1,4 @@
-﻿<!--新闻信息汇总-->
+<!--新闻信息汇总-->
 <div class="row">
     <div class="col-md-12">
         <div class="box box-blue">

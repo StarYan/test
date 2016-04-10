@@ -169,6 +169,22 @@ class Register extends MY_Controller{
     }
 
     /**
+     * 按驾校通过率进行排名显示
+     */
+    public function showSchoolByPassRate(){
+        $where['deleted']=0;
+        $field='pass_rate';
+
+        $result=$this->school->orderBy($field,$where);
+        if($result){
+            return $this->send_json(true,"",$result);
+        }
+        else{
+            return $this->send_json(false,"读取驾校通过率排名信息失败");
+        }
+    }
+
+    /**
      * 获取指定学校的教练信息的ajax接口
      */
     public function getCoachBySchool(){

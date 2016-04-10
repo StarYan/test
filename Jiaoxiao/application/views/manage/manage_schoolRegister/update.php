@@ -1,4 +1,4 @@
-﻿<!--更新注册信息-->
+<!--更新注册信息-->
 <div class="row">
     <div class="col-md-12">
         <div class="box box-blue">

@@ -20,7 +20,7 @@
          */
         public function get($where, $offset=0, $limit=0, $order_by = '') {
             if (!empty($order_by)) {
-                $this->db->order_by($order_by);
+                $this->db->order_by($order_by,'desc');
             }
             if (empty($where)) {
                 $where = array();

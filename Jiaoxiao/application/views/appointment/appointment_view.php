@@ -130,7 +130,7 @@
                         </li>
 
                         <li>
-                            <a href="<?php echo site_url('/main/goMain') ?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
+                            <a href="<?php echo site_url('/main/goMain') ?>"><h4><i class="icon-list"></i> 学车入口</h4></a>
                         </li>
 
                         <li>
@@ -264,7 +264,7 @@
                     <div class="container">
                                 <div class="hidden-xs col-md-6 text-center">
                                     <a href="#" rel="prettyPhoto" title="场地照片">
-                                        <img class="place" src="<?php echo base_url()?>images/14.jpg" alt=""  />
+                                        <img style="height: 165px;width: 270px;" class="place" src="<?php echo base_url()?>images/14.jpg" alt=""  />
                                     </a>
                                 </div>
                                 <div class="col-md-6 place">
@@ -292,7 +292,7 @@
                     <div class="container">
                                 <div class="hidden-xs col-md-6 text-center">
                                     <a href="#" rel="prettyPhoto" title="教练照片">
-                                        <img class="coach" src="<?php echo base_url()?>images/14.jpg" alt="" />
+                                        <img style="height: 165px;width: 270px;" class="coach" src="<?php echo base_url()?>images/14.jpg" alt="" />
                                     </a>
                                 </div>
                                 <div class="col-md-6">
@@ -320,7 +320,7 @@
                     <div class="container">
                                 <div class="hidden-xs col-md-6 text-center">
                                     <a href="#" rel="prettyPhoto" title="车辆照片">
-                                        <img class="car" src="<?php echo base_url()?>images/14.jpg" alt="" />
+                                        <img style="height: 165px;width: 270px;" class="car" src="<?php echo base_url()?>images/14.jpg" alt="" />
                                     </a>
                                 </div>
                                 <div class="col-md-6">
@@ -410,7 +410,7 @@
                 }
                 $("#hot").empty();
                 for(var i = 0; i < 10; i++){
-                    var hot='<li><a href="#" rel="prettyPhoto" title="教练推荐"> <div> <img src="'+'<?php echo base_url()?>images/'+ data.data[i].img+'" alt="" /> </div> </a> <div class="gallery-tools"> <p><h4><strong style="color:black;">'+ data.data[i].c_name+'教练</strong></h4></p> </div> </li>';
+                    var hot='<li><a href="#" rel="prettyPhoto" title="教练推荐"> <div> <img src="'+'<?php echo base_url()?>/uploads/'+ data.data[i].img+'" alt="" /> </div> </a> <div class="gallery-tools"> <p><h4><strong style="color:black;">'+ data.data[i].c_name+'教练</strong></h4></p> </div> </li>';
                     $("#hot").append(hot);
                 }
             }
@@ -473,7 +473,7 @@
 
                     $("#hot").empty();
                     for(var i = 0; i < 5; i++){
-                        var hot='<li><a href="#" rel="prettyPhoto" title="教练推荐"> <div> <img src="'+'<?php echo base_url()?>images/'+ data.data['result'][i].img+'" alt="" /> <i></i> </div> </a> <div class="gallery-tools"> <p><h4><strong style="color:black;">'+ data.data['result'][i].c_name+'教练</strong></h4></p> </div> </li>';
+                        var hot='<li><a href="#" rel="prettyPhoto" title="教练推荐"> <div> <img src="'+'<?php echo base_url()?>/uploads/'+ data.data['result'][i].img+'" alt="" /> <i></i> </div> </a> <div class="gallery-tools"> <p><h4><strong style="color:black;">'+ data.data['result'][i].c_name+'教练</strong></h4></p> </div> </li>';
                         $("#hot").append(hot);
                     }
                 }
@@ -506,7 +506,7 @@
 
                     $("#hot").empty();
                     for(var i = 0; i < 5; i++){
-                        var hot='<li><a href="#" rel="prettyPhoto" title="教练推荐"> <div> <img src="'+'<?php echo base_url()?>images/'+ data.data['result'][i].img+'" alt="" /> <i></i> </div> </a> <div class="gallery-tools"> <p><h4><strong style="color:black;">'+ data.data['result'][i].c_name+'教练</strong></h4></p> </div> </li>';
+                        var hot='<li><a href="#" rel="prettyPhoto" title="教练推荐"> <div> <img src="'+'<?php echo base_url()?>/uploads/'+ data.data['result'][i].img+'" alt="" /> <i></i> </div> </a> <div class="gallery-tools"> <p><h4><strong style="color:black;">'+ data.data['result'][i].c_name+'教练</strong></h4></p> </div> </li>';
                         $("#hot").append(hot);
                     }
                 }
@@ -525,7 +525,7 @@
                 },
                 dataType: "json",
                 success: function (data) {
-                    $("img.coach").attr("src","<?php echo base_url()?>uploads/"+data.data['coachInfo'][0].img);
+                    $("img.coach").attr("src","<?php echo base_url()?>/uploads/"+data.data['coachInfo'][0].img);
                     var string="<dt>姓名</dt><dd>"+data.data['coachInfo'][0].c_name +"</dd><dt>电话</dt><dd>"+data.data['coachInfo'][0].tel +"</dd><dt>价钱</dt><dd>"+data.data['coachInfo'][0].price +"</dd><dt>星级</dt><dd>"+data.data['coachInfo'][0].star +"</dd>";
                     $("dl.coach").html(string);
                 }
@@ -543,7 +543,7 @@
                 },
                 dataType: "json",
                 success: function (data) {
-                    $("img.car").attr("src","<?php echo base_url()?>uploads/"+data.data['carInfo'][0].img);
+                    $("img.car").attr("src","<?php echo base_url()?>/uploads/"+data.data['carInfo'][0].img);
                     var string="<dt>车牌号码</dt><dd>"+data.data['carInfo'][0].number +"</dd><dt>车辆型号</dt><dd>"+data.data['carInfo'][0].type +"</dd><dt>车辆详情</dt><dd>"+data.data['carInfo'][0].car_detail +"</dd>";
                     $("dl.car").html(string);
                 }

@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>珠海智慧驾培</title>
+
+    <!-- Meta -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>蓝光驾校</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
 
-    <!--base css styles-->
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
+    <!-- Web Fonts -->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
-    <!--page specific css styles-->
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/style.css">
 
-    <!--flaty css styles-->
-    <link rel="stylesheet" href="<?php echo base_url()?>css/component.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>css/flaty.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>css/flaty-responsive.css">
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/footers/footer-v1.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/plugins/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/pages/page_log_reg_v1.css">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/theme-colors/blue.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/theme-skins/dark.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/custom.css">
 
     <style>
         body{
@@ -46,87 +64,83 @@
         .form-group{
             margin-top: 5%;
         }
-
-
-        .company-info > p{
-            margin: 15px;
-        }
-
-        .copyright{
-            margin-top: 5%;
-            height:50px;
-            background-color: rgb(88,177,242);
-            color:white;
-            padding:15px;
-            font-size: 13px;
-        }
-
-        .register-link a :hover {
-            text-decoration: underline;
-        }
-
-        /*手机分辨率*/
-        @media (max-width: 767px) {
-            body {
-                background-color: rgba(88,177,252,1);
-            }
-        }
-
-        /*平板分辨率*/
-        @media (min-width: 768px) and (max-width: 979px) {
-            body {
-                background-color: rgba(88,177,252,1);
-            }
-        }
-
     </style>
 
 </head>
 <body>
 <!-- BEGIN Navbar -->
-<div  class="navbar" style="height: auto;">
-    <div class="container ">
-        <div class="row col-md-10 col-md-offset-1">
-            <div class="col-md-5">
-                <a class="navbar-brand" href="#">
-                    <h2>
-                        <strong>
-                            珠海网上驾校
-                        </strong>
-                    </h2>
+<div  class="wrapper">
+    <!--=== Header v4 ===-->
+    <div class="header">
+        <div class="container">
+            <h1>
+                <a href="#">
+                    珠海智慧驾培
                 </a>
-            </div>
+            </h1>
+            <!-- Toggle get grouped for better mobile display -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+            </button>
+            <!-- End Toggle -->
+        </div><!--/end container-->
 
-            <div class="col-md-7 hidden-sm hidden-xs">
-                <nav style="float: right;">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="<?php echo site_url('/main/goInterface') ?>"><h4><i class="icon-home"></i> 驾校首页</h4></a>
-                        </li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="<?php echo site_url('/main/goInterface') ?>">首页</a>
+                    </li>
 
-                        <li>
-                            <a href="<?php echo site_url('/main/goMain') ?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
-                        </li>
+                    <li class="dropdown">
+                        <a href="<?php echo site_url('/main/goMain')?>" class="dropdown-toggle" data-toggle="dropdown">
+                            学车入口
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo site_url('/register/goRegister')?>">在线报名</a></li>
+                            <li><a href="#">科目一视频培训</a></li>
+                            <li><a href="<?php echo site_url('/appointment/index')?>">网上预约</a></li>
+                            <li><a href="<?php echo site_url('/evaluate/index')?>">学员评价</a></li>
+                        </ul>
+                    </li>
 
-                        <li>
-                            <a href="<?php echo site_url('/school/schoolIntroduction')?>"><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
-                        </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            驾校入口
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo site_url('/manage_schoolRegister/goRegister')?>">注册/登录</a></li>
+                        </ul>
+                    </li>
 
-                        <li>
-                            <a href="<?php echo base_url()?>/feedback.html"><h4><i class="icon-phone"></i> 投诉建议</h4></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            驾校信息
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo site_url('/school/schoolIntroduction')?>">驾校</a></li>
+                            <li><a href="<?php echo site_url('/school/coachIntroduction')?>">教练</a></li>
+                        </ul>
+                    </li>
 
+                    <li>
+                        <a href="<?php echo site_url('/manage_ranking/goRanking')?>">综合排名</a>
+                    </li>
+
+                    <li>
+                        <a href="<?php echo base_url()?>/feedback.html">投诉建议</a>
+                    </li>
+                </ul>
+            </div><!--/end container-->
+        </div><!--/navbar-collapse-->
     </div>
-
 </div>
 <!-- END Navbar -->
 
-<div class="container">
-    <div class="row col-md-10 col-md-offset-1">
+<div class="container margin-bottom-40">
+    <div class="row col-md-12">
         <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1  login-wrapper">
             <form id="form-register" class="register-form" action="<?php echo site_url('/manage_schoolRegister/acceptRegister')?>" method="post" enctype="multipart/form-data">
                 <h2 class="text-center">驾 校 注 册</h2>
@@ -191,10 +205,10 @@
                     <div class="form-group">
                         <div class="controls">
                             <input type="file" id="img" class="form-control default" name="img" />
-                            <span class="help-inline">图片建议分辨率为428像素 * 270像素</span>
+                            <span class="help-inline">图片建议分辨率为376像素 * 270像素</span>
                             <div class="fileupload fileupload-new" data-provides="fileupload" style="display: none;">
-                                <div class="hidden-xs fileupload-new img-thumbnail"  id="imgDiv" style="width: 428px; height: 270px; border:0;">
-                                    <img  id="imgShow" style="width: 428px; height: 270px; border:0;" />
+                                <div class="hidden-xs fileupload-new img-thumbnail"  id="imgDiv" style="width: 376px; height: 270px; border:0;">
+                                    <img  id="imgShow" style="width: 376px; height: 270px; border:0;" />
                                 </div>
                             </div>
                         </div>
@@ -242,16 +256,22 @@
 </div>
 
 
-<div class="copyright">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-sm-12">
-                <span>Copyright &copy; 珠海网上驾校</span> |
-                <span>京ICP备11008151号</span>
+<!--=== Footer Version 1 ===-->
+<div class="footer-v1">
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        2016 &copy; 珠海智慧驾培 All Rights Reserved.
+                        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
+    </div><!--/copyright-->
 </div>
+<!--=== End Footer Version 1 ===-->
 
 
 <!--basic scripts-->

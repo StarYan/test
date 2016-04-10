@@ -112,8 +112,8 @@
                             驾校信息
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="active"><a href="<?php echo site_url('/school/schoolIntroduction')?>">驾校</a></li>
-                            <li><a href="<?php echo site_url('/school/coachIntroduction')?>">教练</a></li>
+                            <li><a href="<?php echo site_url('/school/schoolIntroduction')?>">驾校</a></li>
+                            <li class="active"><a href="<?php echo site_url('/school/coachIntroduction')?>">教练</a></li>
                         </ul>
                     </li>
 
@@ -130,9 +130,9 @@
                         <i class="search fa fa-search search-btn"></i>
                         <div class="search-open">
                             <div class="input-group animated fadeInDown">
-                                <input type="text" class="form-control" placeholder="驾校名" id="school-name">
+                                <input type="text" class="form-control" placeholder="教练名" id="coach-name">
                                 <span class="input-group-btn">
-                                    <button class="btn-u searchSchool" type="button">搜索</button>
+                                    <button class="btn-u searchCoach" type="button">搜索</button>
                                 </span>
                             </div>
                         </div>
@@ -145,49 +145,56 @@
     <!--=== End Header ===-->
 
     <!--=== Breadcrumbs ===-->
-    <div class="breadcrumbs">
+    <div class="breadcrumbs margin-bottom-20">
         <div class="container">
-            <h1 class="pull-left">驾校简介</h1>
+            <h1 class="pull-left">教练简介</h1>
             <ul class="pull-right breadcrumb">
                 <li><a href="#">驾校信息</a></li>
-                <li><a href="#">驾校</a></li>
+                <li><a href="#">教练</a></li>
             </ul>
         </div>
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
 
-    <div class="container content">
+    <div class="container profile margin-bottom-50">
         <div class="row">
             <div class="col-md-12">
-                <div class="headline"><h2>驾校信息</h2></div>
-                <?php if ($dataSchool): ?>
-                    <div id="schoolInfo">
-                    <?php foreach ($dataSchool as $school): ?>
-                            <!-- Clients Block-->
-                            <div class="row clients-page">
-                                <div class="col-md-3">
-                                    <img src="<?php echo base_url() ?>/uploads/<?php echo $school['school_img']; ?>" class="img-responsive hover-effect" alt="" />
-                                </div>
-                                <div class="col-md-9">
-                                    <h3><a href="<?php echo site_url('/school/goSchool')?>/<?php echo $school['id']; ?>"><?php echo $school['school_name']; ?></a> ( <i class="fa fa-tag color-green"></i> 营业执照：<?php echo $school['licence']; ?> )</h3>
-                                    <ul class="list-inline">
-                                        <li><i class="fa fa-map-marker color-green"></i> 驾校地址：<?php echo $school['school_address']; ?></li>
-                                        <li><i class="fa fa-phone color-green"></i> 联系方式：<?php echo $school['school_tel']; ?></li>
-                                        <li><i class="fa fa-tags color-green"></i> 通过率：<?php echo $school['pass_rate']; ?> %</li>
-                                        <li><i class="fa fa-tags color-green"></i> 分数：<?php echo $school['score']; ?> 分</li>
+                <div class="headline">
+                    <h2>教练信息</h2>
+                </div>
+                <div class="profile-body margin-bottom-50">
+
+                    <div class="row">
+                        <?php if ($dataCoach): ?>
+                        <div id="coachInfo">
+                            <?php foreach ($dataCoach as $coach): ?>
+                            <div class="col-sm-4 padding-bottom-20">
+                                <div class="profile-blog">
+                                    <img class="rounded-x" src="<?php echo base_url();?>/uploads/<?php echo $coach->img;?>" alt="">
+                                    <div class="name-location">
+                                        <strong><?php echo $coach->c_name;?></strong>
+                                        <span><i class="fa fa-home"></i><a href="#"><?php echo $coach->school_name;?></a></span><br/>
+                                        <span><i class="fa fa-tag"></i>资格证号：<?php echo $coach->qualification_certificate ;?></span>
+                                    </div>
+                                    <div class="clearfix margin-bottom-20"></div>
+                                    <hr>
+                                    <ul class="list-inline share-list">
+                                        <li><i class="fa fa-jpy"></i><a href="#"><?php echo $coach->price;?>/小时</a></li>
+                                        <li><i class="fa fa-group"></i><a href="#"><?php echo $coach->student_num;?>名</a></li>
+                                        <li><i class="fa fa-phone"></i><a href="#"><?php echo $coach->tel;?></a></li>
                                     </ul>
-                                    <p><?php echo $school['school_introduction']; ?></p>
                                 </div>
                             </div>
-                            <!-- End Clients Block-->
-                    <?php endforeach; ?>
+                            <?php endforeach; ?>
+                            <!-- Pagination -->
+                            <div class="text-center margin-bottom-30">
+                                <?php echo $link;?>
+                            </div>
+                        </div>
+                        <?php endif; ?>
                     </div>
-                <?php endif; ?>
-                <!-- Pagination -->
-                <div class="text-center md-margin-bottom-30">
-                    <?php echo $link;?>
+
                 </div>
-                <!-- End Pagination -->
             </div><!--/col-md-12-->
         </div><!--/row-->
     </div><!--/container-->
@@ -234,38 +241,38 @@
         App.init();
 
         /**
-         * 搜索驾校信息的ajax
+         * 搜索教练信息的ajax
          */
-        $(".searchSchool").click(function(){
-            var schoolName=$("#school-name").val();
+        $(".searchCoach").click(function(){
+            var coachName=$("#coach-name").val();
 
             $.ajax({
                 type: "POST",
-                url: '<?php echo site_url('/school/schoolSearch')?>',
+                url: '<?php echo site_url('/school/coachInfoSearch')?>',
                 data: {
-                    school:schoolName
+                    coach:coachName
                 },
                 dataType: "json",
                 success: function (data) {
-                    $("#schoolInfo").empty();
+                    $("#coachInfo").empty();
                     for(var i=0;i<data.data.length;i++){
-                        var str='<div class="row clients-page">'+
-                            '<div class="col-md-3">'+
-                            '<img src="<?php echo base_url() ?>/uploads/'+data.data[i]['school_img']+'" class="img-responsive hover-effect" alt="" />'+
-                            '</div>'+
-                            '<div class="col-md-9">'+
-                            '<h3><a href="<?php echo site_url('/school/goSchool')?>/'+data.data[i]['id']+'">'+data.data[i]['school_name']+'</a> ( <i class="fa fa-tag color-green"></i> 营业执照：'+data.data[i]['licence']+' )</h3>'+
-                            '<ul class="list-inline">'+
-                            '<li><i class="fa fa-map-marker color-green"></i> 驾校地址：'+data.data[i]['school_address']+'</li>'+
-                            '<li><i class="fa fa-phone color-green"></i> 联系方式：'+data.data[i]['school_tel']+'</li>'+
-                            '<li><i class="fa fa-tags color-green"></i> 通过率：'+data.data[i]['pass_rate']+' %</li>'+
-                            '<li><i class="fa fa-tags color-green"></i> 分数：'+data.data[i]['score']+' 分</li>'+
-                            '</ul>'+
-                            '<p>'+data.data[i]['school_introduction']+'</p>'+
-                            '</div>'+
-                            '</div>';
+                        var str='<div class="col-sm-4 padding-bottom-20">'+
+                                '<div class="profile-blog">'+
+                                '<img class="rounded-x" src="<?php echo base_url()?>/uploads/'+data.data[i]['img']+'" alt="">'+
+                                '<div class="name-location">'+
+                                '<strong>'+data.data[i]['c_name']+'</strong>'+
+                                '<span><i class="fa fa-home"></i><a href="#">'+data.data[i]['school_name']+'</a></span><br/>'+
+                                '<span><i class="fa fa-tag"></i>资格证号：'+data.data[i]['qualification_certificate']+'</span>'+
+                                '</div>'+
+                                '<div class="clearfix margin-bottom-20"></div>'+
+                                '<hr>'+
+                                '<ul class="list-inline share-list">'+
+                                '<li><i class="fa fa-jpy"></i><a href="#">'+data.data[i]['price']+'/小时</a></li>'+
+                                '<li><i class="fa fa-group"></i><a href="#">'+data.data[i]['student_num']+'名</a></li>'+
+                                '<li><i class="fa fa-phone"></i><a href="#">'+data.data[i]['tel']+'</a></li>'+
+                                '</ul></div></div>';
 
-                        $("#schoolInfo").append(str);
+                        $("#coachInfo").append(str);
                     }
 
                 }

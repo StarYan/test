@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>珠海智慧驾培</title>
+
+    <!-- Meta -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>网上报名</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
 
-    <!--base css styles-->
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
 
-    <!--page specific css styles-->
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/style.css">
 
-    <!--flaty css styles-->
-    <link rel="stylesheet" href="<?php echo base_url()?>css/flaty.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>css/flaty-responsive.css">
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/footers/footer-v1.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/plugins/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+    <!--[if lt IE 9]><link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/theme-colors/blue.css">
+
+
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="<?php echo base_url()?>/unify-v1.7/assets/css/custom.css">
     <link rel="stylesheet" href="<?php echo base_url()?>/css/bootstrap-stars.css">
-
     <script type="text/javascript">
 
         window.onload=function(){
@@ -95,43 +112,6 @@
     </script>
 
     <style>
-
-        .company-info > p{
-            margin: 15px;
-        }
-
-        .copyright{
-            height:50px;
-            background-color: white;
-            color:black;
-            padding:15px;
-            font-size: 13px;
-        }
-
-        .title {
-            border-bottom:1px solid white;
-        }
-
-        .friend-link > li{
-            padding-left:5px;
-        }
-        .friend-link > li > h5 >a{
-            color:white;
-        }
-
-
-        .box-content {
-            transition:border linear .2s,box-shadow linear .5s;
-            -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
-            -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
-            outline:none;
-            border-color:rgba(88,177,252,.75);
-            box-shadow:0 0 28px rgba(88,177,242,.5);
-            -moz-box-shadow:0 0 28px rgba(88,177,242,.5);
-            -webkit-box-shadow:0 0 28px rgba(88,177,242,3);
-
-        }
-
         .coach-rank-list {
             padding: 0px;
             list-style: none;
@@ -197,315 +177,375 @@
             padding:10px;
         }
 
-        .register-title > a :hover{
-            text-decoration: underline;
-        }
-
     </style>
 </head>
 <body>
-<!-- BEGIN Navbar -->
-<div class="navbar" style="height: 270px;">
-    <div class="container ">
-        <div class="row col-md-10 col-md-offset-1">
-            <div class="col-md-5">
-                <a class="navbar-brand" href="#">
-                    <h2>
-                        <strong>
-                            珠海网上驾校
-                        </strong>
-                    </h2>
+<div class="wrapper">
+    <!--=== Header ===-->
+    <div class="header">
+        <div class="container">
+            <h1>
+                <a href="#">
+                    珠海智慧驾培
                 </a>
-            </div>
+            </h1>
+            <!-- Toggle get grouped for better mobile display -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+            </button>
+            <!-- End Toggle -->
+        </div><!--/end container-->
 
-            <div class="col-md-7 hidden-sm hidden-xs">
-                <nav style="float: right;">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="<?php echo site_url('/main/goInterface') ?>"><h4><i class="icon-home"></i> 驾校首页</h4></a>
-                        </li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="<?php echo site_url('/main/goInterface') ?>">首页</a>
+                    </li>
 
-                        <li>
-                            <a href="<?php echo site_url('/main/goMain') ?>"><h4><i class="icon-list"></i> 学车流程</h4></a>
-                        </li>
+                    <li class="dropdown active">
+                        <a href="<?php echo site_url('/main/goMain')?>" class="dropdown-toggle" data-toggle="dropdown">
+                            学车入口
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="active"><a href="<?php echo site_url('/register/goRegister')?>">在线报名</a></li>
+                            <li><a href="#">科目一视频培训</a></li>
+                            <li><a href="<?php echo site_url('/appointment/index')?>">网上预约</a></li>
+                            <li><a href="<?php echo site_url('/evaluate/index')?>">学员评价</a></li>
+                        </ul>
+                    </li>
 
-                        <li>
-                            <a href="<?php echo site_url('/school/schoolIntroduction')?>"><h4><i class="icon-file-text"></i> 驾校简介</h4></a>
-                        </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            驾校入口
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo site_url('/manage_schoolRegister/goRegister')?>">注册/登录</a></li>
+                        </ul>
+                    </li>
 
-                        <li>
-                            <a href="<?php echo base_url()?>/feedback.html"><h4><i class="icon-phone"></i> 投诉建议</h4></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            驾校信息
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo site_url('/school/schoolIntroduction')?>">驾校</a></li>
+                            <li><a href="<?php echo site_url('/school/coachIntroduction')?>">教练</a></li>
+                        </ul>
+                    </li>
 
-        </div>
+                    <li>
+                        <a href="<?php echo site_url('/manage_ranking/goRanking')?>">综合排名</a>
+                    </li>
 
-
-        <div class="row text-center " style="margin: 8% auto">
-            <div style="color: white;">
-                <h1><strong>珠海网上驾校欢迎您</strong></h1>
-                <br/>
-
-                <p>
-
-                <h2>微笑是我们的语言，文明是我们的信念，教学是我们的责任，成功是我们的心愿</h2></p>
-            </div>
-        </div>
+                    <li>
+                        <a href="<?php echo base_url()?>/feedback.html">投诉建议</a>
+                    </li>
+                </ul>
+            </div><!--/end container-->
+        </div><!--/navbar-collapse-->
     </div>
+    <!--=== End Header ===-->
 
-</div>
-<!-- END Navbar -->
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">在线报名</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="#">学车入口</a></li>
+                <li class="active">在线报名</li>
+            </ul>
+        </div>
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
 
-<!-- BEGIN Container -->
-<div class="container"  style="margin-top: 1%;" >
+    <!-- Begin Content -->
+    <div class="container content">
         <div class="row">
-            <div class="col-md-7 col-md-offset-1">
-                <div class="box">
-                    <div class="container" >
-                        <div class="row box-content register-title" style="background-color: rgb(88,177,242);color: white; ">
-                            <h3 class="col-md-6">珠海网上驾校网上报名</h3>
-                            <a href="<?php echo site_url('appointment/index')?>"  class="col-md-3 text-center pull-right" style="color: white;margin:8px 0;" ><h5>已有账号，请直接登陆</h5></a>
-                        </div>
-                    </div>
-
-                    <div class="box-content">
-                        <form class="form-horizontal" id="register-form"  action="<?php echo site_url('/register/Save')?>" method="post" enctype="multipart/form-data" >
-                            <div class="form-group">
-                                <label for="nickname" class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 账号名</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="nickname" id="nickname" class="form-control"  />
-                                    <span class="help-inline">7个汉字或者14个英文字符组成</span>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 密码</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="password" name="password" id="password" class="form-control" />
-                                    <span class="help-inline">8-20个字符，包含大小写字母和数字的组合，不能使用特殊字符</span>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label" for="confirm_password"><span style="color: red">*</span> 确认密码</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="password" name="confirm_password" id="confirm_password" class="form-control"   />
-                                    <span class="help-inline">请再次填写密码</span>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-
-                            <hr>
-
-                            <div class="form-group">
-                                <label for="name" class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 姓名</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="name" id="name" class="form-control">
-                                    <span class="help-inline">最多由7个汉字组成</span>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 性别</label>
-                                <div class="col-sm-5 col-lg-3 controls">
-                                    <label class="radio-inline">
-                                        <input type="radio" name="sex" value="1" checked> 男
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="sex" value="0"> 女
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label" for="birthday"><span style="color: red">*</span> 出生日期</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <input class="form-control"  type="date" id="birthday" name="birthday" required />
-                                    <span class="help-inline">格式：yyyy/mm/dd</span>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-                            <div class="form-group">
-                                <label for="id" class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 身份证号</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="id" id="id" class="form-control"  />
-                                    <span class="help-inline">请填写身份证号码</span>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone" class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 手机号码</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="phone" id="phone" class="form-control"  />
-                                    <span class="help-inline">请填写手机号码</span>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-                            <div class="form-group">
-                                <label for="qq" class="col-sm-3 col-lg-2 control-label">QQ</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="text" name="qq" id="qq" class="form-control" pattern="[1-9][0-9]{4,14}" />
-                                    <span class="help-inline">请填写QQ号码</span>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> Email：</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="email" name="email" id="email" class="form-control"  >
-                                    <span class="help-inline">请填写电子邮箱</span>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="address" class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 住址</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <textarea name="address" id="address" rows="3" class="form-control" ></textarea>
-                                    <span class="help-inline">请填写地址信息</span>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-
-                            <hr>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 身份证照片</label>
-                                <div class=" col-sm-9 col-lg-10 controls">
-                                    <div class="fileupload fileupload-new" data-provides="fileupload">
-                                        <div class="hidden-xs fileupload-new img-thumbnail"  id="imgDiv" style="width: 428px; height: 270px; border:0;">
-                                            <img  id="imgShow" style="width: 428px; height: 270px; border:0;" />
+            <div class="col-md-9">
+                <div class="row margin-bottom-40">
+                    <div class="col-md-12">
+                        <form class="sky-form" id="register-form"  action="<?php echo site_url('/register/Save')?>" method="post" enctype="multipart/form-data" >
+                            <header>报名表 (带<span style="color: red;">*</span>的为必填项)</header>
+                            <fieldset>
+                                <section>
+                                    <div class="row">
+                                        <label for="nickname" class="label col col-4"><span style="color: red">*</span> 账号名</label>
+                                        <div class="col col-8">
+                                            <label class="input">
+                                                <i class="icon-append fa fa-user"></i>
+                                                <input type="text" name="nickname" id="nickname"  />
+                                                <span class="help-inline">7个汉字或者14个英文字符组成</span>
+                                            </label>
+                                            <label class="label" style="color:red"></label>
                                         </div>
-                                        <input type="file" id="img" class="form-control default" name="img"  style="border:0; margin:10px;" />
-                                        <span class="help-inline">图片建议分辨率为428像素 * 270像素</span>
+
                                     </div>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
+                                </section>
 
-                            <hr>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 报名驾校</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <select class="form-control school"  tabindex="1"  name="school" >
-                                        <option value="" selected>-- 请选择驾校 --</option>
-                                    </select>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 选择教练</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <select class="form-control coach"  tabindex="1"  name="coach" >
-                                        <option value="" selected>-- 请选择教练 --</option>
-                                    </select>
-                                    <div style="margin-top: 4%; color: rgb(88,177,242);display: none;" id="coachInformation">
+                                <section>
+                                    <div class="row">
+                                        <label for="password" class="label col col-4"><span style="color: red">*</span> 密码</label>
+                                        <div class="col col-8">
+                                            <label class="input">
+                                                <i class="icon-append fa fa-lock"></i>
+                                                <input type="password" name="password" id="password" />
+                                                <span class="help-inline">8-20个字符，包含大小写字母和数字的组合，不能使用特殊字符</span>
+                                            </label>
+                                            <label class="control-label" style="color:red"></label>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+                                </section>
+
+                                <section>
+                                    <div class="row">
+                                        <label class="label col col-4" for="confirm_password"><span style="color: red">*</span> 确认密码</label>
+                                        <div class="col col-8">
+                                            <label class="input">
+                                                <i class="icon-append fa fa-lock"></i>
+                                                <input type="password" name="confirm_password" id="confirm_password" />
+                                                <span class="help-inline">请再次填写密码</span>
+                                            </label>
+                                            <label class="control-label" style="color:red"></label>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <hr>
+
+                                <section>
+                                    <div class="row">
+                                        <label for="name" class="label col col-4"><span style="color: red">*</span> 姓名</label>
+                                        <div class="col col-8">
+                                            <label class="input">
+                                                <input type="text" name="name" id="name"/>
+                                                <span class="help-inline">最多由7个汉字组成</span>
+                                            </label>
+                                            <label class="control-label" style="color:red"></label>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div class="row">
+                                        <label class="label col col-4"><span style="color: red">*</span> 性别</label>
+                                        <div class="col col-8 inline-group">
+                                            <label class="radio">
+                                                <input type="radio" name="sex" value="1" checked><i class="rounded-x"></i> 男
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="sex" value="0"><i class="rounded-x"></i> 女
+                                            </label>
+                                        </div>
+                                    </div>
+                                </section>
 
 
-                            <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 培训类别</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <select class="form-control  chosen"  tabindex="1" id="select1" name="select1" >
-                                        <option value="" selected>-- 请选择培训类别 --</option>
-                                        <option value="type1" >普通机动车驾驶员培训</option>
-                                        <option value="type2">道路运输驾驶员从业资格培训</option>
-                                        <option value="type3">其他培训</option>
-                                    </select>
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
+                                <section>
+                                    <div class="row">
+                                        <label class="label col col-4" for="birthday"><span style="color: red">*</span> 出生日期</label>
+                                        <div class="col col-8 ">
+                                            <label class="input">
+                                                <input type="date" id="birthday" name="birthday" required />
+                                                <span class="help-inline">格式：yyyy/mm/dd</span>
+                                            </label>
+                                            <label class="control-label" style="color:red"></label>
+                                        </div>
+                                    </div>
+                                </section>
 
-                            <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label"><span style="color: red">*</span> 培训车型</label>
-                                <div class="col-sm-6 col-lg-4 controls">
-                                    <select class="form-control  chosen" name="wanted_car_type" id="select2" name="select2" >
-                                    </select>
-                                    <input type="text" style="display:none" id="others" class="form-control"  />
-                                </div>
-                                <label class="control-label" style="color:red"></label>
-                            </div>
+                                <section>
+                                    <div class="row">
+                                        <label for="id" class="label col col-4"><span style="color: red">*</span> 身份证号</label>
+                                        <div class="col col-8 ">
+                                            <label class="input">
+                                                <input type="text" name="id" id="id" />
+                                                <span class="help-inline">请填写身份证号码</span>
+                                            </label>
+                                            <label class="control-label" style="color:red"></label>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div class="row">
+                                        <label for="phone" class="label col col-4"><span style="color: red">*</span> 手机号码</label>
+                                        <div class="col col-8 ">
+                                            <label class="input">
+                                                <input type="text" name="phone" id="phone" />
+                                                <span class="help-inline">请填写手机号码</span>
+                                            </label>
+                                            <label class="control-label" style="color:red"></label>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div class="row">
+                                        <label for="qq" class="label col col-4">QQ</label>
+                                        <div class="col col-8 ">
+                                            <label class="input">
+                                                <input type="text" name="qq" id="qq" pattern="[1-9][0-9]{4,14}" />
+                                                <span class="help-inline">请填写QQ号码</span>
+                                            </label>
+                                            <label class="control-label" style="color:red"></label>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div class="row">
+                                        <label for="email" class="label col col-4"><span style="color: red">*</span> Email：</label>
+                                        <div class="col col-8">
+                                            <label class="input">
+                                                <input type="email" name="email" id="email" />
+                                                <span class="help-inline">请填写电子邮箱</span>
+                                            </label>
+                                            <label class="control-label" style="color:red"></label>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div class="row">
+                                        <label for="address" class="label col col-4"><span style="color: red">*</span> 住址</label>
+                                        <div class="col col-8">
+                                            <label class="textarea">
+                                                <textarea  name="address" id="address" rows="3" ></textarea>
+                                            </label>
+                                            <label class="control-label" style="color:red"></label>
+                                        </div>
+                                    </div>
+                                </section>
 
 
-                            <div class="form-group">
-                                <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
-                                    <button type="submit" class="btn btn-primary" >报名</button>
-                                    <button type="reset" class="btn">重置</button>
-                                </div>
-                            </div>
+                                <hr>
+
+                                <section>
+                                    <div class="row">
+                                        <label class="label col col-4"><span style="color: red">*</span> 身份证照片</label>
+                                        <div class="col col-8">
+                                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                                <div class="hidden-xs fileupload-new img-thumbnail"  id="imgDiv" style="width: 428px; height: 270px; border:0;">
+                                                    <img  id="imgShow" style="width: 428px; height: 270px; border:0;" />
+                                                </div>
+                                                <input type="file" id="img" class="form-control default" name="img"  style="border:0; margin:10px;" />
+                                                <span class="help-inline">图片建议分辨率为428像素 * 270像素</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                                <hr>
+
+                                <section>
+                                    <div class="row">
+                                        <label class="label col col-4"><span style="color: red">*</span> 报名驾校</label>
+                                        <div class="col col-8">
+                                            <select class="form-control school"  tabindex="1"  name="school" >
+                                                <?php if(!empty($licence)&&!empty($school_name)){ ?>
+                                                    <option value="<?php echo $licence;?>" selected><?php echo $school_name;?></option>
+                                                <?php }else{ ?>
+                                                    <option value="" selected>-- 请选择驾校 --</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div class="row">
+                                        <label class="label col col-4"><span style="color: red">*</span> 选择教练</label>
+                                        <div class="col col-8">
+                                            <select class="form-control coach"  tabindex="1"  name="coach" >
+                                                <option value="" selected>-- 请选择教练 --</option>
+                                            </select>
+                                            <div style="margin-top: 4%; color: rgb(88,177,242);display: none;" id="coachInformation">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div class="row">
+                                        <label class="label col col-4"><span style="color: red">*</span> 培训类别</label>
+                                        <div class="col col-8">
+                                            <select class="form-control  chosen"  tabindex="1" id="select1" name="select1" >
+                                                <option value="" selected>-- 请选择培训类别 --</option>
+                                                <option value="type1" >普通机动车驾驶员培训</option>
+                                                <option value="type2">道路运输驾驶员从业资格培训</option>
+                                                <option value="type3">其他培训</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div class="row">
+                                        <label class="label col col-4"><span style="color: red">*</span> 培训车型</label>
+                                        <div class="col col-8">
+                                            <select class="form-control  chosen" name="wanted_car_type" id="select2" name="select2" >
+                                            </select>
+                                            <input type="text" style="display:none" id="others" class="form-control"  />
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </fieldset>
+
+                            <footer>
+                                <button type="submit" class="btn btn-primary" >报名</button>
+                                <button type="reset" class="btn">重置</button>
+                            </footer>
 
                         </form>
                     </div>
                 </div>
             </div>
 
-            <div class="hidden-xs col-md-3">
-                <div class="box row">
-                    <div class="container " >
-                        <div class="row box-content text-center" style="background-color: rgb(88,177,242);color: white;  ">
-                            <h3>人气教练</h3>
-                        </div>
-                    </div>
-                    <div class="box-content ">
-                        <ul class="coach-rank-list">
-                        </ul>
+            <!-- Begin Sidebar -->
+            <div class="col-md-3">
+                <div class="headline" style="margin-top: 0"><h2 class="heading-sm">热门驾校</h2></div>
+
+                <ul class="list-unstyled who margin-bottom-30 news"></ul>
+                <ul class="list-unstyled who margin-bottom-30 schoolTitle"></ul>
+
+                <div class="headline"><h2 class="heading-sm">人气教练</h2></div>
+                <div class="box-content "><ul class="list-unstyled who margin-bottom-30 coach-rank-list"></ul></div>
+
+                <div class="headline"><h2 class="heading-sm">联系方式</h2></div>
+                <ul class="list-unstyled who margin-bottom-30">
+                    <li><a href="#"><i class="fa fa-home"></i>北京师范大学珠海分校</a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i>zhihuijiapei@163.com</a></li>
+                    <li><a href="#"><i class="fa fa-phone"></i>13631224755</a></li>
+                    <li><a href="#"><i class="fa fa-globe"></i>http://www.zhuhuijiapei.com</a></li>
+                </ul>
+            </div>
+            <!-- End Sidebar -->
+        </div>
+    </div>
+
+    <!--=== Footer Version 1 ===-->
+    <div class="footer-v1">
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>
+                            2016 &copy; 珠海智慧驾培 All Rights Reserved.
+                            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-</div>
-
-<div class="container" style="margin-top: 3%;height: 250px; background-color: rgb(88,177,242);color:white;padding:20px;" >
-    <div class="row col-md-10 col-md-offset-1" >
-        <div class="col-xs-12 col-sm-12 col-md-3 company-info" >
-            <div class="title">
-                <h2>联系方式</h2>
-            </div>
-            <p><h5>驾校地址</h5></p>
-            <p><h5><i class="icon-phone"></i> 驾校电话</h5></p>
-            <p><h5><i class="icon-print"></i> 驾校传真号</h5></p>
-            <p><h5><i class="icon-globe"></i> 驾校网址</h5></p>
-            <p><h5><i class="icon-envelope"></i> 驾校邮箱</h5></p>
-        </div>
-
-        <div class="col-md-7 company-info hidden-xs hidden-sm " style="float: right" >
-            <div class="title">
-                <h2 >友情链接</h2>
-            </div>
-            <ul class="nav nav-pills friend-link ">
-                <li><h5><a href="#"> 百度 |</a></h5></li>
-                <li><h5><a href="#"> 腾讯 |</a></h5></li>
-                <li><h5><a href="#"> Google |</a></h5></li>
-                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
-                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
-                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
-                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
-                <li><h5><a href="#"> 新浪微博 |</a></h5></li>
-            </ul>
-        </div>
-
-        <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="icon-chevron-up"></i></a>
+        </div><!--/copyright-->
     </div>
-
+    <!--=== End Footer Version 1 ===-->
 </div>
 
-<div class="copyright">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-sm-12">
-                <span>Copyright &copy; 珠海网上驾校</span> |
-                <span>京ICP备11008151号</span>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -513,7 +553,6 @@
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
 <script>window.jQuery || document.write('<script src="<?php echo base_url()?>assets/jquery/jquery-2.0.3.min.js"><\/script>')</script>
 <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url()?>assets/nicescroll/jquery.nicescroll.min.js"></script>
 <script src="<?php echo base_url()?>assets/jquery-cookie/jquery.cookie.js"></script>
 
 <!--page specific plugin scripts-->
@@ -521,7 +560,8 @@
 <script src="<?php echo base_url()?>assets/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
 
 <!--flaty scripts-->
-<script src="<?php echo base_url()?>js/flaty.js"></script>
+<script src="<?php echo base_url()?>/js/flaty.js"></script>
+<script src="<?php echo base_url()?>/assets/nicescroll/jquery.nicescroll.min.js"></script>
 
 <script src="<?php echo base_url()?>/assets/jquery-validation/dist/jquery.validate.js"></script>
 <script src="<?php echo base_url()?>/assets/jquery-validation/dist/additional-methods.js"></script>
@@ -538,6 +578,42 @@
                 for(var i = 0;i < data.data.length;i++){
                     var str='<option value='+data.data[i]['licence']+'>'+data.data[i]['school_name']+'</option>';
                     $(".school").append(str);
+                }
+            }
+        });
+
+
+        $.ajax({
+            type: "POST",
+            url: '<?php echo site_url("/register/showSchoolByPassRate")?>',
+            data: {},
+            dataType: "json",
+            success: function(data){
+                $(".carousel-inner").empty();
+                for(var i = 0;i < 10;i++){
+                    var str = '<li><a href="<?php echo site_url('/school/goSchool')?>/'+data.data[i]['id']+
+                        '" target="_blank" ><span style="overflow:hidden;white-space:nowrap;display: block;"><i>'+(i+1)+'</i> '+data.data[i]['school_name']
+                        +' </span></a></li>';
+                    $(".schoolTitle").append(str);
+                }
+            }
+        });
+
+        var licence=$('.school').val();
+        $(".coach").empty();
+        $.ajax({
+            type: "POST",
+            url: '<?php echo site_url("/register/getCoachBySchool")?>',
+            data: {
+                licence:licence
+            },
+            dataType: "json",
+            success: function(data){
+                var str1='<option value="" selected>-- 请选择教练 --</option>';
+                $(".coach").append(str1);
+                for(var i = 0;i < data.data.length;i++){
+                    var str='<option value='+data.data[i]['id']+'>'+data.data[i]['c_name']+'</option>';
+                    $(".coach").append(str);
                 }
             }
         });
@@ -598,28 +674,15 @@
                 $(".coach-rank-list").empty();
                 var str1='<li data-list-collapse="accordion" class="active" >'+
                             '<div class="container rank-list-title">'+
-                            '<a href="#">'+
                             '<span class="col-md-3 rank-list-num" style="background-color: rgba(231, 76, 60,1.0)">'+1+'</span>'+
                             '<span class="col-md-5 list-coach-name">'+data.data[0]['c_name']+'</span>'+
-                            '<span class="col-md-5 list-coach-star">'+
-                            '<select data-coach-star="'+data.data[0]['star']+'" name="rating">'+
-                            '<option value="" selected>0</option>'+
-                            '<option value="1">1</option>'+
-                            '<option value="2">2</option>'+
-                            '<option value="3">3</option>'+
-                            '<option value="4">4</option>'+
-                            '<option value="5">5</option>'+
-                            '</select>'+
-                            '</span>'+
-                            '</a>'+
                             '</div>'+
                             '<div class="container rank-list-content">'+
-                            '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/images/teacher-male.png" /></div>'+
+                            '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/uploads/'+data.data[0]['img']+'" /></div>'+
                             '<div class="list-coach-detail col-md-8">'+
                             '<p>所属驾校：<a href="'+data.data[0]['school_url']+'">'+data.data[0]['school_name']+'</a></p>'+
                             '<p>价格：'+data.data[0]['price']+'/小时</p>'+
                             '<p>电话：'+data.data[0]['tel']+'</p>'+
-                            '<p><a href="#" class="btn btn-primary pull-right">查看</a></p>'+
                             '</div>'+
                             '</div>'+
                             '</li>';
@@ -627,28 +690,15 @@
 
                 var str2='<li data-list-collapse="accordion" >'+
                     '<div class="container rank-list-title">'+
-                    '<a href="#">'+
                     '<span class="col-md-3 rank-list-num" style="background-color: rgba(230, 126, 34,1.0)">'+2+'</span>'+
                     '<span class="col-md-5 list-coach-name">'+data.data[1]['c_name']+'</span>'+
-                    '<span class="col-md-5 list-coach-star">'+
-                    '<select data-coach-star="'+data.data[1]['star']+'" name="rating">'+
-                    '<option value="" selected>0</option>'+
-                    '<option value="1">1</option>'+
-                    '<option value="2">2</option>'+
-                    '<option value="3">3</option>'+
-                    '<option value="4">4</option>'+
-                    '<option value="5">5</option>'+
-                    '</select>'+
-                    '</span>'+
-                    '</a>'+
                     '</div>'+
                     '<div class="container rank-list-content">'+
-                    '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/images/teacher-male.png" /></div>'+
+                    '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/uploads/'+data.data[1]['img']+'" /></div>'+
                     '<div class="list-coach-detail col-md-8">'+
                     '<p>所属驾校：<a href="'+data.data[1]['school_url']+'">'+data.data[1]['school_name']+'</a></p>'+
                     '<p>价格：'+data.data[1]['price']+'/小时</p>'+
                     '<p>电话：'+data.data[1]['tel']+'</p>'+
-                    '<p><a href="#" class="btn btn-primary pull-right">查看</a></p>'+
                     '</div>'+
                     '</div>'+
                     '</li>';
@@ -656,28 +706,15 @@
 
                 var str3='<li data-list-collapse="accordion" >'+
                     '<div class="container rank-list-title">'+
-                    '<a href="#">'+
                     '<span class="col-md-3 rank-list-num" style="background-color: rgba(241, 196, 15,1.0)">'+3+'</span>'+
                     '<span class="col-md-5 list-coach-name">'+data.data[2]['c_name']+'</span>'+
-                    '<span class="col-md-5 list-coach-star">'+
-                    '<select data-coach-star="'+data.data[2]['star']+'" name="rating">'+
-                    '<option value="" selected>0</option>'+
-                    '<option value="1">1</option>'+
-                    '<option value="2">2</option>'+
-                    '<option value="3">3</option>'+
-                    '<option value="4">4</option>'+
-                    '<option value="5">5</option>'+
-                    '</select>'+
-                    '</span>'+
-                    '</a>'+
                     '</div>'+
                     '<div class="container rank-list-content">'+
-                    '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/images/teacher-male.png" /></div>'+
+                    '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/uploads/'+data.data[2]['img']+'" /></div>'+
                     '<div class="list-coach-detail col-md-8">'+
                     '<p>所属驾校：<a href="'+data.data[1]['school_url']+'">'+data.data[2]['school_name']+'</a></p>'+
                     '<p>价格：'+data.data[2]['price']+'/小时</p>'+
                     '<p>电话：'+data.data[2]['tel']+'</p>'+
-                    '<p><a href="#" class="btn btn-primary pull-right">查看</a></p>'+
                     '</div>'+
                     '</div>'+
                     '</li>';
@@ -686,43 +723,22 @@
                 for(var i=3;i < 10;i++){
                     var str='<li data-list-collapse="accordion">'+
                             '<div class="container rank-list-title">'+
-                            '<a target="_blank" href="#">'+
                             '<span class="col-md-3 rank-list-num">'+(i+1)+'</span>'+
                             '<span class="col-md-5 list-coach-name">'+data.data[i]['c_name']+'</span>'+
-                            '<span class="col-md-5 list-coach-star">'+
-                            '<select data-coach-star="'+data.data[i]['star']+'" name="rating">'+
-                            '<option value="" selected>0</option>'+
-                            '<option value="1">1</option>'+
-                            '<option value="2">2</option>'+
-                            '<option value="3">3</option>'+
-                            '<option value="4">4</option>'+
-                            '<option value="5">5</option>'+
-                            '</select>'+
-                            '</span>'+
-                            '</a>'+
                             '</div>'+
                             '<div class="container rank-list-content">'+
-                            '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/images/teacher-male.png" /></div>'+
+                            '<div class="list-coach-img col-md-4"><img src="<?php echo base_url()?>/uploads/'+data.data[i]['img']+'" /></div>'+
                             '<div class="list-coach-detail col-md-8">'+
                             '<p>所属驾校：<a target="_blank" href="'+data.data[i]['school_url']+'">'+data.data[i]['school_name']+'</a></p>'+
                             '<p>价格：'+data.data[i]['price']+'/小时</p>'+
                             '<p>电话：'+data.data[i]['tel']+'</p>'+
-                            '<p><a target="_blank" href="#" class="btn btn-primary pull-right">查看</a></p>'+
                             '</div>'+
                             '</div>'+
                             '</li>';
 
                     $(".coach-rank-list").append(str);
                 }
-
-                for(var i=0;i < 10;i++){
-                    $('[data-coach-star="'+data.data[i]['star']+'"]').barrating({
-                        theme: 'bootstrap-stars',
-                        readonly:true,
-                        showSelectedRating: false
-                    });
-                    $('[data-coach-star="'+data.data[i]['star']+'"]').barrating('set', data.data[i]['star']);
-                }
+                $("ul.coach-rank-list li:last").css("border-bottom","none");
 
                 $(function () {!function () {
                     var a = $('[data-list-collapse="accordion"]');
@@ -733,8 +749,6 @@
                 });
             }
         });
-
-
 
         $("#register-form").validate({
 
@@ -841,7 +855,8 @@
                 }
             },
             errorPlacement: function(error,element) {
-                    error.appendTo(element.parent("div").next("label"));
+                    element.next("span").toggle();
+                    error.appendTo(element.parent("label").next("label"));
             }
         });
 

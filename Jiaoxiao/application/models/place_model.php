@@ -18,7 +18,7 @@
          * @param int $limit 查询几条
          * @param string $order_by 排序字段 ex: name desc
          */
-        public function get($where, $offset, $limit, $order_by = '') {
+        public function get($where, $offset=0, $limit=0, $order_by = '') {
             if (!empty($order_by)) {
                 $this->db->order_by($order_by);
             }
@@ -79,15 +79,55 @@
             return $result;
         }
 
+        /**
+         * Updates a particular model
+         * @param array $data 需要更新的数据数组
+         * @param array $where 条件数据数组
+         */
         public function update($data,$where){
-            $result = $this->db->update($this->table_name,$data,$where);
-            return $result;
+            $this->db->update($this->table_name,$data,$where);
         }
 
         public function getInfo($where){
             $result=$this->db->get_where($this->table_name,$where);
             if ($result->num_rows() > 0) {
                 return $result->result_array();
+            }
+            return false;
+        }
+
+        /**
+         * 把数据的deleted的值改为1，不显示该数据
+         * @param $where
+         * @return bool
+         */
+        public function delete($where){
+            if($where){
+                if($this->db->update($this->table_name,array('deleted'=>1),$where)){
+                    return true;
+                }
+                return false;
+            }
+            return false;
+        }
+
+        /**
+         * 模糊查询数据
+         * @param array $where
+         * @param int $limit
+         * @param int $offset
+         * @return bool
+         */
+        public function fuzzy_search($where=array(),$limit=0,$offset=0){
+            $this->db->from($this->table_name);
+            if(!empty($where)){
+                $this->db->like($where);
+            }
+            $this->db->where('deleted',0);
+            $this->db->limit($limit,$offset);
+            $query = $this->db->get();
+            if ($query) {
+                return $query->result_object();
             }
             return false;
         }
